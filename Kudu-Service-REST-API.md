@@ -48,3 +48,21 @@ POST APIs:
 
 - /files/Save?path={path}: passes *content* in body
 - /files/Delete?path={path}
+
+## Connection strings
+
+GET APIs:
+
+- /connectionstrings
+- /connectionstrings/Get?key={key} should really be /connectionstrings/Get/{key}
+
+
+POST APIs:
+
+- /connectionstrings/Set?key=Somekey&value=Somevalue
+- /connectionstrings/Remove?key=Somekey
+
+
+## App Setttings
+
+Identical to Connection strings but with /connectionstrings changed to /appsettings
