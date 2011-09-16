@@ -1,0 +1,3 @@
+
+- /scm/kind
+- /scm/id
