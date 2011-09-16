@@ -36,3 +36,15 @@ POST APIs:
 
 - /deploy/index/{id}
 - /deploy/new/{id}
+
+## Files
+
+GET APIs:
+
+- /files?path={path}
+
+
+POST APIs:
+
+- /files/Save?path={path}: passes *content* in body
+- /files/Delete?path={path}
