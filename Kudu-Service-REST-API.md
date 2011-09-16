@@ -22,3 +22,17 @@ POST APIs:
 - /scm/Create: create the repository. Takes in a repo *type* (see /scm/kind)
 - /scm/Delete: delete the repository
 - /scm/Commit: commits the current changes. Takes an author *name* and a *message*
+
+## Deployment
+
+GET APIs:
+
+- /deploy/id: returns the id of the current deployment
+- /deploy/log/{id}
+- /deploy/details/{id}
+
+
+POST APIs:
+
+- /deploy/index/{id}
+- /deploy/new/{id}
