@@ -1,4 +1,4 @@
-To turn profiling on for the Kudu Service, set the `enableProfiler` flag in the appSettings to true:
+To turn profiling on for the Kudu Service, set the `enableProfiler` appSetting to true:
 
     <appSettings>
         <add key="enableProfiler" value="true" />
