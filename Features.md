@@ -1,2 +1,2 @@
 # Kudu Features
-* [[Deployment Rules]]
+* [[Customizing Deployments]]
