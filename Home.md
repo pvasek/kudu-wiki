@@ -1,1 +1,1 @@
-Welcome to the kudu wiki!
+* [[Project Structure]] of the Kudu project on github
