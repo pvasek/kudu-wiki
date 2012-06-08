@@ -1,1 +1,2 @@
-* [[Project Structure]] of the Kudu project on github
+* [[Project Structure]]
+* [[Features]]
