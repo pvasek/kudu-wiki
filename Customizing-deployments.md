@@ -1,4 +1,3 @@
-## Customizing deployments
 When deploying a git repository via kudu, the rules for picking a specific project are as follows:
 
 1. If there's a .deployment file at the root of the repository go to step 4, otherwise go to the next step.
