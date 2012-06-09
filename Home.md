@@ -1,4 +1,4 @@
 * [[Getting Started]]
 * [[Project Structure]]
 * [[Features]]
-* [[Fun Kudu tweets]]
+* [[Cool user tweets]]
