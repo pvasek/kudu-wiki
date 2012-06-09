@@ -2,3 +2,7 @@
 * [6/8/2012 Building and Deploying Windows Azure Web Sites using Git and GitHub for Windows (@shijucv)](
 http://weblogs.asp.net/shijuvarghese/archive/2012/06/08/building-and-deploying-windows-azure-web-sites-using-git-and-github-for-windows.aspx)
 * [6/8/2012 Screencast: Pushing the NuGet gallery to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=72SAHWUHnzA&hd=1)
+* [6/8/2012 Screencast: Web sites - Node.js Development](http://www.youtube.com/watch?v=LZhfiYqxwcg&list=UU0m-80FnNY2Qb7obvTL_2fA&index=7&feature=plcp)
+* [6/8/2012 Screencast: Getting started on Windows Azure with Node.js on Mac OS](http://www.youtube.com/watch?v=jetNJCUJJz8&list=UU0m-80FnNY2Qb7obvTL_2fA&index=2&feature=plcp)
+* [6/8/2012 Screencast: Getting started on Windows Azure with Node.js on Windows](http://www.youtube.com/watch?v=T8Ehr_V1i1U&list=UU0m-80FnNY2Qb7obvTL_2fA&index=3&feature=plcp)
+* [6/8/2012 Screencast: Getting started on Windows Azure with PHP on Mac OS](http://www.youtube.com/watch?v=SWBLiCwAiMM&list=UU0m-80FnNY2Qb7obvTL_2fA&index=4&feature=plcp)
