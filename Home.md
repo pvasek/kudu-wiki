@@ -2,4 +2,4 @@
 * [[Project Structure]]
 * [[Features]]
 * [[Cool user tweets]]
-* [[Blog posts]]
+* [[Blog posts and screencasts]]
