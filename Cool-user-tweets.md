@@ -1,3 +1,5 @@
+Here are a few fun tweets about Kudu and the Azure git push feature:
+
 - "More Azure awesomeness: the Git deployment model is open source, and does not just work for Azure. How great is that?
 http://t.co/Ge2ORxW1" @bleroy [8 Jun 2012](http://twitter.com/#!/bleroy/status/211267156141277184)
 - ""git push azure master" #FTW" @giovannibassi [8 Jun 2012](http://twitter.com/#!/giovannibassi/status/211259521451040768)
