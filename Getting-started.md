@@ -1,5 +1,8 @@
+## Deploying your first application
+After running Kudu.Web, you should be able to use the dashboard to manage your application. Below is a walk through on how to create and deploy your first application using git.
+
 ## Step 1
-Create an application
+Create an application.
 
 ![Step 1](http://i.imgur.com/pScf7.png)
 
