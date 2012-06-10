@@ -6,3 +6,5 @@ http://weblogs.asp.net/shijuvarghese/archive/2012/06/08/building-and-deploying-w
 * [6/8/2012 Screencast: Getting started on Windows Azure with Node.js on Mac OS (@gblock)](http://www.youtube.com/watch?v=jetNJCUJJz8&list=UU0m-80FnNY2Qb7obvTL_2fA&index=2&feature=plcp)
 * [6/8/2012 Screencast: Getting started on Windows Azure with Node.js on Windows (@gblock)](http://www.youtube.com/watch?v=T8Ehr_V1i1U&list=UU0m-80FnNY2Qb7obvTL_2fA&index=3&feature=plcp)
 * [6/8/2012 Screencast: Getting started on Windows Azure with PHP on Mac OS](http://www.youtube.com/watch?v=SWBLiCwAiMM&list=UU0m-80FnNY2Qb7obvTL_2fA&index=4&feature=plcp)
+* [6/7/2012 GitHub for Windows Azure Websites (@maartenballiauw)](http://blog.maartenballiauw.be/post/2012/06/07/GitHub-for-Windows-Azure-Websites.aspx)
+
