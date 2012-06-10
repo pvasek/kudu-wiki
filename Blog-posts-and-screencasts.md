@@ -1,3 +1,4 @@
+* [6/9/2012 Windows Azure Web Sites vs Web Roles (@robdmoore)](http://robdmoore.id.au/blog/2012/06/09/windows-azure-web-sites-vs-web-roles/)
 * [6/8/2012 Introducing Kudu: the Open Source engine behind ‘git push azure master’ (@davidebbo)](http://blog.davidebbo.com/2012/06/introducing-open-source-engine-behind.html)
 * [6/8/2012 Building and Deploying Windows Azure Web Sites using Git and GitHub for Windows (@shijucv)](
 http://weblogs.asp.net/shijuvarghese/archive/2012/06/08/building-and-deploying-windows-azure-web-sites-using-git-and-github-for-windows.aspx)
