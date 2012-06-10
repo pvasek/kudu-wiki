@@ -17,3 +17,8 @@ The above configuration specifies that we want to deploy WebProject.csproj in th
 
     [config]
     project = WebProject
+
+In case you have an solution/project file in your repository but you want it to be ignored and have your full repo deployed as a web site, you can use the following:
+
+    [config]
+    project = .
