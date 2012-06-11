@@ -8,4 +8,4 @@ To connect via FTP, you need the following information:
 
 You can use whatever FTP client you like, but you can't go wrong if you go with FileZilla.
 
-Once you've FTP's check out [[File structure on Azure]] to navigate through the files.
+Once you've FTP'd, check out [[File structure on Azure]] to navigate through the files.
