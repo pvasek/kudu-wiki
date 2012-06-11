@@ -5,3 +5,4 @@
 * [[Cool user tweets]]
 * [[Blog posts and screencasts]]
 * [[Accessing files via FTP]]
+* [[File structure on Azure]]
