@@ -6,6 +6,6 @@ To connect via FTP, you need the following information:
 - **Your username**: you'll also find it on the dashboard, under Deployment User. It's the same as your git username, but prefixed with the site name. e.g. 'MyCoolSite\davidebbo'
 - **Your password**: use the same password as when you 'git push'
 
-You can use whatever FTP client you like, but you can't go wrong if you go with FileZilla.
+You can use whatever FTP client you like, but you can't go wrong if you go with [FileZilla](http://filezilla-project.org/).
 
 Once you've FTP'd, check out [[File structure on Azure]] to navigate through the files.
