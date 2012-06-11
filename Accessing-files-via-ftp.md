@@ -7,3 +7,5 @@ To connect via FTP, you need the following information:
 - **Your password**: use the same password as when you 'git push'
 
 You can use whatever FTP client you like, but you can't go wrong if you go with FileZilla.
+
+Once you've FTP's check out [[File structure on Azure]] to navigate through the files.
