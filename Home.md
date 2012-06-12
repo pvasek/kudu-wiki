@@ -1,6 +1,7 @@
 * [[Getting Started]]
 * [[Deploying Kudu to a Server]]
 * [[Project Structure]]
+* [[Investigating Issues]]
 * [[Features]]
 * [[Cool user tweets]]
 * [[Blog posts and screencasts]]
