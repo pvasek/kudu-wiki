@@ -2,7 +2,7 @@
 
 If you are just using git in Azure, this is the section you'll care most about.
 
-* [[Customizing Deployments]]: choosing which folder of project to deploy
+* [[Customizing Deployments]]: choosing which folder or project to deploy to the web site
 * [[Investigating Issues]]
 * [[Accessing files via FTP]]
 * [[File structure on Azure]]
