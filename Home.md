@@ -14,7 +14,6 @@ Read this is you are interested in contributing to Kudu
 
 * [[Getting Started]]
 * [[Project Structure]]
-* [[Deploying Kudu to a Server]]
 
 
 ## Features in development
