@@ -1,3 +1,10 @@
+## Getting help
+
+* Post to the [Azure Git Deployment forum on MSDN](http://social.msdn.microsoft.com/Forums/en-US/azuregit)
+* Go to the [Kudu room on JabbR](http://jabbr.net/#/rooms/kudu)
+* Ping [@davidebbo](https://twitter.com/davidebbo) or [@davidfowl](https://twitter.com/davidfowl) on Twitter
+
+
 ## Using git in Azure Web Sites
 
 If you are just using git in Azure, this is the section you'll care most about.
