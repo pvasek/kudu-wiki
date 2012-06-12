@@ -23,7 +23,7 @@ That could mean two different things:
 1. An issue with Azure Web Sites
 2. An issue with the git support itelf
 
-Record what the error is and report it.
+Record what the error is and report it to the [forum](http://social.msdn.microsoft.com/Forums/en-US/azuregit/threads)
 
 ## Getting the git service log
 
