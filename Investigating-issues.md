@@ -38,8 +38,7 @@ To do this:
 ## Error types
 
 * **403** - You don't have access to this site
-* **404** - That can happen when you have a git postBuffer set to a high value. Try running:
-  * 'git config --global --unset http.postBuffer'
+* **404** - See [[Known issues]]
 * **409** - There's a deployment in progress.
 * **501** - Git tried to use the dumb protocol and we don't support this ([[Anatomy of a git request]]), this is because the initial request failed.
 * **502, 503** - Something went wrong before the request reached the Kudu service.
