@@ -10,6 +10,8 @@ If you are just using git in Azure, this is the section you'll care most about.
 
 ## Building and running Kudu from the github sources
 
+Read this is you are interested in contributing to Kudu
+
 * [[Getting Started]]
 * [[Project Structure]]
 * [[Deploying Kudu to a Server]]
