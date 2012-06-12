@@ -51,8 +51,8 @@ Capture the git client trace for more details (see below).
 ### Capturing the git http verbose output
 
 1. First set GIT_CURL_VERBOSE to 1. The syntax varies depending on the shell:
-  * git bash: export GIT_CURL_VERBOSE=1
-  * cmd.exe: set GIT_CURL_VERBOSE=1
-  * Powershell: $env:GIT_CURL_VERBOSE=1
+  * git bash: `export GIT_CURL_VERBOSE=1`
+  * cmd.exe: `set GIT_CURL_VERBOSE=1`
+  * Powershell: `$env:GIT_CURL_VERBOSE=1`
 2. Run your git command. (e.g. git push url master). **NOTE: To capture output you need to redirect the error stream not output!**
 3. [[Analzying a git client trace]].
