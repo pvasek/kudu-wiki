@@ -8,7 +8,7 @@ When you run into a git issue, the first thing to try is to hit the site itself 
 
 ## Try hitting the root of the git service
 
-If the main site is up but Kudu is broken in some way, try hitting the root of the Kudu service directly from the browser. This is useful whether you fail to Enable Git, get a failure on the Deployment tab, or get a failure when you git push.
+If the main site is up but git is broken in some way, try hitting the root of the Kudu service directly from the browser. This is useful whether you fail to Enable Git, get a failure on the Deployment tab, or get a failure when you git push.
 
 e.g. if your site URL is http://somesite.azurewebsites.net/, the kudu service root URL will be https://somesite.scm.azurewebsites.net/. So use https, and add the scm token. You will be prompted for credentials, which are the same as what you use to 'git push'.
 
