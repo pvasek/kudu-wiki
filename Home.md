@@ -13,6 +13,7 @@ If you are just using git in Azure, this is the section you'll care most about.
 Read this is you are interested in contributing to Kudu
 
 * [[Getting Started]]
+* Blog post: [Developing Kudu locally and on Azure](http://blog.davidebbo.com/2012/06/developing-kudu-locally-and-on-azure.html)
 * [[Project Structure]]
 
 
