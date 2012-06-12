@@ -34,3 +34,25 @@ To do this:
 * Go to the root of the git service (per previous section)
 * On that page, you'll see a Download link next to 'Diagnostics Dump'
 * Just click it to download a zip file which you can provide to help investigation
+
+## Error types
+
+* **403** - You don't have access to this site
+* **404** - That can happen when you have a git postBuffer set to a high value. Try running:
+  * 'git config --global --unset http.postBuffer'
+* **409** - There's a deployment in progress.
+* **501** - Git tried to use the dumb protocol and we don't support this ([[Anatomy of a git request]]), this is because the initial request failed.
+* **502, 503** - Something went wrong before the request reached the Kudu service.
+
+To get more details for any of the above status codes:
+
+Capture the git client trace for more details (see below).
+
+### Capturing the git http verbose output
+
+1. First set GIT_CURL_VERBOSE to 1. The syntax varies depending on the shell:
+  * git bash: export GIT_CURL_VERBOSE=1
+  * cmd.exe: set GIT_CURL_VERBOSE=1
+  * Powershell: $env:GIT_CURL_VERBOSE=1
+2. Run your git command. (e.g. git push url master). **NOTE: To capture output you need to redirect the error stream not output!**
+3. [[Analzying a git client trace]].
