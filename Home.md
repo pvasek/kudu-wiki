@@ -9,6 +9,7 @@
 
 If you are just using git in Azure, this is the section you'll care most about.
 
+* [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation ftom windowsazure.com)
 * [[Customizing Deployments]]: choosing which folder or project to deploy to the web site
 * [[Known issues]]
 * [[Investigating Issues]]
