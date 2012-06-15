@@ -7,7 +7,7 @@
 
 ## Using git in Azure Web Sites
 
-If you are just using git in Azure, this is the section you'll care most about.
+If you are using git to push to an Azure Web Site, this is the section you'll care most about.
 
 * [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation ftom windowsazure.com)
 * [[Customizing Deployments]]: choosing which folder or project to deploy to the web site
