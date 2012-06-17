@@ -1,6 +1,6 @@
 There are three different ways to publish files to an Azure Web Site:
 
-1. git: the main topic of this wiki
+1. git: the main topic of this wiki, and what the Kudu project is all about!
 2. [Web Deploy](http://www.iis.net/download/webdeploy) (also known as MSDeploy)
 3. FTP
 
