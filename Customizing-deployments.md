@@ -10,7 +10,7 @@ When deploying a git repository via kudu, the rules for picking a specific proje
 # .deployment file
 Deployment configuration files let you override the default heuristics of deployment by allowing you to specify a project or folder to be deployed. It has to be at the root of the repository and it's in .ini format. Here are some examples:
 
-## Deploying a specific ASP.NET project file (i.e. a WAP):
+## Deploying a specific ASP.NET project file (i.e. a WAP)
 
 You can specify the full path the the project file, e.g.
 
@@ -22,7 +22,7 @@ Or simply the folder that the project file is in, assuming there is only one. e.
     [config]
     project = WebProject
 
-## Deploying a specific folder for a Node, PHP, or ASP.NET site:
+## Deploying a specific folder for a Node, PHP, or ASP.NET site
 
 If the folder you want to deploy is not the root of  the repository, you can specify which folder to deploy. e.g.
 
