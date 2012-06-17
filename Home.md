@@ -15,6 +15,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Investigating Issues]]
 * [[Accessing files via FTP]]
 * [[File structure on Azure]]
+* [[Understanding deployment credentials|Deployment credentials]]
 
 
 ## Building and running Kudu from the github sources
