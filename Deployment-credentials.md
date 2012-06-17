@@ -1,4 +1,3 @@
-
 There are three different ways to publish files to an Azure Web Site:
 
 1. git: the main topic of this wiki
@@ -7,7 +6,7 @@ There are three different ways to publish files to an Azure Web Site:
 
 When it comes to authenticating with these three mechanisms, you cannot use your Live ID credentials (which the protocols can't easily support), but instead need to use deployment credentials.
 
-To make things more interesting, for a given web site, there are actually two sets of deployment credentials that you can use to publish.
+To make things more interesting, there are actually two sets of deployment credentials that you can use to publish. This page discusses the two alternatives.
 
 ## User-level credentials
 
