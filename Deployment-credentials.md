@@ -10,11 +10,11 @@ To make things more interesting, there are actually two sets of deployment crede
 
 ## User-level credentials
 
-These are the credentials that you choose yourself in the Azure portal. If you're not sure what they are, you can reset them by going into the Dashboard tab for any site and clicking 'Reset deployment credentials' (under quick glance).
+These are the credentials that you choose yourself in the Azure portal. If you're not sure what they are, you can reset them by going to the Dashboard tab for any site and clicking 'Reset deployment credentials' (under quick glance).
 
 These credentials are directly tied to a Live ID, and not to a particular web site. This needs to be emphasized, because the Azure portal UI is a bit confusing, as you need to go under a specific site on order to change them. But changing them under one site affects all of them!
 
-Note that when an Azure subscription has multiple admins/co-admins, each person has their own set of credentials, since they each have a different Live ID.
+Note that when an Azure subscription has multiple admins/co-admins, each person has their own set of credentials, since they each have a different Live ID. In other words, user-level credentials are never meant to be shared among different users.
 
 One key point about the user-level credentials is that since you specifically set them, they are meant to be memorized, and directly typed by the user when needed (e.g. when doing a git push).
 
