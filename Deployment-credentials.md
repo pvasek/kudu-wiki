@@ -44,7 +44,7 @@ Also, note that when it comes to credentials, everything that mentions git appli
 
 ## Important note about the FTP username
 
-Whether you use user-level or site-level credentials, not that you need to prepend the site name you the username you use for FTP. So you'd have user names that look like this:
+Whether you use user-level or site-level credentials, note that you need to prepend the site name to the username you use for FTP. So you'd have FTP full user names that look like this:
 
 * With user-level credentials: MyCoolSite\davidebbo
 * With site-level credentials: MyCoolSite\$MyCoolSite
