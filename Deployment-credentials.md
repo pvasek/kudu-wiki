@@ -39,6 +39,8 @@ Typically, you use the user-level credentials for git and FTP, and the site-leve
 
 So why would you want to use the big random site-level credentials when doing a git push? Well, you wouldn't. However, there can be scenarios where a tool needs to do this on your behalf, and using the site-level credentials can make a lot of sense there.
 
+Also, note that when it comes to credentials, everything that mentions git applies equally to all entry points provided by the Kudu service.
+
 
 ## Important note about the FTP username
 
