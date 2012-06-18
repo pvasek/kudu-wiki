@@ -1,4 +1,12 @@
 ## Deploying your first application
+1. First clone the repository.
+
+        git clone git://github.com/projectkudu/kudu.git
+
+3. Open Kudu.sln as **Administrator** and build it.
+
+4. Set **Kudu.Web** as the startup project and run!
+
 After running Kudu.Web, you should be able to use the dashboard to manage your application. Below is a walk through on how to create and deploy your first application using git.
 
 ## Step 1
