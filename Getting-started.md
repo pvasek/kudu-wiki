@@ -1,4 +1,6 @@
 ### Prerequisites
+* IIS >= 7 (Configured to run ASP.NET 4.0)
+* ASP.NET 4.0
 
 ### Deploying your first application
 1. First clone the repository.
