@@ -4,7 +4,7 @@ All tests use xunit, this includes the unit tests and functional tests.
 To run the unit tests just use build.cmd or use [Test Driven .NET](http://www.testdriven.net/) to run them. They are in `Kudu.Core.Test`.
 
 ## Functional tests
-Running all functional tests require lots of software to be installed and working on IIS.
+The functional tests are located in the `Kudu.FunctionalTests` project. Running them requires the following software to be installed.
 * IISNode
 * ASP.NET MVC 3
 * ASP.NET WebPages 1.0
