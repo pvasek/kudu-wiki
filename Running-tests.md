@@ -9,4 +9,4 @@ Running all functional tests require lots of software to be installed and workin
 * ASP.NET MVC 3
 * ASP.NET WebPages 1.0
 
-You can download all of this software using [WebPlatformInstaller](http://go.microsoft.com/fwlink/?LinkId=255386)
+You can download all of this software using the [Web Platform Installer](http://go.microsoft.com/fwlink/?LinkId=255386)
