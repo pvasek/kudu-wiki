@@ -1,4 +1,3 @@
-## Testing
 All tests use xunit, this includes the unit tests and functional tests. 
 
 ## Unit tests
