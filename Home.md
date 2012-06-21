@@ -19,6 +19,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 * [[File structure on Azure]]
 * [[Understanding deployment credentials|Deployment credentials]]
+* [[How Kudu deploys sites|Deployment]]
 
 
 ### Troubleshooting
