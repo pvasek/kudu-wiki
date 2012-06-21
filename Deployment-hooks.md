@@ -8,18 +8,26 @@ The plan is to look for a deploy.cmd file at the root of the repo. If Kudu finds
 
 One thing that Kudu does do before executing this file is checkout the correct files in the repo. So deploy.cmd should generally not be doing any git operations. Instead, it's working with an existing source tree that needs to be deployed.
 
-To take a trivial example, let's say this file contains simply:
-
-    @echo "Hello"
-
-When you do a 'git push', you'll actually see Hello getting displayed, and nothing else will happen. i.e. none of your files will actually get copied!
+### Environment variables
 
 To make the batch file more useful, there are a couple environment variables that it can access:
 
 - SOURCE: this points to where the source files are, which is normally the root of the repo
 - TARGET: the target of the deployment. Typically, this is the wwwroot folder
 
+
+### Working folder
+
 Also, note that the current folder is always the root of the repo (same as %SOURCE%) when the batch file is executed.
+
+
+## Examples
+
+To take a trivial example, let's say this file contains simply:
+
+    @echo "Hello"
+
+When you do a 'git push', you'll actually see Hello getting displayed, and nothing else will happen. i.e. none of your files will actually get copied!
 
 So let's say you wanted to copy all the source files to the web root, you could do something like this:
 
