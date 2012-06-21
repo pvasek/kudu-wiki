@@ -1,3 +1,4 @@
+
 When it comes to deploying sites from a git repo, Kudu support two main scenarios: .NET Web Application Project (aka. WAP), and everything else.
 
 ## Non-WAP site (e.g. Node, PHP, ASP.NET Web Site) ##
@@ -13,7 +14,9 @@ This is the simpler case, as in essence deploying just means copying files from 
 - For Node sites, Kudu runs 'npm install' in the wwwroot folder
 
 
-## WAP ##
+## ASP.NET Web Application Projects (WAP) ##
+
+This case is a bit more complex because there is a build process that needs to happen before files can be deployed.
 
 - A 'git push' is received and processed, triggering a post-receive hook
 - Kudu checks out the relevant commit such that we have the right working files
