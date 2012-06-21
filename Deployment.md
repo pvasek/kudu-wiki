@@ -1,4 +1,3 @@
-
 When it comes to deploying sites from a git repo, Kudu support two main scenarios: .NET Web Application Project (aka. WAP), and everything else.
 
 ## Non-WAP site (e.g. Node, PHP, ASP.NET Web Site) ##
@@ -23,3 +22,7 @@ This case is a bit more complex because there is a build process that needs to h
 - Kudu locates the relevant csproj file that needs to be built. See [[Customizing deployments]] for details on this.
 - msbuild is run, and produces artifact in a TMP folder
 - Artifacts are copied to wwwroot, using the same smart logic as in the non-WAP case
+
+## Future direction
+
+In the future, we'll have an option to let you completely override how the deployment is performed.
