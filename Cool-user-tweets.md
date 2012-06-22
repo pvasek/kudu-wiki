@@ -1,5 +1,17 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- "My fav. feature- Git Depolyment, Simply click "Set up Git Publishing" on your website and Win Azure will create a Git repository #MeetAzure" @CloudJedi_ [22 Jun 2012](http://twitter.com/#!/CloudJedi_/status/216170428614459393)
+- "Impressive website deployment to Azure via GIT including redeploy of previous version #londonAzure" @ianbillage [22 Jun 2012](http://twitter.com/#!/ianbillage/status/216117302423322625)
+- "Avec Windows Azure Web Site, on peut d‚sormais d‚ployer GIT et MySQL sur Azure en 1 clic: cool ! (@ntotten) #Azure #Git http://t.co/6t514cLA" @lionellaske [22 Jun 2012](http://twitter.com/#!/lionellaske/status/216102097186328577)
+- ""git push azure master" never thought I'd type that :) #Azure #AzureWebsites" @4MKMobile [21 Jun 2012](http://twitter.com/#!/4MKMobile/status/215890864843665408)
+- "Been said before but; nodejs, cloud9, cli, git deploys &amp; open source - from/with microsoft windows azure?! http://t.co/01ctT3z3" @saerdnakire [20 Jun 2012](http://twitter.com/#!/saerdnakire/status/215570375038353408)
+- "deploying a website to azure with git is very slick." @Denifia [20 Jun 2012](http://twitter.com/#!/Denifia/status/215345245590798336)
+- "Pushing to Azure with git couldn't be easier. If you hate MS, it's really time you start looking at some of their newer stuff." @senfo [19 Jun 2012](http://twitter.com/#!/senfo/status/215262349643366400)
+- "Just pushed my first web site to Azure via Git.. Took what, 10 seconds? Awesome!" @TheAmph [19 Jun 2012](http://twitter.com/#!/TheAmph/status/215023820782845952)
+- "Windows Azure Dev Camp Sydney - great demo's of the new features.Portal is v slick! and finally we have "git push azure master"" @AIDANJCASEY [19 Jun 2012](http://twitter.com/#!/AIDANJCASEY/status/214982751097597952)
+- "If you look past the dancing girls, using Azure + git is a pretty nice experience." @niklasmelinder [15 Jun 2012](http://twitter.com/#!/niklasmelinder/status/213535535988346880)
+- "Unbelievable: Win Azure SDK Team uses Git-based deployment model! - Windows Azure for node.js developers | G. Block http://t.co/OzHd7tO5 #in" @MarkoApfel [13 Jun 2012](http://twitter.com/#!/MarkoApfel/status/212937337456427008)
+- "Wow. The new #Azure portal and capabilities are really impressive. I mean, git push a node.js app into Azure websites? :)" @goldshtn [13 Jun 2012](http://twitter.com/#!/goldshtn/status/212813495874498560)
 - "Deploying #orchardcms to #WindowsAzure was easy before, but now with #git and WebSites its has transcended ease." @thereverandnd [12 Jun 2012](http://twitter.com/#!/thereverandnd/status/212552252580302848)
 - "Windows Azure: fra git push til simpel .NET MVC app er deployet, buildet og har renderet side: ca 14 sekunder. Pretty nice. cc @mhoybyef" @dalager [12 Jun 2012](http://twitter.com/#!/dalager/status/212537796580212738)
 - "WOWWW! Al usar git y hacer deploy en Azure, verifica los #nuget packages necesarios en el server y los despliega localmente... #baba" @masaez [11 Jun 2012](http://twitter.com/#!/masaez/status/212266052845965314)
