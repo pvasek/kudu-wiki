@@ -39,7 +39,7 @@ Read this is you are interested in contributing to Kudu
 
 ## Features in development
 
-* [[Deployment hooks (planned)|Deployment hooks]]
+* [[Deployment hooks]]
 
 
 ## Miscellaneous
