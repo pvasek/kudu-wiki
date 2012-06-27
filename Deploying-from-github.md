@@ -34,7 +34,7 @@ So the Kudu deployment trigger URL might look like:
 
 If the GitHub repo is public, then anyone can pull from it without authentication. Initially, we might only support public repos in this workflow.
 
-For private repos, there are several possible approaches.
+For private repos, there are several possible approaches:
 
 ### 1. Using GitHub credentials
 
@@ -45,3 +45,11 @@ This is probably not a great solution.
 ### 2. Using SSH keys
 
 Kudu can generate a private SSH key, and set the public key on GitHub. Either the user can set the key, or it can be done via OAuth.
+
+This is a good solution, but it requires having a secure way of storing the private key on the Kudu side.
+
+### 3. Using a Kudu-owned GitHub account
+
+If Kudu owned its own GitHub account (e.g. kudu_user), the user could add it as a readonly collaborator.
+
+Unfortunately, this solution doesn't work well with Kudu because the Kudu service itself runs as user code. This means that the Kudu service cannot easily keep a secret from the user, which it would need to do to protect the kudu_user GitHub account credentials.
