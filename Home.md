@@ -40,7 +40,7 @@ Read this is you are interested in contributing to Kudu
 ## Features in development
 
 * [[Deployment hooks]]
-
+* [[Deploying from GitHub]]
 
 ## Miscellaneous
 
