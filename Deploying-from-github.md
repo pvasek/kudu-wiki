@@ -27,4 +27,21 @@ Having to include the user's credentials in the GitHub hook would not be ideal. 
 
 So the Kudu deployment trigger URL might look like:
 
-`https://$MyCoolSite:SOME_BIG_RANDOM_TOKEN@mycoolsite.scm.azurewebsites.net/MyCoolSite.git`
+`https://$MyCoolSite:SOME_BIG_RANDOM_TOKEN@mycoolsite.scm.azurewebsites.net/deploy`
+
+
+## Authenticating with GitHub
+
+If the GitHub repo is public, then anyone can pull from it without authentication. Initially, we might only support public repos in this workflow.
+
+For private repos, there are several possible approaches.
+
+### 1. Using GitHub credentials
+
+If the user provides their GitHub credentials to Kudu, could would be able to pull from the private repo using basic auth over https.
+
+This is probably not a great solution.
+
+### 2. Using SSH keys
+
+Kudu can generate a private SSH key, and set the public key on GitHub. Either the user can set the key, or it can be done via OAuth.
