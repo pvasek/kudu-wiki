@@ -20,7 +20,7 @@ So to summarize, the Kudu services completely relies on the security model of th
 
 One difference between the Kudu service site and the real site is that the Kudu site is authenticated by http basic auth, which by default the real site is not authenticated.
 
-Note that the basic auth happens *before* requests reach the Kudu service, which is why you won't find any code related to this in the Kudu sources.
+Note that the basic auth happens *before* requests reach the Kudu service, which is why you won't find any code related to this in the Kudu sources. See the [[deployment credentials]] page for more details on this.
 
 As for the real site, it can of course implement any authentication mechanism that it wants, but it is something that it needed to handle through its own logic.
 
