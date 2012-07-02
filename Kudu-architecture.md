@@ -2,7 +2,7 @@
 
 Kudu has a somewhat unusual architecture, in the sense that it is a single-tenant rather than multi-tenant service. What this means is that each Azure Web Site which uses git deployment has its own instance of the Kudu service, completely distinct from the Kudu service sites used for other Azure sites.
 
-Furthermore, the Kudu site itself runs as an Azure web site, abeit a somewhat special site. The best way to look at the Kudu service is that it is a 'buddy site' to the real Azure site. The main difference is that the Kudu site is being given access to the files of the real site, allowing it to publish to it.
+Furthermore, the Kudu site itself runs as an Azure web site, albeit a somewhat special site. The best way to look at the Kudu service is that it is a 'buddy site' to the real Azure site. The main difference is that the Kudu site is being given access to the files of the real site, allowing it to publish to it.
 
 
 ### Security model
@@ -29,4 +29,4 @@ As for the real site, it can of course implement any authentication mechanism th
 
 Not only the Kudu service site runs in the same sandbox as the site, but it actually runs in the same *process* as the site. However, there are no assumptions in the code that this is the case, and it is something that could very well change in the future.
 
-The only thing that really 'connects' the Kudu site to the real site is the file system, and that works regarless of what process or machine they each run on.
+The only thing that really 'connects' the Kudu site to the real site is the file system, and that works regardless of what process or machine they each run on.
