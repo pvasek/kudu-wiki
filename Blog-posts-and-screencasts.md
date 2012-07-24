@@ -1,5 +1,7 @@
 * [Deploying to IIS using Kudu](http://jhovgaard.net/deploying-git-support-iis-server)
 * [7/20/2012 ASPConf Windows Azure Web Sites (@bradygaster)](http://channel9.msdn.com/Events/aspConf/aspConf/Windows-Azure-Web-Sites)
+* [6/21/2012 Git Deployment Credentials & Adding more users to Git repos on Azure (@vishalrjoshi)](http://vishaljoshi.blogspot.com/2012/06/git-deployment-credentials-adding-more.html)
+* [7/20/2012 Download logs for git push azure master (@vishalrjoshi)](http://vishaljoshi.blogspot.com/2012/06/download-logs-for-git-push-azure-master.html)
 * [6/9/2012 Windows Azure Web Sites vs Web Roles (@robdmoore)](http://robdmoore.id.au/blog/2012/06/09/windows-azure-web-sites-vs-web-roles/)
 * [6/8/2012 Introducing Kudu: the Open Source engine behind ‘git push azure master’ (@davidebbo)](http://blog.davidebbo.com/2012/06/introducing-open-source-engine-behind.html)
 * [6/8/2012 Building and Deploying Windows Azure Web Sites using Git and GitHub for Windows (@shijucv)](
