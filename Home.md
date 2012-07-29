@@ -9,6 +9,10 @@
 
 If you are using git to push to an Azure Web Site, this is the section you'll care most about.
 
+### Version of Kudu currently live in Azure
+
+* The changeset that's currently live in Azure is [c9501cc21bf45e249ed6c24b12cfbb6e1b1b9698](https://github.com/projectkudu/kudu/commit/c9501cc21bf45e249ed6c24b12cfbb6e1b1b9698)
+
 ### How-to guides
 
 * [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation ftom windowsazure.com)
