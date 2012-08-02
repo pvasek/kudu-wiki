@@ -1,3 +1,4 @@
+* [8/2/2012 MVC4, Git, Azure and Facebook... Oh my! (@Denifia)](http://denifia.posterous.com/mvc4-git-azure-and-facebook-oh-my)
 * [7/20/2012 ASPConf Windows Azure Web Sites (@bradygaster)](http://channel9.msdn.com/Events/aspConf/aspConf/Windows-Azure-Web-Sites)
 * [7/12/2012 Deploying to IIS using Kudu (@jhovgaard)](http://jhovgaard.net/deploying-git-support-iis-server)
 * [7/6/2012 Project Kudu: Git deployment for all!](http://codebork.com/2012/07/06/project-kudu-git-deployment-all.html)
