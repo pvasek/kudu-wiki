@@ -1,3 +1,4 @@
+* [8/8/2012 git deployment to an Azure Website: keeping configuration secrets (@srkirkland)](http://weblogs.asp.net/srkirkland/archive/2012/08/08/git-deployment-to-an-azure-website-keeping-configuration-secrets.aspx)
 * [8/2/2012 MVC4, Git, Azure and Facebook... Oh my! (@Denifia)](http://denifia.posterous.com/mvc4-git-azure-and-facebook-oh-my)
 * [7/20/2012 ASPConf Windows Azure Web Sites (@bradygaster)](http://channel9.msdn.com/Events/aspConf/aspConf/Windows-Azure-Web-Sites)
 * [7/12/2012 Deploying to IIS using Kudu (@jhovgaard)](http://jhovgaard.net/deploying-git-support-iis-server)
