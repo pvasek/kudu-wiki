@@ -23,6 +23,8 @@ Also, note that the current folder is always the root of the repo (same as %SOUR
 
 ## Examples
 
+Some more complete examples are on [this gist](https://gist.github.com/3342182)
+
 To take a trivial example, let's say this file contains simply:
 
     @echo "Hello"
