@@ -4,9 +4,16 @@ By default, Kudu drives the logic to deploy sites. See [[Deployment]] for detail
 
 But in some scenarios, it can be interesting to override this mechanism and use custom logic to perform the deployment.
 
-The plan is to look for a deploy.cmd file at the root of the repo. If Kudu finds that file, it calls into it and lets it perform the entire deployment instead of using its own logic.
+The plan is to look for a command in the .deployment file at the root of the repo. If Kudu finds that command, it calls into it and lets it perform the entire deployment instead of using its own logic.
 
-One thing that Kudu does do before executing this file is checkout the correct files in the repo. So deploy.cmd should generally not be doing any git operations. Instead, it's working with an existing source tree that needs to be deployed.
+One thing that Kudu does do before executing this file is checkout the correct files in the repo. So the .deployment command should generally not be doing any git operations. Instead, it's working with an existing source tree that needs to be deployed.
+
+### Sample .deployment file
+
+```
+[config]
+command = node build.js
+```
 
 ### Environment variables
 
