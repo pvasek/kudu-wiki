@@ -12,13 +12,14 @@ One thing that Kudu does do before executing this file is checkout the correct f
 
 To make the batch file more useful, there are a couple environment variables that it can access:
 
-- SOURCE: this points to where the source files are, which is normally the root of the repo
-- TARGET: the target of the deployment. Typically, this is the wwwroot folder
+- DEPLOYMENT_SOURCE: this points to where the source files are, which is normally the root of the repo
+- DEPLOYMENT_TARGET: the target of the deployment. Typically, this is the wwwroot folder
+- DEPLOYMENT_TEMP: a temporary folder that can be used to store artifacts for the current build. This folder is deleted after the cmd is run.
 
 
 ### Working folder
 
-Also, note that the current folder is always the root of the repo (same as %SOURCE%) when the batch file is executed.
+Also, note that the current folder is always the root of the repo (same as %DEPLOYMENT_SOURCE%) when the batch file is executed.
 
 
 ## Examples
@@ -35,11 +36,11 @@ So let's say you wanted to copy all the source files to the web root, you could 
 
     @echo off
     echo Deploying files...
-    xcopy %SOURCE% %TARGET% /Y
+    xcopy %DEPLOYMENT_SOURCE% %DEPLOYMENT_TARGET% /Y
 
 To process a WAP, things get more complicated, as you need to run msbuild with some pretty advanced options (which is what Kudu normally does by default). e.g. you could do:
 
     @echo off
-    MSBuild MyWebApp\MyWebApp.csproj /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%TARGET%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Debug;SolutionDir="%SOURCE%"
+    MSBuild MyWebApp\MyWebApp.csproj /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TARGET%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Debug;SolutionDir="%DEPLOYMENT_SOURCE%"
     
 Note that this directly deploys from the repo to wwwroot without going through any TMP folder. It also wipes out the content of wwwroot before deploying, so it doesn't do the smart copying that Kudu normally does. That's why Kudu normally deploys to TMP first, and then does smart copying to wwwroot. And you could potentially do something similar here with fancier scripts.
