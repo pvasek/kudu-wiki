@@ -1,5 +1,16 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- "just set up a new funnelweb site up on azure websites, with sql &amp; blob storage, using git publish &amp; powershell. #happyDev" @samandmoore [23 Aug 2012](http://twitter.com/#!/samandmoore/status/238797026622586880)
+- "#AzureWebSites + #NuGet + #Git deployment is all kinds of awesome." @smaine [14 Aug 2012](http://twitter.com/#!/smaine/status/235381856487473152)
+- ""git push azure master" - so simple its a joy!  #azure" @leifsa [14 Aug 2012](http://twitter.com/#!/leifsa/status/235300166972882945)
+- "@gorebash love the git push publishing in Azure - w/ one click historical rollbacks" @nato24 [7 Aug 2012](http://twitter.com/#!/nato24/status/233079131481444352)
+- "I am gobbsmacked... #aspnetwebapi #git deploy to #azure=nonsensically easy. CacheCow server sample now running at http://t.co/aNoT1w5r" @aliostad [5 Aug 2012](http://twitter.com/#!/aliostad/status/232152357402734592)
+- "Windows Azure is fun. I'm gonna throw everything onto the cloud now. Also, might migrate from SVN to GIT. #omg" @jusraff [4 Aug 2012](http://twitter.com/#!/jusraff/status/231783500792090626)
+- "I created MVC4 site that uses git to deploy to Azure and runs as a Facebook app.. all in less than 1 hour. I'd never made a FB app before." @Denifia [31 Jul 2012](http://twitter.com/#!/Denifia/status/230294024773320704)
+- "IMHO integrating Azure with GIT is killer." @t3rse [30 Jul 2012](http://twitter.com/#!/t3rse/status/230003006622543872)
+- "TechEd 2012 Highlights: Git deploy for Azure http://t.co/RDfTG2Bo" @brlinton [29 Jul 2012](http://twitter.com/#!/brlinton/status/229695886228344832)
+- "Git publishing to Azure websites is so so good. https://t.co/h73seDLH" @LoungeFlyZ [27 Jul 2012](http://twitter.com/#!/LoungeFlyZ/status/229004671832977408)
+- "#Azure + #Git = #win. It's pretty unbelievable how easy it is to push something to the cloud these days. Deploying MVC3 app was pretty easy!" @ysolik [27 Jul 2012](http://twitter.com/#!/ysolik/status/228871778536128512)
 - "#git deployment in #azure. My jaw just dropped." @maniserowicz [26 Jul 2012](http://twitter.com/#!/maniserowicz/status/228620013219741697)
 - "Azure websites is mental, just set up a remote in git push to azure and boom, it builds and publishes!! It takes like 5 mins to do!" @deanvmc [25 Jul 2012](http://twitter.com/#!/deanvmc/status/228041945040158720)
 - "Git deployment in @WindowsAzure is f'ing brilliant" @andrewjbellamy [23 Jul 2012](http://twitter.com/#!/andrewjbellamy/status/227526942142889984)
