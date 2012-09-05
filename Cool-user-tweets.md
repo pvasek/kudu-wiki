@@ -1,5 +1,17 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- "#tenz love the git and command line tools support for deploying azure websites from any platform (mac/Linux) #AZR202" @gabrielsoftware [4 Sep 2012](http://twitter.com/#!/gabrielsoftware/status/243149976459411456)
+- "Loving #windowsAzure git deploy #win" @andycwk [3 Sep 2012](http://twitter.com/#!/andycwk/status/242596764971044864)
+- "git publish on #azure is pretty cool stuff! just tried it for the first time" @NicoVermeir [1 Sep 2012](http://twitter.com/#!/NicoVermeir/status/241946130324271104)
+- "OK. I'm impressed. WindowsAzure publish from git has the smoothest onboarding experience. #azure outdoing #devtools" @teyc [1 Sep 2012](http://twitter.com/#!/teyc/status/241799408067432448)
+- "Evening project committed to git and pushed to azure. I can't believe how ridiculously easy that is :)" @Wolfbyte [31 Aug 2012](http://twitter.com/#!/Wolfbyte/status/241564222805377024)
+- "Git push #phponazure with @SyntaxC4 on #azure websites nice feature - totally smooth!" @azurecoder [30 Aug 2012](http://twitter.com/#!/azurecoder/status/241238115077992450)
+- "Just completed my first git deploy to #windowsAzure.. it built, transformed and web deploy packed the solution and then deployed... #win" @andycwk [30 Aug 2012](http://twitter.com/#!/andycwk/status/241187522737238016)
+- "In under 30 mins, joined Auzre and Git and published the default MVC website to my Azure account, via GIt. Am impressed" @paulthecyclist [30 Aug 2012](http://twitter.com/#!/paulthecyclist/status/241090839454048256)
+- "You can use Windows Azure to host Node.js as a Git enabled PaaS for free? #Whaaaaat" @egleek [29 Aug 2012](http://twitter.com/#!/egleek/status/240849108858974210)
+- "I just git pushed my blog to an Azure web site man that was easy. now I just need custom domain names" @mgroves84 [25 Aug 2012](http://twitter.com/#!/mgroves84/status/239465583534546944)
+- "oh. wow. I didn't know it was this easy getting node.js up and running on windows. iis express, node.js, azure, git - love it!" @chrislof [24 Aug 2012](http://twitter.com/#!/chrislof/status/239081239850655744)
+- "new node.js site, on an Azure WebSite, with git based deployment, on WebMatrix2, vanilla win8 - one smooth ride. #azure" @kenegozi [24 Aug 2012](http://twitter.com/#!/kenegozi/status/238895893020028928)
 - "just set up a new funnelweb site up on azure websites, with sql &amp; blob storage, using git publish &amp; powershell. #happyDev" @samandmoore [23 Aug 2012](http://twitter.com/#!/samandmoore/status/238797026622586880)
 - "#AzureWebSites + #NuGet + #Git deployment is all kinds of awesome." @smaine [14 Aug 2012](http://twitter.com/#!/smaine/status/235381856487473152)
 - ""git push azure master" - so simple its a joy!  #azure" @leifsa [14 Aug 2012](http://twitter.com/#!/leifsa/status/235300166972882945)
