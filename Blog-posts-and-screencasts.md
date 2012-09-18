@@ -1,6 +1,6 @@
 * [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and GitHub (@davidebbo)](http://www.youtube.com/watch?v=5NGieL0tinw&feature=youtu.be&hd=1)
-* [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and CodePlex(@davidebbo)](http://www.youtube.com/watch?v=PgPrZT1cG0Y&feature=youtu.be&hd=1)
-* [9/17/2012 Screencast: Publishing a custom git branch to an Azure Web Site(@davidebbo)](http://www.youtube.com/watch?v=xXiJeFJXmrA&feature=youtu.be&hd=1)
+* [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and CodePlex (@davidebbo)](http://www.youtube.com/watch?v=PgPrZT1cG0Y&feature=youtu.be&hd=1)
+* [9/17/2012 Screencast: Publishing a custom git branch to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=xXiJeFJXmrA&feature=youtu.be&hd=1)
 * [9/17/2012 Deploying Azure Websites with Git (@tyler_gd)](http://blog.tylerdoerksen.com/2012/09/17/deploying-azure-websites-with-git/)
 * [9/11/2012 Managing database connections in Azure Web Sites (@davidebbo)](http://blog.davidebbo.com/2012/09/managing-database-connections-in-azure.html)
 * [8/8/2012 git deployment to an Azure Website: keeping configuration secrets (@srkirkland)](http://weblogs.asp.net/srkirkland/archive/2012/08/08/git-deployment-to-an-azure-website-keeping-configuration-secrets.aspx)
