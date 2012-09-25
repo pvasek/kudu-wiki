@@ -12,7 +12,7 @@ Suppose you have a .NET site that has something like this in its web.config:
 	    <add key="MyKey" value="Some default value" />
 	  </appSettings>
 	
-And somewhere in your code, you use `ConfigurationManager.AppSettings["MyKey"]` to access the value. The value you hard code into your source will typically be some default that is safe for the world to see. Or you may simply not have anything in there, and have the code fall back to some default behavior.
+And somewhere in your code, you use `ConfigurationManager.AppSettings["MyKey"]` to access the value. The value you hard code into your web.config will typically be some default that is safe for the world to see. Or you may simply not have anything in there, and have the code fall back to some default behavior.
 
 But when you deploy your site to Azure, you'd like this setting to take on a specific value, which may very well be a secret.
 
