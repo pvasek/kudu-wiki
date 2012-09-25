@@ -1,10 +1,8 @@
-*This is a planned feature that is not yet implemented*
-
 By default, Kudu drives the logic to deploy sites. See [[Deployment]] for details on how that works.
 
 But in some scenarios, it can be interesting to override this mechanism and use custom logic to perform the deployment.
 
-The plan is to look for a command in the .deployment file at the root of the repo. If Kudu finds that command, it calls into it and lets it perform the entire deployment instead of using its own logic.
+To support this, Kudu looks for a command in the .deployment file at the root of the repo. If it finds that command, it calls into it and lets it perform the entire deployment instead of using its own logic.
 
 One thing that Kudu does do before executing this file is checkout the correct files in the repo. So the .deployment command should generally not be doing any git operations. Instead, it's working with an existing source tree that needs to be deployed.
 
