@@ -20,6 +20,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Deployment branch]]: choosing the branch that gets deployed when you push
 * [[Managing settings and secrets]]: how to modify the values when the app is deployed
 * [Managing database connections in Azure Web Sites](http://blog.davidebbo.com/2012/09/managing-database-connections-in-azure.html)
+* [[Deployment hooks]]: how to take over the deployment logic for a site
 * [[Accessing files via FTP]]
 
 ### Understanding Kudu
@@ -47,7 +48,6 @@ Read this is you are interested in contributing to Kudu
 
 ## Features in development
 
-* [[Deployment hooks]]
 * [[Deploying from GitHub]]
 
 ## Miscellaneous
