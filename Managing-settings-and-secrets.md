@@ -1,4 +1,6 @@
-When you deploy an site to Azure using git, all the files come from a git repository. If you're site needs any secrets at runtime (e.g. credentials to access some external resource), it's generally a bad idea to commit those secrets to your repository. Even if it's a private repo, you may not want every developer working on the project to have access to those secrets.
+When you deploy a site to Azure using git, all the files come from a git repository. If your site needs any secrets at runtime (e.g. credentials to access some external resource), it's generally a bad idea to commit those secrets to your repository. Even if it's a private repo, you may not want every developer working on the project to have access to those secrets.
+
+In other cases, it's not really about the values being secrets, but simply about needing different values at runtime in Azure from the ones you use at development time on your own box.
 
 The way to solve this is Azure Web Sites is to use runtime app settings. These are just a bunch of Key/Value pairs that you can find in the Configure section of the portal. They work in slightly different ways for .NET sites and for other sites.
 
