@@ -13,6 +13,7 @@ In there, you will see the following structure:
           hello.htm     // The files that are live in your app
         repository          // Your repo, including working files (i.e. not bare)
           .git
+            HEAD, index and other git files
         deployments
           [commit id 1]
             log.xml       // The deployment log, similar to what the protal shows
