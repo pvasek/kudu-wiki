@@ -29,7 +29,7 @@ If the folder you want to deploy is not the root of  the repository, you can spe
     [config]
     project = MyWebRoot
 
-In case you have an solution/project file in your repository but you want it to be ignored and have your full repo deployed as a web site, you can use the following (e.g. Orchard use this):
+In case you have a solution/project file in your repository but you want it to be ignored and have your full repo deployed as a web site, you can use the following (e.g. Orchard use this):
 
     [config]
     project = .
