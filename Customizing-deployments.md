@@ -1,4 +1,4 @@
-When deploying a git repository via kudu, the rules for picking a specific project are as follows:
+When deploying a git repository via Kudu, the rules for picking a specific project are as follows:
 
 1. If there's a .deployment file at the root of the repository go to step 4, otherwise go to the next step.
 2. Scan for solution files, if there's multiple solutions, fail, if there's 1 solution file go to next step, if none, go to step 6.
@@ -12,7 +12,9 @@ Deployment configuration files let you override the default heuristics of deploy
 
 ## Deploying a specific ASP.NET project file (i.e. a WAP)
 
-You can specify the full path the the project file, e.g.
+You can specify the full path the the project file. Note that this is not a path to the solution file (.sln), but to the project file (.csproj/.vbproj). The reason for this is that Kudu only builds the minimal dependency tree for this project, and avoids building unrelated projects in the solution that are not needed by the web project.
+
+Here is an example:
 
     [config]
     project = WebProject/WebProject.csproj
