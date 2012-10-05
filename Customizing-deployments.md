@@ -12,7 +12,7 @@ Deployment configuration files let you override the default heuristics of deploy
 
 ## Deploying a specific ASP.NET project file (i.e. a WAP)
 
-You can specify the full path the the project file. **Note that this is not a path to the solution file (.sln), but to the project file (.csproj/.vbproj)**. The reason for this is that Kudu only builds the minimal dependency tree for this project, and avoids building unrelated projects in the solution that are not needed by the web project.
+You can specify the full path to the project file. **Note that this is not a path to the solution file (.sln), but to the project file (.csproj/.vbproj)**. The reason for this is that Kudu only builds the minimal dependency tree for this project, and avoids building unrelated projects in the solution that are not needed by the web project.
 
 Here is an example:
 
