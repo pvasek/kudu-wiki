@@ -45,7 +45,7 @@ Read this is you are interested in contributing to Kudu
 * Blog post: [Developing Kudu locally and on Azure](http://blog.davidebbo.com/2012/06/developing-kudu-locally-and-on-azure.html)
 * [[Project Structure]]
 * [[Running Tests]]
-
+* [Coding Guidelines](http://aspnetwebstack.codeplex.com/wikipage?title=CodingConventions) We use the coding guidelines used by AspNetWebStack
 ## Features in development
 
 * [[Deploying from GitHub]]
