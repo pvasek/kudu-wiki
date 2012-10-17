@@ -46,9 +46,11 @@ Read this is you are interested in contributing to Kudu
 * [[Project Structure]]
 * [[Running Tests]]
 * [Coding Guidelines](http://aspnetwebstack.codeplex.com/wikipage?title=CodingConventions) We use the coding guidelines used by AspNetWebStack
+
 ## Features in development
 
 * [[Deploying from GitHub]]
+* [[Custom Deployment Script]]
 
 ## Miscellaneous
 
