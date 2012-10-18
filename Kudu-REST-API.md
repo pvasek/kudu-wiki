@@ -1,6 +1,6 @@
 ## scm
 
-Note: in older builds, use live/scm instead of scm
+Note: in older builds, use `live/scm` instead of `scm`
 
     GET scm/info
     Get information about the repository
