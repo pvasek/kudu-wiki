@@ -15,4 +15,4 @@ If the repo is private, you will also need to set up an SSH key.
 
 The public key is given to GitHub/CodePlex/Bitbucket, either manually or through their OAuth API.
 
-The private key is given to the Kudu service using the PUT `/sshkey` REST API. The supported key format is privacy enhanced mail (PEM).   Since Kudu runs as a service (no interactive), make sure the private key PEM is not encrypted with `passphrase`.  The ssh-keygen command, by default, will solicit passphrase, do leave it blank).
+The private key is given to the Kudu service using the PUT `/sshkey` REST API. The supported key format is privacy enhanced mail (PEM).   Since Kudu runs as a service (no interactive), make sure the private key PEM is not encrypted with `passphrase`.  The ssh-keygen command, by default, will solicit passphrase, do leave it blank.
