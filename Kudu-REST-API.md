@@ -1,12 +1,14 @@
 ## scm
 
+Note: in older builds, use live/scm instead of scm
+
     GET scm/info
     Get information about the repository
     
-    POST live/scm/clean	
+    POST scm/clean	
     Clean the repository, using 'git clean -xdf'
     
-    DELETE live/scm	
+    DELETE scm	
     Delete the repository
     	
 ## Command
