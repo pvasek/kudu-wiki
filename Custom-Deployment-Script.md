@@ -13,12 +13,49 @@
 
 ## Scenarios
 
-- User wants to add a flag to msbuild command line.
-- User wants to change the msbuild command line entirely.
-- User wants to add tests before deploying with a .NET project.
-- User wants to add tests before deploying with a node.js project.
-- User with node.js project needs more control on how npm is run.
-- User wants to fully customize (have full control on) the deployment process.
+### User wants to add a flag to msbuild command line.
+
+**Suggested Behavior - Options:**
+
+1. User updates the custom deployment configuration file (deployment.config) with the new flags and they are appended as a postfix to the msbuild commandline.
+2. The configuration file already has an entry with all msbuild flags and the user simply adds his new flags to all the current ones in the configuration.
+
+`MsBuildProjectCommand = "MSBuild MyWebApp\MyWebApp.csproj /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TARGET%";AutoParameterizationWebConfigConnectionStrings"`
+
+### User wants to change the msbuild command line entirely.
+
+**Suggested Behavior - Options:**
+
+1. The configuration file already has an entry with all msbuild flags and the user simply adds his new flags to all the current ones in the configuration.
+2. The user updates the custom deployment script where the msbuild line is.
+
+### User wants to add tests before deploying with a .NET project.
+
+**Suggested Behavior - Options:**
+
+1. User updates a custom deployment script hook (post build hook) with the commands that run the tests.
+2. User updates the custom deployment script (a batch file) and write the "run tests" command after the build command.
+
+### User wants to add tests before deploying with a node.js project.
+
+**Suggested Behavior**
+
+Same as the previous one only this time the script being updated is a node.js JavaScript script.
+
+### User with node.js project needs more control on how npm is run.
+
+**Suggested Behavior - Options:**
+
+1. User updates the custom deployment script (node.js JavaScript file) and changes the npm command.
+2. User updates the configuration file with the npm command he wishes to use.
+
+`NpmCommand = npm install -whatever`
+
+### User wants to fully customize (have full control on) the deployment process.
+
+**Suggested Behavior**
+
+User updates the custom deployment script (node.js JavaScript file or batch file according to his preference) and changes the npm command.
 
 
 ## Design
