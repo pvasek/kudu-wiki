@@ -26,7 +26,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 ### Understanding Kudu
 
 * [[Kudu architecture]]
-* [[Kudu REST API|REST]]
+* [[Kudu REST API]]
 * [[Enabling continuous deployment from Github, Codeplex and Bitbucket|Continuous deployment]]
 * [[File structure on Azure]]
 * [[Understanding deployment credentials|Deployment credentials]]
