@@ -21,4 +21,4 @@ The private key is given to the Kudu service using the PUT `/sshkey` REST API. T
 
 One possible way to call the REST API is using curl. e.g.
 
-    curl --user yourname -X PUT -H "Content-Type: application/json; charset=UTF-8" --data "{key: 'full private key goes here!'}" http://localhost:14962/sshkey
+    curl --user yourname -X PUT -H "Content-Type: application/json; charset=UTF-8" --data "{key: 'full private key goes here!'}" https://yoursite.scm.azurewebsites.net/sshkey
