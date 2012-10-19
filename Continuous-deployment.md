@@ -31,9 +31,9 @@ One possible way to call the REST API is using curl. e.g.
 
 You need to copy two files over FTP (see [[Accessing-files-via-ftp]] and [[File-structure-on-azure]]).
 
-Under the site folder, create a .ssh folder and create two files.
+Under the `site` folder, create a .ssh folder and create two files.
 
-The first is named config and should contain exactly:
+The first is named config (so `site\.ssh\config`) and should contain exactly:
 
     HOST *
     	  StrictHostKeyChecking no
