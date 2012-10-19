@@ -15,6 +15,10 @@ The hook expects a POST request, and supports the payload from those various sit
 
 If the repo is private, you will also need to set up an SSH key.
 
-The public key is given to GitHub/CodePlex/Bitbucket, either manually or through their OAuth API.
+The public key is given to GitHub/Bitbucket, either manually or through their OAuth API.
 
 The private key is given to the Kudu service using the PUT `/sshkey` REST API. The supported key format is privacy enhanced mail (PEM). Since Kudu runs as a service (no interactive), make sure the private key PEM is not encrypted with `passphrase`. The ssh-keygen command, by default, will solicit passphrase, do leave it blank.
+
+One possible way to call the REST API is using curl. e.g.
+
+    curl --user yourname -X PUT -H "Content-Type: application/json; charset=UTF-8" --data "{key: 'full private key goes here!'}" http://localhost:14962/sshkey
