@@ -38,7 +38,7 @@ The first is named config (so `site\.ssh\config`) and should contain exactly:
     HOST *
     	  StrictHostKeyChecking no
 
-The second is id_rsa and contains, your private key, e.g.
+The second is `id_rsa` and contains, your private key, e.g.
 
     -----BEGIN RSA PRIVATE KEY-----
     MIIEoAIBAAKCAQEAxFkKAmZSruEVhq4g0LsDTBiKe/FXYcy1dzi/eHd4Cw32bq9H
