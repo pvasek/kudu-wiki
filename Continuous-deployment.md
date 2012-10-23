@@ -53,6 +53,6 @@ If you have done any 'git push' directly to the Azure repo, the option to set up
 Ideally, there would be a way to bring it back, but until then you'll have to use a workaround:
 
 - Access your sites file using FTP (see [[Accessing-files-via-ftp]])
-- Got into the `site` folder (see [[File-structure-on-azure]])
+- Go into the `site` folder (see [[File-structure-on-azure]])
 - Delete the entire `deployments` folder
 - Back in the portal, the Deployment page should offer to set up Continuous Deployment again.
