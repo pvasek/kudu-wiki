@@ -13,6 +13,8 @@
 
 ## Scenarios
 
+[[Deployment Logic Flow]]
+
 ### Precondition
 
 In order to use the custom deployment script feature, the user will have to install node.js and download the custom deployment package (which probably consists of more than 1 package like: smart-copy, smart-publish, ...).
