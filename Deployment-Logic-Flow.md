@@ -26,7 +26,7 @@ Options:
 - Build web site to current repository path.
 - Smart copy from repository path to web root.
 
-### 2.3 Web Application
+### 2.3 Plain web site with no build step (e.g. Node, PHP)
 
 - Smart copy from repository path to web root.
 - Download npm packages on web root (using npm install).
