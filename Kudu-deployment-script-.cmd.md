@@ -11,37 +11,39 @@
 
 
     ```Batchfile
-    @echo off  
-  
-    REM ----------------------  
-    REM KUDU Deployment Script
-    REM ----------------------
-    REM
-    REM INPUTS:
-    REM -------
-    REM REPOSITORY_ROOT_PATH
-    REM TEMPORARY_DIRECTORY_PATH
-    REM WEB_ROOT_PATH
-    REM MANIFEST_PATH
-    REM PROJECT_TYPE
-    REM PROJECT_FILE_PATH
-    REM SOLUTION_FILE_PATH
-      
-    REM Switch on the project type
+    @echo off
+    
+    :: ----------------------
+    :: KUDU Deployment Script
+    :: ----------------------
+    ::
+    :: INPUTS:
+    :: -------
+    :: REPOSITORY_ROOT_PATH
+    :: TEMPORARY_DIRECTORY_PATH
+    :: WEB_ROOT_PATH
+    :: MANIFEST_PATH
+    :: PROJECT_TYPE
+    :: PROJECT_FILE_PATH
+    :: SOLUTION_FILE_PATH
+    
+    :: Switch on the project type
     IF /I  "%PROJECT_TYPE%"=="DOTNET_WEB_APPLICATION" goto wap
     IF /I  "%PROJECT_TYPE%"=="DOTNET_WEB_SITE" goto website
     IF /I  "%PROJECT_TYPE%"=="OTHER" goto other
     goto error
-      
-      
+    
+    
     :wap
     echo Handling .NET Web Application deployment.
     
-    REM Build to the temporary path
-    %MSBUILD_WEB_APPLICATION_COMMAND%
+    :: Build to the temporary path
+    %MSBUILD_TO_TEMP_COMMAND%
+    IF %ERRORLEVEL% NEQ 0 goto error
     
-    REM SmartCopy [From] [To] [Manifest]
+    :: SmartCopy [From] [To] [Manifest]
     %SMART_COPY_COMMAND% %TEMPORARY_DIRECTORY_PATH% %WEB_ROOT_PATH% %MANIFEST_PATH%
+    IF %ERRORLEVEL% NEQ 0 goto error
     
     goto end
     
@@ -49,28 +51,34 @@
     :website
     echo Handling .NET Web Site deployment.
     
-    REM Build to the repository root path
-    %MSBUILD_WEB_SITE_COMMAND%
+    :: Build to the repository root path
+    %MSBUILD_TO_REPOSITORY_COMMAND%
+    IF %ERRORLEVEL% NEQ 0 goto error
     
-    REM SmartCopy [From] [To] [Manifest]
+    :: SmartCopy [From] [To] [Manifest]
     %SMART_COPY_COMMAND% %REPOSITORY_ROOT_PATH% %WEB_ROOT_PATH% %MANIFEST_PATH%
+    IF %ERRORLEVEL% NEQ 0 goto error
     
     goto end
     
-
+    
     :other
     echo Handling web site deployment.
-
-    REM SmartCopy [From] [To] [Manifest]
+    
+    :: SmartCopy [From] [To] [Manifest]
     %SMART_COPY_COMMAND% %REPOSITORY_ROOT_PATH% %WEB_ROOT_PATH% %MANIFEST_PATH%
+    IF %ERRORLEVEL% NEQ 0 goto error
     
     %DOWNLOAD_NPM_PACKAGES_COMMAND%
+    IF %ERRORLEVEL% NEQ 0 goto error
     
     goto end
     
     
     :error
     echo An error has occured during web site deployment.
-
-
+    exit /b 1
+    
+    
     :end
+    echo Finished successfully.
