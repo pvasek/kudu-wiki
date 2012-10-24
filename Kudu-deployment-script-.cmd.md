@@ -38,7 +38,7 @@
     echo Handling .NET Web Application deployment.
     
     REM Build to the temporary path
-    %MSBUILD_TO_TEMP_COMMAND%
+    %MSBUILD_WEB_APPLICATION_COMMAND%
     
     REM SmartCopy [From] [To] [Manifest]
     %SMART_COPY_COMMAND% %TEMPORARY_DIRECTORY_PATH% %WEB_ROOT_PATH% %MANIFEST_PATH%
@@ -50,7 +50,7 @@
     echo Handling .NET Web Site deployment.
     
     REM Build to the repository root path
-    %MSBUILD_TO_REPOSITORY_COMMAND%
+    %MSBUILD_WEB_SITE_COMMAND%
     
     REM SmartCopy [From] [To] [Manifest]
     %SMART_COPY_COMMAND% %REPOSITORY_ROOT_PATH% %WEB_ROOT_PATH% %MANIFEST_PATH%
