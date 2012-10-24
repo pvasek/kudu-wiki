@@ -1,6 +1,6 @@
 ## Preparation
 
-Updating the repository with the new changes, at this point the folder: apps\%app name%\live\repository will have the pre-compiled website with all the new changes.
+Updating the repository with the new changes, at this point the folder: `site\repository` will have the pre-compiled website with all the new changes.
 
 ## Deployment
 
