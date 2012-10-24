@@ -79,5 +79,8 @@ User updates the custom deployment script (node.js JavaScript file or batch file
 - The line between code in JavaScript and C# should be whatever is used to deploy a website (any kind), including: copy/delete/move of files/directories, smart copy and project compilation/build.
 - Most of the code is within the kudu.exe project, but there are cases where deployment related code is being called bypassing kudu.exe, will need to look into these cases closely to choose carefully between duplicating the code in 2 places (C# and JavaScript) or calling from the C# project to node.js (seems possible at first sight).
 
+Prototype for how a batch script would look like - [[Kudu Deployment Script .cmd]]
+Prototype for how the deployment configuration would look like - [[Kudu Deployment Configuration Prototype]]
+
 ## Misc
 - We should consider changing the concept here to a self contained "Smart Publish" script that has no dependencies on kudu.
