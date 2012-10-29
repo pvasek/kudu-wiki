@@ -1,3 +1,5 @@
+* [10/28/2012 Screencast: Continuous Deployment with Windows Azure Websites and Bitbucket (@sandrinodm)](http://fabriccontroller.net/blog/posts/continuous-deployment-with-windows-azure-websites-and-bitbucket/)
+* [10/28/2012 Screencast: Publishing to an Azure Web Site from Bitbucket (@davidebbo)](http://www.youtube.com/watch?v=MeT2TB6fCqE&feature=youtu.be&hd=1)
 * [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and GitHub (@davidebbo)](http://www.youtube.com/watch?v=5NGieL0tinw&feature=youtu.be&hd=1)
 * [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and CodePlex (@davidebbo)](http://www.youtube.com/watch?v=PgPrZT1cG0Y&feature=youtu.be&hd=1)
 * [9/17/2012 Screencast: Publishing a custom git branch to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=xXiJeFJXmrA&feature=youtu.be&hd=1)
