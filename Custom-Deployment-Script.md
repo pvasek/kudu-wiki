@@ -26,7 +26,7 @@ In order to use the custom deployment script feature, the user will have to inst
 - User runs the "Custom Deployment Script Wizard" from the Azure SDK node.js package, selects the project type and where the project (and/or solution) file is located at.
 - The Wizard will generate a custom deployment script file.
 - The user will update the msbuild command with the required changes (add a flag).
-- The user will place this file in the root of his web project and will commit this file to gis repository.
+- The user will place this file in the root of his web project and will commit this file to git repository.
 
 **Previous Suggested Behavior (for comparison) - Options:**
 
