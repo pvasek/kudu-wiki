@@ -23,6 +23,6 @@ This case is a bit more complex because there is a build process that needs to h
 - msbuild is run, and produces artifact in a TMP folder
 - Artifacts are copied to wwwroot, using the same smart logic as in the non-WAP case
 
-## Future direction
+## Taking over the deployment process
 
-In the future, we'll have an option to let you completely override how the deployment is performed.
+If you want to completely override how the deployment is performed, see [[Deployment-hooks]].
