@@ -6,7 +6,7 @@ Note: in older builds, use `live/scm` instead of `scm`
     Get information about the repository
     
     POST scm/clean	
-    Clean the repository, using 'git clean -xdf'
+    Clean the repository, using 'git clean -xdff'
     
     DELETE scm	
     Delete the repository
