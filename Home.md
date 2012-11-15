@@ -11,7 +11,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 ### Version of Kudu currently live in Azure
 
-* The changeset that's currently live in Azure is [2d7d44422e8af6ab0041ec267fcee33e75cafa25](https://github.com/projectkudu/kudu/commit/2d7d44422e8af6ab0041ec267fcee33e75cafa25)
+* The changeset that's currently live in Azure is [94d69abe1cd0bc822635f0b4dc12e459fae4ef04](https://github.com/projectkudu/kudu/commit/94d69abe1cd0bc822635f0b4dc12e459fae4ef04)
 
 ### How-to guides
 
