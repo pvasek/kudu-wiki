@@ -17,7 +17,7 @@ In there, you will see the following structure:
             <instance>-<guid>.txt // deployment related traces
         http
           RawLogs
-            <logfile>.log // iis http log
+            <logfile>.log // iis http log.  iis buffers and flushes every 60sec.
         W3SVC#####
           fr####.xml // IIS fail request traces
           freb.xsl
