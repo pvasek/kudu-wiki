@@ -1,6 +1,6 @@
 See [[Accessing files via FTP]] for info on getting at all the files that relate to your site.
 
-In there, you will see the following structure:
+In there, you will see the following structure (or at least a subset of it):
 
 
     /
