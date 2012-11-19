@@ -1,4 +1,5 @@
-* [10/28/2012 Screencast: Continuous Deployment with Windows Azure Websites and Bitbucket (@sandrinodm)](http://fabriccontroller.net/blog/posts/continuous-deployment-with-windows-azure-websites-and-bitbucket/)
+* [11/19/2012 Composer (PHP) and Azure Websites Git Deployment (@beberlei)](http://www.whitewashing.de/2012/11/19/composer_and_azure_websites_git_deployment.html)
+* [10/28/2012 Continuous Deployment with Windows Azure Websites and Bitbucket (@sandrinodm)](http://fabriccontroller.net/blog/posts/continuous-deployment-with-windows-azure-websites-and-bitbucket/)
 * [10/28/2012 Screencast: Publishing to an Azure Web Site from Bitbucket (@davidebbo)](http://www.youtube.com/watch?v=MeT2TB6fCqE&feature=youtu.be&hd=1)
 * [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and GitHub (@davidebbo)](http://www.youtube.com/watch?v=5NGieL0tinw&feature=youtu.be&hd=1)
 * [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and CodePlex (@davidebbo)](http://www.youtube.com/watch?v=PgPrZT1cG0Y&feature=youtu.be&hd=1)
