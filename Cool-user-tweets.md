@@ -2,7 +2,6 @@ Here are a few fun tweets about Kudu and the Azure git push feature:
 
 - "In under 5 minutes i setup continuous deployment of git repo to #azure for a new WordPress site. Call me a geek but I'm in love." @strippedsharp [18 Nov 2012](http://twitter.com/#!/strippedsharp/status/270138629286944769)
 - "#SDP12 azure deployment using git. Cool as hell!" @BobIsLife [18 Nov 2012](http://twitter.com/#!/BobIsLife/status/270107057707962368)
-- "You can't change an Azure Website that's using direct git deployment to use github/bitbucket instead?  Deployments tab only shows history" @MotoWilliams [17 Nov 2012](http://twitter.com/#!/MotoWilliams/status/269951005905522688)
 - "Just pushed my first change to windows azure website.. using private bitbucket repo. and GH4W. Just wow! I love the new MS. Thnx @davidebbo" @hjmeulekamp [17 Nov 2012](http://twitter.com/#!/hjmeulekamp/status/269852159443611649)
 - "Azure publishing from Git is a great step forward" @DerikWhittaker [14 Nov 2012](http://twitter.com/#!/DerikWhittaker/status/268866934735519744)
 - "The magic of Git and Azure together is amazing.. Automated Deployment on steroids.. #AzureConf" @erlegestad [14 Nov 2012](http://twitter.com/#!/erlegestad/status/268825978971774976)
