@@ -7,7 +7,7 @@ Here are a few fun tweets about Kudu and the Azure git push feature:
 - "Azure publishing from Git is a great step forward" @DerikWhittaker [14 Nov 2012](http://twitter.com/#!/DerikWhittaker/status/268866934735519744)
 - "The magic of Git and Azure together is amazing.. Automated Deployment on steroids.. #AzureConf" @erlegestad [14 Nov 2012](http://twitter.com/#!/erlegestad/status/268825978971774976)
 - "Wow! Publishing from GIT to Windows Azure website automatically is supercool! #AzureConf" @mark__land [14 Nov 2012](http://twitter.com/#!/mark__land/status/268762136350687232)
-- "Essa integra‡ao do Git com Azure Websites ‚ realmente muito bacana..." @SanchezFabricio [14 Nov 2012](http://twitter.com/#!/SanchezFabricio/status/268761520756887553)
+- "Essa integração do Git com Azure Websites ‚ realmente muito bacana..." @SanchezFabricio [14 Nov 2012](http://twitter.com/#!/SanchezFabricio/status/268761520756887553)
 - "Git deployment to #windowsazure is Awesome. It just works." @jvanrhyn [5 Nov 2012](http://twitter.com/#!/jvanrhyn/status/265381768855683072)
 - "What do you get when you mix open source, git, node, linux, sql, .net, mongodb and memcache? Answer: #WindowsAzure..by Microsoft #crazytimes" @anderly [3 Nov 2012](http://twitter.com/#!/anderly/status/264781604105379840)
 - "@markdstafford http://t.co/NIDGKJON runs on Web Sites and it's really awesome. git push azure master rocks :)" @tkes [2 Nov 2012](http://twitter.com/#!/tkes/status/264471032646234113)
