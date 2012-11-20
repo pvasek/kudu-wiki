@@ -1,6 +1,5 @@
 * [11/19/2012 Composer (PHP) and Azure Websites Git Deployment (@beberlei)](http://www.whitewashing.de/2012/11/19/composer_and_azure_websites_git_deployment.html)
-* [11/17/2012 Continuous Deployment in Windows Azure Web Sites (@SyntaxC4)](http://sebastienros.com/publishing-orchard-on-azure-web-sites-using-git)
-* [10/29/2012 Publishing Orchard on Azure Web Sites using Git (@sebastienros)](http://fabriccontroller.net/blog/posts/continuous-deployment-with-windows-azure-websites-and-bitbucket/)
+* [11/17/2012 Continuous Deployment in Windows Azure Web Sites (@SyntaxC4)](http://blog.syntaxc4.net/post/2012/11/17/continuous-deployment-in-windows-azure-web-sites.aspx)
 * [10/28/2012 Continuous Deployment with Windows Azure Websites and Bitbucket (@sandrinodm)](http://fabriccontroller.net/blog/posts/continuous-deployment-with-windows-azure-websites-and-bitbucket/)
 * [10/28/2012 Screencast: Publishing to an Azure Web Site from Bitbucket (@davidebbo)](http://www.youtube.com/watch?v=MeT2TB6fCqE&feature=youtu.be&hd=1)
 * [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and GitHub (@davidebbo)](http://www.youtube.com/watch?v=5NGieL0tinw&feature=youtu.be&hd=1)
