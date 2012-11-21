@@ -1,3 +1,4 @@
+* [11/21/2012 Multiple Environments with Windows Azure Web Sites (@bradygaster)](http://www.bradygaster.com/multiple-environments-with-windows-azure-web-sites)
 * [11/19/2012 Composer (PHP) and Azure Websites Git Deployment (@beberlei)](http://www.whitewashing.de/2012/11/19/composer_and_azure_websites_git_deployment.html)
 * [11/17/2012 Continuous Deployment in Windows Azure Web Sites (@SyntaxC4)](http://blog.syntaxc4.net/post/2012/11/17/continuous-deployment-in-windows-azure-web-sites.aspx)
 * [10/29/2012 Publishing Orchard on Azure Web Sites using Git (@sebastianros)](http://sebastienros.com/publishing-orchard-on-azure-web-sites-using-git)
