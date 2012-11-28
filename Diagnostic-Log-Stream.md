@@ -17,9 +17,13 @@ etc.
 
 Most of the trace providers allow users to adjust the verbosity of the traces.  Kudu trace provider uses Diagnostic's TraceLevel; Off=0 (default), Error=1, Warning=2, Info=3, Verbose=4.  Its trace level can be adjusted via settings.
 
-* setting trace_level to Verbose.
+* set kudu trace_level to Verbose.
 
   `$ curl <kudu-service-url>/settings -X POST -H "Content-Type: Application/json" -d "{'trace_level':'4'}"` 
+
+* get kudu trace_level to Verbose.
+
+  `$ curl <kudu-service-url>/settings/trace_level` 
  
 ## Lifetime /logstream
 
