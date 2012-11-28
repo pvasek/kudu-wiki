@@ -15,7 +15,7 @@ etc.
 
 ## trace_level knobs
 
-Most of the trace providers allow users to adjust the verbosity of the traces.  Kudu trace provider uses Diagnostic's TraceLevel; Off=0 (default), Error=1, Warning=2, Info=3, Verbose=4.  Its trace level can be adjusted via settings.
+Most trace providers allow users to adjust the verbosity of the traces.  Kudu trace provider uses Diagnostic's TraceLevel; Off=0 (default), Error=1, Warning=2, Info=3, Verbose=4.  Its trace level can be adjusted via settings.
 
 * set kudu trace_level to Verbose.
 
