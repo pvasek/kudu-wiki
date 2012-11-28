@@ -1,10 +1,13 @@
 ## Overview
 
-One of the keys to diagnose the issues is to look at the trace files.  Kudu service as well as its application write traces to Logfiles folder (see [[File structure on Azure]]).  Logstream endpoint (/logstream) enables developers to view live traces as they happen in the system allowing the real-time diagnostics.
+One of the keys to diagnose the issues is to look at the trace files.  Kudu service as well as its application write traces to Logfiles folder (see [[File structure on Azure]]).  Logstream endpoint (/logstream) enables developers to view live traces as they are being written allowing the real-time diagnostics.
 
 ## Using /logstream
 
-If you are using git to push to an Azure Web Site, this is the section you'll care most about.
+By simply connecting to <kudu-service-url>/logstream, you will be able to get the live streaming of traces.
+
+### Lifetime /logstream
+
 
 ### Version of Kudu currently live in Azure
 
