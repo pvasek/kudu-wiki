@@ -21,10 +21,12 @@ Most trace providers allow users to adjust the verbosity of the traces.  Kudu tr
 
   `$ curl <kudu-service-url>/settings -X POST -H "Content-Type: Application/json" -d "{'trace_level':'4'}"` 
 
-* get kudu trace_level to Verbose.
+* get kudu trace_level.
 
   `$ curl <kudu-service-url>/settings/trace_level` 
  
+TBD: setting and getting application trace_level.
+
 ## Lifetime /logstream
 
 By simply connecting to <kudu-service-url>/logstream, you will be able to get the live streaming of traces.  The /logstream watches all the files changes under /LogFiles and its sub folders.   To scope the live traces to certain providers/folders, you may additional specify the path.
