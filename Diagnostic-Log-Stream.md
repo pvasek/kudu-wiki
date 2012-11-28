@@ -4,7 +4,7 @@ One of the keys to diagnose the issues is to look at the trace files.  Kudu serv
 
 ## Using /logstream
 
-By simply connecting to <kudu-service-url>/logstream, you will be able to get the live streaming of traces.  The /logstream watches all the files changes under /LogFiles and its sub folder.   To scope the live traces to certain providers, you may additional specify the path.
+By simply connecting to <kudu-service-url>/logstream, you will be able to get the live streaming of traces.  The /logstream watches all the files changes under /LogFiles and its sub folders.   To scope the live traces to certain providers/folders, you may additional specify the path.
 
 * /logstream/git/trace => kudu related traces intended for diagnostic kudu issues.
 * /logstream/git/deployment => kudu deployment traces intended for application developers/operators.
