@@ -1,11 +1,8 @@
-## Getting help
+## Overview
 
-* Post to the [Azure Git Deployment forum on MSDN](http://social.msdn.microsoft.com/Forums/en-US/azuregit)
-* Go to the [Kudu room on JabbR](http://jabbr.net/#/rooms/kudu)
-* Ping [@davidebbo](https://twitter.com/davidebbo) or [@davidfowl](https://twitter.com/davidfowl) on Twitter
+One of the keys to diagnose the issues is to look at the trace files.  Kudu service as well as its application write traces to Logfiles folder (see [[File structure on Azure]]).  Logstream endpoint (/logstream) enables developers to view live traces as they happen in the system allowing the real-time diagnostics.
 
-
-## Using git in Azure Web Sites
+## Using /logstream
 
 If you are using git to push to an Azure Web Site, this is the section you'll care most about.
 
