@@ -37,7 +37,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 * [[Known issues]]
 * [[Investigating Issues]]
-* [[/logstream]]
+* [[logstream]]
 
 ## Building and running Kudu from the github sources
 
