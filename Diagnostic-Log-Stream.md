@@ -19,7 +19,7 @@ Most of the trace providers allow users to adjust the verbosity of the traces.  
 
 * setting trace_level to Verbose.
 
-  $ curl <kudu-service-url>/settings -X POST -H "Content-Type: Application/json" -d "{'trace_level':'4'}" 
+  `$ curl <kudu-service-url>/settings -X POST -H "Content-Type: Application/json" -d "{'trace_level':'4'}"` 
  
 ## Lifetime /logstream
 
