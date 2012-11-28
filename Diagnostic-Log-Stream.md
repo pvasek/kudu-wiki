@@ -8,10 +8,10 @@ By simply connecting to <kudu-service-url>/logstream, you will be able to get th
 
 To scope the live traces to certain providers/folders, you may additional specify the path.
 
-* /logstream/git/trace => kudu related traces intended for diagnostic kudu issues.
-* /logstream/git/deployment => kudu deployment traces intended for application developers/operators.
-* /logstream/application => application traces.
-* /logstream/http => iis logs.
+* `/logstream/git/trace` => kudu related traces intended for diagnostic kudu issues.
+* `/logstream/git/deployment` => kudu deployment traces intended for application developers/operators.
+* `/logstream/application` => application traces.
+* `/logstream/http` => iis logs.
 
 etc.
 
