@@ -27,7 +27,7 @@ Record what the error is and report it to the [forum](http://social.msdn.microso
 
 ## Live traces
 
-[[Diagnostic Log Stream]]
+See [[Diagnostic Log Stream]].
 
 ## Getting the git service log
 
