@@ -25,7 +25,7 @@ That could mean two different things:
 
 Record what the error is and report it to the [forum](http://social.msdn.microsoft.com/Forums/en-US/azuregit/threads)
 
-## Live log stream
+## Live traces
 
 [[Diagnostic Log Stream]]
 
