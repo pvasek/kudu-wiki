@@ -21,9 +21,13 @@ That usually means something pretty bad is wrong, causing things to fail before 
 That could mean two different things:
 
 1. An issue with Azure Web Sites
-2. An issue with the git support itelf
+2. An issue with the git support itself
 
 Record what the error is and report it to the [forum](http://social.msdn.microsoft.com/Forums/en-US/azuregit/threads)
+
+## Live log stream
+
+[[Diagnostic Log Stream]]
 
 ## Getting the git service log
 
