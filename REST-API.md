@@ -1,3 +1,8 @@
+This API is accessed the same way as the git endpoint. e.g. if your git URL is `https://yoursite.scm.azurewebsites.net/yoursite.git`, then the API to get the list of deployments will be `https://yoursite.scm.azurewebsites.net/deployments`.
+
+The credentials you use are the same as when you git push. See [[Deployment-credentials]] for more details.
+
+
 ## scm
 
 Note: in older builds, use `live/scm` instead of `scm`
