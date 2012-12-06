@@ -4,6 +4,11 @@
 * If you have MVC4 installed, uninstall it.
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
 
+If you manually install IIS, here is what needs to be enabled:
+
+![Windows Features](http://i.imgur.com/ZdFpz.png)
+
+
 ### Deploying your first application
 1. First clone the repository.
 
