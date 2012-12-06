@@ -1,4 +1,6 @@
-All tests use xunit, this includes the unit tests and functional tests. 
+First, make sure you look at the [[Getting started]] page for the list of prerequisites.
+
+All tests use xunit; this includes the unit tests and functional tests. 
 
 ## Unit tests
 To run the unit tests just use build.cmd or use the VS 2012 XUnit.net runner (or [Test Driven .NET](http://www.testdriven.net/)) to run them. They are in `Kudu.Core.Test`.
@@ -6,8 +8,6 @@ To run the unit tests just use build.cmd or use the VS 2012 XUnit.net runner (or
 ## Functional tests
 The functional tests are located in the `Kudu.FunctionalTests` project. Running them requires the following software to be installed.
 
-* IIS needs to be installed, including at least `ASP.NET 4.5`, `static content` and `IIS Management console`
-* Visual Studio 2012
 * The XUnit.net runner for VS 2012, which you install from Tools / Extensions & Updates
 * Both 32-bit and 64-bit versions of [Node](http://nodejs.org/download/). Only the 64 bit one is actally used at runtime, but there are some quirky tests that expect the 32-bit version to also be present. The co-exist fine side by side, so this is harmless.
 * x64 [IISNode](https://github.com/tjanczuk/iisnode)
