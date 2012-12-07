@@ -2,7 +2,6 @@
 * Visual Studio 2012
 * IIS >= 7 (Configured to run ASP.NET 4.0)
 * Use [WebPI](http://go.microsoft.com/fwlink/?LinkID=145505) and install IIS and ASP.NET 4.0
-* If you have MVC4 installed, uninstall it.
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
 
 
