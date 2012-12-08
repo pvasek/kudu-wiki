@@ -16,9 +16,10 @@ Note: If you manually install IIS, here is what needs to be enabled:
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
 * Install [Node](http://nodejs.org/).
 * Install [IISNode](http://go.microsoft.com/?linkid=9784331)
-* Pretend to have teh 32 bit version of Node to fool the version detection logic:
+* Pretend to have the 32 bit version of Node to fool the version detection logic:
  * Copy your `\Program Files\nodejs` folder to \Program Files (x86)\nodejs.
  * Under `\Program Files (x86)\nodejs`, you need to have a folder named `0.8.2`, and containing a file named `node.exe`. **it does not matter what this file is, as only its presence is checked!**.
+* The Web and WebApplications folders need to be present under `\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0`. If you don't have them, you may need to copy them from a machine that has VS 2010 installed. This is needed because some of the test apps target these. **TODO**: we need to make this easier!
 
 
 ### Deploying your first application
