@@ -1,13 +1,24 @@
-### Prerequisites
+### Prerequisites to run Kudu
 * Visual Studio 2012
-* IIS >= 7 (Configured to run ASP.NET 4.0)
-* Use [WebPI](http://go.microsoft.com/fwlink/?LinkID=145505) and install IIS and ASP.NET 4.0
+* IIS >= 7, configured to run ASP.NET 4.0. This can be installed using [WebPI](http://go.microsoft.com/fwlink/?LinkID=145505).
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
 
 
-If you manually install IIS, here is what needs to be enabled:
+Note: If you manually install IIS, here is what needs to be enabled:
 
 ![Windows Features](http://i.imgur.com/ZdFpz.png)
+
+
+### Additional prerequisites to run the functional tests
+
+* Install the XUnit.net runner for VS 2012, which you install from Tools / Extensions & Updates
+* Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true.
+* Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
+* Install [Node](http://nodejs.org/).
+* Install [IISNode](http://go.microsoft.com/?linkid=9784331)
+* Pretend to have teh 32 bit version of Node to fool the version detection logic:
+ * Copy your `\Program Files\nodejs` folder to \Program Files (x86)\nodejs.
+ * Under `\Program Files (x86)\nodejs`, you need to have a folder named `0.8.2`, and containing a file named `node.exe`. **it does not matter what this file is, as only its presence is checked!**.
 
 
 ### Deploying your first application
