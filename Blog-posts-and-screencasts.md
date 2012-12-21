@@ -1,3 +1,18 @@
+## Screencasts
+
+* [12/20/2012 Log streaming in Azure Web Sites (@davidebbo)](http://www.youtube.com/watch?v=FP5Mnbj3ZcI&hd=1)
+* [10/28/2012 Publishing to an Azure Web Site from Bitbucket (@davidebbo)](http://www.youtube.com/watch?v=MeT2TB6fCqE&feature=youtu.be&hd=1)
+* [9/17/2012 Enabling Continuous Deployment with Windows Azure Websites and CodePlex (@davidebbo)](http://www.youtube.com/watch?v=PgPrZT1cG0Y&feature=youtu.be&hd=1)
+* [9/17/2012 Enabling Continuous Deployment with Windows Azure Websites and GitHub (@davidebbo)](http://www.youtube.com/watch?v=5NGieL0tinw&feature=youtu.be&hd=1)
+* [9/17/2012 Publishing a custom git branch to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=xXiJeFJXmrA&feature=youtu.be&hd=1)
+* [6/8/2012 Pushing the NuGet gallery to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=72SAHWUHnzA&hd=1)
+* [6/8/2012 Web sites - Node.js Development](http://www.youtube.com/watch?v=LZhfiYqxwcg&list=UU0m-80FnNY2Qb7obvTL_2fA&index=7&feature=plcp)
+* [6/8/2012 Getting started on Windows Azure with Node.js on Mac OS (@gblock)](http://www.youtube.com/watch?v=jetNJCUJJz8&list=UU0m-80FnNY2Qb7obvTL_2fA&index=2&feature=plcp)
+* [6/8/2012 Getting started on Windows Azure with Node.js on Windows (@gblock)](http://www.youtube.com/watch?v=T8Ehr_V1i1U&list=UU0m-80FnNY2Qb7obvTL_2fA&index=3&feature=plcp)
+* [6/8/2012 Getting started on Windows Azure with PHP on Mac OS](http://www.youtube.com/watch?v=SWBLiCwAiMM&list=UU0m-80FnNY2Qb7obvTL_2fA&index=4&feature=plcp)
+
+## Blog posts
+
 * [11/29/2012 Continuous Delivery to Windows Azure Not Only Microsoft Style with TeamCity (@noopman)](http://magnusmartensson.com/continuous-delivery-windowsazure-nomirosoft-teamcity)
 * [11/21/2012 Multiple Environments with Windows Azure Web Sites (@bradygaster)](http://www.bradygaster.com/multiple-environments-with-windows-azure-web-sites)
 * [11/19/2012 Composer (PHP) and Azure Websites Git Deployment (@beberlei)](http://www.whitewashing.de/2012/11/19/composer_and_azure_websites_git_deployment.html)
@@ -5,10 +20,6 @@
 * [11/6/2012 Publishing to Windows Azure from Github (@jchannon)](http://blog.jonathanchannon.com/2012/11/06/publishing-to-windows-azure-from-github/)
 * [10/29/2012 Publishing Orchard on Azure Web Sites using Git (@sebastianros)](http://sebastienros.com/publishing-orchard-on-azure-web-sites-using-git)
 * [10/28/2012 Continuous Deployment with Windows Azure Websites and Bitbucket (@sandrinodm)](http://fabriccontroller.net/blog/posts/continuous-deployment-with-windows-azure-websites-and-bitbucket/)
-* [10/28/2012 Screencast: Publishing to an Azure Web Site from Bitbucket (@davidebbo)](http://www.youtube.com/watch?v=MeT2TB6fCqE&feature=youtu.be&hd=1)
-* [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and GitHub (@davidebbo)](http://www.youtube.com/watch?v=5NGieL0tinw&feature=youtu.be&hd=1)
-* [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and CodePlex (@davidebbo)](http://www.youtube.com/watch?v=PgPrZT1cG0Y&feature=youtu.be&hd=1)
-* [9/17/2012 Screencast: Publishing a custom git branch to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=xXiJeFJXmrA&feature=youtu.be&hd=1)
 * [9/17/2012 Deploying Azure Websites with Git (@tyler_gd)](http://blog.tylerdoerksen.com/2012/09/17/deploying-azure-websites-with-git/)
 * [9/11/2012 Managing database connections in Azure Web Sites (@davidebbo)](http://blog.davidebbo.com/2012/09/managing-database-connections-in-azure.html)
 * [8/8/2012 git deployment to an Azure Website: keeping configuration secrets (@srkirkland)](http://weblogs.asp.net/srkirkland/archive/2012/08/08/git-deployment-to-an-azure-website-keeping-configuration-secrets.aspx)
@@ -22,10 +33,5 @@
 * [6/8/2012 Introducing Kudu: the Open Source engine behind ‘git push azure master’ (@davidebbo)](http://blog.davidebbo.com/2012/06/introducing-open-source-engine-behind.html)
 * [6/8/2012 Building and Deploying Windows Azure Web Sites using Git and GitHub for Windows (@shijucv)](
 http://weblogs.asp.net/shijuvarghese/archive/2012/06/08/building-and-deploying-windows-azure-web-sites-using-git-and-github-for-windows.aspx)
-* [6/8/2012 Screencast: Pushing the NuGet gallery to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=72SAHWUHnzA&hd=1)
-* [6/8/2012 Screencast: Web sites - Node.js Development](http://www.youtube.com/watch?v=LZhfiYqxwcg&list=UU0m-80FnNY2Qb7obvTL_2fA&index=7&feature=plcp)
-* [6/8/2012 Screencast: Getting started on Windows Azure with Node.js on Mac OS (@gblock)](http://www.youtube.com/watch?v=jetNJCUJJz8&list=UU0m-80FnNY2Qb7obvTL_2fA&index=2&feature=plcp)
-* [6/8/2012 Screencast: Getting started on Windows Azure with Node.js on Windows (@gblock)](http://www.youtube.com/watch?v=T8Ehr_V1i1U&list=UU0m-80FnNY2Qb7obvTL_2fA&index=3&feature=plcp)
-* [6/8/2012 Screencast: Getting started on Windows Azure with PHP on Mac OS](http://www.youtube.com/watch?v=SWBLiCwAiMM&list=UU0m-80FnNY2Qb7obvTL_2fA&index=4&feature=plcp)
 * [6/7/2012 GitHub for Windows Azure Websites (@maartenballiauw)](http://blog.maartenballiauw.be/post/2012/06/07/GitHub-for-Windows-Azure-Websites.aspx)
 * [6/7/2012 Use NuGet Package Restore to avoid pushing assemblies to Windows Azure Websites (@maartenballiauw)](http://blog.maartenballiauw.be/post/2012/06/07/Use-NuGet-Package-Restore-to-avoid-pushing-assemblies-to-Windows-Azure-Websites.aspx)
