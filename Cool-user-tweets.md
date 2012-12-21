@@ -1,5 +1,17 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- "Again impressed with Azure's git deployment. These people are mind-readers." @teyc [20 Dec 2012](http://twitter.com/#!/teyc/status/281911478800510976)
+- "Git deployment to Azure is *fast*. From the moment I make a change in GitHub and the moment it's on #orchardcms docs, only seconds pass." @bleroy [13 Dec 2012](http://twitter.com/#!/bleroy/status/279421447259172864)
+- "Loving #git integration with #WindowsAzure Web Sites. The continuous deployment is the bomb..." @stratospher_es [12 Dec 2012](http://twitter.com/#!/stratospher_es/status/279106460959522818)
+- "Had my first full-on experience with #azure today and must admit I was very impressed with default PHP and GIT deployment. To be continued." @m_smalley [11 Dec 2012](http://twitter.com/#!/m_smalley/status/278509458097848320)
+- "Node.js, Git and #Azure WebSites, great team! together all seems easier! #AzureOSS" @ibonilm [4 Dec 2012](http://twitter.com/#!/ibonilm/status/275971635176148992)
+- "Git integration in Windows Azure is nice! #azure" @artistandsocial [4 Dec 2012](http://twitter.com/#!/artistandsocial/status/275922720213053440)
+- "Git deploy and rollback on Azure is pretty sweet, syncing across scaled boxes too." @timpeel [2 Dec 2012](http://twitter.com/#!/timpeel/status/275507027315408896)
+- "@WindowsAzure automated git deployment via bitbucket is an epic improvement." @levelnis [29 Nov 2012](http://twitter.com/#!/levelnis/status/274270412920209408)
+- "It's awesome to see Microsoft supporting git with Azure for deployment of apps!" @nielswh [29 Nov 2012](http://twitter.com/#!/nielswh/status/274258089551753216)
+- "Very cool watching an Azure Web Site deployment go live after a git push to the master branch via GitHub!" @jeffwilcox [26 Nov 2012](http://twitter.com/#!/jeffwilcox/status/273222971915653120)
+- "Just published my first node.js app to azure from my macbook with git. Amazing experience!" @martijnboland [22 Nov 2012](http://twitter.com/#!/martijnboland/status/271757694447271937)
+- "Just created my first free Windows Azure Website and git-deployed an ASP.MVC 4 web application. That was easy. :)" @PhoenixHawk [21 Nov 2012](http://twitter.com/#!/PhoenixHawk/status/271315878774202368)
 - "In under 5 minutes i setup continuous deployment of git repo to #azure for a new WordPress site. Call me a geek but I'm in love." @strippedsharp [18 Nov 2012](http://twitter.com/#!/strippedsharp/status/270138629286944769)
 - "#SDP12 azure deployment using git. Cool as hell!" @BobIsLife [18 Nov 2012](http://twitter.com/#!/BobIsLife/status/270107057707962368)
 - "Just pushed my first change to windows azure website.. using private bitbucket repo. and GH4W. Just wow! I love the new MS. Thnx @davidebbo" @hjmeulekamp [17 Nov 2012](http://twitter.com/#!/hjmeulekamp/status/269852159443611649)
