@@ -25,7 +25,7 @@ The private key is given to the Kudu service. This can be done in two ways:
 
 One possible way to call the REST API is using curl. e.g.
 
-    curl --user yourname -X PUT -H "Content-Type: application/json; charset=UTF-8" --data "{key: 'full private key goes here!'}" https://yoursite.scm.azurewebsites.net/sshkey
+    curl --user username 'https://yoursite.scm.azurewebsites.net/sshkey' -X PUT --upload-file /c/users/me/.ssh/id_rsa
 
 ### Manually over ftp (this is probably simpler)
 
