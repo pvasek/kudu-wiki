@@ -20,6 +20,7 @@ To make the batch file more useful, there are a couple environment variables tha
 - DEPLOYMENT_SOURCE: this points to where the source files are, which is normally the root of the repo
 - DEPLOYMENT_TARGET: the target of the deployment. Typically, this is the wwwroot folder
 - DEPLOYMENT_TEMP: a temporary folder that can be used to store artifacts for the current build. This folder is deleted after the cmd is run.
+- MSBUILD_PATH: Path to msbuild executable.
 
 
 ### Working folder
@@ -28,8 +29,6 @@ Also, note that the current folder is always the root of the repo (same as %DEPL
 
 
 ## Examples
-
-Some more complete examples are on [this gist](https://gist.github.com/3342182).
 
 To take a trivial example, let's say this file contains simply:
 
@@ -46,6 +45,42 @@ So let's say you wanted to copy all the source files to the web root, you could 
 To process a WAP, things get more complicated, as you need to run msbuild with some pretty advanced options (which is what Kudu normally does by default). e.g. you could do:
 
     @echo off
-    MSBuild MyWebApp\MyWebApp.csproj /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TARGET%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Debug;SolutionDir="%DEPLOYMENT_SOURCE%"
+    %MSBUILD_PATH% MyWebApp\MyWebApp.csproj /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TARGET%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Debug;SolutionDir="%DEPLOYMENT_SOURCE%"
     
 Note that this directly deploys from the repo to wwwroot without going through any TMP folder. It also wipes out the content of wwwroot before deploying, so it doesn't do the smart copying that Kudu normally does. That's why Kudu normally deploys to TMP first, and then does smart copying to wwwroot. And you could potentially do something similar here with fancier scripts.
+
+
+### Deployment Script Generator
+
+To simplify the custom deployment script authoring we have a script generation tool that will create a script that is customized specifically to your site and will do the same logic as kudu does to deploy your site.
+
+After you generate the script you can customize/edit it and add your own steps.
+
+The generator tool is part of [azure-cli](http://www.windowsazure.com/en-us/manage/linux/other-resources/command-line-tools/) tool, so to use it you need to install azure-cli (you'll need to have node.js in order to use azure-cli):
+
+    npm install azure-cli -g
+
+Then the command to generate a deployment script is:
+
+    azure site deploymentscript [options]
+
+In the [options] part you'll need to specify your site type:
+* --aspWAP: ASP.NET web application (requires the location or your .csproj file).
+* --aspWebSite: ASP.NET web site.
+* --node: node.js.
+* --php, --python: self explaining.
+* --basic: any other basic website (will only copy the changed files from the repository to the wwwroot directory).
+
+More options:
+* -r, --repositoryRoot [dir path]: the root path for the repository (default: current directory).
+* -s, --solutionFile [file path]: the solution file path (sln).
+* -p, --sitePath [directory path]: the path to the site being deployed (default: same as repositoryRoot).
+* -t, --scriptType [batch|bash]: the output script can be of batch type which is the default or bash which is more for non-windows users.
+
+For example, to generate a deployment script for an ASP.NET web application:
+
+    azure site deploymentscript --aspWAP MySite\MySite.csproj -s MySite.sln
+
+The resulting script can also be run and tested locally, it'll output the site into: `your repo root/artifacts/`
+
+For more information on deployment hooks and a step by step sample of the deployment script generator go to [this blog post](http://blog.amitapple.com/post/38417491924/azurewebsitecustomdeploymentpart1).
