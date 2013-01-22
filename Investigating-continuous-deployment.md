@@ -15,3 +15,5 @@ If there is, try POST simple payload to that URL.   The payload need to just con
 ## Verify Service hook
 
 Create a http request bin at http://requestb.in/ and add it as one of Services of your repo setting.  Push to your repo and see if there exist any POST requests.  If not, then contact GitHub, CodePlex or Bitbucket.
+
+Here is the Bitbucket status page: http://status.bitbucket.org/
