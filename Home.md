@@ -4,7 +4,7 @@ Kudu is the engine behind [git deployments in Azure Web Sites](https://www.windo
 
 * Post to the [Azure Git Deployment forum on MSDN](http://social.msdn.microsoft.com/Forums/en-US/azuregit)
 * Go to the [Kudu room on JabbR](http://jabbr.net/#/rooms/kudu)
-* Ping [@davidebbo](https://twitter.com/davidebbo) or [@davidfowl](https://twitter.com/davidfowl) or [@vishalrjoshi](https://twitter.com/vishalrjoshi)on Twitter
+* Ping [@davidebbo](https://twitter.com/davidebbo) or [@davidfowl](https://twitter.com/davidfowl) or [@vishalrjoshi](https://twitter.com/vishalrjoshi) on Twitter
 
 
 ## Using git in Azure Web Sites
