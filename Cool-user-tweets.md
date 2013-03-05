@@ -1,5 +1,14 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- “It's been said before, but only when you do it yourself do you see how simple it is to push a Git repository to an Azure website. Impressed!” @BernhardHofmann [4 Mar 2013](http://twitter.com/#!/BernhardHofmann/status/308680441479716865)
+- “The git deploy support in #azurewebsites is the best feature they could have added! #AutomatedDeploymentFTW” @anthony_vdh [1 Mar 2013](http://twitter.com/#!/anthony_vdh/status/307651903255351297)
+- “@WindowsAzure setting up continuous git deployments (staging and production) for our company site.  Loving git deploy!” @joeldow [1 Mar 2013](http://twitter.com/#!/joeldow/status/307607998463868928)
+- “Are you kidding me with free Azure websites and github deploy? Wicked smooth! @jayway #net” @andyhammar [1 Mar 2013](http://twitter.com/#!/andyhammar/status/307449510811029504)
+- “Loving #azurewebsites. Just setup a preview of the #glimpse website, using git deploy from our preview branch &amp; it all just worked!” @anthony_vdh [27 Feb 2013](http://twitter.com/#!/anthony_vdh/status/306728926833672193)
+- “Late to the party but deploying web sites with git to #azure is smooth.” @justinwignall [19 Feb 2013](http://twitter.com/#!/justinwignall/status/303997755339206658)
+- “git push azure master.  Shiny.” @swingsetacid [19 Feb 2013](http://twitter.com/#!/swingsetacid/status/303991618174857216)
+- “Git -&gt; BitBucket -&gt; Azure all with one git push - very cool :)” @andyhey [15 Feb 2013](http://twitter.com/#!/andyhey/status/302540271470653440)
+- “So, git + github + Azure = pretty frakking sweet. #speakerportal” @ghurlman [14 Feb 2013](http://twitter.com/#!/ghurlman/status/302154440503349249)
 - "Great feature of Windows Azure: integration with GIT Here you have my first website (free) http://t.co/M3TZ5xZB #sixstepsazure #developers" @davilagrau [11 Feb 2013](http://twitter.com/#!/davilagrau/status/300941769460301825)
 - "Automatic deployment to Azure with Git. Microsoft is supporting Git across all of its products. #awesome http://t.co/aMMlluvD" @jpartogi [9 Feb 2013](http://twitter.com/#!/jpartogi/status/300158330662420480)
 - "YAY got Umbraco V6 running of a BitBucket Git Repo deploying to an Azure Website. Kick ass deployment solution :)" @warrenbuckley [8 Feb 2013](http://twitter.com/#!/warrenbuckley/status/299932368372895746)
