@@ -10,4 +10,5 @@ Here are some of the steps that are needed to deploy Kudu to a Windows 2012 serv
   - Create an empty App_Data in there
 - Copy the KuduService artifacts into C:\inetpub\Kudu.Services.Web
 - Change AppPool to run as LocalSystem so it can manage IIS sites
-- Give 'Users' full access to C:\inetpub\apps
+- Give 'Users' full access to C:\inetpub\apps, which is where sites get created
+  - Note that you can change that location using the `sitesPath` AppSetting in Kudu.Web's web.config.
