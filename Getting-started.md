@@ -1,5 +1,5 @@
 ### Prerequisites to run Kudu
-* Visual Studio 2012
+* Visual Studio 2012. Note that you need to run it as admin.
 * IIS >= 7, configured to run ASP.NET 4.0. This can be installed using [WebPI](http://go.microsoft.com/fwlink/?LinkID=145505).
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
 * Install [Node](http://nodejs.org/). Node is used as part of the build process for sites.
