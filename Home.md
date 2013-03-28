@@ -17,7 +17,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 ### How-to guides
 
-* [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation ftom windowsazure.com)
+* [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation from windowsazure.com)
 * [[Customizing Deployments]]: choosing which folder or project to deploy to the web site
 * [[Deployment branch]]: choosing the branch that gets deployed when you push
 * [[Managing settings and secrets]]: how to modify the values when the app is deployed
