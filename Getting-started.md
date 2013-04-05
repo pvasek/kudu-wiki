@@ -2,7 +2,7 @@
 * Visual Studio 2012. Note that you need to run it as admin.
 * IIS >= 7, configured to run ASP.NET 4.0. This can be installed using [WebPI](http://go.microsoft.com/fwlink/?LinkID=145505).
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
-* Install [Node](http://nodejs.org/). Node is used as part of the build process for sites.
+* Install [Node](http://nodejs.org/) 0.8.x (0.10.x doesn't work yet for Kudu!). Node is used as part of the build process for sites.
 
 Note: If you manually install IIS, here is what needs to be enabled:
 
