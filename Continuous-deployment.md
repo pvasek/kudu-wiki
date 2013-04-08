@@ -1,3 +1,9 @@
+## From the Azure portal
+
+The Azure portal makes it easy to set up continous deployment from GitHub, Bitbucket or Codeplex.
+
+This documents discusses what happens under the cover. Inmost cases you don't need to worry about this. It may be useful to set up continuous deployment from a git host that the portal doesn't directly support.
+
 Steps to set up continuous deployment from an externally hosted repo (e.g. GitHub/CodePlex/Bitbucket):
 
 ## Getting the hook URL
