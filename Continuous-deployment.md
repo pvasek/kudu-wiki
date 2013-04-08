@@ -46,12 +46,10 @@ The second is `id_rsa` and contains, your private key, e.g.
     etc...
     -----END RSA PRIVATE KEY-----
     
-## Setting up continuous deployment from the portal after a deployment has happened
+## Deleting the repository
 
-If any git deployments have already happened, the option to set up continous deployment disappears from the Deployment page in the portal.
+You can do this from the Dashboard page on the Azure portal.
 
-Ideally, there would be a way to bring it back, but until then you can use a simple workaround to delete the existing repository and start fresh. Just run the following curl command, using the same username/password that you use for git deployment:
+As an alternative, you can run the following curl command, using the same username/password that you use for git deployment:
 
     curl --user yourusername -X DELETE https://yoursitename.scm.azurewebsites.net/live/scm
-
-After you do this, the Deployment page in the portal will offer to set up Continuous Deployment again.
