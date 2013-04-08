@@ -4,7 +4,7 @@
 * Improve progress reporting during deployment
 * Allow the root of the Kudu service to be used as an alternate git endpoint
 * Trim old deployments after reaching some limit
-* Several improvement to the diagnostic trace file
+* Several improvement and fixes to the diagnostic trace file
 
 ### Perf improvements
 * Cache deployment script to avoid having to generate it each time
@@ -17,6 +17,8 @@
 * Fixed several issues that were causing timeouts when pushing large repositories
 * Improved detection for processes that are waiting for user input
 * Improved recovery after a crash (previously git locks and unwanted git remotes would remain)
+* Added retry loop when fetching from external repos to deal with network reliability issues
+* Improved how Kudu detects if the git repository already exists
 
 ## S20
 * New support for deploying Mercurial sites on Bitbucket and Codeplex
