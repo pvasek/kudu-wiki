@@ -1,6 +1,6 @@
 ## S21 (not yet running on Azure)
 
-### Perf improvements
+### Features
 * Add optional support for shallow clones (to save disk space) via SCM_USE_SHALLOW_CLONE setting
 * Add etag support to /deployments API to avoid getting data unless necessary
 * Improve progress reporting during deployment
