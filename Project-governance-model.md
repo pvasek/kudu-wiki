@@ -40,11 +40,20 @@ The PMC has final say over who can become a committer and will use lazy consensu
 
 Membership of the PMC is by invitation from the existing PMC members. A nomination will result in discussion and then a vote by the existing PMC members. PMC membership votes are subject to consensus approval of the current PMC members and will be done in private.
 
+The current PMC members are:
+
+- [David Ebbo](https://github.com/davidebbo)
+- [suwatch](https://github.com/suwatch)
+- [Amit Apple](https://github.com/amitapl)
+- [pranavkm](https://github.com/pranavkm)
+
 **How to become one:** Be invited by a current PMC member and have nomination approved by the PMC.
 
 ###PMC Chairperson###
 
 The PMC Chairperson is a member of the PMC whom the Outercurve Foundation staff consider the primary point of contact or first point of contact for the project for purposes of business operations including domain registrations, and technical services (e.g. code-signing). The Chairperson does not have any increased authority and is simply a convenient point of contact for the Foundation.
+
+The current Chairperson is [David Ebbo](https://github.com/davidebbo)
 
 **How to become one:** Have nomination approved by members of the PMC.
 
