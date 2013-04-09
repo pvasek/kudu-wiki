@@ -1,4 +1,6 @@
 ## S21
+
+### Perf improvements
 * Add optional support for shallow clones (to save disk space) via SCM_USE_SHALLOW_CLONE setting
 * Add etag support to /deployments API to avoid getting data unless necessary
 * Improve progress reporting during deployment
@@ -21,6 +23,13 @@
 * Improved how Kudu detects if the git repository already exists
 
 ## S20
-* New support for deploying Mercurial sites on Bitbucket and Codeplex
-* New support for deploying from Dropbox
-* New support zip download/upload API
+* Add support for deploying from Dropbox
+* Add support for deploying Mercurial sites on Bitbucket and Codeplex
+* Switch to use script generator as default deployment logic
+* Add support for vfs REST API to access the file system
+* Add support for zip download/upload API
+* Improvements to Log streaming support
+* Automatically update git submodules
+* Support simple payload to force fetch and deploy
+* Add support for Codebase, GitlabHq and Kiln in Kudu (no portal UI though)
+* Switch Kudu to use .NET 4.5
