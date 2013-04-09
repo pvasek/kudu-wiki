@@ -22,7 +22,7 @@
 * Added retry loop when fetching from external repos to deal with network reliability issues
 * Improved how Kudu detects if the git repository already exists
 
-## S20
+## S20 (currently on Azure)
 * Add support for deploying from Dropbox
 * Add support for deploying Mercurial sites on Bitbucket and Codeplex
 * Switch to use script generator as default deployment logic
@@ -33,3 +33,7 @@
 * Support simple payload to force fetch and deploy
 * Add support for Codebase, GitlabHq and Kiln in Kudu (no portal UI though)
 * Switch Kudu to use .NET 4.5
+
+## Earlier releases
+
+Sorry, this page was not maintained earlier. Ideally, we'd go back in fill this in, but probably won't :)
