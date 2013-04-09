@@ -1,4 +1,4 @@
-## S21
+## S21 (not yet running on Azure)
 
 ### Perf improvements
 * Add optional support for shallow clones (to save disk space) via SCM_USE_SHALLOW_CLONE setting
