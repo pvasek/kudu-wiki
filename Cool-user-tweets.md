@@ -41,9 +41,6 @@ Here are a few fun tweets about Kudu and the Azure git push feature:
 - "git push azure hamster . that's how I roll.." @SonOfJorEl [13 Mar 2013](http://twitter.com/#!/SonOfJorEl/status/311833544265715713)
 - "Configured my Azure Web Site to carry out CI from my GitHub repository. I am living in the future." @FinVamp1 [9 Mar 2013](http://twitter.com/#!/FinVamp1/status/310502692957089793)
 - "Website deployed (Git &gt; Azure). Invoice sent (via FreeAgent). It's all worked out beautifully. Hello weekend! I'm going for a walk." @neil__thompson [8 Mar 2013](http://twitter.com/#!/neil__thompson/status/310037032946761729)
-
-
-
 - “It's been said before, but only when you do it yourself do you see how simple it is to push a Git repository to an Azure website. Impressed!” @BernhardHofmann [4 Mar 2013](http://twitter.com/#!/BernhardHofmann/status/308680441479716865)
 - “The git deploy support in #azurewebsites is the best feature they could have added! #AutomatedDeploymentFTW” @anthony_vdh [1 Mar 2013](http://twitter.com/#!/anthony_vdh/status/307651903255351297)
 - “@WindowsAzure setting up continuous git deployments (staging and production) for our company site.  Loving git deploy!” @joeldow [1 Mar 2013](http://twitter.com/#!/joeldow/status/307607998463868928)
