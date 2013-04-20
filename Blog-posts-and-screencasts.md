@@ -21,6 +21,15 @@
 * [9/17/2012 Screencast: Enabling Continuous Deployment with Windows Azure Websites and GitHub (@davidebbo)](http://www.youtube.com/watch?v=5NGieL0tinw&feature=youtu.be&hd=1)
 
 
+## Deploying via Dropbox
+
+
+* [3/25/2013 Screencast: Dropbox Deployment to Windows Azure Web Sites (@bradygaster)](http://channel9.msdn.com/Series/Windows-Azure-Web-Sites-Tutorials/Dropbox-Deployment-to-Windows-Azure-Web-Sites)
+* [3/20/2013 Deploy code to Windows Azure from Dropbox (TechDreams)](http://www.techdreams.org/microsoft/deploy-code-to-windows-azure-from-dropbox/8792-20130320)
+* [3/19/2013 Expanding the #windowsazure CI / CD / ALM landscape – integrating Dropbox (@techmike2kx)](http://techmike2kx.wordpress.com/2013/03/19/expanding-the-windowsazure-ci-cd-alm-landscape-integrating-dropbox-meetbe/)
+* [3/18/2013 Screencast: Deploying an Azure Web Site from a Dropbox folder (@davidebbo)](http://www.youtube.com/watch?v=hC1xAjz6jHI&hd=1)
+
+
 ## Customizing the build and deployment process
 
 * [12/20/2012 3 part series on Custom Deployment (@amitapl)](http://blog.amitapple.com/post/38417491924/azurewebsitecustomdeploymentpart1)
