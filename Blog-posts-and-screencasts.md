@@ -65,7 +65,7 @@
 
 ## Miscellaneous
 
-* [3/18/2013 Simple terminal for your Azure Website (@amitapl)](http://blog.amitapple.com/post/45675601255/azurewebsiteterminal)
+* [3/18/2013 Kuduexec: Simple terminal for your Azure Website (@amitapl)](http://blog.amitapple.com/post/45675601255/azurewebsiteterminal)
 * [8/2/2012 MVC4, Git, Azure and Facebook... Oh my! (@Denifia)](http://denifia.posterous.com/mvc4-git-azure-and-facebook-oh-my)
 * [6/21/2012 Git Deployment Credentials & Adding more users to Git repos on Azure (@vishalrjoshi)](http://vishaljoshi.blogspot.com/2012/06/git-deployment-credentials-adding-more.html)
 * [6/9/2012 Windows Azure Web Sites vs Web Roles (@robdmoore)](http://robdmoore.id.au/blog/2012/06/09/windows-azure-web-sites-vs-web-roles/)
