@@ -12,6 +12,8 @@
 
 ## Continous Delivery
 
+* [4/14/2013 Deploying an Azure Website from Source Control](http://typecastexception.com/post/2013/04/14/Deploying-an-Azure-Website-from-Source-Control.aspx)
+* [3/24/2013 Deploying to Azure Web Sites using NuGet package restore from a secured feed (@xavierdecoster)](http://www.xavierdecoster.com/deploying-to-azure-web-sites-using-nuget-package-restore-from-a-secured-feed)
 * [11/29/2012 Continuous Delivery to Windows Azure Not Only Microsoft Style with TeamCity (@noopman)](http://magnusmartensson.com/continuous-delivery-windowsazure-nomirosoft-teamcity)
 * [11/17/2012 Continuous Deployment in Windows Azure Web Sites (@SyntaxC4)](http://blog.syntaxc4.net/post/2012/11/17/continuous-deployment-in-windows-azure-web-sites.aspx)
 * [11/6/2012 Publishing to Windows Azure from Github (@jchannon)](http://blog.jonathanchannon.com/2012/11/06/publishing-to-windows-azure-from-github/)
