@@ -29,7 +29,7 @@ Record what the error is and report it to the [forum](http://social.msdn.microso
 
 See [[Diagnostic Log Stream]].
 
-## Getting the git service log
+## Getting the diagnostic dump
 
 If you are able to hit the git service (per previous section), but you get an error during a git command (e.g. push/pull/clone), the next step is to download the git service log.
 
