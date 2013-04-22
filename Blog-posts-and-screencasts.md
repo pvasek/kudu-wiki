@@ -44,8 +44,9 @@
 * [9/17/2012 Screencast: Publishing a custom git branch to an Azure Web Site (@davidebbo)](http://www.youtube.com/watch?v=xXiJeFJXmrA&feature=youtu.be&hd=1)
 
 
-## Log streaming and downloading
+## Logging and tracing
 
+* [4/5/2013 Streaming Diagnostics Trace Logging from the Azure Command Line (plus Glimpse!) (@shanselman)](http://www.hanselman.com/blog/StreamingDiagnosticsTraceLoggingFromTheAzureCommandLinePlusGlimpse.aspx)
 * [12/20/2012 Screencast: Log streaming in Azure Web Sites (@davidebbo)](http://www.youtube.com/watch?v=FP5Mnbj3ZcI&hd=1)
 * [12/19/2012 How to get live traces from Windows Azure (@suwat_ch)](http://blogs.msdn.com/b/suwatch/archive/2012/12/19/how-to-get-live-traces-from-windows-azure.aspx)
 * [6/20/2012 Download logs for git push azure master (@vishalrjoshi)](http://vishaljoshi.blogspot.com/2012/06/download-logs-for-git-push-azure-master.html)
