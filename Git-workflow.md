@@ -32,3 +32,15 @@ If you're familiar with git and GitHub, here's the short version of what you nee
 11. Rebase issue branch ($ git checkout 100-new-feature; git rebase master)
 12. Push branch to GitHub ($ git push origin 100-new-feature)
 13. Issue pull request (Click Pull Request button)
+
+## Squash commits before pushing to master
+
+To keep our history clean, it's best to squashing commits before pushing to master, unless it makes sense to have separate commits.
+
+e.g.
+- "First part of work" and "second part of work" is fine, BUT
+- "Fixed this issue", followed by "oh crap fixed typo" is dirty, and adds no value to the history line
+
+You can find simple instructions [here](http://stackoverflow.com/questions/6934752/git-combining-multiple-commits-before-pushing), using interactive rebasing.
+
+
