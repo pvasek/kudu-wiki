@@ -1,3 +1,9 @@
+## S21.5 (not yet running on Azure)
+
+### Features
+* Add mstest support
+* Add support for F# sites
+
 ## S21 (not yet running on Azure)
 
 ### Features
