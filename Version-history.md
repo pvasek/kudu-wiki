@@ -3,8 +3,9 @@
 ### Features
 * Add mstest support
 * Add support for F# sites
+* Add ability to override some deployment settings (e.g. `SCM_BUILD_ARGS`) using .deployment file
 
-## S21 (not yet running on Azure)
+## S21
 
 ### Features
 * Add optional support for shallow clones (to save disk space) via SCM_USE_SHALLOW_CLONE setting
