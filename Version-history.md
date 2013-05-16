@@ -1,3 +1,6 @@
+## S22 (not yet running on Azure)
+* Add new kudexec page giving a console windows from within the browser
+
 ## S21.5 (not yet running on Azure)
 
 ### Features
@@ -5,7 +8,6 @@
 * Add support for F# sites
 * Add support for RIA sites
 * Add ability to override some deployment settings (e.g. `SCM_BUILD_ARGS`) using .deployment file
-* Add new kudexec page giving a console windows from within the browser
 
 ## S21
 
