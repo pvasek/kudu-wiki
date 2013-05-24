@@ -1,7 +1,7 @@
 ## S22 (not yet running on Azure)
 * Add new kudexec page giving a console windows from within the browser
 
-## S21.5 (not yet running on Azure)
+## S21.5
 
 ### Features
 * Add vstest support (including test frameworks: mstest, nunit and xunit)
