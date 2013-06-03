@@ -35,3 +35,15 @@ In case you have a solution/project file in your repository but you want it to b
 
     [config]
     project = .
+
+## Using App Settings instead of a .deployment file
+
+One downside of using a .deployment file is that it is committed to the repo, and sometimes you want to make that selection outside of the repo.
+
+Let's say that you have one repo that contains two different ASP.NET projects (possibly in the same solution), which you want to deploy to different sites. You couldn't use a .deployment file here, as it can only point to one project.
+
+Instead, you can use App Settings to set the same values that are supported in the .deployment file. The steps are:
+
+- Go to the Configure tab for you site in the Azure portal
+- Add an App Setting called `Project`, and set its value to something like `WebProject/WebProject.csproj`
+- Then in your other web site you can set `Project` to point to a different .csproj file.
