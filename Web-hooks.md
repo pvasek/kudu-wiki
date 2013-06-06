@@ -86,3 +86,25 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
   "event": "PostDeployment"
 }
 ```
+
+### Hook Call ###
+
+    POST [url]
+
+**Body**
+
+```
+{
+  "id": "cd5bee7181e74ea38a3522e73253f6ebb8ed72fb",
+  "status": "success", (could be pending, building, deploying, failed, success)
+  "authorEmail": "someone@somewhere.com",
+  "author": "Some One",
+  "message": "My fix",
+  "deployer": "Some One",
+  "receivedTime": "2013-06-06T01:24:12.1077132Z",
+  "startTime": "2013-06-06T01:24:16.5873293Z",
+  "endTime": "2013-06-06T01:24:17.63342Z",
+  "lastSuccessEndTime": "2013-06-06T01:24:17.63342Z",
+  "complete": true
+}
+```
