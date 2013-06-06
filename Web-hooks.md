@@ -33,6 +33,8 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
 }
 ```
 
+***
+
 ### Unsubscribe / Remove Hook ###
 
     DELETE /hooks/[id]
@@ -40,3 +42,45 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
 **Response**
 
 200 OK
+
+***
+
+### List Hooks ###
+
+    GET /hooks
+
+**Response**
+
+200 OK
+
+```
+[
+  {
+    "id": 123,
+    "url": "http://www.callback.com/callback",
+    "event": "PostDeployment"
+  },
+  {
+    ...
+  }
+  ...
+]
+```
+
+***
+
+### Get Hook ###
+
+    GET /hooks/[id]
+
+**Response**
+
+200 OK
+
+```
+{
+  "id": 123,
+  "url": "http://www.callback.com/callback",
+  "event": "PostDeployment"
+}
+```
