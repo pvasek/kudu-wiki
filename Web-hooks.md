@@ -32,3 +32,11 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
   "event": "PostDeployment"
 }
 ```
+
+### Unsubscribe / Remove Hook ###
+
+    DELETE /hooks/[id]
+
+**Response**
+
+200 OK
