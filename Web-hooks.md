@@ -19,7 +19,8 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
 ```
 {
   "url": "http://www.callback.com/callback",
-  "event": "PostDeployment"
+  "event": "PostDeployment",
+  "insecure_ssl": false (set to true to ignore https certificate check)
 }
 ```
 
