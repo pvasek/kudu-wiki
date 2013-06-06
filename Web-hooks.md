@@ -1,9 +1,11 @@
+_Note: this feature is in development, and is not available in Azure_
+
 The web hooks feature is about being able to register a (callback) url(s) that will be called once a deployment has finished with the deployment information on whether the deployment was successful or not, the author, commit id and more.
 
-With this feature we'll be able to hook a kudu site as a trigger in web services such as zapier.com which will allow a user to do a wide array of actions when a deployment is done, for example:
+With this feature we'll be able to hook a kudu site as a trigger in web services such as [zapier.com](https://zapier.com) which will allow a user to do a wide array of actions when a deployment is done, for example:
 - Send an email when deployment is done
 - Call when a deployment has failed
-- Twit when a deployment has succeeded
+- Tweet when a deployment has succeeded
 - And more...
 
 ## API ##
