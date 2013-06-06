@@ -103,10 +103,7 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
   "author": "Some One",
   "message": "My fix",
   "deployer": "Some One",
-  "receivedTime": "2013-06-06T01:24:12.1077132Z",
   "startTime": "2013-06-06T01:24:16.5873293Z",
-  "endTime": "2013-06-06T01:24:17.63342Z",
-  "lastSuccessEndTime": "2013-06-06T01:24:17.63342Z",
-  "complete": true
+  "endTime": "2013-06-06T01:24:17.63342Z"
 }
 ```
