@@ -1,0 +1,34 @@
+The web hooks feature is about being able to register a (callback) url(s) that will be called once a deployment has finished with the deployment information on whether the deployment was successful or not, the author, commit id and more.
+
+With this feature we'll be able to hook a kudu site as a trigger in web services such as zapier.com which will allow a user to do a wide array of actions when a deployment is done, for example:
+- Send an email when deployment is done
+- Call when a deployment has failed
+- Twit when a deployment has succeeded
+- And more...
+
+## API ##
+
+### Subscribe / Add Hook ###
+
+    POST /hooks
+
+**Body**
+
+```
+{
+  "url": "http://www.callback.com/callback",
+  "event": "PostDeployment"
+}
+```
+
+**Response**
+
+201 Created or 409 Conflict (if url already exists as a hook)
+
+```
+{
+  "id": 123,
+  "url": "http://www.callback.com/callback",
+  "event": "PostDeployment"
+}
+```
