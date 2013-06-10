@@ -84,7 +84,11 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
 {
   "id": 123,
   "url": "http://www.callback.com/callback",
-  "event": "PostDeployment"
+  "event": "PostDeployment",
+  "last_datetime": "08/08/2013 13:24PM",
+  "last_status": "OK",
+  "last_reason": "internal server SSL issue or whatever",
+  "last_context": "The last event content published"
 }
 ```
 
@@ -111,9 +115,9 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
 
 ***
 
-### Invoke Hook ###
+### Publish Hook Type ###
 
-    POST /hooks/invoke/[hook type]
+    POST /hooks/publish/[hook type]
 
 **Body**
 
