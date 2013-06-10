@@ -26,7 +26,7 @@ With this feature we'll be able to hook a kudu site as a trigger in web services
 
 **Response**
 
-201 Created or 409 Conflict (if url already exists as a hook)
+201 Created or 409 Conflict (if url already exists as the address of a hook but the event is different)
 
 ```
 {
