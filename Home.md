@@ -59,6 +59,7 @@ Read this is you are interested in contributing to Kudu
 ## Features in development
 
 * [[Web Hooks]]
+* [[Action Hooks]]
 
 ## Miscellaneous
 
