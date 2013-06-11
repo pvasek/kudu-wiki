@@ -8,7 +8,7 @@ _Note: this feature is in development, and is not available in Azure_
 - Tweet when a deployment has succeeded
 - And more...
 
-## API ##
+## API on the Kudu service ##
 
 ### Subscribe / Add Hook ###
 
@@ -94,7 +94,28 @@ _Note: this feature is in development, and is not available in Azure_
 
 ***
 
-### Hook Call ###
+### Publish Hook Type ###
+
+    POST /hooks/publish/[hook type]
+
+**Body**
+
+```
+{
+  ...
+}
+```
+
+**Response**
+
+200 OK
+
+
+***
+
+## Hook Call ##
+
+This is request sent by the Kudu service to the registered URL.
 
     POST [url]
 
@@ -112,21 +133,3 @@ _Note: this feature is in development, and is not available in Azure_
   "endTime": "2013-06-06T01:24:17.63342Z"
 }
 ```
-
-***
-
-### Publish Hook Type ###
-
-    POST /hooks/publish/[hook type]
-
-**Body**
-
-```
-{
-  ...
-}
-```
-
-**Response**
-
-200 OK
