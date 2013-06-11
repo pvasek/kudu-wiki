@@ -29,3 +29,5 @@ An action hook is a script that runs as part of the deployment on a specific sta
     - Goes against the "deployment script owns all deployments steps" concept we have so far.
 
     - Harder to keep the environment state that the deployment script has.
+
+- Do we need another way to set order for the scripts besides alphabetical?
