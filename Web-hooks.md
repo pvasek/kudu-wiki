@@ -8,7 +8,7 @@ _Note: this feature is in development, and is not available in Azure_
 - Tweet when a deployment has succeeded
 - And more...
 
-## API on the Kudu service ##
+## API exposed by the Kudu service ##
 
 ### Subscribe / Add Hook ###
 
@@ -113,7 +113,7 @@ _Note: this feature is in development, and is not available in Azure_
 
 ***
 
-## Hook Call ##
+## Hook request fired by the Kudu service ##
 
 This is request sent by the Kudu service to the registered URL.
 
