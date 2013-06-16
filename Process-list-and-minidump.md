@@ -4,7 +4,7 @@ To diagnose the issues, one may need to get the list of running processes, their
 
 ## Using /diagnostics/processes
 
-`<kudu-service-url>/diagnostics/processes` endpoint returns the list of running processes in json format.   Each process info contains process name, id and a link `/diagnostics/processes/{id}` to its detail information (such as memory, cpu usages, etc.).  Note: the id `0` is reserved for current `w3wp.exe` process allowing a shortcut to this via `/diagnostics/processes/0`.  One can take and download the minidump of a process by simply connect to `/diagnostics/processes/{id}/dump`.      
+`<kudu-service-url>/diagnostics/processes` endpoint returns the list of running processes in json format.   Each process info contains process name, id and a link `/diagnostics/processes/{id}` to its detail information (such as memory, cpu usages, etc.).  Note: the id `0` is reserved for current `w3wp.exe` process allowing a shortcut to this via `/diagnostics/processes/0`.  One can take the minidump of any given process by simply connect to `/diagnostics/processes/{id}/dump`.      
 
 ## Summary
 
