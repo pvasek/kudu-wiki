@@ -17,8 +17,16 @@ This indicates which sub folder in the repository folder to be deployed.  This i
 This indicates which sub folder in the wwwroot to deploy to.  This is often used where only part of your site (wwwroot) is under source control and you only want to deploy to that part.  The default is `.`; meaning deploying to the root of wwwroot.
 
 ## Scenarios
+Given the above 4 settings, one can use in combination to achieve interesting scenarios.
+
 ### Inplace deployment
+By setting `SCM_REPOSITORY_PATH` to `wwwroot`, the repository (artifact source) and wwwroot (destination) folders are the same!  The benefit is there is no need to copy from repository (or temporary folder in case of msbuild) to wwwroot.  This speed up the deployment especially for sites with many files and only a few changed for each deployments.  This is very suitable for site (aka. Basic Web Site) that requires no msbuild.
+
+By the way, this mode is turned on automatically when the `git clone\fetch` is occurred for site created via gallery, msdeploy as well as ftp deploy. 
+
 ### Inplace deployment with readonly history
+
+
 ### Deploy from a subfolder of a repository
 ### Deploy to a subfolder of a wwwroot
 ### Deploy from a subfolder of a repository to a subfolder of a wwwroot
