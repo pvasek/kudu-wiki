@@ -8,7 +8,7 @@ There are a couple of settings that can be used to optimize the deployment.  Bel
 This represents the repository path.  The value is a relative path of site directory that will be the root of repository (see [[File structure on azure]]; default is repository).
   
 ### SCM_NO_REPOSITORY
-This indicates whether repository (Git or Hg) should be created for source control.  By default, the repository is always created and one can rollback and deploy from a certain changese id in the history.  If set to `1`, no repository is created and deployment history will only be read-only (not rollback-able).  
+This indicates whether repository should be created with source control (Git/Hg).  By default, the source control is always enabled.  With an overhead of additional source control files, the benefit is one can rollback and deploy from a certain changeset id in the history.  If set to `1`, no source control is enabled and deployment history will only be read-only (not rollback-able).  
 
 ### PROJECT
 This indicates which sub folder in the repository folder to be deployed.  This is often used where there are multiple projects in the repository, this knob will dictate which project/folder to be deployed.  
