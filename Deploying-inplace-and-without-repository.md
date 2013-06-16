@@ -23,53 +23,25 @@ This indicates which sub folder in the wwwroot to deploy to.  This is often used
 ## Scenarios
 Given the above 4 settings, one can use in combination to achieve interesting scenarios.
 
-### Inplace deployment
+* Inplace deployment
+
 By setting `SCM_REPOSITORY_PATH` to `wwwroot`, the repository (artifact source) and wwwroot (destination) folders are the same!  The benefit is there is no need to copy from repository (or temporary folder in case of msbuild) to wwwroot.  This speeds up the deployment especially for sites with many files and only a few changed for each deployments.  This is very suitable for site (aka. Basic Web Site) that requires no msbuild.
 
 By the way, this mode is turned on automatically when the `git clone\fetch` is occurred for site initially deployed by msdeploy (gallery) as well as ftp deploy. 
 
-### Inplace deployment with readonly history
+* Inplace deployment with readonly history
+
 By setting `SCM_NO_REPOSITORY` to `1`, the default `SCM_REPOSITORY_PATH` will auto adjust to `wwwroot`.  This allows inplace deployment without any source control overhead.   This is suitable for deploying from Dropbox where you simply want to file-to-file sync up as is with wwwroot and no source control.
 
-### Deploy from a subfolder of a repository
-By setting `PROJECT`, you can define where from repository to deploy from.  See [[Customizing deployments]].
+* Deploy from a subfolder of a repository
 
-### Deploy to a subfolder of a wwwroot
-### Deploy from a subfolder of a repository to a subfolder of a wwwroot
-### Initial Clone
+By setting `PROJECT`, you can define `from` which `subfolder` in repository to deploy.  See [[Customizing deployments]].
 
+* Deploy to a subfolder of a wwwroot
 
-By simply connecting to <kudu-service-url>/logstream, you will be able to get the live streaming of traces.  The /logstream watches (FileSystemWatcher) all the log/txt files changes under /LogFiles and its sub folders.   
+By setting `SCM_TARGET_PATH`, you can define `to` which subfolder in `wwwroot` to deploy.
 
-To scope the live traces to certain providers/folders, you may additional specify the path.
+* Deploy from a subfolder of a repository to a subfolder of a wwwroot
 
-* `/logstream/git/trace` => kudu related traces intended for diagnostic kudu issues.
-* `/logstream/git/deployment` => kudu deployment traces intended for application developers/operators.
-* `/logstream/application` => application traces.
-* `/logstream/http` => iis logs.
+Simply use a combination of `PROJECT` and `SCM_TARGET_PATH` [#664](https://github.com/projectkudu/kudu/issues/664)
 
-etc.
-
-## trace_level knobs
-
-Most trace providers allow users to adjust the verbosity of the traces.  Kudu trace provider uses Diagnostic's TraceLevel; Off=0 (default), Error=1, Warning=2, Info=3, Verbose=4.  
-
-Its trace level can be adjusted via settings.
-
-* set kudu trace_level to Verbose.
-
-  `$ curl <kudu-service-url>/settings -X POST -H "Content-Type: Application/json" -d "{'trace_level':'4'}"` 
-
-* get kudu trace_level.
-
-  `$ curl <kudu-service-url>/settings/trace_level` 
- 
-TBD: setting and getting application trace_level.
-
-## filtering and last N
-
-TBD.
-
-## Lifetime /logstream
-
-As long as there exists active traces, the client request will be keep alive.  After 10 mins of idle without traces, the client connection will be terminated to optimize server resources.  
