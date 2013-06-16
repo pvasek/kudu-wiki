@@ -43,6 +43,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Investigating Issues]]
 * [[Diagnostic Log Stream]]
 * [[Investigating Continuous Deployment]]
+* [[Process list and MiniDump]]
 
 ## Building and running Kudu from the github sources
 
