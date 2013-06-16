@@ -5,7 +5,7 @@ There are a couple of settings that can be used to optimize the deployment.  Bel
 ## Settings
 
 ### SCM_REPOSITORY_PATH
-This represents the repository path.  The value is a relative path of site directory that will be the root of repository (see [[File structure on azure]]; default is repository).
+This represents the repository path.  The value is a relative path of site directory that will be the root of repository (see [[File structure on azure]]).   The default is `repository`; meaning the repository will be created at `site\repository`.
   
 ### SCM_NO_REPOSITORY
 This indicates whether repository should be created with source control (Git/Hg).  By default, the source control is always enabled.  With an overhead of additional source control files, the benefit is one can rollback and deploy from a certain changeset id in the history.  If set to `1`, no source control is enabled and deployment history will only be read-only (not rollback-able).  
