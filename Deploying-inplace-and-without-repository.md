@@ -25,10 +25,11 @@ By setting `SCM_REPOSITORY_PATH` to `wwwroot`, the repository (artifact source) 
 By the way, this mode is turned on automatically when the `git clone\fetch` is occurred for site initially deployed by msdeploy (gallery) as well as ftp deploy. 
 
 ### Inplace deployment with readonly history
-By setting `SCM_NO_REPOSITORY` to `1`, the default `SCM_REPOSITORY_PATH` will auto adjust to `wwwroot`.  This allows inplace deployment without any source control overhead.   This is suitable for deploying from Dropbox where you simply want to file-to-file sync up with wwwroot without source control.
-
+By setting `SCM_NO_REPOSITORY` to `1`, the default `SCM_REPOSITORY_PATH` will auto adjust to `wwwroot`.  This allows inplace deployment without any source control overhead.   This is suitable for deploying from Dropbox where you simply want to file-to-file sync up as is with wwwroot and no source control.
 
 ### Deploy from a subfolder of a repository
+By setting `PROJECT`, you can define where from repository to deploy from.  See [[Customizing deployments]].
+
 ### Deploy to a subfolder of a wwwroot
 ### Deploy from a subfolder of a repository to a subfolder of a wwwroot
 ### Initial Clone
