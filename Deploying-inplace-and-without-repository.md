@@ -5,15 +5,19 @@ There are a couple of settings that can be used to optimize the deployment.  Bel
 ## Settings
 
 * SCM_REPOSITORY_PATH
+
 This represents the repository path.  The value is a relative path of site directory that will be the root of repository (see [[File structure on azure]]).   The default is `repository`; meaning the repository will be created at `site\repository` folder.
   
 * SCM_NO_REPOSITORY
+
 This indicates whether repository should be created with source control (Git/Hg).  By default, the source control is always enabled.  With an overhead of additional source control files and functionalities, the benefit is one can rollback and deploy from a certain changeset id in the history.  If set to `1`, no source control is enabled and deployment history will only be read-only (not rollback-able).  However, there is no overhead of source control (faster deployment).  
 
 * PROJECT
+
 This indicates which sub folder in the repository folder to be deployed.  This is often used where there are multiple projects in the repository, this knob will dictate which project/folder to be deployed.  The default is `.`; meaning deploying from the root of repository. 
 
 * SCM_TARGET_PATH
+
 This indicates which sub folder in the wwwroot to deploy to.  This is often used where only part of your site (wwwroot) is under source control and you only want to deploy to that part.  The default is `.`; meaning deploying to the root of wwwroot.
 
 ## Scenarios
