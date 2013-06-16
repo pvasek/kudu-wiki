@@ -20,11 +20,12 @@ This indicates which sub folder in the wwwroot to deploy to.  This is often used
 Given the above 4 settings, one can use in combination to achieve interesting scenarios.
 
 ### Inplace deployment
-By setting `SCM_REPOSITORY_PATH` to `wwwroot`, the repository (artifact source) and wwwroot (destination) folders are the same!  The benefit is there is no need to copy from repository (or temporary folder in case of msbuild) to wwwroot.  This speed up the deployment especially for sites with many files and only a few changed for each deployments.  This is very suitable for site (aka. Basic Web Site) that requires no msbuild.
+By setting `SCM_REPOSITORY_PATH` to `wwwroot`, the repository (artifact source) and wwwroot (destination) folders are the same!  The benefit is there is no need to copy from repository (or temporary folder in case of msbuild) to wwwroot.  This speeds up the deployment especially for sites with many files and only a few changed for each deployments.  This is very suitable for site (aka. Basic Web Site) that requires no msbuild.
 
-By the way, this mode is turned on automatically when the `git clone\fetch` is occurred for site created via gallery, msdeploy as well as ftp deploy. 
+By the way, this mode is turned on automatically when the `git clone\fetch` is occurred for site initially deployed by msdeploy (gallery) as well as ftp deploy. 
 
 ### Inplace deployment with readonly history
+By setting `SCM_NO_REPOSITORY` to `1`, the default `SCM_REPOSITORY_PATH` will auto adjust to `wwwroot`.  This allows inplace deployment without any source control overhead.   This is suitable for deploying from Dropbox where you simply want to file-to-file sync up with wwwroot without source control.
 
 
 ### Deploy from a subfolder of a repository
