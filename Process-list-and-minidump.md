@@ -1,6 +1,6 @@
 ## Overview
 
-To diagnose the issues, one may need to get the list of running processes, their cpu and memory usages or, even, take a minidump.  Kudu service exposes processes endpoint (`/diagnostics/processes`) enabling developers to achieve exactly that.
+To diagnose the issues, one may need to get the list of running processes, their cpu and memory usages or, even, take a minidump.  Kudu service exposes processes endpoint (`/diagnostics/processes`) enabling users to achieve exactly that.
 
 ## Using /diagnostics/processes
 
