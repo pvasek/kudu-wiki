@@ -14,7 +14,7 @@ This indicates whether repository should be created with source control (Git/Hg)
 This indicates which sub folder in the repository folder to be deployed.  This is often used where there are multiple projects in the repository, this knob will dictate which project/folder to be deployed.  The default is `.`; meaning deploying from the root of repository. 
 
 ### SCM_TARGET_PATH
-This indicates which sub folder in the wwwroot to deploy to.  This is often used where only part of your site (wwwroot) is under source control and you only want to deploy to that part. 
+This indicates which sub folder in the wwwroot to deploy to.  This is often used where only part of your site (wwwroot) is under source control and you only want to deploy to that part.  The default is `.`; meaning deploying to the root of wwwroot.
 
 ## Scenarios
 ### Inplace deployment
