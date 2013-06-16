@@ -26,6 +26,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Managing settings and secrets]]: how to modify the values when the app is deployed
 * [Managing database connections in Azure Web Sites](http://blog.davidebbo.com/2012/09/managing-database-connections-in-azure.html)
 * [[Accessing files via FTP]]
+* [[Deploying inplace and without repository]]
 
 ### Understanding Kudu
 
