@@ -14,7 +14,7 @@ To diagnose the issues, one may need to get the list of running processes, their
 * `HTTP GET /diagnostics/processes/0` => detail process information of current `w3wp.exe`.
 * `HTTP DELETE /diagnostics/processes/0` => terminate `w3wp.exe` process and its children.
 * `HTTP GET /diagnostics/processes/{id}/dump` => minidump of process with `id`.  By default, this is minimum dump without memory (dumptType=0).
-* `HTTP GET /diagnostics/processes/{id}/dump?dumpType=2` => full memory minidump of process with `id`.  The available dumpType  value are [MINIDUMP_TYPE](http://msdn.microsoft.com/en-us/library/windows/desktop/ms680519.aspx). 
+* `HTTP GET /diagnostics/processes/{id}/dump?dumpType=2` => full memory minidump of process with `id`.  The available dumpType  value can be found at [MINIDUMP_TYPE](http://msdn.microsoft.com/en-us/library/windows/desktop/ms680519.aspx). 
 
 
 
