@@ -35,7 +35,7 @@ By setting `SCM_NO_REPOSITORY` to `1`, the default `SCM_REPOSITORY_PATH` will au
 
 * Deploy from a subfolder of a repository
 
-By setting `PROJECT`, you can define `from` which `subfolder` in repository to deploy.  See [[Customizing deployments]].
+By setting `PROJECT`, you can define `from` which subfolder in repository to deploy.  See [[Customizing deployments]].
 
 * Deploy to a subfolder of a wwwroot
 
