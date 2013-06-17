@@ -1,7 +1,9 @@
 ## S23 (not yet running on Azure)
 * [Web Hooks](Web Hooks)
 
-## S22 (not yet running on Azure)
+## S22
+* Add support for [in-place and repo-less deployments](https://github.com/projectkudu/kudu/wiki/Deploying-inplace-and-without-repository)
+* Add support for [getting process information and mini-dumps](https://github.com/projectkudu/kudu/wiki/Process-list-and-minidump)
 * Add new kudexec page giving a console windows from within the browser
 
 ## S21.5
