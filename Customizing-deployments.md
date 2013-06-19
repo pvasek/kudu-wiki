@@ -19,11 +19,6 @@ Here is an example:
     [config]
     project = WebProject/WebProject.csproj
 
-Or simply the folder that the project file is in, assuming there is only one. e.g.
-
-    [config]
-    project = WebProject
-
 ## Deploying a specific folder for a Node, PHP, or ASP.NET site
 
 If the folder you want to deploy is not the root of  the repository, you can specify which folder to deploy. e.g.
