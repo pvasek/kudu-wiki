@@ -1,5 +1,6 @@
 ## S23 (not yet running on Azure)
-* [Web Hooks](Web Hooks)
+* [Web hooks](Web Hooks)
+* [Action hooks](Action Hooks)
 
 ## S22
 * Add support for [in-place and repo-less deployments](https://github.com/projectkudu/kudu/wiki/Deploying-inplace-and-without-repository)
