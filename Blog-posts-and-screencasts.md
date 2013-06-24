@@ -57,6 +57,7 @@
 
 ## Connection strings and secrets
 
+* [6/8/2013 Keeping sensitive config settings secret with Azure Websites and GitHub (Phil Lee)](http://www.codeproject.com/Articles/602146/Keeping-sensitive-config-settings-secret-with-Azur)
 * [9/11/2012 Managing database connections in Azure Web Sites (@davidebbo)](http://blog.davidebbo.com/2012/09/managing-database-connections-in-azure.html)
 * [8/8/2012 git deployment to an Azure Website: keeping configuration secrets (@srkirkland)](http://weblogs.asp.net/srkirkland/archive/2012/08/08/git-deployment-to-an-azure-website-keeping-configuration-secrets.aspx)
 
