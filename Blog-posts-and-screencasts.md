@@ -35,8 +35,9 @@
 ## Customizing the build and deployment process
 
 * [12/20/2012 3 part series on Custom Deployment (@amitapl)](http://blog.amitapple.com/post/38417491924/azurewebsitecustomdeploymentpart1)
-* [1/19/2013 Running Mocha Tests (@gblock)](http://codebetter.com/glennblock/2013/01/19/teach-your-website-new-deployment-tricks-with-azure-cli-1-of-xxx-running-mocha-tests/)
+* [6/11/2013 Custom deployment scripts – with mstest (@PhoenixHawk)](http://dotnetninja.de/2013/06/custom-azure-website-git-deployment-with-mstest/)
 * [4/27/2013 Azure Web Sites Git Deploy For Multiple Project Solutions (Paul Hiles)](http://www.devtrends.co.uk/blog/azure-web-sites-git-deploy-for-multiple-project-solutions)
+* [1/19/2013 Running Mocha Tests (@gblock)](http://codebetter.com/glennblock/2013/01/19/teach-your-website-new-deployment-tricks-with-azure-cli-1-of-xxx-running-mocha-tests/)
 * [11/19/2012 Composer (PHP) and Azure Websites Git Deployment (@beberlei)](http://www.whitewashing.de/2012/11/19/composer_and_azure_websites_git_deployment.html)
 
 
