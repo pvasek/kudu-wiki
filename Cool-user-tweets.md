@@ -1,5 +1,15 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- "Just deployed a #nodejs website on #Windows #Azure using #Git. Easier than I thought !" @MakanWG [15 Jun 2013](http://twitter.com/#!/MakanWG/status/345945115967225856)
+- "Wow, my pet projects Azure Git deployment now runs mstest unit tests. Was just a 2-line change in the default custom deployment script." @PhoenixHawk [7 Jun 2013](http://twitter.com/#!/PhoenixHawk/status/343115748522221568)
+- "Setup a site that's auto deployed from Git on Azure. Easy is an understatement! Well played Microsoft, well played." @Amadiere [3 Jun 2013](http://twitter.com/#!/Amadiere/status/341674382558642178)
+- "First time I've used the automatic deploy from Github to #WindowsAzure websites. Pretty slick. Don't forget NuGet Package Restore!" @WadeWegner [30 May 2013](http://twitter.com/#!/WadeWegner/status/340289764869668864)
+- "Crikey. GitHub + Node + Azure Websites is pretty fucking slick. http://t.co/jl8lT23giS" @nzben [26 May 2013](http://twitter.com/#!/nzben/status/338851652989763587)
+- "Mac, Sublime Text, CodeKit, Chrome -&gt; GitHub -&gt; Azure! Impressive, very impressive." @adamjwolf [26 May 2013](http://twitter.com/#!/adamjwolf/status/338776756716728320)
+- "Just deployed a Github repo to azure. Few clicks and ... It's done. I can't believe it was that easy." @adamjwolf [26 May 2013](http://twitter.com/#!/adamjwolf/status/338775358763569153)
+- "GitHub/BitBucket + Azure Web Sites + NuGet Package Restore = super super SUPER easy deployments" @acanthamoeba [19 May 2013](http://twitter.com/#!/acanthamoeba/status/336287260792205313)
+- "Git deploy on Windows Azure looks realy great. #phpday" @Endijs [18 May 2013](http://twitter.com/#!/Endijs/status/335676651943899136)
+- "I just deploy node.js to @WindowsAzure with @Dropbox !! oh man... couldn't get any easier." @imapisit [14 May 2013](http://twitter.com/#!/imapisit/status/334535759539339264)
 - "Wow the GitHub integration that Azure Web Sites has is so smooth." @robdmoore [12 May 2013](http://twitter.com/#!/robdmoore/status/333560267269107715)
 - "I love #windowsazure because it allows me to start a new website with #git repo, #php and continuous integration in seconds !" @JulienCarosi [9 May 2013](http://twitter.com/#!/JulienCarosi/status/332483305498886145)
 - "azure site log tail [sitename] is my new fried. Very handy." @teelahti [8 May 2013](http://twitter.com/#!/teelahti/status/332247621966131204)
