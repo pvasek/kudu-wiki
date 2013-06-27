@@ -50,6 +50,7 @@
 
 ## Logging and tracing
 
+* [6/26/2013 Introducing Website Diagnostic cmdlets in Windows Azure PowerShell (@elogeel)](http://abdelrahmanogail.wordpress.com/2013/06/26/introducing-website-diagnostic-cmdlets-in-windows-azure-powershell/)
 * [4/5/2013 Streaming Diagnostics Trace Logging from the Azure Command Line (plus Glimpse!) (@shanselman)](http://www.hanselman.com/blog/StreamingDiagnosticsTraceLoggingFromTheAzureCommandLinePlusGlimpse.aspx)
 * [12/20/2012 Screencast: Log streaming in Azure Web Sites (@davidebbo)](http://www.youtube.com/watch?v=FP5Mnbj3ZcI&hd=1)
 * [12/19/2012 How to get live traces from Windows Azure (@suwat_ch)](http://blogs.msdn.com/b/suwatch/archive/2012/12/19/how-to-get-live-traces-from-windows-azure.aspx)
