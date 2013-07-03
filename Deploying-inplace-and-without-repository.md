@@ -10,7 +10,7 @@ This represents the repository path.  The value is a relative path of site direc
   
 * SCM_NO_REPOSITORY
 
-This indicates whether repository should be created with source control (Git/Hg).  By default, the source control is always enabled.  With an overhead of additional source control files and functionalities, the benefit is one can rollback and deploy from a certain changeset id in the history.  If set to `1`, no source control is enabled and deployment history will only be read-only (not rollback-able).  However, there is no overhead of source control (faster deployment).  
+This indicates whether repository should be created with source control (Git/Hg).  By default, the source control is always enabled.  With an overhead of additional source control files and functionalities, the benefit is one can rollback and deploy from a certain changeset id in the history.  If set to `1`, no source control is enabled and deployment history will only be read-only (not rollback-able).  However, there is no overhead of source control (faster deployment).  Setting this to '1' effectively ensures no git deployment can occur. All git deployments henceforth will result in a 400 error. Only dropbox can be used with this setting since it has no source control.
 
 * PROJECT
 
