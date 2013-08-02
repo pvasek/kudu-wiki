@@ -44,9 +44,9 @@ This is probably not a great solution.
 
 ### 2. Using SSH keys
 
-Kudu can generate a private SSH key, and set the public key on GitHub. Either the user can set the key, or it can be done via OAuth.
+For private repository, Kudu supports SSH.  Kudu can generate the SSH key-pair.  The private key will be kept within Kudu.  You can get the public key via `/sshkey?ensurePublicKey=1` endpoint.  Note: `ensurePublicKey` directs Kudu to generate key-pair if not exists.
 
-This is a good solution, but it requires having a secure way of storing the private key on the Kudu side.
+In addition to setting hook, you need to set the public key as `Deploy Key` for the repository in order to allow Kudu to fetch from it.
 
 ### 3. Using a Kudu-owned GitHub account
 
