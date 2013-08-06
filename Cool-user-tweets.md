@@ -1,5 +1,16 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- "Holy Smokes! I just setup automatic deployment to Windows Azure from GitHub with like two freaking clicks! What is this, MAGIC!?" @jonathansampson [1 Aug 2013](http://twitter.com/#!/jonathansampson/status/363038537576230913)
+- "Loves how #WindowsAzure #website simplify deployment of Github projects! Just commit and #azure will deploy immediately." @stiucsib86 [31 Jul 2013](http://twitter.com/#!/stiucsib86/status/362491777762070529)
+- "Spending some quality time with #nodejs and #windowsazure. With Git support it's so damn easy, even from a Mac." @thereverandnd [29 Jul 2013](http://twitter.com/#!/thereverandnd/status/361976734532378624)
+- "#WindowsAzure Web Sites leveraging #DropBox deployments http://t.co/Nqgl9smliS via @Perficient_MSFT" @rduclos [25 Jul 2013](http://twitter.com/#!/rduclos/status/360457577169043459)
+- "Toying around with Dropbox deployment to Windows Azure Web Sites. Such a cool feature." @goldshtn [20 Jul 2013](http://twitter.com/#!/goldshtn/status/358836865056509952)
+- "Enabling Git on Azure Mobile Services Scripts is a huge plus. Good job MS" @RealAndyLawton [10 Jul 2013](http://twitter.com/#!/RealAndyLawton/status/355151944874074112)
+- "Don't think I'll ever fall out of love with Git + Azure" @ed_spencer_uk [9 Jul 2013](http://twitter.com/#!/ed_spencer_uk/status/354696512565018624)
+- "azure is pretty amazing, was able to create a project, push it to github and deploy to azure websites nice and easily" @buildstarted [3 Jul 2013](http://twitter.com/#!/buildstarted/status/352539433498722305)
+- "Windows Azure publishing com Dropbox ‚ muito amor." @eder_nucci [1 Jul 2013](http://twitter.com/#!/eder_nucci/status/351904472659787776)
+- "Playing around with Windows Azure today, deploying a website from BitBucket: amazingly simple." @dubmun [30 Jun 2013](http://twitter.com/#!/dubmun/status/351459468783001602)
+- "Azure git deploy is rocking my world. Pull updates for a product from their repo, merge with customizations in my repo then push to Azure." @JamesNK [25 Jun 2013](http://twitter.com/#!/JamesNK/status/349466677085351938)
 - "Just deployed a #nodejs website on #Windows #Azure using #Git. Easier than I thought !" @MakanWG [15 Jun 2013](http://twitter.com/#!/MakanWG/status/345945115967225856)
 - "Wow, my pet projects Azure Git deployment now runs mstest unit tests. Was just a 2-line change in the default custom deployment script." @PhoenixHawk [7 Jun 2013](http://twitter.com/#!/PhoenixHawk/status/343115748522221568)
 - "Setup a site that's auto deployed from Git on Azure. Easy is an understatement! Well played Microsoft, well played." @Amadiere [3 Jun 2013](http://twitter.com/#!/Amadiere/status/341674382558642178)
