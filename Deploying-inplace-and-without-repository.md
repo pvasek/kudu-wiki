@@ -45,3 +45,6 @@ By setting `SCM_TARGET_PATH`, you can define `to` which subfolder in `wwwroot` t
 
 Simply use a combination of `PROJECT` and `SCM_TARGET_PATH` [#664](https://github.com/projectkudu/kudu/issues/664)
 
+## Notes
+
+See these [steps](http://social.msdn.microsoft.com/Forums/windowsazure/en-US/46cd0039-7427-4c77-b796-cabeb5eb5316/git-deployment-and-get-my-files-back) from a forum user who successfully used this.
