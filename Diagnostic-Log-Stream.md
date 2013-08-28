@@ -4,7 +4,7 @@ One of the keys to diagnose the issues is to look at the trace files.  Kudu serv
 
 ## Using /logstream
 
-By simply connecting to <kudu-service-url>/logstream, you will be able to get the live streaming of traces.  The /logstream watches (FileSystemWatcher) all the log/txt files changes under /LogFiles and its sub folders.   
+By simply connecting to <kudu-service-url>/logstream (preferably using a tool like curl), you will be able to get the live streaming of traces.  The /logstream watches (FileSystemWatcher) all the log/txt files changes under /LogFiles and its sub folders.   
 
 To scope the live traces to certain providers/folders, you may additional specify the path.
 
@@ -35,6 +35,14 @@ TBD: setting and getting application trace_level.
 
 TBD.
 
-## Lifetime /logstream
+## Lifetime of /logstream requests
 
-As long as there exists active traces, the client request will be keep alive.  After 10 mins of idle without traces, the client connection will be terminated to optimize server resources.  
+As long as there exists active traces, the client request is kept alive.  After 10 mins of idle without traces, the client connection is terminated to optimize server resources.  
+
+## Connecting the /logstream using a web browser
+
+If you request /logstream from a Web browser (e.g. Chrome or IE), you may find that you initially get a blank page, even though your site is producing some trace.
+
+The reason is that browsers do buffering of the response, until either the response is complete (which never happens in this case), or it gets a large amount of data.
+
+For that reason, using a browser is not recommended, and using a simple tool like curl is preferable.
