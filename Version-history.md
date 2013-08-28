@@ -39,7 +39,7 @@
 * Added retry loop when fetching from external repos to deal with network reliability issues
 * Improved how Kudu detects if the git repository already exists
 
-## S20 (currently on Azure)
+## S20
 * Add support for deploying from Dropbox
 * Add support for deploying Mercurial sites on Bitbucket and Codeplex
 * Switch to use script generator as default deployment logic
