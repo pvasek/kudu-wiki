@@ -1,6 +1,3 @@
-# Analzying a git client trace
-
-
 After enabling the git trace ([[Investigating issues]]) and performing a git clone or push, you should see something like this:
 
     trace: built-in: git 'push' 'http://dfowler-nb.redmond.corp.microsoft.com:35954/NuGet199c8e.git' 'master'
