@@ -1,4 +1,4 @@
-## S23 (not yet running on Azure)
+## S23 (8/27/2013)
 * [Web hooks](Web Hooks)
 * [Action hooks](Action Hooks)
 
