@@ -18,6 +18,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 ### How-to guides
 
+* [[Accessing the Kudu service]]
 * [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation from windowsazure.com)
 * [[Customizing Deployments]]: choosing which folder or project to deploy to the web site
 * [[Deployment hooks]]: how to take over the deployment logic for a site
