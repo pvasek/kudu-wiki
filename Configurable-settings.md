@@ -17,7 +17,7 @@ Please see [[Deploying inplace and without repository]] for information on using
 
 ### Using a git shallow clone in Continous Deployment scenarios
 
-For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. Tu turn it on:
+For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. To turn it on:
 
 	SCM_USE_SHALLOW_CLONE=1
 
