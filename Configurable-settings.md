@@ -5,21 +5,21 @@ Note that in addition to using App Settings, you can specify those settings in y
 
 ## Repository and deployment related settings
 
-### Using a git shallow clone in Continous Deployment scenarios
-
-For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. Tu turn it on:
-
-	SCM_USE_SHALLOW_CLONE=1
-
-### Changing the repo and deployment paths, and not using a repo at all
-
-Please see [[Deploying inplace and without repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
-
 ### Adding flags to the msbuild command line
 
 Use this flag to add things to the msbuild command line. e.g. to choose the build configuration, you could have:
 
     SCM_BUILD_ARGS=/p:Configuration=Release
+
+### Changing the repo and deployment paths, and not using a repo at all
+
+Please see [[Deploying inplace and without repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
+
+### Using a git shallow clone in Continous Deployment scenarios
+
+For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. Tu turn it on:
+
+	SCM_USE_SHALLOW_CLONE=1
 
 
 ## Diagnostic related settings
