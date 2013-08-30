@@ -11,9 +11,9 @@ For large repos, you can make Kudu use a shallow clone when it clones your repo 
 
 	SCM_USE_SHALLOW_CLONE=1
 
-### Changing the repo path, the deployment path, and choosing not to use a repo at all.
+### Changing the repo and deployment paths, and not using a repo at all
 
-Please see [[Deploying-inplace-and-without-repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
+Please see [[Deploying inplace and without repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
 
 ### Adding flags to the msbuild command line
 
