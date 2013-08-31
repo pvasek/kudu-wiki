@@ -7,9 +7,11 @@ Note that in addition to using App Settings, you can specify those settings in y
 
 ### Adding flags to the msbuild command line
 
-Use this flag to add things to the msbuild command line. e.g. to choose the build configuration, you could have:
+Use this flag to add things at the end of the msbuild command line, such that it overrides any previous parts of the default command line.
 
-    SCM_BUILD_ARGS=/p:Configuration=Release
+e.g. to choose the Debug build configuration (default is Release), you could have:
+
+    SCM_BUILD_ARGS=/p:Configuration=Debug
 
 ### Changing the repo and deployment paths, and not using a repo at all
 
