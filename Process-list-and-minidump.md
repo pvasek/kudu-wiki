@@ -1,6 +1,6 @@
 ## Overview
 
-To diagnose the issues, one may need to get the list of running processes, their cpu and memory usages or, even, take a minidump.  Kudu service exposes processes endpoint (`/diagnostics/processes`) enabling users to achieve exactly that. If you start at the [[root of the Kudu service|Accessing-the-kudu-service]], you'll see a `Processes and mini-dumps` link that lets you easily navigate the REST API (a browser extension like [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en) is recommended).
+To diagnose issues, one may need to get the list of running processes, their cpu and memory usages, or even take a minidump.  Kudu service exposes processes endpoint (`/diagnostics/processes`) enabling users to achieve exactly that. If you start at the [[root of the Kudu service|Accessing-the-kudu-service]], you'll see a `Processes and mini-dumps` link that lets you easily navigate the REST API (a browser extension like [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en) is recommended).
 
 ## Using /diagnostics/processes
 
