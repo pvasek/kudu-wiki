@@ -44,6 +44,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 * [[Known issues]]
 * [[Investigating Issues]]
+* Using the [[Kudu Console]]
 * [[Diagnostic Log Stream]]
 * [[Investigating Continuous Deployment]]
 * [[Process list and MiniDump]]
