@@ -1,5 +1,14 @@
 Here are a few fun tweets about Kudu and the Azure git push feature:
 
+- "Setup another @WindowsAzure website, pointed it to my @bitbucket repo and it published automagicly. Having #fun now!" @brettski111 [1 Sep 2013](http://twitter.com/#!/brettski111/status/374310013960871937)
+- "Never thought I'd say this but the new @WindowsAzure platform is fooking amazing! Deployed a private git repo within 3mins! Bye bye AWS!" @andyshora [30 Aug 2013](http://twitter.com/#!/andyshora/status/373448946469044224)
+- "#Azure rocks! I make CSS changes, push to #github, and within 20 seconds I am testing it on my iPhone 5 and WinPhone8 !" @John_Papa [25 Aug 2013](http://twitter.com/#!/John_Papa/status/371815391166607360)
+- "#LD48 So Azure+Git integration is working beautifully. Site updates less than a minute after staging to master. Getting spoiled." @JustRogDigiTec [24 Aug 2013](http://twitter.com/#!/JustRogDigiTec/status/371499183087173635)
+- "Trialling out VS Express 2013 for Web. Impressed so far. Git deployed new site with Bootstrap and social OAuth to Azure Websites in 10 mins" @paulswail [20 Aug 2013](http://twitter.com/#!/paulswail/status/370033730326241281)
+- "I can't believe how pain-free setting up azure and github deployments are #almosttoosimple" @ryantomlinson [17 Aug 2013](http://twitter.com/#!/ryantomlinson/status/368714876295733248)
+- "Continuous Deployment running from our Github repo of our new company site into Windows Azure with a couple of click. #geekasm." @martincronje [14 Aug 2013](http://twitter.com/#!/martincronje/status/367647278708060160)
+- "@nzthiago OMG! Gob smacked by Azure! I just set up a website with CI from Bitbucket(Mecurial) in 5 minutes. Bye-bye existing provider." @dwcCBSL [11 Aug 2013](http://twitter.com/#!/dwcCBSL/status/366467467079458816)
+- "Automatic @WindowsAzure website deployment using @github is the #beesknees" @stevendanna [10 Aug 2013](http://twitter.com/#!/stevendanna/status/366381644589973505)
 - "Holy Smokes! I just setup automatic deployment to Windows Azure from GitHub with like two freaking clicks! What is this, MAGIC!?" @jonathansampson [1 Aug 2013](http://twitter.com/#!/jonathansampson/status/363038537576230913)
 - "Loves how #WindowsAzure #website simplify deployment of Github projects! Just commit and #azure will deploy immediately." @stiucsib86 [31 Jul 2013](http://twitter.com/#!/stiucsib86/status/362491777762070529)
 - "Spending some quality time with #nodejs and #windowsazure. With Git support it's so damn easy, even from a Mac." @thereverandnd [29 Jul 2013](http://twitter.com/#!/thereverandnd/status/361976734532378624)
