@@ -68,4 +68,4 @@ Read this is you are interested in contributing to Kudu
 ## Miscellaneous
 
 * [[Blog posts and screencasts]]
-* [[Cool user tweets]]
+* [[Cool tweets from the community|Cool user tweets]]
