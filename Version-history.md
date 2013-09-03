@@ -1,3 +1,6 @@
+## S24
+* Fix [selection issue](https://github.com/chrisdone/jquery-console/issues/32) in the Console.
+
 ## S23 (8/27/2013)
 * [Web hooks](Web Hooks)
 * [Action hooks](Action Hooks)
