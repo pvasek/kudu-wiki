@@ -12,7 +12,7 @@ The hook URL is the /deploy path on the Kudu service. So it looks like `https://
 
 Note that you can also obtain this URL from the Azure Portal under the Configure tab, in the Deployment Trigger Url field.
 
-One you have the URL, you can set it as a GitHub/CodePlex/Bitbucket hook, either via OAuth, or manually from those sites.
+Once you have the URL, you can set it as a GitHub/CodePlex/Bitbucket hook, either via OAuth, or manually from those sites.
 
 The hook expects a POST request, and supports the payload from those various sites (which are all different).
 
