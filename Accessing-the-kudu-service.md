@@ -13,7 +13,7 @@ Notes:
 Notes:
 
 - This trick only works for sites that have git/hg/dropbox publishing enabled
-- It works in Chrome but not in IE. Not sure about other browsers.
+- It doesn't work in IE
 
 Here are the steps:
 
