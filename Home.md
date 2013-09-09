@@ -16,12 +16,17 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * The branch that's currently live in Azure is [S23](https://github.com/projectkudu/kudu/tree/S23)
 * [[Version history]]
 
+### Features
+* [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation from windowsazure.com)
+* [[Deployment hooks]]: how to take over the deployment logic for a site
+* [[Web Hooks]]
+* [[Action Hooks]]
+
+
 ### How-to guides
 
 * [[Accessing the Kudu service]]
-* [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation from windowsazure.com)
 * [[Customizing Deployments]]: choosing which folder or project to deploy to the web site
-* [[Deployment hooks]]: how to take over the deployment logic for a site
 * [[Deployment branch]]: choosing the branch that gets deployed when you push
 * [[Deploying from GitHub]]
 * [[Managing settings and secrets]]: how to modify the values when the app is deployed
@@ -60,11 +65,6 @@ Read this is you are interested in contributing to Kudu
 * [[Deploying to a server]]
 * [[Git workflow]] for contributors
 * [Coding Guidelines](http://aspnetwebstack.codeplex.com/wikipage?title=CodingConventions) We use the coding guidelines used by AspNetWebStack
-
-## Features in development
-
-* [[Web Hooks]]
-* [[Action Hooks]]
 
 ## Miscellaneous
 
