@@ -32,3 +32,8 @@ For directories, it downloads a zip file containing the full content of the fold
 ## Upload files and folder using drag and drop
 
 You can drag some files from the Windows shell (or Mac finder), and drop them directly into the Kudu Console's UI, much like you would between two Windows shell folders. You have to try it to believe it! :)
+
+
+## View and Edit text files
+
+If you click the Edit icon next to a file, the Console will open up a window where you can view and edit the file. It's a super basic editor, so don't expect any syntax coloring or fancy code editor features. But it can still be helpful when investigating issues. e.g. you could use it to quickly tweak a web.config file.
