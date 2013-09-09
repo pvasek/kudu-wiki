@@ -45,4 +45,4 @@ Capture the git client trace for more details (see below).
   * cmd.exe: `set GIT_CURL_VERBOSE=1`
   * Powershell: `$env:GIT_CURL_VERBOSE=1`
 2. Run your git command. (e.g. git push url master). **NOTE: To capture output you need to redirect the error stream not output!**
-3. [[Analzying a git client trace]].
+3. [[Analyzing a git client trace]].
