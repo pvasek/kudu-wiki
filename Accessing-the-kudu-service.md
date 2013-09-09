@@ -25,6 +25,6 @@ Here are the steps:
 The root of the Kudu service has links to various things that can be done from there, and are discussed elsewhere in this wiki. e.g., you can:
 
 - Get the Kudu diagnostic dump
-- Launch the diagnostic console
+- Launch the [[diagnostic console|Kudu-console]]
 - See info about the runtime environment
 - Navigate the REST API
