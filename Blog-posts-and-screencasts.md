@@ -10,7 +10,7 @@
 * [6/8/2012 Screencast: Getting started on Windows Azure with PHP on Mac OS](http://www.youtube.com/watch?v=SWBLiCwAiMM&list=UU0m-80FnNY2Qb7obvTL_2fA&index=4&feature=plcp)
 
 
-## Continous Delivery
+## Continous Deployment
 
 * [4/14/2013 Deploying an Azure Website from Source Control](http://typecastexception.com/post/2013/04/14/Deploying-an-Azure-Website-from-Source-Control.aspx)
 * [3/24/2013 Deploying to Azure Web Sites using NuGet package restore from a secured feed (@xavierdecoster)](http://www.xavierdecoster.com/deploying-to-azure-web-sites-using-nuget-package-restore-from-a-secured-feed)
