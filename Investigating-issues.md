@@ -18,11 +18,11 @@ See [[Diagnostic Log Stream]].
 
 ## Getting the diagnostic dump
 
-If you are able to hit the git service (per previous section), but you get an error during a git command (e.g. push/pull/clone), the next step is to download the git service log.
+If you are able to hit the root of the Kudu service (per previous section), but you get an error during a git command (e.g. push/pull/clone), the next step is to download the Kudu service log.
 
 To do this:
 
-* Go to the root of the git service (per previous section)
+* Go to the [[root of the Kudu service|Accessing-the-kudu-service]]
 * On that page, you'll see a Download link next to 'Diagnostics Dump'
 * Just click it to download a zip file which you can provide to help investigation
 
