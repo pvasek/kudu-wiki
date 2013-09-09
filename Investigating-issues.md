@@ -4,24 +4,13 @@ This page gives instructions on investigating git issues that occur in Azure Web
 
 ## Make sure the site itself works
 
-When you run into a git issue, the first thing to try is to hit the site itself (e.g. http://somesite.azurewebsites.net/). If you get some kind of error instead of the default _"The web site is under construction"_ page, then Azure Web Sites are likely down, and nothing related to git will work.
+When you run into an issue with a Kudu feature (e.g. git/hg/dropbox deployment), the first thing to try is to hit the site itself (e.g. http://yoursite.azurewebsites.net/). It it seems completely unreachable, then there is a chance that you're dealing with some kind of WAWS outage, which would also disable the Kudu features. When that happens, please check the [Azure Service Dashboard](http://www.windowsazure.com/en-us/support/service-dashboard/) to see if some outage is mentioned.
 
 ## Try hitting the root of the git service
 
-If the site is up but git is broken in some way, try hitting the [[root of the Kudu service|Accessing-the-kudu-service]] directly from the browser. This is useful whether you fail to Enable Git, get a failure on the Deployment tab, or get a failure when you git push.
+If the site is up but a Kudu feature is broken in some way, try hitting the [[root of the Kudu service|Accessing-the-kudu-service]] directly from the browser. This is useful whether you fail to Enable Git, get a failure on the Deployment tab, or get a failure when you git push.
 
-### If you get an error BEFORE getting prompted for credentials
-
-That usually means something pretty bad is wrong, causing things to fail before it even reaches the git engine.
-
-### If you get an error AFTER getting prompted for credentials
-
-That could mean two different things:
-
-1. An issue with Azure Web Sites
-2. An issue with the git support itself
-
-Record what the error is and report it to the [forum](http://social.msdn.microsoft.com/Forums/en-US/azuregit/threads)
+If you get an error, it could mean that there is something wrong with Kudu. Please record what the error is and report it to the [forum](http://social.msdn.microsoft.com/Forums/en-US/azuregit/threads)
 
 ## Live traces
 
