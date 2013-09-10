@@ -13,6 +13,16 @@ e.g. to choose the Debug build configuration (default is Release), you could hav
 
     SCM_BUILD_ARGS=/p:Configuration=Debug
 
+### Taking over the script generator command line
+
+Kudu uses the `azure site deploymentscript` command described [here](http://blog.amitapple.com/post/38418009331/azurewebsitecustomdeploymentpart2) to generate a deployment script. By default, it figures out what parameters to pass by looking at the files in the repo to determine the project type (e.g. Node, ASP.NET, ...).
+
+But in some cases, you may want to override that and take control of the command line, which you can do using this setting.
+
+e.g. to force your repo to be treated as a plain web site (no build), you can use:
+ 
+    SCM_SCRIPT_GENERATOR_ARGS=--basic -p FolderToDeploy
+
 ### Changing the repo and deployment paths, and not using a repo at all
 
 Please see [[Deploying inplace and without repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
