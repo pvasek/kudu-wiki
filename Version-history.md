@@ -2,8 +2,8 @@
 * Fix [selection issue](https://github.com/chrisdone/jquery-console/issues/32) in the Console.
 
 ## S23 (8/27/2013)
-* [Web hooks](Web Hooks)
-* [Action hooks](Action Hooks)
+* [[Web Hooks]]
+* [[Post Deployment Action Hooks]]
 
 ## S22
 * Add support for [in-place and repo-less deployments](https://github.com/projectkudu/kudu/wiki/Deploying-inplace-and-without-repository)
