@@ -20,7 +20,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation from windowsazure.com)
 * [[Deployment hooks]]: how to take over the deployment logic for a site
 * [[Web Hooks]]
-* [[Post Deployment Action Hook]]
+* [[Post Deployment Action Hooks]]
 
 
 ### How-to guides
