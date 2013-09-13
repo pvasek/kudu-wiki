@@ -6,5 +6,4 @@ The best way to eliminate that possibility is to test your site using a clean co
 
     clone MySite MySiteClean
 
-One you've done that, try running your site locally using this new `MySiteClean` repo instead of your original repo.
-If you find that it's broken, then you most likely didn't commit some required files, and your issue is unrelated to Azure. The next step is to figure out what files you're missing by comparing your `MySite` and `MySiteClean` folders.
+One you've done that, try running your site locally using this new `MySiteClean` repo instead of your original repo. If you find that it's broken, then you most likely didn't commit some required files, and your issue is unrelated to Azure. The next step is to figure out what files you're missing by comparing your `MySite` and `MySiteClean` folders.
