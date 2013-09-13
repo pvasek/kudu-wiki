@@ -4,7 +4,7 @@ This page gives instructions on investigating Kudu issues that occur in Azure We
 
 Sometimes, the issue exists client side, and has nothing to do with Azure Web Sites. Here are a couple things worth looking at to make sure things are healthy on the client side:
 
-* [[Make sure your repository is clean]]: this applies to git scenarios
+* [[Make sure all your files are committed]]: this applies to git scenarios
 * [[Make sure site correctly deploys locally]]: this applies to ASP.NET Web Applications
 
 # Server side investigation
