@@ -1,5 +1,6 @@
 ## S24
 * Added diagsession and gcdump support to the [[Process API|Process-list-and-minidump]]
+* Dump files now include matching mscordacwks.dll and SOS.dll for convenience
 * Added threads to the [[Process API|Process-list-and-minidump]]
 * Fix [selection issue](https://github.com/chrisdone/jquery-console/issues/32) in the Console.
 
