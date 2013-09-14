@@ -1,4 +1,6 @@
 ## S24
+* Added diagsession and gcdump support to the [[Process API||Process-list-and-minidump]]
+* Added threads to the [[Process API|Process-list-and-minidump]]
 * Fix [selection issue](https://github.com/chrisdone/jquery-console/issues/32) in the Console.
 
 ## S23 (8/27/2013)
