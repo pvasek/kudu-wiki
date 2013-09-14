@@ -1,4 +1,5 @@
 ## S24
+* New Site Extension feature
 * Added diagsession and gcdump support to the [[Process API|Process-list-and-minidump]]
 * Dump files now include matching mscordacwks.dll and SOS.dll for convenience
 * Added threads to the [[Process API|Process-list-and-minidump]]
