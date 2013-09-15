@@ -87,6 +87,6 @@ Maximum size of the log file (Default: 128 kb):
 
     DIAGNOSTICS_TEXTTRACEMAXLOGFILESIZEBYTES=200000
 
-Maximum size of the log folder (Default: 1 MB)
+Maximum size of the log folder (Default: 1 MB):
 
     DIAGNOSTICS_TEXTTRACEMAXLOGFOLDERSIZEBYTES=2000000
