@@ -54,3 +54,13 @@ By default, when your build process launches some command, it's allowed to run f
 When using the log streaming feature, by default it times out after 30 minutes of inactivity. To change it to 15 minutes (unit is seconds):
 
 	SCM_LOGSTREAM_TIMEOUT=900
+
+## Runtime settings
+
+The following settings must be set in the Azure App Settings, and cannot be overridden in the .deployment file (since they are not deployment settings)
+
+### Change the Node version
+
+Used the change the version of Node that is used by default
+
+    WEBSITE_NODE_DEFAULT_VERSION=0.10.5
