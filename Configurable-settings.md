@@ -68,3 +68,25 @@ Used the change the version of Node that is used by default
 ### Enable the use of private Site Extensions on a site
 
     WEBSITE_PRIVATE_EXTENSIONS=1
+
+### Diagnostics related settings
+
+The name (or relative path to the LogDirectory) of the file where internal errors are logged, for troubleshooting the listener:
+
+    DIAGNOSTICS_LASTRESORTFILE=logging-errors.txt
+
+The settings file, relative to the web app root:
+
+    DIAGNOSTICS_LOGGINGSETTINGSFILE=..\diagnostics\settings.json
+
+The log folder, relative to the web app root:
+
+    DIAGNOSTICS_TEXTTRACELOGDIRECTORY=..\..\LogFiles\Application
+
+Maximum size of the log file (Default: 128 kb):
+
+    DIAGNOSTICS_TEXTTRACEMAXLOGFILESIZEBYTES=200000
+
+Maximum size of the log folder (Default: 1 MB)
+
+    DIAGNOSTICS_TEXTTRACEMAXLOGFOLDERSIZEBYTES=2000000
