@@ -53,7 +53,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * Using the [[Kudu Console]]
 * [[Diagnostic Log Stream]]
 * [[Investigating Continuous Deployment]]
-* [[Process list and MiniDump]]
+* [[Process Threads list and minidump/gcdump/diagsession]]
 
 ## Building and running Kudu from the github sources
 
