@@ -64,3 +64,7 @@ The following settings must be set in the Azure App Settings, and cannot be over
 Used the change the version of Node that is used by default
 
     WEBSITE_NODE_DEFAULT_VERSION=0.10.5
+
+### Enable the use of private Site Extensions on a site
+
+    WEBSITE_PRIVATE_EXTENSIONS=1
