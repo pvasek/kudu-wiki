@@ -4,7 +4,7 @@ To diagnose issues, one may need to get the list of running processes, their cpu
 
 ## Using /diagnostics/processes
 
-`<kudu-service-url>/diagnostics/processes` endpoint returns the list of running processes in json format.   Each process info contains process name, id and a link `/diagnostics/processes/{id}` to its detail information (such as memory, cpu usages, etc.).  Note: the id `0` is reserved for current `w3wp.exe` process allowing a shortcut to this via `/diagnostics/processes/0`.  One can take the minidump of any given process by simply connect to `/diagnostics/processes/{id}/dump`.   In addition, we also support taking a gcdump and diagsession format (`/diagnostics/processes/{id}/gcdump&format=raw` and `/diagnostics/processes/{id}/gcdump&format=diagsession`, which is default, respectively).      
+`<kudu-service-url>/diagnostics/processes` endpoint returns the list of running processes in json format.   Each process info contains process name, id and a link `/diagnostics/processes/{id}` to its detail information (such as memory, cpu usages, etc.).  Note: the id `0` is reserved for current `w3wp.exe` process allowing a shortcut to this via `/diagnostics/processes/0`.  One can take the minidump of any given process by simply connect to `/diagnostics/processes/{id}/dump`.   For Windows Azure, we include support for taking a gcdump and diagsession format (`/diagnostics/processes/{id}/gcdump&format=raw` and `/diagnostics/processes/{id}/gcdump&format=diagsession` respectively).      
 
 ## Using /diagnostics/processes/{id}/threads
 
@@ -22,7 +22,7 @@ To diagnose issues, one may need to get the list of running processes, their cpu
 * `HTTP GET /diagnostics/processes/{id}/dump` => minidump of process with `id`.  By default, this is minimum dump without memory (dumptType=0).
 * `HTTP GET /diagnostics/processes/{id}/dump?dumpType=2` => full memory minidump of process with `id`.  The available dumpType  value can be found at [MINIDUMP_TYPE](http://msdn.microsoft.com/en-us/library/windows/desktop/ms680519.aspx).
 * `HTTP GET /diagnostics/processes/{id}/dump?dumpType=2&format=zip` => full memory minidump of process with `id`.  This will include matching sos.dll and mscordackws.dll in the zip package.  
-* `HTTP GET /diagnostics/processes/{id}/gcdump` => take managed gcdump.  This returns a diagsession format file.    VS 2013 Ultimate (or newer) is needed to open this type of file.  You can also specify different format query string such as `?format=raw` (returning in raw gcdump format readable by [perfview](http://www.microsoft.com/en-us/download/details.aspx?id=28567) or `?format=zip` to compress the raw gcdump in zip file.
+* (Windows Azure only) `HTTP GET /diagnostics/processes/{id}/gcdump` => take managed gcdump.  This returns a diagsession format file.    VS 2013 Ultimate (or newer) is needed to open this type of file.  You can also specify different format query string such as `?format=raw` (returning in raw gcdump format readable by [perfview](http://www.microsoft.com/en-us/download/details.aspx?id=28567) or `?format=zip` to compress the raw gcdump in zip file.
 
 ## Limitations
 
