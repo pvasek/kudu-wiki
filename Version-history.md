@@ -1,8 +1,8 @@
 ## S24 (not yet live in Azure)
 * New Site Extension feature
-* Added diagsession and gcdump support to the [[Process API|Process-list-and-minidump]]
+* Added diagsession and gcdump support to the [[Process API|Process Threads list and minidump gcdump diagsession]]
 * Dump files now include matching mscordacwks.dll and SOS.dll for convenience
-* Added threads to the [[Process API|Process-list-and-minidump]]
+* Added threads to the [[Process API|Process Threads list and minidump gcdump diagsession]]
 * Fix [selection issue](https://github.com/chrisdone/jquery-console/issues/32) in the Console.
 
 ## S23 (8/27/2013)
