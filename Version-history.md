@@ -8,6 +8,7 @@
 ## S23 (8/27/2013)
 * [[Web Hooks]]
 * [[Post Deployment Action Hooks]]
+* Enable automatic NuGet package restore, based on NuGet 2.7 semantic
 
 ## S22
 * Add support for [in-place and repo-less deployments](https://github.com/projectkudu/kudu/wiki/Deploying-inplace-and-without-repository)
