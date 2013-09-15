@@ -65,7 +65,7 @@ Used the change the version of Node that is used by default
 
     WEBSITE_NODE_DEFAULT_VERSION=0.10.5
 
-### Enable the use of private Site Extensions on a site
+### Enable the use of private Site Extensions on a site (note: coming soon!)
 
     WEBSITE_PRIVATE_EXTENSIONS=1
 
