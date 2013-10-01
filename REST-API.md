@@ -69,4 +69,30 @@ Note: in older builds, use `live/scm` instead of `scm`
 
     GET dump	
     Get all the diagnostic logs as a zip file
+
+## Diagnostics/Settings
+
+    POST diagnostics/settings	
+    Create or change a setting
+    
+    GET diagnostics/settings	
+    Get the list of all settings
+    
+    GET diagnostics/settings/{key}	
+    Get the value of a setting
+    
+    DELETE diagnostics/settings/{key}	
+    Delete a setting
+
+Sample of available settings.
+
+    {
+        "AzureDriveEnabled": false(|true),
+        "AzureDriveTraceLevel": "Error(|Information|Warning|Verbose)",
+        "AzureTableEnabled": false(|true),
+        "AzureTableTraceLevel": "Error(|Information|Warning|Verbose)",
+        "AzureBlobEnabled": false(|true),
+        "AzureBlobTraceLevel": "Error(|Information|Warning|Verbose)",
+    }
+
     
