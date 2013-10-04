@@ -6,9 +6,9 @@ You can simply deploy your own version of Kudu to the Windows Azure WebSites by 
 
 3. Run DeployPrivateKudu.cmd with DEPLOYMENT TRIGGER URL as argument.  This will upload Kudu bits to your site.
 
-For example, `DeployPrivateKudu.cmd "https://$site:password@site.scm.azurewebsites.net/deploy"`.
+  For example, `DeployPrivateKudu.cmd "https://$site:password@site.scm.azurewebsites.net/deploy"`.
 
-Note: To get DEPLOYMENT TRIGGER URL, go to Azure Portal and navigate to your site CONFIGURE tab.  If you don't see the URL, you can always form up scm URL (add scm in the middle) and embed publishing username/password instead.
+  Note: To get DEPLOYMENT TRIGGER URL, go to Azure Portal and navigate to your site CONFIGURE tab.  If you don't see the URL, you can always form up scm URL (add scm in the middle) and embed publishing username/password instead.
 
 4. On CONFIGURE tab, set WEBSITE_PRIVATE_EXTENSIONS to 1.
 
