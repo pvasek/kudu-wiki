@@ -49,13 +49,19 @@ For that reason, using a browser is not recommended, and using a simple tool lik
 
 ## log samples
 
-For .NET application.
+For .NET application, 
+
+       System.Diagnostics.Trace.TraceInformation("Info statement");
+       System.Diagnostics.Trace.TraceError("Error statement");
+       System.Diagnostics.Trace.TraceWarning("Warning statement");
+
+Codes above produce traces below in log file.
 
         2013-10-04T22:17:06  PID[2432] Information Info statement
         2013-10-04T22:17:07  PID[2432] Error       Error statement
         2013-10-04T22:17:07  PID[2432] Warning     Warning statement
 
-For NodeJS application.
+For NodeJS application, `console.log("Hello World " + req.url);` produces below in log file.
 
         Hello World /
         Hello World /favicon.ico
