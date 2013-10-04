@@ -46,3 +46,11 @@ If you request /logstream from a Web browser (e.g. Chrome or IE), you may find t
 The reason is that browsers do buffering of the response, until either the response is complete (which never happens in this case), or it gets a large amount of data.
 
 For that reason, using a browser is not recommended, and using a simple tool like curl is preferable.
+
+## log samples
+
+For .NET application.
+
+        2013-10-04T22:17:06  PID[2432] Information Info statement
+        2013-10-04T22:17:07  PID[2432] Error       Error statement
+        2013-10-04T22:17:07  PID[2432] Warning     Warning statement
