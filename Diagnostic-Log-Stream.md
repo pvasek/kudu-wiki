@@ -54,3 +54,8 @@ For .NET application.
         2013-10-04T22:17:06  PID[2432] Information Info statement
         2013-10-04T22:17:07  PID[2432] Error       Error statement
         2013-10-04T22:17:07  PID[2432] Warning     Warning statement
+
+For NodeJS application.
+
+        Hello World /
+        Hello World /favicon.ico
