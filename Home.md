@@ -60,7 +60,8 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 Read this is you are interested in contributing to Kudu
 
 * [[Getting Started]]
-* Blog post: [Developing Kudu locally and on Azure](http://blog.davidebbo.com/2012/06/developing-kudu-locally-and-on-azure.html)
+* Blog post: [Developing Kudu locally](http://blog.davidebbo.com/2012/06/developing-kudu-locally-and-on-azure.html)
+* [[Deploy locally-built private Kudu to Azure]]
 * [[Project Structure]]
 * [[Running Tests]]
 * [[Deploying to a server]]
