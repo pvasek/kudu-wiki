@@ -1,3 +1,7 @@
+## S25 (not yet live in Azure)
+* Support for deploying Console 'worker' apps
+* Made SqlCmd.exe available to deployment scripts
+
 ## S24 (not yet live in Azure)
 * New Site Extension feature
 * Added diagsession and gcdump support to the [[Process API|Process Threads list and minidump gcdump diagsession]]
