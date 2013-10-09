@@ -2,7 +2,7 @@ Here are some of the steps that are needed to deploy Kudu to a Windows 2012 serv
 
 - Enable Web Server role, and within that:
   - Application Development / ASP.NET 4.5
-- Copy "C:\Program Files (x86)\MSBuild" from dev machine onto same location on server
+- Make sure you have all the relevant target files in your "%ProgramFiles(x86)%\MSBuild" folder. Installing Visual Studio brings in those files. See related discussion [here](http://stackoverflow.com/questions/3980909/microsoft-webapplication-targets-was-not-found-on-the-build-server-whats-your).
 - Install:
   - Git
   - Node
