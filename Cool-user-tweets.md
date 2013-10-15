@@ -1,4 +1,4 @@
-Here are a few fun tweets about Kudu and the Azure git push feature:
+Here are a few fun tweets about Kudu from the community:
 
 - "Just set up auto deployment from @bitbucket to @WindowsAzure   It's sick!!! :)" @tom_hawkin [10 Oct 2013](http://twitter.com/#!/tom_hawkin/status/388440695281057792)
 - "Deploying to #azure turned out to be quite a smooth process. The extent to which they are integrated with @bitbucket is absolutely amazing!" @Chaott [9 Oct 2013](http://twitter.com/#!/Chaott/status/388073205648617472)
