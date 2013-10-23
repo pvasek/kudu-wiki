@@ -4,6 +4,17 @@ By this time, we assume you have created the Azure WebSites and using its compan
 
 Out of the box, Windows Azure provides one Site Extension (which is Kudu).   All builtin Site Extensions are installed at `d:\Program Files (x86)\SiteExtensions`.  For instance, the below is Kudu Site Extensions layout.
 
+    d:\
+        Program Files (x86)\
+            SiteExtensions\
+                Kudu\
+                    extension.xml
+                    1.24.12345.67\
+                        applicationHost.xdt
+                        kudu bits...
+                    1.24.34567.89-preview\
+                        applicationHost.xdt
+                        kudu bits...
    
 
 
