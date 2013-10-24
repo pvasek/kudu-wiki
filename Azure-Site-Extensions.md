@@ -53,15 +53,15 @@ The site owners can overwrite the existing site extensions with their own implem
 
 * Upload extension bits to root `SiteExtensions` folder.   Below examples illustrate overriding Kudu extension as well as introducing new Foo extension.
 
-     /site
-     /LogFiles
-     /SiteExtensions
-         /Kudu
-             applicationHost.xdt
-             artifacts
-         /Foo
-             applicationHost.xdt
-             artifacts
+        /site
+        /LogFiles
+        /SiteExtensions
+            /Kudu
+                applicationHost.xdt
+                artifacts
+            /Foo
+                applicationHost.xdt
+                artifacts
 
 * Set AppSetting `WEBSITE_PRIVATE_EXTENSIONS` = `1`
 
