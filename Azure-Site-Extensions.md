@@ -20,6 +20,7 @@ The `extension.xml` indicates what version to be used by default.  Good news is 
   
 ApplicationHost Config Transformation 
 -------------------------------------
+You may notice
 
 
 Private Extensions
