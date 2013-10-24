@@ -20,7 +20,7 @@ The `extension.xml` indicates what version to be used by default.  Good news is 
   
 ApplicationHost Config Transformation 
 -------------------------------------
-You may wonder how Kudu or any other extensions gets setup in SCM site.   The key is the applicationHost.xdt (notice one exists for each versioning folders).   The [XDT](http://msdn.microsoft.com/en-us/library/dd465326.aspx) file is used to transform the actual applicationHost.config for the site.  For instance, a simple site extension XDT would just add the IIS application under SCM site.
+You may wonder how Kudu or any other extensions gets setup in SCM site.   The key is the applicationHost.xdt (notice one exists for each versioning folders).   The [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.aspx) file is used to transform the actual applicationHost.config for the site.  For instance, a simple site extension XDT would just add the IIS application under SCM site.
 
 
     <?xml version="1.0"?>
@@ -49,4 +49,19 @@ By the way, the XDT is not limited to only <site/> sections.   It could transfor
 
 Private Extensions
 ------------------
+The site owners can overwrite the existing site extensions with their own implementations or introduce a totally new set of site extensions altogether.   For demonstration, we created this [simple extension](https://github.com/projectkudu/SimpleWebSiteExtension) sample.   The step involves ...
 
+* Upload extension bits to site root's `SiteExtensions` folder.   
+
+    /site
+    /LogFiles
+    /SiteExtensions
+        /Kudu
+            applicationHost.xdt
+            artifacts
+        /Foo
+            applicationHost.xdt
+            artifacts
+
+Each extension should be unloaded to sub folder of SiteExtensions.  For instance, if you are replacing Kudu with your own implementation, simply upload the new bits at site root `SiteExtensions\Kudu` folder.
+* Extension artifact should contains 
