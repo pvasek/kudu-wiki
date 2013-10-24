@@ -63,4 +63,6 @@ The site owners can overwrite the existing site extensions with their own implem
             applicationHost.xdt
             artifacts
 
-* set AppSetting `WEBSITE_PRIVATE_EXTENSION = 1`
+* Set AppSetting `WEBSITE_PRIVATE_EXTENSIONS = 1`
+
+Note: For any issue with XDT, look at `/LogFiles/Transform` log files.
