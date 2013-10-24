@@ -51,7 +51,7 @@ Private Extensions
 ------------------
 The site owners can overwrite the existing site extensions with their own implementations or introduce a totally new set of site extensions altogether.   For demonstration, we created this [simple extension](https://github.com/projectkudu/SimpleWebSiteExtension) sample.   The step involves ...
 
-* Upload extension bits to site root's `SiteExtensions` folder.   
+* Upload extension bits to root `SiteExtensions` folder.   Below examples illustrate overriding Kudu extension as well as introducing new Foo extension.
 
     /site
     /LogFiles
@@ -63,5 +63,4 @@ The site owners can overwrite the existing site extensions with their own implem
             applicationHost.xdt
             artifacts
 
-Each extension should be unloaded to sub folder of SiteExtensions.  For instance, if you are replacing Kudu with your own implementation, simply upload the new bits at site root `SiteExtensions\Kudu` folder.
-* Extension artifact should contains 
+* set AppSetting `WEBSITE_PRIVATE_EXTENSION = 1`
