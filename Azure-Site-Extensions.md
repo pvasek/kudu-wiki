@@ -16,13 +16,11 @@ Out of the box, Windows Azure provides one Site Extension (which is Kudu).   All
                         applicationHost.xdt
                         kudu bits...
    
-The `extension.xml` indicates what version to be used by default.  Good news is each site can overwrite the version by specifying `<extension>_EXTENSION_VERSION` in AppSettings.   For above example, we have 2 versions of Kudu in different {semver)[http://semver.org/] folders.   The default version is `latest` which means using any latest version excluding preview/beta (in this case, 1.24.12345.67).   However, if you want to try beta or preview version, you may set KUDU_EXTENSION_VERSION to `beta`.  
+The `extension.xml` indicates what version to be used by default.  Good news is each site can overwrite the version by specifying `<extension>_EXTENSION_VERSION` in AppSettings.   For above example, we have 2 versions of Kudu in different (semver)[http://semver.org/] folders.   The default version is `latest` which means using any latest version excluding preview/beta (in this case, 1.24.12345.67).   However, if you want to try beta or preview version, you may set KUDU_EXTENSION_VERSION to `beta` and it will look for latest including such.   Other available versions include `disabled` if you want to disable this extension as well as `specific semver` if you only want to use specific version.
+  
+ApplicationHost Config Transformation 
+-------------------------------------
 
-        
-
-
-Customize Builtin Extensions
-----------------------------
 
 Private Extensions
 ------------------
