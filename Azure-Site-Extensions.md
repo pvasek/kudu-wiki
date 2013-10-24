@@ -42,7 +42,7 @@ There are a set of env variables passed to XDT to assist in locating the appropr
 * `XDT_SITENAME` is the current site name
 * `XDT_SCMSITENAME` is the current scm site name
 * `XDT_APPPOOLNAME` is the application pool name
-* `XDT_EXTENSIONPATH` is the version specific extension path
+* `XDT_EXTENSIONPATH` is the version specific extension physical path
 * `HOME` is the site root path
 
 By the way, the XDT is not limited to only <site/> sections.   It could transform other part of applicationHost.config such as introuducing a new mime type for httpCompression or adjusting httpModules.    
