@@ -58,10 +58,10 @@ The site owners can overwrite the existing site extensions with their own implem
         /SiteExtensions
             /Kudu
                 applicationHost.xdt
-                artifacts
+                kudu bits...
             /Foo
                 applicationHost.xdt
-                artifacts
+                foo bits...
 
 * Set AppSetting `WEBSITE_PRIVATE_EXTENSIONS` = `1`
 
