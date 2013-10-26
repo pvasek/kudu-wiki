@@ -32,6 +32,7 @@ Note that the multi co-admins scenario does not affect those credentials. All th
 
 And unlike User lever credentials, the site-level credentials are definitely not meant to be memorized (though you're welcome to try!). Instead, they're meant to be used by programs that automates deployment for you (like WebMatrix).
 
+They can also be useful when a subscription owner wants to allow an external party to publish to just one site while having no access to the others.
 
 ## When to use which set of credentials
 
