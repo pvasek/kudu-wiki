@@ -66,6 +66,7 @@
 
 ## Kudu outside of Azure
 
+* [10/27/2013 Continuous deployment in .NET using Project Kudu and git (@synhershko)](http://code972.com/blog/2013/10/449-continuous-deployment-in-net-using-project-kudu-and-git)
 * [7/12/2012 Deploying to IIS using Kudu (@jhovgaard)](http://jhovgaard.net/deploying-git-support-iis-server)
 * [7/6/2012 Project Kudu: Git deployment for all!](http://codebork.com/2012/07/06/project-kudu-git-deployment-all.html)
 * [6/8/2012 Introducing Kudu: the Open Source engine behind ‘git push azure master’ (@davidebbo)](http://blog.davidebbo.com/2012/06/introducing-open-source-engine-behind.html)
