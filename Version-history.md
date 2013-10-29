@@ -1,6 +1,7 @@
 ## S25 (not yet live in Azure)
 * Support for deploying Console 'worker' apps
 * Made SqlCmd.exe available to deployment scripts
+* New API to return the list of available node/npm versions (https://github.com/projectkudu/kudu/issues/784)
 
 ## S24 (not yet live in Azure)
 * New Site Extension feature
