@@ -20,6 +20,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation from windowsazure.com)
 * [[Deployment hooks]]: how to take over the deployment logic for a site
 * [[Web Hooks]]
+* [[Azure Site Extensions]]
 * [[Post Deployment Action Hooks]]
 
 
@@ -62,7 +63,6 @@ Read this is you are interested in contributing to Kudu
 * [[Getting Started]]
 * Blog post: [Developing Kudu locally](http://blog.davidebbo.com/2012/06/developing-kudu-locally-and-on-azure.html)
 * [[Deploy locally-built private Kudu to Azure]]
-* [[Azure Site Extensions]]
 * [[Project Structure]]
 * [[Running Tests]]
 * [[Deploying to a server]]
