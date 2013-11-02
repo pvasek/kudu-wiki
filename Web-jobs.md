@@ -18,3 +18,12 @@ The following file types are accepted as runnable scripts that can be used as a 
 * .php (using php)
 * .py (using python)
 * .js (using node)
+
+We use the following logic to decide which file is the script to run in side the job's directory:
+
+* Per file type we look first for a file named: ```run.{file type extension}```.
+* If it doesn't exist we look for any other file with that {file type extension}.
+* If we still didn't find one we go to the next file type.
+* The order of file types we use is: .cmd, .bat, .exe, .sh, .php, .py, .js.
+* The recommended script file to have in your job directory is: ```run.cmd```
+* Note: We'll only look for a script under the root directory of that job (not under sub directories of it).
