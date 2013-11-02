@@ -1,6 +1,6 @@
 Every Azure web site has an associated Kudu service site.
 
-**Update**: actually, sites that were created way back (say early 2013 or before) may not have a Kudu site. To create it, choose 'Set up deployment from source control', and then 'Local git'. Then you can instantly 'Delete git repository', and you will be left with the Kudu service working.
+_**Update**: actually, sites that were created way back (say early 2013 or before) may not have a Kudu site. To create it, choose 'Set up deployment from source control', and then 'Local git'. Then you can instantly 'Delete git repository', and you will be left with the Kudu service working._
 
 If your web site has URL `http://mysite.azurewebsites.net/`, then the root URL of the Kudu service is `https://mysite.scm.azurewebsites.net/`. Note the added `scm` token.
 
