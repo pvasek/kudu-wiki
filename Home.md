@@ -23,6 +23,8 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Azure Site Extensions]]
 * [[Post Deployment Action Hooks]]
 
+### Features under development
+* [[Web Jobs]]
 
 ### How-to guides
 
