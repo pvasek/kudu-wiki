@@ -42,7 +42,7 @@ We use the following logic to decide which file is the script to run in side the
     Get a specific triggered job by name
 
     PUT jobs/triggered/{job name}
-    Add/Replace a triggered job using a zip file containing the files for it
+    Add/Replace a triggered job using a zip file containing the files for it, or just a single file (e.g foo.exe)
 
     DELETE jobs/triggered/{job name}
     Delete a triggered job
@@ -74,7 +74,7 @@ We use the following logic to decide which file is the script to run in side the
     Get a specific continuous job by name
 
     PUT jobs/continuous/{job name}
-    Add/Replace a continuous job using a zip file containing the files for it
+    Add/Replace a continuous job using a zip file containing the files for it, or just a single file (e.g foo.exe)
 
     DELETE jobs/continuous/{job name}
     Delete a continuous job
