@@ -83,7 +83,7 @@ All you need to do is upload the extension bits into a `SiteExtensions` folder. 
                 applicationHost.xdt
                 foo bits...
 
-### Top level private extensions
+### Top level private extension
 
 There can be only one such extension for a given site, and it consists of a single `applicationHost.xdt` file living in the `site` folder. It is typically be used to make general tweaks to your site's `ApplicationHost.config`.
 
