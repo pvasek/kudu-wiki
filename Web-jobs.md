@@ -19,12 +19,11 @@ The following file types are accepted as runnable scripts that can be used as a 
 * .py (using python)
 * .js (using node)
 
-We use the following logic to decide which file is the script to run in side the job's directory:
+We use the following logic to decide which file is the script to run within the job's directory:
 
-* Per file type we look first for a file named: ```run.{file type extension}```.
-* If it doesn't exist we look for any other file with that {file type extension}.
-* If we still didn't find one we go to the next file type.
-* The order of file types we use is: ```.cmd```, ```.bat```, ```.exe```, ```.sh```, ```.php```, ```.py```, ```.js```.
+* Per file type we look first for a file named: ```run.{file type extension}``` (for example ```run.cmd``` or ```run.exe```.
+* If it doesn't exists for all file types, we'll then look for the first file with a supported file type extension.
+* The order of file types extension used is: ```.cmd```, ```.bat```, ```.exe```, ```.sh```, ```.php```, ```.py```, ```.js```.
 * The recommended script file to have in your job directory is: ```run.cmd```.
 * Note: We'll only look for a script under the root directory of that job (not under sub directories of it).
 
@@ -35,55 +34,178 @@ We use the following logic to decide which file is the script to run in side the
 
 ## Triggered Jobs ##
 
+### List all triggered jobs ###
+
     GET jobs/triggered
-    List all triggered jobs
+
+**Response**
+
+    [
+      {
+        name: "jobName",
+        runCommand: "...\run.cmd",
+        url: "http://.../jobs/triggered/jobName",
+        history_url: "http://.../jobs/triggered/jobName/history",
+        log_url: "http://.../vfs/data/jobs/triggered/jobName/job.log",
+        latest_run:
+          {
+            id: "20131103120400",
+            status: "Running",
+            output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
+            error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
+            url: "http://.../jobs/triggered/jobName/history/20131103120400"
+          }
+      }
+    ]
+
+### Get a specific triggered job by name ###
 
     GET jobs/triggered/{job name}
-    Get a specific triggered job by name
+
+**Response**
+
+    {
+      name: "jobName",
+      status: "Running",
+      runCommand: "...\run.cmd",
+      url: "http://.../jobs/triggered/jobName",
+      history_url: "http://.../jobs/triggered/jobName/history",
+    }
+
+### Add/Replace a triggered job ###
+
+Using a zip file containing the files for it, or just a single file (e.g foo.exe).
 
     PUT jobs/triggered/{job name}
-    Add/Replace a triggered job using a zip file containing the files for it, or just a single file (e.g foo.exe)
+
+### Delete a triggered job ###
 
     DELETE jobs/triggered/{job name}
-    Delete a triggered job
 
-    POST jobs/triggered/{job name}/invoke
-    Invoke a triggered job
+### Invoke a triggered job ###
 
-    POST jobs/triggered/{job name}/kill
-    Kill a triggered job
+    POST jobs/triggered/{job name}/run
+
+### Stop a triggered job ###
+
+    POST jobs/triggered/{job name}/stop
+
+### List all triggered job runs history ###
 
     GET jobs/triggered/{job name}/history
-    List all triggered job runs history
+
+**Response**
+
+    {
+	  log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
+      runs:
+        [
+          {
+            id: "20131103120400",
+            status: "Running",
+            output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
+            error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
+            url: "http://.../jobs/triggered/jobName/history/20131103120400"
+          }
+        ]
+    }
+
+### Get a specific run for a specific triggered job ###
 
     GET jobs/triggered/{job name}/history/{id}
-    Get a specific run for a specific triggered job
 
-    GET jobs/triggered/{job name}/history/{id}/output
-    Get the standard (stdout) output for a specific run
+**Response**
 
-    GET jobs/triggered/{job name}/history/{id}/error
-    Get the error (stderr) output for a specific run
+    {
+      id: "20131103120400",
+      status: "Running",
+      output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
+      error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
+      url: "http://.../jobs/triggered/jobName/history/20131103120400"
+    }
 
 ## Continuous Jobs ##
 
+### List all continuous jobs ###
+
     GET jobs/continuous
-    List all continuous jobs
+
+**Response**
+
+    [
+      {
+        name: "jobName",
+        status: "Running",
+        runCommand: "...\run.cmd",
+        url: "http://.../jobs/continuous/jobName",
+        history_url: "http://.../jobs/continuous/jobName/history"
+      }
+    ]
+
+### Get a specific continuous job by name ###
 
     GET jobs/continuous/{job name}
-    Get a specific continuous job by name
+
+**Response**
+
+    {
+      name: "jobName",
+      status: "Running",
+      runCommand: "...\run.cmd",
+      url: "http://.../jobs/continuous/jobName",
+      history_url: "http://.../jobs/continuous/jobName/history"
+    }
+
+### Add/Replace a continuous job ###
+
+Using a zip file containing the files for it, or just a single file (e.g foo.exe).
 
     PUT jobs/continuous/{job name}
-    Add/Replace a continuous job using a zip file containing the files for it, or just a single file (e.g foo.exe)
+
+### Delete a continuous job ###
 
     DELETE jobs/continuous/{job name}
-    Delete a continuous job
+
+### Start a continuous job ###
+
+    POST jobs/continuous/{job name}/run
+
+### Stop a continuous job ###
 
     POST jobs/continuous/{job name}/stop
-    Stop a continuous job (if running)
 
-    POST jobs/continuous/{job name}/start
-    Start a continuous job (if stopped)
+### Get continuous job history ###
 
-    GET jobs/continuous/{job name}/log
-    Get the log for a specific continuous job
+    GET jobs/continuous/{job name}/history
+
+**Response**
+
+    {
+	  log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
+	  output_url: "http://.../vfs/data/jobs/continuous/jobName/output_20131103120400.log",
+	  error_url: "http://.../vfs/data/jobs/continuous/jobName/error_20131103120400.log"
+      runs:
+        [
+          {
+            id: "ProcessBlob_20131103120400",
+            status: "Success",
+            output_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/output_20131103120400.log",
+            error_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/error_20131103120400.log",
+            url: "http://.../jobs/triggered/jobName/history/ProcessBlob_20131103120400"
+          }
+        ]
+    }
+
+### Get a specific run for a specific continuous job ###
+
+    GET jobs/continuous/{job name}/history/{id}
+
+**Response**
+
+      {
+        id: "ProcessBlob_20131103120400",
+        status: "Success",
+        output_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/output_20131103120400.log",
+        error_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/error_20131103120400.log",
+        url: "http://.../jobs/triggered/jobName/history/ProcessBlob_20131103120400"
+      }
