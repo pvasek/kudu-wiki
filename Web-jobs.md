@@ -29,8 +29,9 @@ We use the following logic to decide which file is the script to run within the 
 
 # API #
 
+### List all web jobs ###
+
     GET jobs
-    List all web jobs
 
 ## Triggered Jobs ##
 
