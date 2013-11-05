@@ -106,6 +106,24 @@ Example: this `applicationHost.xdt` adds a mime type to `<httpCompression>` sect
     </configuration>
     
 
-### Debugging private Extensions
+## Debugging private Extensions
 
-For any issue with XDT, look at `/LogFiles/Transform` log files.
+### Finding your applicationhost.config
+
+Before trying to apply any transform, you may want to see what the applicationhost.config looks like. Likewise, after applying a transform, you'll want to look at applicationhost.config to make sure it looks ok.
+
+Here is one way to do it (we should try to make this easier in the future):
+
+- Go to the [Kudu Console](https://github.com/projectkudu/kudu/wiki/Kudu-console)
+- Type `md MyConfig` to create a temporary folder
+- Type `copy %TMP%\..\config\app*.config MyConfig` to copy `applicationhost.config` into your new folder
+- Refresh the console so the `MyConfig` folder shows up, and click on it
+- Click the 1st button next to `applicationhost.config` to download it, or the second button to view it.
+
+### Finding the log of what happened during the transform
+
+If you look under `/LogFiles/Transform` you should see a log that gives info about what happened during the transforms. This can be very useful when errors happen.
+
+### Disabling the private extension transform
+
+If you run into problems and hose your site, all you have to do is set `WEBSITE_PRIVATE_EXTENSIONS=0` (or remove it) in the site AppSettings, and none of your XDT will be applied.
