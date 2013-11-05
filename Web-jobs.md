@@ -47,7 +47,6 @@ We use the following logic to decide which file is the script to run within the 
         runCommand: "...\run.cmd",
         url: "http://.../jobs/triggered/jobName",
         history_url: "http://.../jobs/triggered/jobName/history",
-        log_url: "http://.../vfs/data/jobs/triggered/jobName/job.log",
         latest_run:
           {
             id: "20131103120400",
@@ -67,10 +66,17 @@ We use the following logic to decide which file is the script to run within the 
 
     {
       name: "jobName",
-      status: "Running",
       runCommand: "...\run.cmd",
       url: "http://.../jobs/triggered/jobName",
       history_url: "http://.../jobs/triggered/jobName/history",
+      latest_run:
+        {
+          id: "20131103120400",
+          status: "Running",
+          output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
+          error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
+          url: "http://.../jobs/triggered/jobName/history/20131103120400"
+        }
     }
 
 ### Add/Replace a triggered job ###
@@ -98,7 +104,6 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 **Response**
 
     {
-	  log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
       runs:
         [
           {
@@ -182,31 +187,7 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 **Response**
 
     {
-	  log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
-	  output_url: "http://.../vfs/data/jobs/continuous/jobName/output_20131103120400.log",
-	  error_url: "http://.../vfs/data/jobs/continuous/jobName/error_20131103120400.log"
-      runs:
-        [
-          {
-            id: "ProcessBlob_20131103120400",
-            status: "Success",
-            output_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/output_20131103120400.log",
-            error_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/error_20131103120400.log",
-            url: "http://.../jobs/triggered/jobName/history/ProcessBlob_20131103120400"
-          }
-        ]
+      log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
+      output_url: "http://.../vfs/data/jobs/continuous/jobName/output_20131103120400.log",
+      error_url: "http://.../vfs/data/jobs/continuous/jobName/error_20131103120400.log"
     }
-
-### Get a specific run for a specific continuous job ###
-
-    GET jobs/continuous/{job name}/history/{id}
-
-**Response**
-
-      {
-        id: "ProcessBlob_20131103120400",
-        status: "Success",
-        output_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/output_20131103120400.log",
-        error_url: "http://.../vfs/data/jobs/continuous/jobName/ProcessBlob_20131103120400/error_20131103120400.log",
-        url: "http://.../jobs/triggered/jobName/history/ProcessBlob_20131103120400"
-      }
