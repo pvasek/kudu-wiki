@@ -12,6 +12,7 @@
 
 ## Continous Deployment
 
+* [7/6/2013 Deploy to Windows Azure using git with private submodules (@suwat_ch)](http://blogs.suwatbodin.com/2013/07/deploy-to-windows-azure-using-git-with.html)
 * [4/14/2013 Deploying an Azure Website from Source Control](http://typecastexception.com/post/2013/04/14/Deploying-an-Azure-Website-from-Source-Control.aspx)
 * [3/24/2013 Deploying to Azure Web Sites using NuGet package restore from a secured feed (@xavierdecoster)](http://www.xavierdecoster.com/deploying-to-azure-web-sites-using-nuget-package-restore-from-a-secured-feed)
 * [11/29/2012 Continuous Delivery to Windows Azure Not Only Microsoft Style with TeamCity (@noopman)](http://magnusmartensson.com/continuous-delivery-windowsazure-nomirosoft-teamcity)
