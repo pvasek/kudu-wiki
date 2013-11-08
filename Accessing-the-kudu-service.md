@@ -4,6 +4,9 @@ _**Update**: actually, sites that were created way back (say early 2013 or befor
 
 If your web site has URL `http://mysite.azurewebsites.net/`, then the root URL of the Kudu service is `https://mysite.scm.azurewebsites.net/`. Note the added `scm` token.
 
+For mobile services, the site URL looks like `https://myservice.scm.azure-mobile.net/`, and the Kudu root URL is 
+`https://myservice.scm.azure-mobile.net/default.aspx` (**note the explicit /default.aspx necessary for mobile services**).
+
 Notes:
 
 - The Kudu service should always be accessed over https and not http to protect sensitive data.
