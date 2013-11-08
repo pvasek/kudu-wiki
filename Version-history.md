@@ -2,8 +2,9 @@
 * Support for deploying Console 'worker' apps
 * Made SqlCmd.exe available to deployment scripts
 * New API to return the list of available node/npm versions (https://github.com/projectkudu/kudu/issues/784)
+* Process API now returns the list of open file handles for each process
 
-## S24 (not yet live in Azure)
+## S24 (11/1/2013)
 * New Site Extension feature
 * Added diagsession and gcdump support to the [[Process API|Process Threads list and minidump gcdump diagsession]]
 * Dump files now include matching mscordacwks.dll and SOS.dll for convenience
