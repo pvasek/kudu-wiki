@@ -23,7 +23,7 @@ Notes:
 Here are the steps:
 
 - In the Azure portal, go to the Configure tab, and look for 'DEPLOYMENT TRIGGER URL'. You'll see a URL that looks like this: `https://$mysite:37jbd3ejoQYAHa1bwufqpeFoxGNuF4ZohhjJcPLelsRll4tCyJe0c5Sv2GJv@mysite.scm.azurewebsites.net/deploy`. Note that it has the site-level publishing credentials embedded, which is what makes it work without prompting for credentials.
-- Remove the /deploy at the end, and paste the rest in your browser's address bar. e.g. `https://$mysite:37jbd3ejoQYAHa1bwufqpeFoxGNuF4ZohhjJcPLelsRll4tCyJe0c5Sv2GJv@mysite.scm.azurewebsites.net`. You're now looking at the root of the Kudu service.
+- Remove the /deploy at the end, and paste the rest in your browser's address bar. e.g. `https://$mysite:37jbd3ejoQYAHa1bwufqpeFoxGNuF4ZohhjJcPLelsRll4tCyJe0c5Sv2GJv@mysite.scm.azurewebsites.net`. You're now looking at the root of the Kudu service (**note: for mobile services, add /default.aspx at the end**).
 
 ## Once you're in the Kudu service
 
