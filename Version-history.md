@@ -12,6 +12,7 @@
 * New [SCM_SCRIPT_GENERATOR_ARGS](https://github.com/projectkudu/kudu/wiki/Configurable-settings#taking-over-the-script-generator-command-line) to get better control over the script generator
 * Fix [selection issue](https://github.com/chrisdone/jquery-console/issues/32) in the Console.
 * Moved .ssh folder to the root instead of inside the Site folder.
+* Added support for .Net 4.5.1 SDK
 
 ## S23 (8/27/2013)
 * [[Web Hooks]]
