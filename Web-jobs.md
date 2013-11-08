@@ -27,6 +27,13 @@ We use the following logic to decide which file is the script to run within the 
 * The recommended script file to have in your job directory is: ```run.cmd```.
 * Note: We'll only look for a script under the root directory of that job (not under sub directories of it).
 
+
+## Configuration Settings ##
+
+* *SCM_TIMEOUT_BETWEEN_JOBS* - Timeout in seconds between when a continuous job's process goes down (for any reason) and the time we re-launch it again (Only for continuous jobs).
+* *SCM_JOBS_IDLE_TIMEOUT* - Time in seconds after which we'll abort a running triggered job's process if it's in idle, has no cpu time or output (Only for triggered jobs).
+
+
 # API #
 
 ### List all web jobs ###
@@ -45,12 +52,16 @@ We use the following logic to decide which file is the script to run within the 
       {
         name: "jobName",
         runCommand: "...\run.cmd",
+        type: "triggered",
         url: "http://.../jobs/triggered/jobName",
         history_url: "http://.../jobs/triggered/jobName/history",
         latest_run:
           {
             id: "20131103120400",
-            status: "Running",
+            status: "Success",
+            start_time: "2013-11-08T02:56:00.000000Z",
+            end_time: "2013-11-08T02:57:00.000000Z",
+            duration: "00:01:00",
             output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
             error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
             url: "http://.../jobs/triggered/jobName/history/20131103120400"
@@ -67,27 +78,31 @@ We use the following logic to decide which file is the script to run within the 
     {
       name: "jobName",
       runCommand: "...\run.cmd",
+      type: "triggered",
       url: "http://.../jobs/triggered/jobName",
       history_url: "http://.../jobs/triggered/jobName/history",
       latest_run:
         {
           id: "20131103120400",
-          status: "Running",
+          status: "Success",
+          start_time: "2013-11-08T02:56:00.000000Z",
+          end_time: "2013-11-08T02:57:00.000000Z",
+          duration: "00:01:00",
           output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
           error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
           url: "http://.../jobs/triggered/jobName/history/20131103120400"
         }
     }
 
-### Add/Replace a triggered job ###
+### Upload a triggered job as zip ###
 
 Using a zip file containing the files for it, or just a single file (e.g foo.exe).
 
-    PUT jobs/triggered/{job name}
+    PUT zip/site/wwwroot/App_Data/jobs/triggered/{job name}
 
 ### Delete a triggered job ###
 
-    DELETE jobs/triggered/{job name}
+    DELETE vfs/site/wwwroot/App_Data/jobs/triggered/{job name}
 
 ### Invoke a triggered job ###
 
@@ -108,7 +123,10 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
         [
           {
             id: "20131103120400",
-            status: "Running",
+            status: "Success",
+            start_time: "2013-11-08T02:56:00.000000Z",
+            end_time: "2013-11-08T02:57:00.000000Z",
+            duration: "00:01:00",
             output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
             error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
             url: "http://.../jobs/triggered/jobName/history/20131103120400"
@@ -124,7 +142,10 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
     {
       id: "20131103120400",
-      status: "Running",
+      status: "Success",
+      start_time: "2013-11-08T02:56:00.000000Z",
+      end_time: "2013-11-08T02:57:00.000000Z",
+      duration: "00:01:00",
       output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
       error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
       url: "http://.../jobs/triggered/jobName/history/20131103120400"
@@ -143,8 +164,9 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
         name: "jobName",
         status: "Running",
         runCommand: "...\run.cmd",
+        log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
         url: "http://.../jobs/continuous/jobName",
-        history_url: "http://.../jobs/continuous/jobName/history"
+        type: "continuous"
       }
     ]
 
@@ -158,36 +180,25 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
       name: "jobName",
       status: "Running",
       runCommand: "...\run.cmd",
+      log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
       url: "http://.../jobs/continuous/jobName",
-      history_url: "http://.../jobs/continuous/jobName/history"
+      type: "continuous"
     }
 
-### Add/Replace a continuous job ###
+### Upload a continuous job as zip ###
 
-Using a zip file containing the files for it, or just a single file (e.g foo.exe).
+Using a zip file containing the files for it.
 
-    PUT jobs/continuous/{job name}
+    PUT zip/site/wwwroot/App_Data/jobs/continuous/{job name}
 
-### Delete a continuous job ###
+### Delete a triggered job ###
 
-    DELETE jobs/continuous/{job name}
+    DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}
 
 ### Start a continuous job ###
 
-    POST jobs/continuous/{job name}/run
+    POST jobs/continuous/{job name}/start
 
 ### Stop a continuous job ###
 
     POST jobs/continuous/{job name}/stop
-
-### Get continuous job history ###
-
-    GET jobs/continuous/{job name}/history
-
-**Response**
-
-    {
-      log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
-      output_url: "http://.../vfs/data/jobs/continuous/jobName/output_20131103120400.log",
-      error_url: "http://.../vfs/data/jobs/continuous/jobName/error_20131103120400.log"
-    }
