@@ -5,7 +5,7 @@
 * Process API now returns the list of open file handles for each process
 
 ## S24 (11/1/2013)
-* New Site Extension feature
+* New [Site Extension](https://github.com/projectkudu/kudu/wiki/Azure-Site-Extensions) feature
 * Added diagsession and gcdump support to the [[Process API|Process Threads list and minidump gcdump diagsession]]
 * Dump files now include matching mscordacwks.dll and SOS.dll for convenience
 * Added threads to the [[Process API|Process Threads list and minidump gcdump diagsession]]
