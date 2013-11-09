@@ -30,7 +30,7 @@ We use the following logic to decide which file is the script to run within the 
 
 ## Configuration Settings ##
 
-* *SCM_TIMEOUT_BETWEEN_JOBS* - Timeout in seconds between when a continuous job's process goes down (for any reason) and the time we re-launch it again (Only for continuous jobs).
+* *SCM_JOBS_INTERVAL* - Timeout in seconds between when a continuous job's process goes down (for any reason) and the time we re-launch it again (Only for continuous jobs).
 * *SCM_JOBS_IDLE_TIMEOUT* - Time in seconds after which we'll abort a running triggered job's process if it's in idle, has no cpu time or output (Only for triggered jobs).
 
 
