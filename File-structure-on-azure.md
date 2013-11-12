@@ -38,5 +38,18 @@ In there, you will see the following structure (or at least a subset of it):
                 config                // This contains config to disable strict host checking
                 id_rsa                // private key in PEM format
                 known_hosts           // known hosts have been accepted
-        kuduservice
-            Used when your site uses private kudu bits
+        Data
+            Jobs
+                Triggered
+                    MyTriggeredJob1
+                        20131112101559
+                            output.log
+                            error.log
+                            status
+
+                Continuous
+                    MyContinuousJob1
+                        job.log
+                        status
+        SiteExtensions
+            // TODO: add details here
