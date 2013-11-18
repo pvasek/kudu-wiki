@@ -46,6 +46,8 @@ All pre-installed Site Extensions are under `d:\Program Files (x86)\SiteExtensio
 
 Each site can override the version by specifying `<extension>_EXTENSION_VERSION` in the AppSettings (e.g. from the Azure Portal). e.g. for Kudu you could set `KUDU_EXTENSION_VERSION=beta` to make the site get pre-release versions (if any are available).
 
+Note that if newer Pre-Installed versions become available later, all sites will get them if it matches their `version` selection. However, as site restart is necessary for the site to get the newer version.
+
 
 Private Extensions
 ------------------
