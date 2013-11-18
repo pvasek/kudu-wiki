@@ -34,11 +34,18 @@ All pre-installed Site Extensions are under `d:\Program Files (x86)\SiteExtensio
 `extension.xml` has the following format:
 
     <extension>
-        <version>disabled|latest|beta|1.2.3456</version>
+        <version>latest|beta|1.2.3456|disabled</version>
     </extension>
-    
-The `extension.xml` indicates what version is used by default. Each site can override the version by specifying `<extension>_EXTENSION_VERSION` in the AppSettings (e.g. from the Azure Portal). For above example, we have 2 versions of Kudu in different [semver](http://semver.org/) folders. The default version setting is `latest` which means using the latest version excluding preview/beta (in this case, 1.24.12345). However, if you want to try beta or preview version, you may set KUDU_EXTENSION_VERSION to `beta` and it will look for latest including such. Other available version values include `disabled` if you want to disable this extension entirely, as well as `specific semver` if you only want to use specific version.
-  
+
+`version` can take the following values:
+
+- `latest`: all sites get the latest non-prerelease version of the Extension. This is the default in case there is no `extension.xml` (which is why Kudu doesn't have this file)
+- `beta`: all sites get the latest prerelease version of the Extension
+- `disabled`: sites don't get the extension at all
+- Specific version: e.g. 1.2.3456 (using [semver](http://semver.org/) syntax). Sites get this exact version of the Extension.
+
+Each site can override the version by specifying `<extension>_EXTENSION_VERSION` in the AppSettings (e.g. from the Azure Portal). e.g. for Kudu you could set `KUDU_EXTENSION_VERSION=beta` to make the site get pre-release versions (if any are available).
+
 
 Private Extensions
 ------------------
@@ -141,5 +148,4 @@ There are a set of environment variables passed to the XDT to assist in locating
 * `XDT_APPPOOLNAME` is the application pool name
 * `XDT_EXTENSIONPATH` is the version specific extension physical path
 * `HOME` is the site root path
-
 
