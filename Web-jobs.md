@@ -55,6 +55,7 @@ We use the following logic to decide which file is the script to run within the 
         type: "triggered",
         url: "http://.../jobs/triggered/jobName",
         history_url: "http://.../jobs/triggered/jobName/history",
+        extra_info_url: "http://.../",
         latest_run:
           {
             id: "20131103120400",
@@ -81,6 +82,7 @@ We use the following logic to decide which file is the script to run within the 
       type: "triggered",
       url: "http://.../jobs/triggered/jobName",
       history_url: "http://.../jobs/triggered/jobName/history",
+      extra_info_url: "http://.../",
       latest_run:
         {
           id: "20131103120400",
@@ -98,11 +100,11 @@ We use the following logic to decide which file is the script to run within the 
 
 Using a zip file containing the files for it, or just a single file (e.g foo.exe).
 
-    PUT zip/site/wwwroot/App_Data/jobs/triggered/{job name}
+    PUT zip/site/wwwroot/App_Data/jobs/triggered/{job name}/
 
 ### Delete a triggered job ###
 
-    DELETE vfs/site/wwwroot/App_Data/jobs/triggered/{job name}
+    DELETE vfs/site/wwwroot/App_Data/jobs/triggered/{job name}/
 
 ### Invoke a triggered job ###
 
@@ -165,6 +167,7 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
         status: "Running",
         runCommand: "...\run.cmd",
         log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
+        extra_info_url: "http://.../",
         url: "http://.../jobs/continuous/jobName",
         type: "continuous"
       }
@@ -181,6 +184,7 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
       status: "Running",
       runCommand: "...\run.cmd",
       log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
+      extra_info_url: "http://.../",
       url: "http://.../jobs/continuous/jobName",
       type: "continuous"
     }
@@ -189,11 +193,11 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
 Using a zip file containing the files for it.
 
-    PUT zip/site/wwwroot/App_Data/jobs/continuous/{job name}
+    PUT zip/site/wwwroot/App_Data/jobs/continuous/{job name}/
 
 ### Delete a triggered job ###
 
-    DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}
+    DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}/
 
 ### Start a continuous job ###
 
