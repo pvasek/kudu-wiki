@@ -104,7 +104,7 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
 ### Delete a triggered job ###
 
-    DELETE vfs/site/wwwroot/App_Data/jobs/triggered/{job name}/
+    DELETE vfs/site/wwwroot/App_Data/jobs/triggered/{job name}?recursive=true
 
 ### Invoke a triggered job ###
 
@@ -197,7 +197,7 @@ Using a zip file containing the files for it.
 
 ### Delete a triggered job ###
 
-    DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}/
+    DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}?recursive=true
 
 ### Start a continuous job ###
 
