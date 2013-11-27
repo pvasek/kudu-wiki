@@ -7,7 +7,7 @@
 * Kudu now uses `d:\home` in Azure to refer to the site's files (instead of much longer folder)
 * New optional alpha version of the Kudu Console that works more interactively
 
-## S24.5 (not yet live in Azure)
+## S24.5
 * Added .NET 4.5.1 SDK to help build 4.5.1 projects more cleanly. Note that the **runtime** is still 4.5
 
 ## S24 (11/1/2013)
