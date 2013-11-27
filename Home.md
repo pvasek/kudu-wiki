@@ -38,12 +38,13 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Deploying inplace and without repository]]
 * [Sending an email when your Azure web site deployment completes](http://blog.amitapple.com/post/56390805814/deployment-email)
 
-### Understanding Kudu
+### Understanding Kudu and Windows Azure Web Sites
 
 * [[Kudu architecture]]
 * [[REST API]]
 * [[Enabling continuous deployment from Github, Codeplex and Bitbucket|Continuous deployment]]
 * [[File structure on Azure]]
+* [[Azure Runtime Environment]]
 * [[Understanding deployment credentials|Deployment credentials]]
 * [[How Kudu deploys sites|Deployment]]
 * [[Configurable settings]]
