@@ -189,6 +189,14 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
       type: "continuous"
     }
 
+The `status` can take the following values:
+
+- Initializing
+- Starting
+- Running
+- PendingRestart
+- Stopped
+
 ### Upload a continuous job as zip ###
 
 Using a zip file containing the files for it.
