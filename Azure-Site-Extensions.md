@@ -135,7 +135,7 @@ You may wonder how Kudu or other extensions gets setup in the SCM site. The key 
         <sites>
           <site name="%XDT_SCMSITENAME%" xdt:Locator="Match(name)">
             <application path="/somepath" xdt:Locator="Match(path)" xdt:Transform="Remove" />
-            <application path="/somepath" applicationPool="%XDT_APPPOOLNAME%" xdt:Transform="Insert">
+            <application path="/somepath" xdt:Transform="Insert">
               <virtualDirectory path="/" physicalPath="%XDT_EXTENSIONPATH%" />
             </application>
           </site>
@@ -147,7 +147,6 @@ There are a set of environment variables passed to the XDT to assist in locating
 
 * `XDT_SITENAME` is the current site name
 * `XDT_SCMSITENAME` is the current scm site name
-* `XDT_APPPOOLNAME` is the application pool name
 * `XDT_EXTENSIONPATH` is the version specific extension physical path
 * `HOME` is the site root path
 
