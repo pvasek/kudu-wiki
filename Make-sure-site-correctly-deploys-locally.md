@@ -16,6 +16,7 @@ Another example is when there is a problem with your Web.release.config transfor
 
 The simplest way to detect this type of issues early on is to test your deployment locally. You can use the following steps to do that:
 
+- First completely clean your repository to make sure it has no files other than what's committed (you can do this by running `git clean -dxf`). Or you can use a fresh clone, which will guarantee it's clean.
 - In VS, right click on your Project and choose 'Publish...'
 - In the drop down, choose 'New Profile' and call it something like 'local publish'
 - In the Publish Method drop down, choose 'File System', and pick a target location, e.g. `c:\mysite`
