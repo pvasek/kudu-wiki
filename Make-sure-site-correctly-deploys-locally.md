@@ -2,15 +2,26 @@ When you push an ASP.NET Web Application to an Azure Web Site, Kudu builds it by
 
 In some cases, it's possible to have a Web Application that runs fine from VS, but that becomes broken when you use msbuild to deploy it, whether you run it in Azure or elsewhere.
 
-Here is an example scenario:
+Here are a few example scenarios
 
+### Content files in repo, but missing from csproj
+
+Example scenario:
 - you need an extra .js file and add it to your repo
 - you use it and test it in Visual Studio, and everything works great
 - you deploy it and find that things are busted. You investigate and realize that the .js file is missing. **Where did you go wrong?**
 
-**Answer**: you didn't add the file to your VS Project, so msbuild doesn't know about it! But when you run directly in VS you can't see that because the file is there.
+**Answer**: you didn't add the file to your VS Project, so msbuild doesn't know about it! But when you run directly in VS you can't see that because the file is there. Or maybe the file is in the project, but the Build Action is not `Content`, so it doesn't get copied.
+
+### Problem with transform file
 
 Another example is when there is a problem with your Web.release.config transform file, which doesn't affect things when you run straight from VS, but blows up when you publish.
+
+
+### Project dependency issues
+
+In some cases, multiple projects in a solution don't correctly depend on each other. If you build the entire solution, than things might still work. But if you just build the Web project, only the strict dependency tree is built, which may fail is things are not quite right.
+
 
 ## Locally testing your deployment
 
