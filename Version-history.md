@@ -1,4 +1,6 @@
-## S25 (not yet live in Azure)
+## S25-QFE (not yet live in Azure)
+
+## S25 (12/17/2013)
 * Support for deploying Console 'worker' apps
 * Made SqlCmd.exe available to deployment scripts
 * New API to return the list of available node/npm versions (https://github.com/projectkudu/kudu/issues/784)
