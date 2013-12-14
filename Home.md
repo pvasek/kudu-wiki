@@ -13,7 +13,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 ### Version of Kudu currently live in Azure
 
-* The branch that's currently live in Azure is [S24](https://github.com/projectkudu/kudu/tree/S24)
+* The branch that's currently live in Azure is [S25](https://github.com/projectkudu/kudu/tree/S25)
 * [[Version history]]
 
 ### Features
