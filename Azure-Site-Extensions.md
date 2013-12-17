@@ -18,7 +18,7 @@ Generally, site extensions can modify applicationhost.config in arbitrary ways b
 Pre-Installed Site Extensions
 ------------------
 
-All pre-installed Site Extensions are under `d:\Program Files (x86)\SiteExtensions`. e.g.
+All pre-installed Site Extensions are under `%ProgramFiles(x86)%\SiteExtensions`. e.g.
 
     d:\Program Files (x86)
         SiteExtensions
@@ -48,6 +48,22 @@ Each site can override the version by specifying `<extension>_EXTENSION_VERSION`
 
 Note that if newer Pre-Installed versions become available later, all sites will get them if it matches their `version` selection. However, as site restart is necessary for the site to get the newer version.
 
+### Pre-Installed Site Extensions Package
+To become pre-installed site extension, partners must first contact the Windows Azure Kudu team (see Kudu contact).  In order for us to add or update the Windows Azure pre-installed site extension, we will need a single zip package.  The zip filename should be in `<extension>.<semver>.zip` format (for example, `Kudu.1.25.21217.582.zip` or `Monaco.1.0.0-20130906.zip`).   The layout in the zip file should also be consistent with the zip file name.   For instance, `Kudu.1.25.21217.582.zip` layout should be
+
+            extension.xml
+            /1.25.21217.582
+                applicationHost.xdt
+                kudu bits... 
+
+Or `Monaco.1.0.0-20130906.zip` layout should be
+
+            extension.xml
+            /1.0.0-20130906
+                applicationHost.xdt
+                Monaco bits... 
+
+After installation on Windows Azure, it will be lay out (unzip) exactly to `%ProgramFiles(x86)%\SiteExtensions\<extension>`
 
 Private Extensions
 ------------------
