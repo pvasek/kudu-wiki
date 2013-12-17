@@ -83,7 +83,7 @@ There can be only one such extension for a given site, and it consists of a sing
 
         /site
             applicationHost.xdt
-            wwwroot
+            /wwwroot
         /LogFiles
 
 Example: this `applicationHost.xdt` adds a mime type to `<httpCompression>` section:
