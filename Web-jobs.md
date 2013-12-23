@@ -217,4 +217,6 @@ Using a zip file containing the files for it.
 
 ### Set a continuous job as singleton ###
 
+If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
+
     POST jobs/continuous/{job name}/singleton?isSingleton={true/false}
