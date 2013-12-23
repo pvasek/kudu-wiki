@@ -214,3 +214,7 @@ Using a zip file containing the files for it.
 ### Stop a continuous job ###
 
     POST jobs/continuous/{job name}/stop
+
+### Set a continuous job as singleton ###
+
+    POST jobs/continuous/{job name}/singleton?isSingleton={true/false}
