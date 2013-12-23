@@ -22,9 +22,9 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Web Hooks]]
 * [[Azure Site Extensions]]
 * [[Post Deployment Action Hooks]]
+* [[Web Jobs]]
 
 ### Features under development
-* [[Web Jobs]]
 
 ### How-to guides
 
