@@ -10,7 +10,8 @@ The default is .NET Framework 4.5.
 * 0.8.2
 * 0.8.19
 * 0.10.5
-* 0.10.18  
+* 0.10.18
+* 0.10.21   
 The default is Node.js 0.10.5.
 
 ## PHP
