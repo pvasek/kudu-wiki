@@ -110,6 +110,8 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
     POST jobs/triggered/{job name}/run
 
+Note: if the site has multiple instances, the job will run on one of them arbitrarily. This is the same behavior as regular requests sent to the site.
+
 ### Stop a triggered job ###
 
     POST jobs/triggered/{job name}/stop
