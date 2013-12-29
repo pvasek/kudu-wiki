@@ -166,3 +166,13 @@ There are a set of environment variables passed to the XDT to assist in locating
 * `XDT_EXTENSIONPATH` is the version specific extension physical path
 * `HOME` is the site root path
 
+Here is another example where we want to add an attribute to a specific version of PHP:
+
+	<?xml version="1.0"?>
+	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+	    <system.webServer>
+	        <fastCgi>
+	            <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(queueLength)" fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" queueLength="5000"/>
+	         </fastCgi>
+	    </system.webServer>
+	</configuration>
