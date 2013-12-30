@@ -3,7 +3,7 @@ We have recently created a few custom scripts to automate the setup of Kudu deve
 see the readme for [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/master/Setup) for details. The new approach has been minimally tested so the older manual instruction below are still worth reading to understand what the new script does. The script requires that [WebPI 4.5](http://www.microsoft.com/web/downloads/platform.aspx) be installed. Once you have WebPI install simply execute the script from the directory.
 
 ### Manual Setup Instructions
-* Visual Studio 2012. Note that you need to run it as admin.
+* Visual Studio 2012. Note that you need to run it as admin. Install/Update to the latest version of NuGet Package Manager (Tools -> Extensions and Updates).
 * IIS >= 7, configured to run ASP.NET 4.0. This can be installed using [WebPI](http://www.microsoft.com/web/downloads/platform.aspx).
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
 * Install [Node](http://nodejs.org/) 0.8.x. Node is used as part of the build process for sites.
