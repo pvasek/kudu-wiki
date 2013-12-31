@@ -22,6 +22,20 @@ This e transform adds a /somepath IIS application under the SCM site.
       </system.applicationHost>
     </configuration>
 
+### Adding a mime type to the httpCompression section:
+
+    <?xml version="1.0"?>
+    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+      <system.webServer>
+        <httpCompression>
+          <dynamicTypes>
+            <add mimeType="application/foo" enabled="true" xdt:Transform="Insert" />
+          </dynamicTypes>
+        </httpCompression>
+      </system.webServer>
+    </configuration>
+
+
 ### Adding an attribute to a specific version of PHP
 
 This transform finds the `<application>` tag that has the v5.4 full path, and adds a new `queueLength` attribute to it.
@@ -30,7 +44,8 @@ This transform finds the `<application>` tag that has the v5.4 full path, and ad
 	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
 	    <system.webServer>
 	        <fastCgi>
-	            <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(queueLength)" fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" queueLength="5000"/>
+	            <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(queueLength)"
+                    fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" queueLength="5000"/>
 	         </fastCgi>
 	    </system.webServer>
 	</configuration>
