@@ -101,7 +101,9 @@ There can be only one such extension for a given site, and it consists of a sing
         /LogFiles
    
 
-## Special environment variables used in XDT transforms
+## Authoring XDT transforms
+
+Please check out [[XDT Transform Samples]] for a set of examples of what you can do with XDT files.
 
 There are a set of environment variables passed to the XDT to assist in locating the appropriate elements and set the proper property.
 
@@ -110,8 +112,7 @@ There are a set of environment variables passed to the XDT to assist in locating
 * `XDT_EXTENSIONPATH` is the version specific extension physical path
 * `HOME` is the site root path
 
-
-### Debugging private Extensions
+## Debugging private Extensions
 
 #### Finding your applicationhost.config
 
@@ -131,8 +132,3 @@ If you look under `/LogFiles/Transform` you should see a log that gives info abo
 #### Disabling the private extension transform
 
 If you run into problems and hose your site, all you have to do is set `WEBSITE_PRIVATE_EXTENSIONS=0` (or remove it) in the site AppSettings, and none of your XDT will be applied.
-
-
-## Config Transformation Samples
-
-Please check out [[XDT Transform Samples]] for a set of examples of what you can do with XDT files.
