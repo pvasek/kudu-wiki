@@ -120,10 +120,9 @@ Before trying to apply any transform, you may want to see what the applicationho
 Here is one way to do it (we should try to make this easier in the future):
 
 - Go to the [Kudu Console](https://github.com/projectkudu/kudu/wiki/Kudu-console)
-- Type `md MyConfig` to create a temporary folder
-- Type `copy %TMP%\..\config\app*.config MyConfig` to copy `applicationhost.config` into your new folder
-- Refresh the console so the `MyConfig` folder shows up, and click on it
-- Click the 1st button next to `applicationhost.config` to download it, or the second button to view it.
+- Click the 'planet' icon
+- Click the Config folder
+- Click the download button for `applicationhost.config`. Or you can click the Edit button to look at it directly in the browser (but don't attempt to modufy it from here!)
 
 #### Finding the log of what happened during the transform
 
@@ -134,8 +133,6 @@ If you look under `/LogFiles/Transform` you should see a log that gives info abo
 If you run into problems and hose your site, all you have to do is set `WEBSITE_PRIVATE_EXTENSIONS=0` (or remove it) in the site AppSettings, and none of your XDT will be applied.
 
 
-
-Config Transformation Samples
------------------------------
+## Config Transformation Samples
 
 Please check out [[XDT Transform Samples]] for a set of examples of what you can do with XDT files.
