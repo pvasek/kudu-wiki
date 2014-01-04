@@ -85,6 +85,20 @@ This transform adds a /somepath IIS application under the SCM site.
       </system.applicationHost>
     </configuration>
 
+### Increase the queueLength for your application pool
+
+Note: the default is 1000
+
+	<?xml version="1.0"?>
+	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+	  <system.applicationHost>
+	    <applicationPools>
+	      <add name="%XDT_SITENAME%" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(queueLength)" queueLength="5000">
+	      </add>
+	    </applicationPools>
+	  </system.applicationHost>
+	</configuration>
+
 
 ### Adding an attribute to a specific version of PHP
 
