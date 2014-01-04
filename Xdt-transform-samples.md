@@ -36,6 +36,17 @@ This transform adds a /somepath IIS application under the SCM site.
     </configuration>
 
 
+### Turning off `noCompressionForProxies` attribute
+
+	<?xml version="1.0"?>
+	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+	  <system.webServer>
+	    <httpCompression xdt:Transform="SetAttributes(noCompressionForProxies)" noCompressionForProxies="false" >
+	    </httpCompression>
+	  </system.webServer>
+	</configuration>
+
+
 ### Remove all your recycling options from your .NET 4(+) application pool, and make it available always
 
     <?xml version="1.0"?>
