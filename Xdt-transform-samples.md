@@ -113,3 +113,14 @@ This transform finds the `<application>` tag that has the v5.4 full path, and ad
         </fastCgi>
       </system.webServer>
     </configuration>
+
+### Adding an ASP Classic attribute
+
+e.g. this enables parent paths
+
+    <?xml version="1.0"?>
+    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+      <system.webServer>
+        <asp xdt:Transform="SetAttributes(enableParentPaths)" enableParentPaths="true" />
+      </system.webServer>
+    </configuration>
