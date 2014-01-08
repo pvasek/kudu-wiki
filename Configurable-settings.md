@@ -27,12 +27,17 @@ e.g. to force your repo to be treated as a plain web site (no build), you can us
 
 Please see [[Deploying inplace and without repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
 
-### Using a git shallow clone in Continous Deployment scenarios
+### Using a git shallow clone in Continuous Deployment scenarios
 
 For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. To turn it on:
 
 	SCM_USE_SHALLOW_CLONE=1
 
+### Customize post deployment action directory
+
+After deployment, Kudu will execute, if exists, `postdeployment` script under /site/deployments/tools directory.  To customize to different directory, one can set the following setting.
+
+	SCM_POST_DEPLOYMENT_ACTIONS_PATH=<path> 
 
 ## Diagnostic related settings
 
