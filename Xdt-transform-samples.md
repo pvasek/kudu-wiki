@@ -1,5 +1,10 @@
 Note: this section applies to both Pre-Installed and Private [[site extensions|Azure Site Extensions]].
 
+The simplest way to apply one of these transforms for your site is:
+
+- Create an `applicationHost.xdt` file under your 'site' folder, and copy the content below into it
+- Set `WEBSITE_PRIVATE_EXTENSIONS=1` in the App Settings in the Azure portal.
+
 See [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.aspx) for detailed documentation on the XDT syntax.
 
 ### Adding new applications to the 'scm' site
