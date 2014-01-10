@@ -7,7 +7,7 @@ This is the simpler case, as in essence deploying just means copying files from 
 - A 'git push' is received and processed, triggering a post-receive hook
 - Kudu checks out the relevant commit such that we have the right working files
 - Files are copied from the repo to wwwroot
-  - What's copied may be a subfolder is there is a [[.deployment file|Customizing deployments]])
+  - What's copied may be a subfolder if there is a [[.deployment file|Customizing deployments]])
   - The copying is done in a smart way such that it only copies files that have changed.
   - It's also smart enough to delete files that were removed from the repo, while not deleting files that were created at runtime by the site.
 - For Node sites, Kudu runs 'npm install' in the wwwroot folder
