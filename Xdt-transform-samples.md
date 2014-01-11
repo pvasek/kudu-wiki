@@ -129,3 +129,18 @@ e.g. this enables parent paths
         <asp xdt:Transform="SetAttributes(enableParentPaths)" enableParentPaths="true" />
       </system.webServer>
     </configuration>
+
+
+### Registering an IIS Module
+
+    <?xml version="1.0"?>
+    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+      <location path="" xdt:Locator="Match(path)" xdt:Transform="InsertIfMissing">
+        <system.webServer xdt:Transform="InsertIfMissing">
+          <modules xdt:Transform="InsertIfMissing">
+            <add name="SomeModule" xdt:Locator="Match(name)" xdt:Transform="RemoveAll" />
+            <add name="SomeModule" type="SomeModule.SomeModuleType" xdt:Transform="Insert"/>
+          </modules>
+        </system.webServer>
+      </location>
+    </configuration>
