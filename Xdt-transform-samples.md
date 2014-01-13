@@ -131,7 +131,7 @@ e.g. this enables parent paths
     </configuration>
 
 
-### Registering an IIS Module
+### Registering an IIS HttpModule
 
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
