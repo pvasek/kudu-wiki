@@ -1,5 +1,9 @@
 ## S25-QFE (not yet live in Azure)
 * New [[Web Jobs]] feature
+* Web hook payload now includes the site name ([issue](https://github.com/projectkudu/kudu/issues/906))
+* New Kudu Console mode is now default. Can move back to old one optionally
+* Correct npm version is put on the PATH ([issue](https://github.com/projectkudu/kudu/issues/950))
+* Lots of [fixes](https://github.com/projectkudu/kudu/issues?direction=desc&labels=&milestone=16&page=1&sort=created&state=closed)
 
 ## S25 (12/17/2013)
 * Support for deploying Console 'worker' apps
