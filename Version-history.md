@@ -1,4 +1,5 @@
 ## S25-QFE (not yet live in Azure)
+* New [[Web Jobs]] feature
 
 ## S25 (12/17/2013)
 * Support for deploying Console 'worker' apps
