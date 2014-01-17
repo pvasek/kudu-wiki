@@ -144,3 +144,15 @@ e.g. this enables parent paths
         </system.webServer>
       </location>
     </configuration>
+
+
+### Allowing arbitrary ISAPI extensions to be loaded
+
+    <?xml version="1.0"?>
+    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+      <system.webServer>
+        <security>
+          <isapiCgiRestriction xdt:Transform="SetAttributes(notListedIsapisAllowed)" notListedIsapisAllowed="true"/>
+        </security>
+      </system.webServer>
+    </configuration>
