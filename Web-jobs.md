@@ -112,10 +112,6 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
 Note: if the site has multiple instances, the job will run on one of them arbitrarily. This is the same behavior as regular requests sent to the site.
 
-### Stop a triggered job ###
-
-    POST jobs/triggered/{job name}/stop
-
 ### List all triggered job runs history ###
 
     GET jobs/triggered/{job name}/history
@@ -205,7 +201,7 @@ Using a zip file containing the files for it.
 
     PUT zip/site/wwwroot/App_Data/jobs/continuous/{job name}/
 
-### Delete a triggered job ###
+### Delete a continuous job ###
 
     DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}?recursive=true
 
