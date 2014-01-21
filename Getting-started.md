@@ -18,6 +18,7 @@ Note: If you manually install IIS, here is what needs to be enabled:
 * Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true.
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
 * Install [IISNode](http://go.microsoft.com/?linkid=9784331)
+* Install [TypeScript Plugin](http://www.microsoft.com/en-us/download/details.aspx?id=34790)
 * Pretend to have the 32 bit version of Node to fool the version detection logic:
  * Copy your `\Program Files\nodejs` folder to \Program Files (x86)\nodejs.
  * Under `\Program Files (x86)\nodejs`, you need to have a folder named `0.8.2`, and containing [node.exe version 0.8.2](http://nodejs.org/dist/v0.8.2/node.exe). And then same deal for Node 0.10.5. Yes, this is kind of painful, and we need to make it easier!
