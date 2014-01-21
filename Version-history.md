@@ -1,4 +1,9 @@
-## S25-QFE (not yet live in Azure)
+## S25-QFE2 (Not yet live in Azure)
+* Add support for TypeScript
+* Add Node v0.10.24 (and matching npm 1.3.21)
+* Fix Kudu Console drag and drop in newest Chrome
+
+## S25-QFE (1/16/2014)
 * New [[Web Jobs]] feature
 * Web hook payload now includes the site name ([issue](https://github.com/projectkudu/kudu/issues/906))
 * New Kudu Console mode is now default. Can move back to old one optionally
