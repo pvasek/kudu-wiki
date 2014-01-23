@@ -37,6 +37,7 @@ To do this:
 
 * **403** - You don't have access to this site
 * **404** - See [[Known issues]]
+* **406** - Your Azure web site may be in stopped state.
 * **409** - There's a deployment in progress.
 * **501** - Git tried to use the dumb protocol and we don't support this ([[Anatomy of a git request]]), this is because the initial request failed.
 * **502, 503** - Something went wrong before the request reached the Kudu service.
