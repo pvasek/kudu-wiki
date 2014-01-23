@@ -95,4 +95,28 @@ Sample of available settings.
         "AzureBlobTraceLevel": "Error(|Information|Warning|Verbose)",
     }
 
-    
+## SiteExtensions
+
+    GET api/extensions/remote	
+    List all extension package infos available on the online (remote) server.  The following query strings are supported.
+    - filter: matching string
+    - version: all | latest | beta  (default is latest)
+
+    GET api/extensions/local	
+    List all extension package infos currently installed.  The following query strings are supported.
+    - filter: matching string
+    - only_update: true | false (true means only list ones with updates available, default is false)
+
+    GET api/extensions/remote/{id}	
+    Get a package info with {id} from remote store. The following query strings are supported.
+    - version: <version> | latest | beta  (default is latest)
+
+    GET api/extensions/local/{id}	
+    Get a package info with {id} currently installed.
+    - update_info: true | false (true means including update info if available, default is false)
+
+    POST api/extensions
+    Install or update the package to local machine.   The payload is the package info returned by List/Get apis above. 
+
+    DELETE api/extensions/local/{id}
+    Uninstall the package with {id}.
