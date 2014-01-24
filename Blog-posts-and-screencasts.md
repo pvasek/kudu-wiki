@@ -64,6 +64,9 @@
 * [9/11/2012 Managing database connections in Azure Web Sites (@davidebbo)](http://blog.davidebbo.com/2012/09/managing-database-connections-in-azure.html)
 * [8/8/2012 git deployment to an Azure Website: keeping configuration secrets (@srkirkland)](http://weblogs.asp.net/srkirkland/archive/2012/08/08/git-deployment-to-an-azure-website-keeping-configuration-secrets.aspx)
 
+## WebJobs
+
+[Collection of blogs and documents regarding WebJobs](http://curah.microsoft.com/52143/using-the-webjobs-feature-of-windows-azure-web-sites)
 
 ## Kudu outside of Azure
 
