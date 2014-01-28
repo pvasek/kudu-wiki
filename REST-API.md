@@ -105,15 +105,15 @@ Sample of available settings.
     GET api/extensions/local	
     List all extension package infos currently installed.  The following query strings are supported.
     - filter: matching string
-    - only_update: true | false (true means only list ones with updates available, default is false)
+    - update_info: true | false (true means include update if available, default is true)
 
     GET api/extensions/remote/{id}	
     Get a package info with {id} from remote store. The following query strings are supported.
     - version: <version> | latest | beta  (default is latest)
 
     GET api/extensions/local/{id}	
-    Get a package info with {id} currently installed.
-    - update_info: true | false (true means including update info if available, default is false)
+    Get a package info with {id} currently installed.  The following query strings are supported.
+    - update_info: true | false (true means include update if available, default is true)
 
     POST api/extensions
     Install or update the package to local machine.   The payload is the package info returned by List/Get apis above. 
