@@ -95,6 +95,13 @@ Sample of available settings.
         "AzureBlobTraceLevel": "Error(|Information|Warning|Verbose)",
     }
 
+## Logs
+
+    GET api/logs/recent	
+    Retrieve application logs found in the LogFiles\Application folder, starting with the most recent entries. 
+    The following query string parameter(s) are supported:
+    - top: the number of log entries to return (default is 100, maximum is 1000)
+
 ## SiteExtensions
 
     GET api/extensions/remote	
