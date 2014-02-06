@@ -67,9 +67,7 @@ After installation on Windows Azure, it will be lay out (unzip) exactly to `%Pro
 
 The site owner can overwrite the existing site extensions with their own implementations or introduce a totally new set of site extensions altogether.
 
-The first step to use this is to set `WEBSITE_PRIVATE_EXTENSIONS=1` in the site AppSettings.
-
-**Important note**: Site Extensions only get applied after the site is restarted. Initially, setting `WEBSITE_PRIVATE_EXTENSIONS=1` will restart the site, but if you later add/remove extensions, you will need to manually restart the site from the portal. However, if you modify existing extensions without changing the applicationHost.xdt, no manual restart is needed.
+**Important note**: Site Extensions only get applied after the site is restarted. However, if you modify existing extensions without changing the applicationHost.xdt, no manual restart is needed.
 
 There are two flavors of Private site extensions: 'named' and 'top level'.
 
