@@ -233,7 +233,7 @@ or (in the next version not out yet)
 
 or (in the next version not out yet)
 
-    DELETE jobs/triggered/{job name}
+    DELETE jobs/continuous/{job name}
 
 ### Start a continuous job ###
 
