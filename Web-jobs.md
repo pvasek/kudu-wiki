@@ -14,6 +14,7 @@ To deploy a continuous job copy your binaries to:
 The following file types are accepted as runnable scripts that can be used as a job:
 
 * .cmd, .bat, .exe (using windows cmd)
+* .ps1 (using powershell)
 * .sh (using bash)
 * .php (using php)
 * .py (using python)
@@ -23,7 +24,7 @@ We use the following logic to decide which file is the script to run within the 
 
 * Per file type we look first for a file named: ```run.{file type extension}``` (for example ```run.cmd``` or ```run.exe```.
 * If it doesn't exists for all file types, we'll then look for the first file with a supported file type extension.
-* The order of file types extension used is: ```.cmd```, ```.bat```, ```.exe```, ```.sh```, ```.php```, ```.py```, ```.js```.
+* The order of file types extension used is: ```.cmd```, ```.bat```, ```.exe```, ```.ps1```, ```.sh```, ```.php```, ```.py```, ```.js```.
 * The recommended script file to have in your job directory is: ```run.cmd```.
 * Note: We'll only look for a script under the root directory of that job (not under sub directories of it).
 
@@ -102,9 +103,24 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
     PUT zip/site/wwwroot/App_Data/jobs/triggered/{job name}/
 
+or (in the next version not out yet)
+
+    PUT jobs/triggered/{job name}
+
+    Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
+
+	The file name should be in the Content-Dispostion header, example:
+    Content-Disposition: attachement; filename=run.cmd
+
+
 ### Delete a triggered job ###
 
     DELETE vfs/site/wwwroot/App_Data/jobs/triggered/{job name}?recursive=true
+
+or (in the next version not out yet)
+
+    DELETE jobs/triggered/{job name}
+
 
 ### Invoke a triggered job ###
 
@@ -201,9 +217,23 @@ Using a zip file containing the files for it.
 
     PUT zip/site/wwwroot/App_Data/jobs/continuous/{job name}/
 
+or (in the next version not out yet)
+
+    PUT jobs/continuous/{job name}
+
+    Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
+
+	The file name should be in the Content-Dispostion header, example:
+    Content-Disposition: attachement; filename=run.cmd
+
+
 ### Delete a continuous job ###
 
     DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}?recursive=true
+
+or (in the next version not out yet)
+
+    DELETE jobs/triggered/{job name}
 
 ### Start a continuous job ###
 
@@ -217,4 +247,8 @@ Using a zip file containing the files for it.
 
 If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
 
-    POST jobs/continuous/{job name}/singleton?isSingleton={true/false}
+    PUT jobs/continuous/{job name}/settings
+
+Body
+
+    { "is_singleton": true }
