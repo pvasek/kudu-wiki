@@ -6,7 +6,7 @@ There are three main types of files that an Azure Web Site can deal with
 
 ### Persisted files
 
-This is what you can view as your web site's files. They follow a structure described [[here|File structure on azure]].
+This is what you can view as your web site's files. They follow a structure described [[here|File structure on azure]]. They are rooted in `d:\home`, which can also be found using the `%HOME%` environment variable.
 
 These files are persistent, meaning that you can rely on them staying there until you do something to change them. Also, they are shared between all instances of your site (when you scale it up to multiple instances). Internally, the way this works is that they are stored in Azure Storage instead of living on the local file system.
 
