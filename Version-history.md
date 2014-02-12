@@ -1,4 +1,6 @@
-## S25-QFE2 (Not yet live in Azure)
+## S25-QFE3 (2/11/2014)
+
+## S25-QFE2 (1/30/2014)
 * Add support for TypeScript
 * Add Node v0.10.24 (and matching npm 1.3.21)
 * Fix Kudu Console drag and drop in newest Chrome
