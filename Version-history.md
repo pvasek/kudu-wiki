@@ -1,4 +1,9 @@
 ## S25-QFE3 (2/11/2014)
+* Add support for PowerShell WebJobs
+* Add `/logs/recent` endpoint
+* Add add/remove APIs for WebJobs
+* Update to MVC5.1 and other newer packages
+* Switch from aspx to Razor pages
 
 ## S25-QFE2 (1/30/2014)
 * Add support for TypeScript
