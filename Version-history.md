@@ -1,3 +1,5 @@
+## S26 (not yet released)
+
 ## S25-QFE3 (2/11/2014)
 * Add support for PowerShell WebJobs
 * Add `/logs/recent` endpoint
