@@ -129,4 +129,4 @@ If you look under `/LogFiles/Transform` you should see a log that gives info abo
 
 #### Disabling the private extension transform
 
-If you run into problems and hose your site, all you have to do is set `WEBSITE_PRIVATE_EXTENSIONS=0` (or remove it) in the site AppSettings, and none of your XDT will be applied.
+If you run into problems and hose your site, all you have to do is set `WEBSITE_PRIVATE_EXTENSIONS=0` in the site AppSettings, and none of your XDT will be applied.
