@@ -45,6 +45,9 @@ Note: in older builds, use `live/scm` instead of `scm`
 
     PUT sshkey	
     Set the private key. The supported key format is privacy enhanced mail (PEM)
+
+    GET sshkey	
+    Get the public key.  Optional: ?ensurePublicKey=1 to generate if none exist.
     	
 ## Environment
 
