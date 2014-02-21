@@ -27,6 +27,12 @@ e.g. to force your repo to be treated as a plain web site (no build), you can us
 
 Please see [[Deploying inplace and without repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
 
+### Disabling the update of git submodules
+
+By default, Kudu automatically update submodules before doing a deployment. To turn that off:
+
+	SCM_DISABLE_SUBMODULES=1
+
 ### Using a git shallow clone in Continuous Deployment scenarios
 
 For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. To turn it on:
