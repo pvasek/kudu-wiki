@@ -1,5 +1,7 @@
 ## S26
 * Support new `SCM_DISABLE_SUBMODULES=1` flag to turn off git submodule update
+* Add direct PowerShell support in the Debug Console
+* Add auto refresh support to the Debug Console tree view when files change
 
 ## S25-QFE3 (2/11/2014)
 * Add support for PowerShell WebJobs
