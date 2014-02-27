@@ -17,7 +17,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 * [[Version history]]
 
 ### Features
-* [Publishing a website with Git](https://www.windowsazure.com/en-us/develop/nodejs/common-tasks/publishing-with-git/) (official documentation from windowsazure.com)
+* [Publishing a website from Source Control](https://www.windowsazure.com/en-us/documentation/articles/web-sites-publish-source-control/) (official documentation from windowsazure.com)
 * [[Deployment hooks]]: how to take over the deployment logic for a site
 * [[Web Hooks]]
 * [[Azure Site Extensions]] (see also [[Xdt Transform Samples]])
