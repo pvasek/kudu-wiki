@@ -8,7 +8,7 @@ When it comes to authenticating with these three mechanisms, you cannot use your
 
 To make things more interesting, there are actually two sets of deployment credentials that you can use to publish. This page discusses the two alternatives.
 
-## User-level credentials
+## User-level credentials (aka Deployment Credentials)
 
 These are the credentials that you choose yourself in the Azure portal. If you're not sure what they are, you can reset them by going to the Dashboard tab for any site and clicking 'Reset deployment credentials' (under quick glance).
 
@@ -19,7 +19,7 @@ Note that when an Azure subscription has multiple admins/co-admins, each person 
 One key point about the user-level credentials is that since you specifically set them, they are meant to be memorized, and directly typed by the user when needed (e.g. when doing a git push).
 
 
-## Site-level credentials
+## Site-level credentials (aka Publish Profile Credentials)
 
 These are the credentials that are automatically generated for each site. In order to see them, you need to download the 'publish profile', which you can do in the Dashboard tab of a site just above the 'Reset deployment credentials' link we discussed above.
 
