@@ -21,6 +21,21 @@ Note: in older builds, use `live/scm` instead of `scm`
     POST command	
     Executes an arbitrary command line and return its output
     	
+## VFS
+   The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with trailing slashes are treated as directories.
+
+    GET vfs/{path}
+    Gets a file at path
+
+    GET vfs/{path}/
+    Lists files at directory specified by path.
+
+    PUT vfs/{path}
+    Puts a file at path.
+
+    PUT vfs/{path}/
+    Creates a directory at path
+
 ## Deployment
 
     GET deployments	
