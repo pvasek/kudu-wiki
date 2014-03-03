@@ -1,6 +1,6 @@
 ## S26
 
-## S25-QFE4
+## S25-QFE4 (2/28/2014)
 * Support new `SCM_DISABLE_SUBMODULES=1` flag to turn off git submodule update
 * Add direct PowerShell support in the Debug Console
 * Add auto refresh support to the Debug Console tree view when files change
