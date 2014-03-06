@@ -36,6 +36,16 @@ Note: in older builds, use `live/scm` instead of `scm`
     PUT vfs/{path}/
     Creates a directory at path
 
+## Zip
+   The Zip API allows downloading folders as zip files, or expanding zip files into folders.
+
+    GET zip/{path}
+    Zip up and download the specified folder. The zip doesn't include the top folder itself.
+
+    PUT vfs/{path}
+    Upload a zip file which gets expanded into the specified folder. Existing files are not deleted
+    unless they need to be overwritten by files in the zip.
+
 ## Deployment
 
     GET deployments	
