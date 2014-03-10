@@ -1,4 +1,5 @@
 ## S26
+* Initial Preview of Site Extension Gallery
 
 ## S25-QFE4 (2/28/2014)
 * Support new `SCM_DISABLE_SUBMODULES=1` flag to turn off git submodule update
