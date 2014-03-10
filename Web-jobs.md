@@ -31,10 +31,22 @@ We use the following logic to decide which file is the script to run within the 
 
 ## Configuration Settings ##
 
-* *SCM_JOBS_INTERVAL* - Timeout in seconds between when a continuous job's process goes down (for any reason) and the time we re-launch it again (Only for continuous jobs).
-* *SCM_JOBS_IDLE_TIMEOUT* - Time in seconds after which we'll abort a running triggered job's process if it's in idle, has no cpu time or output (Only for triggered jobs).
+* **WEBJOBS_RESTART_TIME** - Timeout in seconds between when a continuous job's process goes down (for any reason) and the time we re-launch it again (Only for continuous jobs).
+* **WEBJOBS_IDLE_TIMEOUT** - Time in seconds after which we'll abort a running triggered job's process if it's in idle, has no cpu time or output (Only for triggered jobs).
+* **WEBJOBS_HISTORY_SIZE** - Maximum number of runs kept in the history directory for a triggered job.
+* **WEBJOBS_STOPPED** - Set this setting to **1** to disable running any job (will also stop all currently running jobs).
 
+## Environment Settings ##
 
+When a job is invoked, several settings are added to it's environment that the job process can use:
+
+* **WEBJOBS_PATH** - The root path of currently running job (will be under some temporary directory).
+* **WEBJOBS_NAME** - The current job name.
+* **WEBJOBS_TYPE** - The current job type (triggered/continuous).
+* **WEBJOBS_DATA_PATH** - The current job meta data path, this includes the job's logs/history and any artifact of the job can go there.
+* **WEBJOBS_RUN_ID** - The current run id of the job (used for triggered jobs).
+
+ 
 # API #
 
 ### List all web jobs ###
