@@ -23,7 +23,7 @@ Note: If you manually install IIS, here is what needs to be enabled:
  * Copy your `\Program Files\nodejs` folder to \Program Files (x86)\nodejs.
  * Under `\Program Files (x86)\nodejs`, you need to have a folder named `0.8.2`, and containing [node.exe version 0.8.2](http://nodejs.org/dist/v0.8.2/node.exe). And then same deal for Node 0.10.5. Yes, this is kind of painful, and we need to make it easier!
 * The Web and WebApplications folders need to be present under `\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0`. If you don't have them, you may need to copy them from a machine that has VS 2010 installed. This is needed because some of the test apps target these. **TODO**: we need to make this easier!
-* Install [Mercurial](http://mercurial.selenic.com/release/windows/mercurial-2.4.2-x86.msi) to the default location (we expect it in ```C:\Program Files (x86)\Mercurial```)
+* Install [Mercurial](http://mercurial.selenic.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Mercurial```)
 
 
 ### Deploying your first application
