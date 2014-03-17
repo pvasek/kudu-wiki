@@ -46,6 +46,15 @@ When a job is invoked, several settings are added to it's environment that the j
 * **WEBJOBS_DATA_PATH** - The current job meta data path, this includes the job's logs/history and any artifact of the job can go there.
 * **WEBJOBS_RUN_ID** - The current run id of the job (used for triggered jobs).
 
+## Logging ##
+
+For **continuous** WebJobs - Console.Out and Console.Error are routed to the "application logs", they will show up as file, blob or table storage depends on your configuration of the application logs (similar to your Website).
+
+Also the first 100 lines in each invocation will also go to the WebJob log file (to ease debugging pain when the WebJob fails at startup) accessible using the Azure portal (but also saved on your site's file system at data/jobs/continuous/jobName).
+
+For **triggered** WebJobs - Console.Out/Console.Error are routed to the WebJobs specific run log file also accessible using the Azure portal and stored at data/jobs/triggered/jobName/runId.
+
+Console.Out is treated (marked) as INFO and Console.Error as ERROR.
  
 # API #
 
@@ -264,3 +273,5 @@ If a continuous job is set as singleton it'll run only on a single instance oppo
 Body
 
     { "is_singleton": true }
+
+> To set a continuous job as singleton during deployment (without the need for the REST API) you can simply create a file called ```job.settings``` with the content: ```{ "is_singleton": true }``` and put it at the root of the (specific) WebJob directory.
