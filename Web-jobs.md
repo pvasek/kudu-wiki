@@ -274,4 +274,4 @@ Body
 
     { "is_singleton": true }
 
-> To set a continuous job as singleton during deployment (without the need for the REST API) you can simply create a file called ```job.settings``` with the content: ```{ "is_singleton": true }``` and put it at the root of the (specific) WebJob directory.
+> To set a continuous job as singleton during deployment (without the need for the REST API) you can simply create a file called ```settings.job``` with the content: ```{ "is_singleton": true }``` and put it at the root of the (specific) WebJob directory.
