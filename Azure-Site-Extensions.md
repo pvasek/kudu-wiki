@@ -75,7 +75,7 @@ There are two flavors of Private site extensions: 'named' and 'top level'.
 
 These work the same way as the 'pre-installed' extensions discussed above, except they're brought in by the site owner.
 
-Here is a complete [simple extension sample](https://github.com/projectkudu/SimpleWebSiteExtension).
+Here is a complete [Site Extension sample](https://github.com/projectkudu/FileCounterSiteExtension).
 
 All you need to do is upload the extension bits into a `SiteExtensions` folder. Below examples illustrate overriding the Kudu extension as well as introducing a new Foo extension. Note that unlike pre-installed extensions, these are not in versioned folders.
 
