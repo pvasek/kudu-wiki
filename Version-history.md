@@ -2,6 +2,7 @@
 * Support dropping Zip files into Dev Console
 * New WebJobs dashboard for both SDK and non-SDK Jobs
 * Improve Site Extension Gallery UI
+* Add F# 3.1 support
 
 ## S26 (3/10/2014)
 * Initial Preview of Site Extension Gallery
