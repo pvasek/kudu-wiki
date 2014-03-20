@@ -1,4 +1,9 @@
-## S26
+## S26-QFE1
+* Support dropping Zip files into Dev Console
+* New WebJobs dashboard for both SDK and non-SDK Jobs
+* Improve Site Extension Gallery UI
+
+## S26 (3/10/2014)
 * Initial Preview of Site Extension Gallery
 
 ## S25-QFE4 (2/28/2014)
