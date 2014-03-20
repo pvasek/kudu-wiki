@@ -10,7 +10,7 @@ This is what you can view as your web site's files. They follow a structure desc
 
 These files are persistent, meaning that you can rely on them staying there until you do something to change them. Also, they are shared between all instances of your site (when you scale it up to multiple instances). Internally, the way this works is that they are stored in Azure Storage instead of living on the local file system.
 
-Free and Shared sites get 1GB of space, while Standard sites get 10GB. See more details on the [Web Sites Pricing](http://www.windowsazure.com/en-us/pricing/details/web-sites/) page.
+Free and Shared sites get 1GB of space, while Standard sites get 50GB. See more details on the [Web Sites Pricing](http://www.windowsazure.com/en-us/pricing/details/web-sites/) page.
 
 
 ### Temporary files
