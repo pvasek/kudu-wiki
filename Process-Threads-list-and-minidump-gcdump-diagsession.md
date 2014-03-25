@@ -24,6 +24,8 @@ To diagnose issues, one may need to get the list of running processes, their cpu
 * `HTTP GET /diagnostics/processes/{id}/dump?dumpType=2&format=zip` => full memory minidump of process with `id`.  This will include matching sos.dll and mscordackws.dll in the zip package.  
 * (Windows Azure only) `HTTP GET /diagnostics/processes/{id}/gcdump` => take managed gcdump.  This returns a diagsession format file.    VS 2013 Ultimate (or newer) is needed to open this type of file.  You can also specify different format query string such as `?format=raw` (returning in raw gcdump format readable by [perfview](http://www.microsoft.com/en-us/download/details.aspx?id=28567) or `?format=zip` to compress the raw gcdump in zip file.
 
+For web sites running on multiple instances the WEBSITE_INSTANCE_ID environment variable can indicate the current instance ID. An instance ID can be used to modify the cookie that directs a request to a specific instance of the web site - before dump requests above. Listing all instance IDs for a web site requires use of the Azure Web Sites REST API.  
+
 ## Limitations
 
 ### It cannot get dumps for crashed processes
@@ -33,13 +35,6 @@ This feature is about getting dumps for running processes, and not for crashed p
 ### w3wp needs to be healthy enough to process the dump request
 
 Since the Kudu service runs in the same w3wp process as the site, w3wp needs to be able to process the dump request. In most cases, it will be, but it's possible for w3wp to be corrupted enough not to be able to handle the request.
-
-### In multi-instance scenarios, the instance cannot be selected
-
-If you have an Azure site that's running on multiple instances, the dump request will end up getting sent to an arbitrary instance.
-
-Ideally, the specific instance could be selected, and hopefully it will work that way in the future.
-
 
 ### Full dump could cause download quota to be reached
 
