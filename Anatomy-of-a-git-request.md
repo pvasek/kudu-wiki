@@ -1,4 +1,3 @@
-# Anatomy of a git request
 Kudu supports the Git Smart protocol. In summary we handle 4 requests:
 
 ## Smart Protocol
