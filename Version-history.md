@@ -1,4 +1,7 @@
-## S26-QFE1
+## S26-QFE2 (not yet in Azure)
+* New Process Explorer UI
+
+## S26-QFE (3/22/2014)
 * Support dropping Zip files into Dev Console
 * New WebJobs dashboard for both SDK and non-SDK Jobs
 * Improve Site Extension Gallery UI
