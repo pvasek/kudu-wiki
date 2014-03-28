@@ -1,5 +1,6 @@
 ## S26-QFE2 (not yet in Azure)
 * New Process Explorer UI
+* Webhooks support for triggered WebJobs (on run complete)
 
 ## S26-QFE (3/22/2014)
 * Support dropping Zip files into Dev Console
