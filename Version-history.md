@@ -1,4 +1,4 @@
-## S26-QFE2 (not yet in Azure)
+## S26-QFE2 (3/31/2014)
 * New Process Explorer UI
 * Webhooks support for triggered WebJobs (on run complete)
 
