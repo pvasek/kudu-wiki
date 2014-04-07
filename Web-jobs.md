@@ -55,6 +55,30 @@ Also the first 100 lines in each invocation will also go to the WebJob log file 
 For **triggered** WebJobs - Console.Out/Console.Error are routed to the WebJobs specific run log file also accessible using the Azure portal and stored at data/jobs/triggered/jobName/runId.
 
 Console.Out is treated (marked) as INFO and Console.Error as ERROR.
+
+## Deploying ##
+
+There are multiple ways to deploy WebJobs.
+
+### Using the Azure portal
+
+From the portal, you can directly upload a zip file that contain the WebJob's files.
+
+### Copying files directly in their proper location
+
+You can deploy a WebJob by directly copying the files under the locations discussed above (i.e. `wwwroot/app_data/jobs/...`). This can be done either by FTP, WebDeploy, Kudu Console or git.
+
+### Deploying .NET Console WebJobs alongside an ASP.NET application
+
+There is a great VS Addin called [WebJobsVs](WebJobsVs "http://visualstudiogallery.msdn.microsoft.com/f4824551-2660-4afa-aba1-1fcc1673c3d0") which lets you do exactly this.
+
+High level:
+
+- You have both an ASP.NET app and one or more WebJobs (Console apps) in your solution
+- You ask the ASP.NET app to include the WebJobs apps with itself when deploying
+
+This works both when deploying directly from Visual Studio (WebDeploy), or via git. 
+
  
 # API #
 
