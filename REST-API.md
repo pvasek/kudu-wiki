@@ -5,111 +5,111 @@ The credentials you use are the same as when you git push. See [[Deployment-cred
 
 ## scm
 
-Note: in older builds, use `live/scm` instead of `scm`
+Note: in older builds, use `/live/scm` instead of `/api/scm`
 
-    GET scm/info
+    GET /api/scm/info
     Get information about the repository
     
-    POST scm/clean	
+    POST /api/scm/clean	
     Clean the repository, using 'git clean -xdff'
     
-    DELETE scm	
+    DELETE /api/scm	
     Delete the repository
     	
 ## Command
 
-    POST command	
+    POST /api/command
     Executes an arbitrary command line and return its output
     	
 ## VFS
    The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with trailing slashes are treated as directories.
 
-    GET vfs/{path}
+    GET /api/vfs/{path}
     Gets a file at path
 
-    GET vfs/{path}/
+    GET /api/vfs/{path}/
     Lists files at directory specified by path.
 
-    PUT vfs/{path}
+    PUT /api/vfs/{path}
     Puts a file at path.
 
-    PUT vfs/{path}/
+    PUT /api/vfs/{path}/
     Creates a directory at path
 
 ## Zip
    The Zip API allows downloading folders as zip files, or expanding zip files into folders.
 
-    GET zip/{path}
+    GET /api/zip/{path}
     Zip up and download the specified folder. The zip doesn't include the top folder itself.
 
-    PUT vfs/{path}
+    PUT /api/vfs/{path}
     Upload a zip file which gets expanded into the specified folder. Existing files are not deleted
     unless they need to be overwritten by files in the zip.
 
 ## Deployment
 
-    GET deployments	
+    GET /api/deployments
     Get the list of all deployments
     
-    GET deployments/{id}	
+    GET /api/deployments/{id}
     Get a deployment
     
-    PUT deployments/{id}	
+    PUT /api/deployments/{id}
     Deploy a previous deployment
     
-    DELETE deployments/{id}	
+    DELETE /api/deployments/{id}
     Delete a deployment
     
-    GET deployments/{id}/log	
+    GET /api/deployments/{id}/log
     Get the list of log entries for a deployment
     
-    GET deployments/{id}/log/{logId}	
+    GET /api/deployments/{id}/log/{logId}
     Get the list of log entry details for a log entry
     	
 ## SSHKey
 
-    PUT sshkey	
+    PUT /api/sshkey	
     Set the private key. The supported key format is privacy enhanced mail (PEM)
 
-    GET sshkey	
+    GET /api/sshkey	
     Get the public key.  Optional: ?ensurePublicKey=1 to generate if none exist.
     	
 ## Environment
 
-    GET environment	
+    GET /api/environment
     Get the Kudu version
     	
 ## Settings
 
-    POST settings	
+    POST /api/settings
     Create or change a setting
     
-    GET settings	
+    GET /api/settings
     Get the list of all settings
     
-    GET settings/{key}	
+    GET /api/settings/{key}
     Get the value of a setting
     
-    DELETE settings/{key}	
+    DELETE /api/settings/{key}
     Delete a setting
     	
 ## Diagnostics
 
-    GET dump	
+    GET /api/dump	
     Get all the diagnostic logs as a zip file
 
 ## Diagnostics/Settings
 
-    POST diagnostics/settings	
+    POST /api/diagnostics/settings
     Create or change a setting
     
-    GET diagnostics/settings	
+    GET /api/diagnostics/settings
     Get the list of all settings
     
-    GET diagnostics/settings/{key}	
+    GET /api/diagnostics/settings/{key}	
     Get the value of a setting
     
-    DELETE diagnostics/settings/{key}	
+    DELETE /api/diagnostics/settings/{key}
     Delete a setting
 
 Sample of available settings.
@@ -125,29 +125,29 @@ Sample of available settings.
 
 ## Logs
 
-    GET api/logs/recent	
+    GET /api/logs/recent
     Retrieve application logs found in the LogFiles\Application folder, starting with the most recent entries. 
     The following query string parameter(s) are supported:
     - top: the number of log entries to return (default is 100, maximum is 1000)
 
 ## SiteExtensions
 
-    GET api/extensions/remote	
+    GET /api/extensions/remote
     List all extension package infos available on the online (remote) server.  The following query strings are supported.
     - filter: matching string
 
-    GET api/extensions/local	
+    GET /api/extensions/local
     List all extension package infos currently installed.  The following query strings are supported.
     - filter: matching string
 
-    GET api/extensions/remote/{id}	
-    Get a package info with {id} from remote store. 
+    GET /api/extensions/remote/{id}
+    Get a package info with {id} from remote store.
 
-    GET api/extensions/local/{id}	
-    Get a package info with {id} currently installed. 
+    GET /api/extensions/local/{id}
+    Get a package info with {id} currently installed.
 
-    POST api/extensions
-    Install or update the package to local machine.   The payload is the package info returned by List/Get apis above. 
+    POST /api/extensions
+    Install or update the package to local machine.   The payload is the package info returned by List/Get apis above.
 
-    DELETE api/extensions/local/{id}
+    DELETE /api/extensions/local/{id}
     Uninstall the package with {id}.
