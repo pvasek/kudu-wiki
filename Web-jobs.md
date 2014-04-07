@@ -11,6 +11,8 @@ To deploy a triggered job copy your binaries to:
 To deploy a continuous job copy your binaries to:
 ```site/wwwroot/app_data/jobs/continuous/{job name}```
 
+**Note:** see the Deployment section below for alternative ways of deploying WebJobs.
+
 The following file types are accepted as runnable scripts that can be used as a job:
 
 * .cmd, .bat, .exe (using windows cmd)
@@ -56,7 +58,7 @@ For **triggered** WebJobs - Console.Out/Console.Error are routed to the WebJobs 
 
 Console.Out is treated (marked) as INFO and Console.Error as ERROR.
 
-## Deploying ##
+## Deployment ##
 
 There are multiple ways to deploy WebJobs.
 
