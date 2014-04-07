@@ -60,13 +60,13 @@ Console.Out is treated (marked) as INFO and Console.Error as ERROR.
 
 ### List all web jobs ###
 
-    GET jobs
+    GET /api/jobs
 
 ## Triggered Jobs ##
 
 ### List all triggered jobs ###
 
-    GET jobs/triggered
+    GET /api/jobs/triggered
 
 **Response**
 
@@ -94,7 +94,7 @@ Console.Out is treated (marked) as INFO and Console.Error as ERROR.
 
 ### Get a specific triggered job by name ###
 
-    GET jobs/triggered/{job name}
+    GET /api/jobs/triggered/{job name}
 
 **Response**
 
@@ -122,11 +122,11 @@ Console.Out is treated (marked) as INFO and Console.Error as ERROR.
 
 Using a zip file containing the files for it, or just a single file (e.g foo.exe).
 
-    PUT zip/site/wwwroot/App_Data/jobs/triggered/{job name}/
+    PUT /api/zip/site/wwwroot/App_Data/jobs/triggered/{job name}/
 
 or (in the next version not out yet)
 
-    PUT jobs/triggered/{job name}
+    PUT /api/jobs/triggered/{job name}
 
     Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
 
@@ -136,22 +136,22 @@ or (in the next version not out yet)
 
 ### Delete a triggered job ###
 
-    DELETE vfs/site/wwwroot/App_Data/jobs/triggered/{job name}?recursive=true
+    DELETE /api/vfs/site/wwwroot/App_Data/jobs/triggered/{job name}?recursive=true
 
 or (in the next version not out yet)
 
-    DELETE jobs/triggered/{job name}
+    DELETE /api/jobs/triggered/{job name}
 
 
 ### Invoke a triggered job ###
 
-    POST jobs/triggered/{job name}/run
+    POST /api/jobs/triggered/{job name}/run
 
 Note: if the site has multiple instances, the job will run on one of them arbitrarily. This is the same behavior as regular requests sent to the site.
 
 ### List all triggered job runs history ###
 
-    GET jobs/triggered/{job name}/history
+    GET /api/jobs/triggered/{job name}/history
 
 **Response**
 
@@ -173,7 +173,7 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
 
 ### Get a specific run for a specific triggered job ###
 
-    GET jobs/triggered/{job name}/history/{id}
+    GET /api/jobs/triggered/{job name}/history/{id}
 
 **Response**
 
@@ -192,7 +192,7 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
 
 ### List all continuous jobs ###
 
-    GET jobs/continuous
+    GET /api/jobs/continuous
 
 **Response**
 
@@ -210,7 +210,7 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
 
 ### Get a specific continuous job by name ###
 
-    GET jobs/continuous/{job name}
+    GET /api/jobs/continuous/{job name}
 
 **Response**
 
@@ -236,11 +236,11 @@ The `status` can take the following values:
 
 Using a zip file containing the files for it.
 
-    PUT zip/site/wwwroot/App_Data/jobs/continuous/{job name}/
+    PUT /api/zip/site/wwwroot/App_Data/jobs/continuous/{job name}/
 
 or (in the next version not out yet)
 
-    PUT jobs/continuous/{job name}
+    PUT /api/jobs/continuous/{job name}
 
     Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
 
@@ -250,25 +250,25 @@ or (in the next version not out yet)
 
 ### Delete a continuous job ###
 
-    DELETE vfs/site/wwwroot/App_Data/jobs/continuous/{job name}?recursive=true
+    DELETE /api/vfs/site/wwwroot/App_Data/jobs/continuous/{job name}?recursive=true
 
 or (in the next version not out yet)
 
-    DELETE jobs/continuous/{job name}
+    DELETE /api/jobs/continuous/{job name}
 
 ### Start a continuous job ###
 
-    POST jobs/continuous/{job name}/start
+    POST /api/jobs/continuous/{job name}/start
 
 ### Stop a continuous job ###
 
-    POST jobs/continuous/{job name}/stop
+    POST /api/jobs/continuous/{job name}/stop
 
 ### Set a continuous job as singleton ###
 
 If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
 
-    PUT jobs/continuous/{job name}/settings
+    PUT /api/jobs/continuous/{job name}/settings
 
 Body
 
