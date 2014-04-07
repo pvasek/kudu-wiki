@@ -10,7 +10,7 @@
 
 ### Subscribe / Add Hook ###
 
-    POST /hooks
+    POST /api/hooks
 
 **Body**
 
@@ -38,7 +38,7 @@
 
 ### Unsubscribe / Remove Hook ###
 
-    DELETE /hooks/[id]
+    DELETE /api/hooks/[id]
 
 **Response**
 
@@ -48,7 +48,7 @@
 
 ### List Hooks ###
 
-    GET /hooks
+    GET /api/hooks
 
 **Response**
 
@@ -72,7 +72,7 @@
 
 ### Get Hook ###
 
-    GET /hooks/[id]
+    GET /api/hooks/[id]
 
 **Response**
 
@@ -94,7 +94,7 @@
 
 ### Publish Hook Type ###
 
-    POST /hooks/publish/[hook type]
+    POST /api/hooks/hooks/publish/[hook type]
 
 **Body**
 
@@ -123,11 +123,11 @@ This is request sent by the Kudu service to the registered URL.
 {
   "id": "cd5bee7181e74ea38a3522e73253f6ebb8ed72fb",
   "status": "success", (could be pending, building, deploying, failed, success)
-  "authorEmail": "someone@somewhere.com",
+  "author_email": "someone@somewhere.com",
   "author": "Some One",
   "message": "My fix",
   "deployer": "Some One",
-  "startTime": "2013-06-06T01:24:16.5873293Z",
-  "endTime": "2013-06-06T01:24:17.63342Z"
+  "start_time": "2013-06-06T01:24:16.5873293Z",
+  "end_time": "2013-06-06T01:24:17.63342Z"
 }
 ```
