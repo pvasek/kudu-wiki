@@ -10,8 +10,6 @@ Here are various things you can do with the Kudu console:
 
 ## Use it to run commands (e.g. git operations)
 
-Even though it's not a true remote console, it tries hard to pretend to be one.
-
 You can use it to do most standard console operations: changing folder, copy/rename/delete files, etc.
 
 You can also use it to run arbitrary external commands. One good use case is to run git commands against your repository (if you are using git). e.g. you can do a 'git log', 'git status', and generally run arbitrary git commands, which can be useful to diagnose certain issues.
