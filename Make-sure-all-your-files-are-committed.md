@@ -4,6 +4,6 @@ Sometimes, users report that everything works fine on their machine, but doesn't
 
 The best way to eliminate that possibility is to test your site using a clean copy of your repository on the client. One simple way to do this is to clone your repo locally. e.g. if your repo is in the `MySite` folder, try running:
 
-    clone MySite MySiteClean
+    git clone MySite MySiteClean
 
 One you've done that, try running your site locally using this new `MySiteClean` repo instead of your original repo. If you find that it's broken, then you most likely didn't commit some required files, and your issue is unrelated to Azure. The next step is to figure out what files you're missing by comparing your `MySite` and `MySiteClean` folders.
