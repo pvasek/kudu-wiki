@@ -65,7 +65,11 @@ Note: in older builds, use `/live/scm` instead of `/api/scm`
     
     GET /api/deployments/{id}/log/{logId}
     Get the list of log entry details for a log entry
-    	
+
+    POST /api/deploy
+    Payload: { format: 'basic', url: 'https://github.com/SomeOrg/SomeRepo.git' } 
+    Trigger a new deployment from that repository 
+
 ## SSHKey
 
     PUT /api/sshkey	
