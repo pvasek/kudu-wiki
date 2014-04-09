@@ -104,7 +104,7 @@ Note: the default is 1000
 	</configuration>
 
 
-### Adding an attribute to a specific version of PHP
+### Adding or changing an attribute for a specific version of PHP
 
 This transform finds the `<application>` tag that has the v5.4 full path, and adds a new `queueLength` attribute to it.
 
@@ -117,6 +117,19 @@ This transform finds the `<application>` tag that has the v5.4 full path, and ad
         </fastCgi>
       </system.webServer>
     </configuration>
+
+This transform changes the value of `maxInstances` for PHP 5.4.
+
+    <?xml version="1.0"?>
+    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+      <system.webServer>
+        <fastCgi>
+          <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(maxInstances)"
+                fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" maxInstances="8"/>
+        </fastCgi>
+      </system.webServer>
+    </configuration>
+
 
 ### Adding an ASP Classic attribute
 
