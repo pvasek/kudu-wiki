@@ -25,3 +25,6 @@ The default is PHP 5.4.
 ## Python
 * 2.7
 
+## Java
+* 1.7.0_51
+
