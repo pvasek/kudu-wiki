@@ -15,7 +15,7 @@ Note: If you manually install IIS, here is what needs to be enabled:
 ### Additional prerequisites to run the functional tests
 
 * Install the XUnit.net runner for VS 2012, which you install from Tools / Extensions & Updates
-* Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true.
+* Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true (or remove the attribute if you are running the latest Windows 8.1).
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
 * Install [IISNode](http://go.microsoft.com/?linkid=9784331)
 * Install [TypeScript Plugin](http://www.microsoft.com/en-us/download/details.aspx?id=34790)
