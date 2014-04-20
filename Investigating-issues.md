@@ -30,7 +30,7 @@ If you are able to hit the root of the Kudu service (per previous section), but 
 To do this:
 
 * Go to the [[root of the Kudu service|Accessing-the-kudu-service]]
-* On that page, you'll see a Download link next to 'Diagnostics Dump'
+* On that page, you'll see a 'Diagnostics Dump' menu item
 * Just click it to download a zip file which you can provide to help investigation
 
 ## Error types
