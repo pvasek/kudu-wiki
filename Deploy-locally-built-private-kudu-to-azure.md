@@ -11,5 +11,3 @@ You can simply deploy your own version of Kudu to the Windows Azure WebSites by 
   Note: To get DEPLOYMENT TRIGGER URL, go to Azure Portal and navigate to your site CONFIGURE tab.  If you don't see the URL, you can always form up scm URL (add scm in the middle) and embed publishing username/password instead.
 
 That's it.
-
-That's it.
