@@ -81,7 +81,32 @@ High level:
 
 This works both when deploying directly from Visual Studio (WebDeploy), or via git. 
 
- 
-# API #
+
+## Graceful Shutdown ##
+
+Graceful shutdown is the ability to notify the job process that it's going to shutdown and a wait period for the process to go down by itself before killing it.
+
+The shutdown can happen on this cases: the site is getting stopped/restarted, the job is getting stopped, the app settings configuration (of the site) is changed, ```web.config``` is updated, the job binaries are updated.
+
+The graceful shutdown feature works slightly different for continuous and triggered jobs:
+
+### Continuous ###
+
+When a shutdown request is detected a file will be created in the path: ```%WEBJOBS_SHUTDOWN_FILE%``` (environment variable which can be obtained by the job's process).
+
+Then there is a default period of **5** seconds waiting for the job process to shutdown before getting killed.
+
+### Triggered ###
+
+When a shutdown request is detected there is a **30** seconds default waiting period for the job process to stop.
+
+> You can change the grace period of a job by specifying it (in seconds) in the job.settings file (should be in the same root directory as the job's script) where the name of the setting is **stopping\_wait_time** like so:
+
+> ```{ "stopping_wait_time": 60 }```
+
+> this sample will have the job grace period at 60 seconds instead of the default.
+
+
+## API ##
 
 [[WebJobs API]]
