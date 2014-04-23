@@ -1,5 +1,6 @@
 ## S27 (under development)
 * Typescript 1.0 support
+* Added graceful shutdown support for WebJobs
 
 ## S26-QFE2 (3/31/2014)
 * New Process Explorer UI
