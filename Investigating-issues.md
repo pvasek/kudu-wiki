@@ -52,3 +52,8 @@ To get more details for any of the above status codes, capture the git client tr
   * Powershell: `$env:GIT_CURL_VERBOSE=1`
 2. Run your git command. (e.g. git push url master). **NOTE: To capture output you need to redirect the error stream not output!**
 3. [[Analyzing a git client trace]].
+
+### Set SCM logging to verbose
+
+Try setting AppSetting SCM_TRACE_LEVEL to 4 for kudu-related verbose logging.
+
