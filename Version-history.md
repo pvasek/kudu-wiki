@@ -1,6 +1,8 @@
 ## S27 (under development)
 * Typescript 1.0 support
 * Added graceful shutdown support for WebJobs
+* Improve deployment logic when disconnecting from a repo and reconnecting to a different one
+* New logic to use the custom start script from package.json
 
 ## S26-QFE2 (3/31/2014)
 * New Process Explorer UI
