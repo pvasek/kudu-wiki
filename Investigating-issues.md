@@ -53,7 +53,7 @@ To get more details for any of the above status codes, capture the git client tr
 2. Run your git command. (e.g. git push url master). **NOTE: To capture output you need to redirect the error stream not output!**
 3. [[Analyzing a git client trace]].
 
-### Set SCM logging to verbose
+### Set Kudu logging to verbose level
 
 Try setting AppSetting SCM_TRACE_LEVEL to 4 for kudu-related verbose logging.
 
