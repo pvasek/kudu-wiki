@@ -20,6 +20,14 @@ Note: in older builds, use `/live/scm` instead of `/api/scm`
 
     POST /api/command
     Executes an arbitrary command line and return its output
+
+The JSON body of the post should look like this, passing the command and the folder it should run in:
+
+    {
+        "command": 'echo Hello World',
+        "dir": 'site\\repository'
+    }
+
     	
 ## VFS
    The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with trailing slashes are treated as directories.
