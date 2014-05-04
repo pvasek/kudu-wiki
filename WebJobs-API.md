@@ -64,7 +64,7 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
     PUT /api/zip/site/wwwroot/App_Data/jobs/triggered/{job name}/
 
-or (in the next version not out yet)
+or
 
     PUT /api/jobs/triggered/{job name}
 
@@ -78,7 +78,7 @@ or (in the next version not out yet)
 
     DELETE /api/vfs/site/wwwroot/App_Data/jobs/triggered/{job name}?recursive=true
 
-or (in the next version not out yet)
+or
 
     DELETE /api/jobs/triggered/{job name}
 
