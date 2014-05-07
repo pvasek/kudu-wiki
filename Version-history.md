@@ -1,4 +1,7 @@
-## S27 (under development)
+## S27-QFE (not yet released)
+* Improve tab auto-complete behavior in Kudu console
+
+## S27 (5/6/2014)
 * Typescript 1.0 support
 * Added graceful shutdown support for WebJobs
 * Improve deployment logic when disconnecting from a repo and reconnecting to a different one
