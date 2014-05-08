@@ -121,7 +121,7 @@ Here is one way to do it (we should try to make this easier in the future):
 - Go to the [Kudu Console](https://github.com/projectkudu/kudu/wiki/Kudu-console)
 - Click the 'planet' icon
 - Click the Config folder
-- Click the download button for `applicationhost.config`. Or you can click the Edit button to look at it directly in the browser (but don't attempt to modufy it from here!)
+- Click the download button for `applicationhost.config`. Or you can click the Edit button to look at it directly in the browser (but don't attempt to modify it from here, as it's read only!)
 
 #### Finding the log of what happened during the transform
 
