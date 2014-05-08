@@ -25,7 +25,22 @@ This transform adds a /somepath IIS application under the SCM site.
         </sites>
       </system.applicationHost>
     </configuration>
-    
+
+
+### Changing the number of segments allowed in the URL
+
+    <?xml version="1.0"?>
+    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+      <system.applicationHost>
+        <sites>
+          <site name="%XDT_SITENAME%" xdt:Locator="Match(name)">
+            <limits xdt:Transform="Insert" maxUrlSegments="64" />
+          </site>
+        </sites>
+      </system.applicationHost>
+    </configuration>
+
+
 ### Adding a mime type to the httpCompression section
 
     <?xml version="1.0"?>
