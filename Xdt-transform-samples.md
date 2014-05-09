@@ -34,6 +34,7 @@ This transform adds a /somepath IIS application under the SCM site.
       <system.applicationHost>
         <sites>
           <site name="%XDT_SITENAME%" xdt:Locator="Match(name)">
+            <limits xdt:Transform="Remove" />
             <limits xdt:Transform="Insert" maxUrlSegments="64" />
           </site>
         </sites>
