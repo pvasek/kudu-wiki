@@ -11,6 +11,7 @@ Use this flag to add things at the end of the msbuild command line, such that it
 
 e.g. to choose the Debug build configuration (default is Release), you could have:
 
+    [config]
     SCM_BUILD_ARGS=-p:Configuration=Debug
 
 ### Taking over the script generator command line
