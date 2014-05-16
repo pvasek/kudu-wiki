@@ -144,22 +144,22 @@ Sample of available settings.
 
 ## SiteExtensions
 
-    GET /api/extensions/remote
+    GET /api/extensionfeed
     List all extension package infos available on the online (remote) server.  The following query strings are supported.
     - filter: matching string
 
-    GET /api/extensions/local
+    GET /api/siteextensions
     List all extension package infos currently installed.  The following query strings are supported.
     - filter: matching string
 
-    GET /api/extensions/remote/{id}
+    GET /api/extensionfeed/{id}
     Get a package info with {id} from remote store.
 
-    GET /api/extensions/local/{id}
+    GET /api/siteextensions/{id}
     Get a package info with {id} currently installed.
 
-    POST /api/extensions
-    Install or update the package to local machine.   The payload is the package info returned by List/Get apis above.
+    PUT /api/siteextensions/{id}
+    Install or update the package to local machine. The payload is the package info returned by List/Get apis above.
 
-    DELETE /api/extensions/local/{id}
+    DELETE /api/siteextensions/{id}
     Uninstall the package with {id}.
