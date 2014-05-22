@@ -100,7 +100,7 @@ Then there is a default period of **5** seconds waiting for the job process to s
 
 When a shutdown request is detected there is a **30** seconds default waiting period for the job process to stop.
 
-> You can change the grace period of a job by specifying it (in seconds) in the job.settings file (should be in the same root directory as the job's script) where the name of the setting is **stopping\_wait_time** like so:
+> You can change the grace period of a job by specifying it (in seconds) in the settings.job file (should be in the same root directory as the job's script) where the name of the setting is **stopping\_wait_time** like so:
 
 > ```{ "stopping_wait_time": 60 }```
 
