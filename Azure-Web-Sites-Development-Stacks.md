@@ -14,6 +14,7 @@ The default is .NET Framework 4.5 (currently .NET 4.5.1).
 * 0.10.18
 * 0.10.21
 * 0.10.24   
+* 0.10.26   
 The default is Node.js 0.10.5.
 
 ## PHP
@@ -24,6 +25,7 @@ The default is PHP 5.4.
 
 ## Python
 * 2.7
+* 3.4
 
 ## Java
 * 1.7.0_51
