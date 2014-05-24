@@ -94,7 +94,7 @@ The JSON body of the post should look like this, passing the command and the fol
 ## Settings
 
     POST /api/settings
-    Create or change a setting
+    Create or change one or more settings
 
     Sample body:
     {
