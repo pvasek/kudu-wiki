@@ -178,7 +178,7 @@ Using a zip file containing the files for it.
 
     PUT /api/zip/site/wwwroot/App_Data/jobs/continuous/{job name}/
 
-or (in the next version not out yet)
+or
 
     PUT /api/jobs/continuous/{job name}
 
@@ -192,7 +192,7 @@ or (in the next version not out yet)
 
     DELETE /api/vfs/site/wwwroot/App_Data/jobs/continuous/{job name}?recursive=true
 
-or (in the next version not out yet)
+or
 
     DELETE /api/jobs/continuous/{job name}
 
