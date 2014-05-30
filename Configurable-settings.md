@@ -77,9 +77,11 @@ Used the change the version of Node that is used by default
 
     WEBSITE_NODE_DEFAULT_VERSION=0.10.5
 
-### Enable the use of private Site Extensions on a site (note: coming soon!)
+### Add user profile support for a site
 
-    WEBSITE_PRIVATE_EXTENSIONS=1
+See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-US/b919f872-2d4c-4c94-9cf1-9494e97d35ce/deployments-fails-when-referencing-systemxaml?forum=azuregit) for details. Note that this is only available for sites running in Basic or Standard mode.
+
+    WEBSITE_LOAD_USER_PROFILE=1
 
 ### Diagnostics related settings
 
