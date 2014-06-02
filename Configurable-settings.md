@@ -83,6 +83,10 @@ See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-
 
     WEBSITE_LOAD_USER_PROFILE=1
 
+### Disable the use of private site extensions
+
+    WEBSITE_PRIVATE_EXTENSIONS=0
+
 ### Diagnostics related settings
 
 The name (or relative path to the LogDirectory) of the file where internal errors are logged, for troubleshooting the listener:
@@ -105,8 +109,6 @@ Maximum size of the log folder (Default: 1 MB):
 
     DIAGNOSTICS_TEXTTRACEMAXLOGFOLDERSIZEBYTES=2000000
 
-### Misc
-
-    WEBSITE_USE_HOME_SITE_PATH=0
+### Use the SCM site for WebDeploy
 
     WEBSITE_WEBDEPLOY_USE_SCM=true
