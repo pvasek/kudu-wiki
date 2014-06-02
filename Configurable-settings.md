@@ -108,3 +108,5 @@ Maximum size of the log folder (Default: 1 MB):
 ### Misc
 
     WEBSITE_USE_HOME_SITE_PATH=0
+
+    WEBSITE_WEBDEPLOY_USE_SCM=true
