@@ -1,4 +1,10 @@
-## S27-QFE (not yet released)
+## S27-QFE3 (6/2/2014)
+* More Site Extension tweaks
+
+## S27-QFE2 (5/29/2014)
+* Misc Site Extension and other fixes
+
+## S27-QFE (5/8/2014)
 * Improve tab auto-complete behavior in Kudu console
 
 ## S27 (5/6/2014)
