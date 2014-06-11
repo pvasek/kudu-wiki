@@ -7,21 +7,10 @@ For mobile services, the site URL looks like `https://myservice.scm.azure-mobile
 
 Notes:
 
-- The scm service should always be accessed over https and not http to protect sensitive data.
 - The scm service host name is not affected by the presence of custom host names in your site. It always has the pattern above.
-- The scm service will prompt you for credentials. Here, you can use either the user publishing credentials (same as you use for git), or the site level credentials. See [[Deployment-credentials]] for details.
+- The scm site uses single sign on, so if you're already logged on to the Azure portal, you will be able to go directly to it without typing additional credentials.
+- If you prefer not to use Single Sign On and instead use basic auth, you can go to `http://mysite.azurewebsites.net/basicauth`. The scm service will prompt you for credentials. Here, you can use either the user publishing credentials (same as you use for git), or the site level credentials. See [[Deployment-credentials]] for details.
 
-## Simple trick to avoid manually typing credentials
-
-Notes:
-
-- This trick only works for sites that have git/hg/dropbox publishing enabled
-- It doesn't work in IE
-
-Here are the steps:
-
-- In the Azure portal, go to the Configure tab, and look for 'DEPLOYMENT TRIGGER URL'. You'll see a URL that looks like this: `https://$mysite:37jbd3ejoQYAHa1bwufqpeFoxGNuF4ZohhjJcPLelsRll4tCyJe0c5Sv2GJv@mysite.scm.azurewebsites.net/deploy`. Note that it has the site-level publishing credentials embedded, which is what makes it work without prompting for credentials.
-- Remove the /deploy at the end, and paste the rest in your browser's address bar. e.g. `https://$mysite:37jbd3ejoQYAHa1bwufqpeFoxGNuF4ZohhjJcPLelsRll4tCyJe0c5Sv2GJv@mysite.scm.azurewebsites.net`. You're now looking at the root of the scm service, which runs the Kudu extension.
 
 ## Once you're in the Kudu service
 
