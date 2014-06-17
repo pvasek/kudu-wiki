@@ -112,3 +112,9 @@ Maximum size of the log folder (Default: 1 MB):
 ### Use the SCM site for WebDeploy
 
     WEBSITE_WEBDEPLOY_USE_SCM=true
+
+### Site Extensions gallery feed url
+
+Each site gets the site extensions feed from a configurable Url. If it is not set, the behavior is equivalent to
+
+    SCM_SITEEXTENSIONS_FEED_URL="http://www.siteextensions.net/api/v2/"
