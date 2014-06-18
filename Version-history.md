@@ -1,4 +1,4 @@
-## S27-QFE4 (6/7/2014)
+## S27-QFE4 (6/17/2014)
 * Add support for `install.cmd`/`uninstall.cmd` scripts in gallery Site Extensions
 * Add support for F# Web Applications (sample [here](https://github.com/KuduApps/fsharp-owin-sample))
 
