@@ -1,6 +1,6 @@
 ## From the Azure portal
 
-The Azure portal makes it easy to set up continous deployment from GitHub, Bitbucket or Codeplex.
+The Azure portal makes it easy to set up continuous deployment from GitHub, Bitbucket or Codeplex.
 
 This documents discusses what happens under the cover. Inmost cases you don't need to worry about this. It may be useful to set up continuous deployment from a git host that the portal doesn't directly support.
 
@@ -37,9 +37,9 @@ One possible way to call the REST API is using curl. e.g.
 
 You need to copy two files over FTP (see [[Accessing-files-via-ftp]] and [[File-structure-on-azure]]).
 
-Under the `site` folder, create a .ssh folder and create two files.
+At the root, create a .ssh folder (i.e. .ssh is a sibling to the site folder) and create two files.
 
-The first is named config (so `site\.ssh\config`) and should contain exactly:
+The first is named config (so `.ssh\config`) and should contain exactly:
 
     HOST *
     	  StrictHostKeyChecking no
