@@ -34,10 +34,10 @@ In there, you will see the following structure (or at least a subset of it):
                     manifest          // The list of files that were deployed
                 [commit id 2]
                     ...
-            .ssh
-                config                // This contains config to disable strict host checking
-                id_rsa                // private key in PEM format
-                known_hosts           // known hosts have been accepted
+        .ssh
+            config                // This contains config to disable strict host checking
+            id_rsa                // private key in PEM format
+            known_hosts           // known hosts have been accepted
         Data
             Jobs
                 Triggered
