@@ -9,10 +9,10 @@ Note that in addition to using App Settings, you can specify those settings in y
 
 Use this flag to add things at the end of the msbuild command line, such that it overrides any previous parts of the default command line.
 
-e.g. to choose the Debug build configuration (default is Release), you could have:
+e.g. to choose the Debug build configuration (default is Release) and apply a chained config transform, you could have:
 
     [config]
-    SCM_BUILD_ARGS=-p:Configuration=Debug
+    SCM_BUILD_ARGS=-p:Configuration=Debug;PublishProfile=MyChainedTransform
 
 ### Taking over the script generator command line
 
