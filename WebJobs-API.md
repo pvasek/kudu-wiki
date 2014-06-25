@@ -87,6 +87,10 @@ or
 
     POST /api/jobs/triggered/{job name}/run
 
+** To run with arguments use the arguments parameters that will be added to the script when invoked **
+
+    POST /api/jobs/triggered/{job name}/run?arguments={arguments}
+
 Note: if the site has multiple instances, the job will run on one of them arbitrarily. This is the same behavior as regular requests sent to the site.
 
 ### List all triggered job runs history ###
