@@ -87,7 +87,7 @@ or
 
     POST /api/jobs/triggered/{job name}/run
 
-** To run with arguments use the arguments parameters that will be added to the script when invoked **
+**To run with arguments use the arguments parameters that will be added to the script when invoked**
 
     POST /api/jobs/triggered/{job name}/run?arguments={arguments}
 
