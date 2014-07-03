@@ -6,6 +6,23 @@ The simplest way to apply one of these transforms for your site is:
 
 See [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.aspx) for detailed documentation on the XDT syntax.
 
+### Adding environment variables
+
+The following will inject an environment variable named `FOO`, with value `BAR`:
+
+    <?xml version="1.0"?> 
+    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
+      <system.webServer> 
+        <runtime xdt:Transform="Insert" >
+             <environmentVariables>
+                <add name="FOO" value="BAR" />    
+             </environmentVariables>
+        </runtime> 
+      </system.webServer> 
+    </configuration> 
+
+
+
 ### Adding new applications to the 'scm' site
 
 You may wonder how Kudu or other extensions gets set up in the SCM site. The key is the applicationHost.xdt (notice one exists for each versioned folders). The [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.aspx) file is used to transform the actual applicationHost.config for the site. 
