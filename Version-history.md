@@ -1,3 +1,8 @@
+## S28-QFE1 (7/2/2014)
+* Cleanup index.lock for ScmVfs operations.
+* Use Newtonsoft instead of DataContract for Json output annotations.
+* Fixes for DebugConsole UI and autocomplete.
+
 ## S28 (6/19/2014)
 * Fix small issue with site extensions API
 
