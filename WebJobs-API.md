@@ -6,7 +6,7 @@
 
 ### List all triggered jobs ###
 
-    GET /api/jobs/triggered
+    GET /api/triggeredjobs
 
 **Response**
 
@@ -15,8 +15,8 @@
         name: "jobName",
         runCommand: "...\run.cmd",
         type: "triggered",
-        url: "http://.../jobs/triggered/jobName",
-        history_url: "http://.../jobs/triggered/jobName/history",
+        url: "http://.../triggeredjobs/jobName",
+        history_url: "http://.../triggeredjobs/jobName/history",
         extra_info_url: "http://.../",
         latest_run:
           {
@@ -27,14 +27,14 @@
             duration: "00:01:00",
             output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
             error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-            url: "http://.../jobs/triggered/jobName/history/20131103120400"
+            url: "http://.../triggeredjobs/jobName/history/20131103120400"
           }
       }
     ]
 
 ### Get a specific triggered job by name ###
 
-    GET /api/jobs/triggered/{job name}
+    GET /api/triggeredjobs/{job name}
 
 **Response**
 
@@ -42,8 +42,8 @@
       name: "jobName",
       runCommand: "...\run.cmd",
       type: "triggered",
-      url: "http://.../jobs/triggered/jobName",
-      history_url: "http://.../jobs/triggered/jobName/history",
+      url: "http://.../triggeredjobs/jobName",
+      history_url: "http://.../triggeredjobs/jobName/history",
       extra_info_url: "http://.../",
       latest_run:
         {
@@ -54,7 +54,7 @@
           duration: "00:01:00",
           output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
           error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-          url: "http://.../jobs/triggered/jobName/history/20131103120400"
+          url: "http://.../triggeredjobs/jobName/history/20131103120400"
         }
     }
 
@@ -66,7 +66,7 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
 or
 
-    PUT /api/jobs/triggered/{job name}
+    PUT /api/triggeredjobs/{job name}
 
     Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
 
@@ -80,22 +80,22 @@ or
 
 or
 
-    DELETE /api/jobs/triggered/{job name}
+    DELETE /api/triggeredjobs/{job name}
 
 
 ### Invoke a triggered job ###
 
-    POST /api/jobs/triggered/{job name}/run
+    POST /api/triggeredjobs/{job name}/run
 
 **To run with arguments use the arguments parameters that will be added to the script when invoked**
 
-    POST /api/jobs/triggered/{job name}/run?arguments={arguments}
+    POST /api/triggeredjobs/{job name}/run?arguments={arguments}
 
 Note: if the site has multiple instances, the job will run on one of them arbitrarily. This is the same behavior as regular requests sent to the site.
 
 ### List all triggered job runs history ###
 
-    GET /api/jobs/triggered/{job name}/history
+    GET /api/triggeredjobs/{job name}/history
 
 **Response**
 
@@ -110,14 +110,14 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
             duration: "00:01:00",
             output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
             error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-            url: "http://.../jobs/triggered/jobName/history/20131103120400"
+            url: "http://.../triggeredjobs/jobName/history/20131103120400"
           }
         ]
     }
 
 ### Get a specific run for a specific triggered job ###
 
-    GET /api/jobs/triggered/{job name}/history/{id}
+    GET /api/triggeredjobs/{job name}/history/{id}
 
 **Response**
 
@@ -129,14 +129,14 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
       duration: "00:01:00",
       output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
       error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-      url: "http://.../jobs/triggered/jobName/history/20131103120400"
+      url: "http://.../triggeredjobs/jobName/history/20131103120400"
     }
 
 ## Continuous Jobs ##
 
 ### List all continuous jobs ###
 
-    GET /api/jobs/continuous
+    GET /api/continuousjobs
 
 **Response**
 
@@ -147,14 +147,14 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
         runCommand: "...\run.cmd",
         log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
         extra_info_url: "http://.../",
-        url: "http://.../jobs/continuous/jobName",
+        url: "http://.../continuousjobs/jobName",
         type: "continuous"
       }
     ]
 
 ### Get a specific continuous job by name ###
 
-    GET /api/jobs/continuous/{job name}
+    GET /api/continuousjobs/{job name}
 
 **Response**
 
@@ -164,7 +164,7 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
       runCommand: "...\run.cmd",
       log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
       extra_info_url: "http://.../",
-      url: "http://.../jobs/continuous/jobName",
+      url: "http://.../continuousjobs/jobName",
       type: "continuous"
     }
 
@@ -184,7 +184,7 @@ Using a zip file containing the files for it.
 
 or
 
-    PUT /api/jobs/continuous/{job name}
+    PUT /api/continuousjobs/{job name}
 
     Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
 
@@ -198,21 +198,21 @@ or
 
 or
 
-    DELETE /api/jobs/continuous/{job name}
+    DELETE /api/continuousjobs/{job name}
 
 ### Start a continuous job ###
 
-    POST /api/jobs/continuous/{job name}/start
+    POST /api/continuousjobs/{job name}/start
 
 ### Stop a continuous job ###
 
-    POST /api/jobs/continuous/{job name}/stop
+    POST /api/continuousjobs/{job name}/stop
 
 ### Set a continuous job as singleton ###
 
 If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
 
-    PUT /api/jobs/continuous/{job name}/settings
+    PUT /api/continuousjobs/{job name}/settings
 
 Body
 
