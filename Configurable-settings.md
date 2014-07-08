@@ -109,7 +109,7 @@ Maximum size of the log folder (Default: 1 MB):
 
     DIAGNOSTICS_TEXTTRACEMAXLOGFOLDERSIZEBYTES=2000000
 
-Timeout in milliseconds to keep application logging on (Default: 12 hours):
+Timeout in milliseconds to keep application logging on (Default is 43200000, which is 12 hours):
 
     DIAGNOSTICS_TEXTTRACETURNOFFPERIOD=43200000
 
