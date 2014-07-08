@@ -109,6 +109,10 @@ Maximum size of the log folder (Default: 1 MB):
 
     DIAGNOSTICS_TEXTTRACEMAXLOGFOLDERSIZEBYTES=2000000
 
+Timeout in milliseconds to keep application logging on (Default: 12 hours):
+
+    DIAGNOSTICS_TEXTTRACETURNOFFPERIOD=43200000
+
 ### Use the SCM site for WebDeploy
 
     WEBSITE_WEBDEPLOY_USE_SCM=true
