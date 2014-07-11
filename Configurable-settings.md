@@ -113,9 +113,9 @@ Timeout in milliseconds to keep application logging on (Default is 43200000, whi
 
     DIAGNOSTICS_TEXTTRACETURNOFFPERIOD=43200000
 
-### Use the SCM site for WebDeploy
+### Don't use the SCM site for WebDeploy
 
-    WEBSITE_WEBDEPLOY_USE_SCM=true
+    WEBSITE_WEBDEPLOY_USE_SCM=false
 
 ### Site Extensions gallery feed url
 
