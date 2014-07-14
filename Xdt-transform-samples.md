@@ -181,7 +181,6 @@ e.g. this enables parent paths
       <location path="" xdt:Locator="Match(path)" xdt:Transform="InsertIfMissing">
         <system.webServer xdt:Transform="InsertIfMissing">
           <modules xdt:Transform="InsertIfMissing">
-            <add name="SomeModule" xdt:Locator="Match(name)" xdt:Transform="RemoveAll" />
             <add name="SomeModule" type="SomeModule.SomeModuleType" xdt:Transform="Insert"/>
           </modules>
         </system.webServer>
