@@ -10,16 +10,16 @@ See [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.as
 
 The following will inject an environment variable named `FOO`, with value `BAR`:
 ```xml
-    <?xml version="1.0"?> 
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
-      <system.webServer> 
-        <runtime xdt:Transform="Insert" >
-             <environmentVariables>
-                <add name="FOO" value="BAR" />    
-             </environmentVariables>
-        </runtime> 
-      </system.webServer> 
-    </configuration> 
+<?xml version="1.0"?> 
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
+  <system.webServer> 
+    <runtime xdt:Transform="Insert" >
+         <environmentVariables>
+            <add name="FOO" value="BAR" />    
+         </environmentVariables>
+    </runtime> 
+  </system.webServer> 
+</configuration> 
 ```
 
 
@@ -30,102 +30,102 @@ You may wonder how Kudu or other extensions gets set up in the SCM site. The key
 This transform adds a /somepath IIS application under the SCM site.
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.applicationHost>
-        <sites>
-          <site name="%XDT_SCMSITENAME%" xdt:Locator="Match(name)">
-            <application path="/somepath" xdt:Transform="Insert">
-              <virtualDirectory path="/" physicalPath="%XDT_EXTENSIONPATH%" />
-            </application>
-          </site>
-        </sites>
-      </system.applicationHost>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <sites>
+      <site name="%XDT_SCMSITENAME%" xdt:Locator="Match(name)">
+        <application path="/somepath" xdt:Transform="Insert">
+          <virtualDirectory path="/" physicalPath="%XDT_EXTENSIONPATH%" />
+        </application>
+      </site>
+    </sites>
+  </system.applicationHost>
+</configuration>
 ```
 
 
 ### Changing the number of segments allowed in the URL
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.applicationHost>
-        <sites>
-          <site name="%XDT_SITENAME%" xdt:Locator="Match(name)">
-            <limits xdt:Transform="Remove" />
-            <limits xdt:Transform="Insert" maxUrlSegments="64" />
-          </site>
-        </sites>
-      </system.applicationHost>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <sites>
+      <site name="%XDT_SITENAME%" xdt:Locator="Match(name)">
+        <limits xdt:Transform="Remove" />
+        <limits xdt:Transform="Insert" maxUrlSegments="64" />
+      </site>
+    </sites>
+  </system.applicationHost>
+</configuration>
 ```
 
 ### Adding a mime type to the httpCompression section
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.webServer>
-        <httpCompression>
-          <dynamicTypes>
-            <add mimeType="application/foo" enabled="true" xdt:Transform="Insert" />
-          </dynamicTypes>
-        </httpCompression>
-      </system.webServer>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <httpCompression>
+      <dynamicTypes>
+        <add mimeType="application/foo" enabled="true" xdt:Transform="Insert" />
+      </dynamicTypes>
+    </httpCompression>
+  </system.webServer>
+</configuration>
 ```
 
 ### Turning off `noCompressionForProxies` attribute
 
 ```xml
-	<?xml version="1.0"?>
-	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-	  <system.webServer>
-	    <httpCompression xdt:Transform="SetAttributes(noCompressionForProxies)" noCompressionForProxies="false" >
-	    </httpCompression>
-	  </system.webServer>
-	</configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <httpCompression xdt:Transform="SetAttributes(noCompressionForProxies)" noCompressionForProxies="false" >
+    </httpCompression>
+  </system.webServer>
+</configuration>
 ```
 
 ### Remove all your recycling options from your .NET 4(+) application pool, and make it available always
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.applicationHost>
-        <applicationPools>
-          <add name="%XDT_SITENAME%" xdt:Transform="Insert" autoStart="true" managedRuntimeVersion="v4.0" startMode="AlwaysRunning">
-            <processModel idleTimeout="00:00:00" />
-            <recycling>
-              <periodicRestart time="00:00:00" />
-            </recycling>
-          </add>
-        </applicationPools>
-      </system.applicationHost>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <applicationPools>
+      <add name="%XDT_SITENAME%" xdt:Transform="Insert" autoStart="true" managedRuntimeVersion="v4.0" startMode="AlwaysRunning">
+        <processModel idleTimeout="00:00:00" />
+        <recycling>
+          <periodicRestart time="00:00:00" />
+        </recycling>
+      </add>
+    </applicationPools>
+  </system.applicationHost>
+</configuration>
 ```        
 
 ### Recycle your application pool at a given time, say off-business hours.
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.applicationHost>
-        <applicationPools>
-          <add name="%XDT_SITENAME%" xdt:Locator="Match(name)">
-            <recycling xdt:Transform="Insert" >
-              <periodicRestart>
-                <schedule>
-                  <clear />
-                  <add value="00:00:00" />
-                </schedule>
-              </periodicRestart>
-            </recycling>
-          </add>
-        </applicationPools>
-      </system.applicationHost>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <applicationPools>
+      <add name="%XDT_SITENAME%" xdt:Locator="Match(name)">
+        <recycling xdt:Transform="Insert" >
+          <periodicRestart>
+            <schedule>
+              <clear />
+              <add value="00:00:00" />
+            </schedule>
+          </periodicRestart>
+        </recycling>
+      </add>
+    </applicationPools>
+  </system.applicationHost>
+</configuration>
 ```
 
 ### Increase the queueLength for your application pool
@@ -133,15 +133,15 @@ This transform adds a /somepath IIS application under the SCM site.
 Note: the default is 1000
 
 ```xml
-        <?xml version="1.0"?>
-	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-	  <system.applicationHost>
-	    <applicationPools>
-	      <add name="%XDT_SITENAME%" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(queueLength)" queueLength="5000">
-	      </add>
-	    </applicationPools>
-	  </system.applicationHost>
-	</configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <applicationPools>
+      <add name="%XDT_SITENAME%" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(queueLength)" queueLength="5000">
+      </add>
+    </applicationPools>
+  </system.applicationHost>
+</configuration>
 ```
 
 ### Adding or changing an attribute for a specific version of PHP
@@ -149,29 +149,29 @@ Note: the default is 1000
 This transform finds the `<application>` tag that has the v5.4 full path, and adds a new `queueLength` attribute to it.
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.webServer>
-        <fastCgi>
-          <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(queueLength)"
-                fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" queueLength="5000"/>
-        </fastCgi>
-      </system.webServer>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <fastCgi>
+      <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(queueLength)"
+            fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" queueLength="5000"/>
+    </fastCgi>
+  </system.webServer>
+</configuration>
 ```
 
 This transform changes the value of `maxInstances` for PHP 5.4.
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.webServer>
-        <fastCgi>
-          <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(maxInstances)"
-                fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" maxInstances="8"/>
-        </fastCgi>
-      </system.webServer>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <fastCgi>
+      <application xdt:Locator="Match(fullPath)" xdt:Transform="SetAttributes(maxInstances)"
+            fullPath="D:\Program Files (x86)\PHP\v5.4\php-cgi.exe" maxInstances="8"/>
+    </fastCgi>
+  </system.webServer>
+</configuration>
 ```
 
 ### Adding an ASP Classic attribute
@@ -179,38 +179,38 @@ This transform changes the value of `maxInstances` for PHP 5.4.
 e.g. this enables parent paths
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.webServer>
-        <asp xdt:Transform="SetAttributes(enableParentPaths)" enableParentPaths="true" />
-      </system.webServer>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <asp xdt:Transform="SetAttributes(enableParentPaths)" enableParentPaths="true" />
+  </system.webServer>
+</configuration>
 ```
 
 ### Registering an IIS HttpModule
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <location path="" xdt:Locator="Match(path)" xdt:Transform="InsertIfMissing">
-        <system.webServer xdt:Transform="InsertIfMissing">
-          <modules xdt:Transform="InsertIfMissing">
-            <add name="SomeModule" type="SomeModule.SomeModuleType" xdt:Transform="Insert"/>
-          </modules>
-        </system.webServer>
-      </location>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <location path="" xdt:Locator="Match(path)" xdt:Transform="InsertIfMissing">
+    <system.webServer xdt:Transform="InsertIfMissing">
+      <modules xdt:Transform="InsertIfMissing">
+        <add name="SomeModule" type="SomeModule.SomeModuleType" xdt:Transform="Insert"/>
+      </modules>
+    </system.webServer>
+  </location>
+</configuration>
 ```
 
 ### Allowing arbitrary ISAPI extensions to be loaded
 
 ```xml
-    <?xml version="1.0"?>
-    <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-      <system.webServer>
-        <security>
-          <isapiCgiRestriction xdt:Transform="SetAttributes(notListedIsapisAllowed)" notListedIsapisAllowed="true"/>
-        </security>
-      </system.webServer>
-    </configuration>
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <security>
+      <isapiCgiRestriction xdt:Transform="SetAttributes(notListedIsapisAllowed)" notListedIsapisAllowed="true"/>
+    </security>
+  </system.webServer>
+</configuration>
 ```
