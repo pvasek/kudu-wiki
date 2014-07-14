@@ -34,7 +34,6 @@ This transform adds a /somepath IIS application under the SCM site.
       <system.applicationHost>
         <sites>
           <site name="%XDT_SCMSITENAME%" xdt:Locator="Match(name)">
-            <application path="/somepath" xdt:Locator="Match(path)" xdt:Transform="Remove" />
             <application path="/somepath" xdt:Transform="Insert">
               <virtualDirectory path="/" physicalPath="%XDT_EXTENSIONPATH%" />
             </application>
@@ -90,7 +89,6 @@ This transform adds a /somepath IIS application under the SCM site.
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.applicationHost>
         <applicationPools>
-          <add name="%XDT_SITENAME%" xdt:Locator="Match(name)" xdt:Transform="Remove" />
           <add name="%XDT_SITENAME%" xdt:Transform="Insert" autoStart="true" managedRuntimeVersion="v4.0" startMode="AlwaysRunning">
             <processModel idleTimeout="00:00:00" />
             <recycling>
