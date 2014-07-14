@@ -9,7 +9,7 @@ See [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.as
 ### Adding environment variables
 
 The following will inject an environment variable named `FOO`, with value `BAR`:
-
+```xml
     <?xml version="1.0"?> 
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
       <system.webServer> 
@@ -20,7 +20,7 @@ The following will inject an environment variable named `FOO`, with value `BAR`:
         </runtime> 
       </system.webServer> 
     </configuration> 
-
+```
 
 
 ### Adding new applications to the 'scm' site
@@ -29,6 +29,7 @@ You may wonder how Kudu or other extensions gets set up in the SCM site. The key
 
 This transform adds a /somepath IIS application under the SCM site.
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.applicationHost>
@@ -41,10 +42,12 @@ This transform adds a /somepath IIS application under the SCM site.
         </sites>
       </system.applicationHost>
     </configuration>
+```
 
 
 ### Changing the number of segments allowed in the URL
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.applicationHost>
@@ -56,10 +59,11 @@ This transform adds a /somepath IIS application under the SCM site.
         </sites>
       </system.applicationHost>
     </configuration>
-
+```
 
 ### Adding a mime type to the httpCompression section
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.webServer>
@@ -70,10 +74,11 @@ This transform adds a /somepath IIS application under the SCM site.
         </httpCompression>
       </system.webServer>
     </configuration>
-
+```
 
 ### Turning off `noCompressionForProxies` attribute
 
+```xml
 	<?xml version="1.0"?>
 	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
 	  <system.webServer>
@@ -81,10 +86,11 @@ This transform adds a /somepath IIS application under the SCM site.
 	    </httpCompression>
 	  </system.webServer>
 	</configuration>
-
+```
 
 ### Remove all your recycling options from your .NET 4(+) application pool, and make it available always
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.applicationHost>
@@ -98,10 +104,11 @@ This transform adds a /somepath IIS application under the SCM site.
         </applicationPools>
       </system.applicationHost>
     </configuration>
-        
+```        
 
 ### Recycle your application pool at a given time, say off-business hours.
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.applicationHost>
@@ -119,12 +126,14 @@ This transform adds a /somepath IIS application under the SCM site.
         </applicationPools>
       </system.applicationHost>
     </configuration>
+```
 
 ### Increase the queueLength for your application pool
 
 Note: the default is 1000
 
-	<?xml version="1.0"?>
+```xml
+        <?xml version="1.0"?>
 	<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
 	  <system.applicationHost>
 	    <applicationPools>
@@ -133,12 +142,13 @@ Note: the default is 1000
 	    </applicationPools>
 	  </system.applicationHost>
 	</configuration>
-
+```
 
 ### Adding or changing an attribute for a specific version of PHP
 
 This transform finds the `<application>` tag that has the v5.4 full path, and adds a new `queueLength` attribute to it.
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.webServer>
@@ -148,9 +158,11 @@ This transform finds the `<application>` tag that has the v5.4 full path, and ad
         </fastCgi>
       </system.webServer>
     </configuration>
+```
 
 This transform changes the value of `maxInstances` for PHP 5.4.
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.webServer>
@@ -160,22 +172,24 @@ This transform changes the value of `maxInstances` for PHP 5.4.
         </fastCgi>
       </system.webServer>
     </configuration>
-
+```
 
 ### Adding an ASP Classic attribute
 
 e.g. this enables parent paths
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.webServer>
         <asp xdt:Transform="SetAttributes(enableParentPaths)" enableParentPaths="true" />
       </system.webServer>
     </configuration>
-
+```
 
 ### Registering an IIS HttpModule
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <location path="" xdt:Locator="Match(path)" xdt:Transform="InsertIfMissing">
@@ -186,10 +200,11 @@ e.g. this enables parent paths
         </system.webServer>
       </location>
     </configuration>
-
+```
 
 ### Allowing arbitrary ISAPI extensions to be loaded
 
+```xml
     <?xml version="1.0"?>
     <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
       <system.webServer>
@@ -198,3 +213,4 @@ e.g. this enables parent paths
         </security>
       </system.webServer>
     </configuration>
+```
