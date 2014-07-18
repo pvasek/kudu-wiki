@@ -117,6 +117,10 @@ Timeout in milliseconds to keep application logging on (Default is 43200000, whi
 
     WEBSITE_WEBDEPLOY_USE_SCM=false
 
+### Use the same process for the user site and the scm site
+
+    WEBSITE_DISABLE_SCM_SEPARATION=true
+
 ### Site Extensions gallery feed url
 
 Each site gets the site extensions feed from a configurable Url. If it is not set, the behavior is equivalent to
