@@ -74,7 +74,7 @@ The JSON body of the post should look like this, passing the command and the fol
     GET /api/deployments/{id}/log/{logId}
     Get the list of log entry details for a log entry
 
-    POST /api/deploy
+    POST /deploy
     Payload: { format: 'basic', url: 'https://github.com/SomeOrg/SomeRepo.git' } 
     Trigger a new deployment from that repository 
 
