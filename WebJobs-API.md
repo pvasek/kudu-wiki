@@ -1,12 +1,12 @@
 ### List all web jobs ###
 
-    GET /api/jobs
+    GET /api/webjobs
 
 ## Triggered Jobs ##
 
 ### List all triggered jobs ###
 
-    GET /api/triggeredjobs
+    GET /api/triggeredwebjobs
 
 **Response**
 
@@ -15,8 +15,8 @@
         name: "jobName",
         runCommand: "...\run.cmd",
         type: "triggered",
-        url: "http://.../triggeredjobs/jobName",
-        history_url: "http://.../triggeredjobs/jobName/history",
+        url: "http://.../triggeredwebjobs/jobName",
+        history_url: "http://.../triggeredwebjobs/jobName/history",
         extra_info_url: "http://.../",
         latest_run:
           {
@@ -27,14 +27,14 @@
             duration: "00:01:00",
             output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
             error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-            url: "http://.../triggeredjobs/jobName/history/20131103120400"
+            url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
           }
       }
     ]
 
 ### Get a specific triggered job by name ###
 
-    GET /api/triggeredjobs/{job name}
+    GET /api/triggeredwebjobs/{job name}
 
 **Response**
 
@@ -42,8 +42,8 @@
       name: "jobName",
       runCommand: "...\run.cmd",
       type: "triggered",
-      url: "http://.../triggeredjobs/jobName",
-      history_url: "http://.../triggeredjobs/jobName/history",
+      url: "http://.../triggeredwebjobs/jobName",
+      history_url: "http://.../triggeredwebjobs/jobName/history",
       extra_info_url: "http://.../",
       latest_run:
         {
@@ -54,7 +54,7 @@
           duration: "00:01:00",
           output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
           error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-          url: "http://.../triggeredjobs/jobName/history/20131103120400"
+          url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
         }
     }
 
@@ -66,7 +66,7 @@ Using a zip file containing the files for it, or just a single file (e.g foo.exe
 
 or
 
-    PUT /api/triggeredjobs/{job name}
+    PUT /api/triggeredwebjobs/{job name}
 
     Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
 
@@ -80,22 +80,22 @@ or
 
 or
 
-    DELETE /api/triggeredjobs/{job name}
+    DELETE /api/triggeredwebjobs/{job name}
 
 
 ### Invoke a triggered job ###
 
-    POST /api/triggeredjobs/{job name}/run
+    POST /api/triggeredwebjobs/{job name}/run
 
 **To run with arguments use the arguments parameters that will be added to the script when invoked**
 
-    POST /api/triggeredjobs/{job name}/run?arguments={arguments}
+    POST /api/triggeredwebjobs/{job name}/run?arguments={arguments}
 
 Note: if the site has multiple instances, the job will run on one of them arbitrarily. This is the same behavior as regular requests sent to the site.
 
 ### List all triggered job runs history ###
 
-    GET /api/triggeredjobs/{job name}/history
+    GET /api/triggeredwebjobs/{job name}/history
 
 **Response**
 
@@ -110,14 +110,14 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
             duration: "00:01:00",
             output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
             error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-            url: "http://.../triggeredjobs/jobName/history/20131103120400"
+            url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
           }
         ]
     }
 
 ### Get a specific run for a specific triggered job ###
 
-    GET /api/triggeredjobs/{job name}/history/{id}
+    GET /api/triggeredwebjobs/{job name}/history/{id}
 
 **Response**
 
@@ -129,14 +129,14 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
       duration: "00:01:00",
       output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
       error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-      url: "http://.../triggeredjobs/jobName/history/20131103120400"
+      url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
     }
 
 ## Continuous Jobs ##
 
 ### List all continuous jobs ###
 
-    GET /api/continuousjobs
+    GET /api/continuouswebjobs
 
 **Response**
 
@@ -147,14 +147,14 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
         runCommand: "...\run.cmd",
         log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
         extra_info_url: "http://.../",
-        url: "http://.../continuousjobs/jobName",
+        url: "http://.../continuouswebjobs/jobName",
         type: "continuous"
       }
     ]
 
 ### Get a specific continuous job by name ###
 
-    GET /api/continuousjobs/{job name}
+    GET /api/continuouswebjobs/{job name}
 
 **Response**
 
@@ -164,7 +164,7 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
       runCommand: "...\run.cmd",
       log_url: "http://.../vfs/data/jobs/continuous/jobName/job.log",
       extra_info_url: "http://.../",
-      url: "http://.../continuousjobs/jobName",
+      url: "http://.../continuouswebjobs/jobName",
       type: "continuous"
     }
 
@@ -184,7 +184,7 @@ Using a zip file containing the files for it.
 
 or
 
-    PUT /api/continuousjobs/{job name}
+    PUT /api/continuouswebjobs/{job name}
 
     Use "Content-Type: application/zip" for zip otherwise it's treated as a regular script file.
 
@@ -198,21 +198,21 @@ or
 
 or
 
-    DELETE /api/continuousjobs/{job name}
+    DELETE /api/continuouswebjobs/{job name}
 
 ### Start a continuous job ###
 
-    POST /api/continuousjobs/{job name}/start
+    POST /api/continuouswebjobs/{job name}/start
 
 ### Stop a continuous job ###
 
-    POST /api/continuousjobs/{job name}/stop
+    POST /api/continuouswebjobs/{job name}/stop
 
 ### Set a continuous job as singleton ###
 
 If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
 
-    PUT /api/continuousjobs/{job name}/settings
+    PUT /api/continuouswebjobs/{job name}/settings
 
 Body
 
