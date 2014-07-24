@@ -208,14 +208,26 @@ or
 
     POST /api/continuouswebjobs/{job name}/stop
 
+### Get continuous job settings ###
+
+    GET /api/continuouswebjobs/{job name}/settings
+
+**Response**
+
+    {
+      "is_singleton": true
+    }
+
 ### Set a continuous job as singleton ###
 
 If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
 
-    PUT /api/continuouswebjobs/{job name}/settings
+    **PUT** /api/continuouswebjobs/{job name}/settings
 
 Body
 
-    { "is_singleton": true }
+    {
+      "is_singleton": true
+    }
 
 > To set a continuous job as singleton during deployment (without the need for the REST API) you can simply create a file called ```settings.job``` with the content: ```{ "is_singleton": true }``` and put it at the root of the (specific) WebJob directory.
