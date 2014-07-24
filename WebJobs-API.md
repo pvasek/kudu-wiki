@@ -222,7 +222,7 @@ or
 
 If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
 
-    **PUT** /api/continuouswebjobs/{job name}/settings
+    PUT /api/continuouswebjobs/{job name}/settings
 
 Body
 
