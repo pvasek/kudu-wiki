@@ -22,7 +22,7 @@ A number of common Windows locations are using temporary storage on the local ma
 
 Unlike Persisted files, these files are not shared among site instances. Also, you cannot rely on them staying there. For instance, if you stop a site and restart it, you'll find that all of these folders get reset to their original state.
 
-For Free and Shared site, there is a 200MB limit for all these locations together (i.e. not per-folder). For Standard site, the limit is very high.
+For Free and Shared sites, there is a 200MB limit for all these locations together (i.e. not per-folder). For Standard and Basic sites, the limit is very high.
 
 
 ### Machine level read-only files
