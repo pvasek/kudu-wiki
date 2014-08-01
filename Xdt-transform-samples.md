@@ -214,3 +214,14 @@ e.g. this enables parent paths
   </system.webServer>
 </configuration>
 ```
+
+### Only log successful http requests to the IIS log (aka Web Server log)
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <httpLogging xdt:Transform="SetAttributes(selectiveLogging)" selectiveLogging="LogSuccessful" />
+  </system.webServer>
+</configuration>
+```
