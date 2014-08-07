@@ -15,7 +15,9 @@ To diagnose issues, one may need to get the list of running processes, their cpu
 * `GET /api/diagnostics/processes` => list of processes.
 * `GET /api/diagnostics/processes/{id}` => detail information of process with `id`.
 * `GET /api/diagnostics/processes/{id}/threads` => list of threads for process with `id`.
-* `GET /api/diagnostics/processes/{id}/threads/{tid}` => detail information of the thread.
+* `GET /api/diagnostics/processes/{id}/threads/{tid}` => details about the thread.
+* `GET /api/diagnostics/processes/{id}/modules` => list of modules for process with `id`.
+* `GET /api/diagnostics/processes/{id}/modules/{base_address}` => details about the module.
 * `DELETE /api/diagnostics/processes/{id}` => terminate process with `id` and its children.
 * `GET /api/diagnostics/processes/0` => detail process information of current `w3wp.exe`.
 * `DELETE /api/diagnostics/processes/0` => terminate `w3wp.exe` process and its children.
