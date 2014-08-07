@@ -15,10 +15,8 @@ Here are a few fun tweets about Kudu from the community:
 - ""Kudu" is simply amazing @Azure http://t.co/9egDrOUNam" @Isham_M_Iqbal [10 Jul 2014](http://twitter.com/#!/Isham_M_Iqbal/status/487282204393762817)
 - "I stand by everything I said yesterday about tools etc. but holy cow publishing a Website from #GitHub to #Azure is pretty damn sweet." @richardadalton [10 Jul 2014](http://twitter.com/#!/richardadalton/status/487241978439299072)
 - "Wow, @Azure @github deployment is simple #justworks" @TCroydon [2 Jul 2014](http://twitter.com/#!/TCroydon/status/484293828263018496)
-- "Experimenting with the new #Azure #webjobs. Love them, great to do periodic reporting." @RolandGuijt [2 Jul 2014](http://twitter.com/#!/RolandGuijt/status/484254627786137600)
 - "Automatic deployments from Github to Azure seem nice. #dotnetconf Zero click deployment strategy." @taimila [26 Jun 2014](http://twitter.com/#!/taimila/status/482247926786584576)
 - "I cannot love the Dropbox to Azure deployment enough though. Awesomeness! :)" @matiaslarsson [26 Jun 2014](http://twitter.com/#!/matiaslarsson/status/482224851282055168)
-- "In love with #WindowsAzure WebJobs" @jeffersonlicet [9 Jun 2014](http://twitter.com/#!/jeffersonlicet/status/476038376353984513)
 - "Git e Azure WebSites ‚ lindo demais! #azure" @cdssoftware [6 Jun 2014](http://twitter.com/#!/cdssoftware/status/474976104252731392)
 - "All right - deployed PHP to Azure Websites via local Git and it works perfectly. Cool stuff! @TagTagCity" @bartreyserhove [6 Jun 2014](http://twitter.com/#!/bartreyserhove/status/474922843701248000)
 - "Hacer deploy de tu sitio web en #Azure con @Dropbox . OMG!" @pablovargan [2 Jun 2014](http://twitter.com/#!/pablovargan/status/473517218316439553)
@@ -32,10 +30,7 @@ Here are a few fun tweets about Kudu from the community:
 - "Learning to use node.js + git + azure all at the same time. This is witchcraft." @jackbanh [13 May 2014](http://twitter.com/#!/jackbanh/status/466406859835187200)
 - "Maybe I'm late to party, but I've just deployed my first for last 10 years #PHP site on #Azure by pushing to #Bitbucket. And it's awesome!" @dmytroduk [12 May 2014](http://twitter.com/#!/dmytroduk/status/465984154128367617)
 - "That's badass! git push --force  and Azure deployment just did its job." @juzzy_za [11 May 2014](http://twitter.com/#!/juzzy_za/status/465522391461142528)
-- "The combo of Azure Web Sites, WebJobs, EF CodeFirst, AngularJS and GitHub is the most productive end-to-end env for me in a decade. Thanks!" @ingorammer [8 May 2014](http://twitter.com/#!/ingorammer/status/464425805917859840)
 - "Que gusto da deployar con "git push azure master" :-)" @vfportero [6 May 2014](http://twitter.com/#!/vfportero/status/463679251800391680)
-- "I love the #WebJobs feature of #Azure #cloud" @ariancelina [21 Apr 2014](http://twitter.com/#!/ariancelina/status/458333510970134528)
-- "#Azure WebJobs is AWESOME ??" @EslaMx7 [21 Apr 2014](http://twitter.com/#!/EslaMx7/status/458247964851732480)
 - "The Azure websites thing with auto deployment from git repos and nuget restore is kinda cool and friction-less. Kudos to Kudu!" @synhershko [19 Apr 2014](http://twitter.com/#!/synhershko/status/457632596152037376)
 - "BTW, continuous deployment from git to azure or a NuGet feed rocks :)" @vlesierse [17 Apr 2014](http://twitter.com/#!/vlesierse/status/456915541547302912)
 - "Deploying an @Azure website from Dropbox. User friendly for anyone. Is there anything this service can't do?!" @DamienPontifex [13 Apr 2014](http://twitter.com/#!/DamienPontifex/status/455350762399232000)
@@ -408,6 +403,11 @@ http://t.co/Ge2ORxW1" @bleroy [8 Jun 2012](http://twitter.com/#!/bleroy/status/2
 
 Web Jobs related tweets:
 
+- "Experimenting with the new #Azure #webjobs. Love them, great to do periodic reporting." @RolandGuijt [2 Jul 2014](http://twitter.com/#!/RolandGuijt/status/484254627786137600)
+- "In love with #WindowsAzure WebJobs" @jeffersonlicet [9 Jun 2014](http://twitter.com/#!/jeffersonlicet/status/476038376353984513)
+- "The combo of Azure Web Sites, WebJobs, EF CodeFirst, AngularJS and GitHub is the most productive end-to-end env for me in a decade. Thanks!" @ingorammer [8 May 2014](http://twitter.com/#!/ingorammer/status/464425805917859840)
+- "I love the #WebJobs feature of #Azure #cloud" @ariancelina [21 Apr 2014](http://twitter.com/#!/ariancelina/status/458333510970134528)
+- "#Azure WebJobs is AWESOME ??" @EslaMx7 [21 Apr 2014](http://twitter.com/#!/EslaMx7/status/458247964851732480)
 - "Azure's WebJobs feature provides a really slick way for working with queues and table storage: http://t.co/9V5n3G23wg via @bradygaster" @danielauger [2 Mar 2014](http://twitter.com/#!/danielauger/status/440249485944299520)
 - "I have to say I'm loving #windowsazure webjobs right now. Reliable, simple scheduling, easy log access." @andybareweb [24 Feb 2014](http://twitter.com/#!/andybareweb/status/438010950193786880)
 - "The new web jobs feature in @WindowsAzure Web Sites is cool. It's like the feature I added to #AzureWebFarm, but on steroids! :)" @robdmoore [25 Jan 2014](http://twitter.com/#!/robdmoore/status/427079612061863936)
