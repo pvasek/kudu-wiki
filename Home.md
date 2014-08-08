@@ -13,8 +13,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 
 ### Version of Kudu currently live in Azure
 
-* The branch that's currently live in Azure is [S27](https://github.com/projectkudu/kudu/releases/tag/S27)
-* [[Version history]]
+See the [[Version history]] page for details.
 
 ### Features
 * [Publishing a website from Source Control](https://www.windowsazure.com/en-us/documentation/articles/web-sites-publish-source-control/) (official documentation from windowsazure.com)
