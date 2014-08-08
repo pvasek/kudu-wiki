@@ -1,3 +1,14 @@
+## S28-QFE3 (not released)
+* Adding Environment Variables view to Process API and UI
+* Improving webjobs logging error handling
+* change (add) api for webjobs from `jobs` to `* change (add) api for processes from `api/diagnostics/process` to `api/process`.
+* Add httpErrors PassThrough to default Node config
+
+## S28-QFE2 (7/20/2014)
+* Enable commit-ish for generic deploy handler
+* Support copy-paste several lines to Debug console
+* Some visual changes for FileExplorer
+
 ## S28-QFE1 (7/2/2014)
 * Cleanup index.lock for ScmVfs operations.
 * Use Newtonsoft instead of DataContract for Json output annotations.
