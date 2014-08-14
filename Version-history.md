@@ -1,4 +1,7 @@
-## S28-QFE3 (not released)
+# S28-QFE4 (not yet released)
+* Added support for viewing process command line in process API and UI
+
+## S28-QFE3 (8/15/2014)
 * Adding Environment Variables view to Process API and UI
 * Improving webjobs logging error handling
 * change (add) api for webjobs from `jobs` to `* change (add) api for processes from `api/diagnostics/process` to `api/process`.
