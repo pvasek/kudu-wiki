@@ -1,5 +1,6 @@
-# S28-QFE4 (not yet released)
-* Added support for viewing process command line in process API and UI
+## S28-QFE4 (not yet released)
+* Add support for viewing process command line in process API and UI
+* Improve WebJobs error handling
 
 ## S28-QFE3 (8/15/2014)
 * Adding Environment Variables view to Process API and UI
