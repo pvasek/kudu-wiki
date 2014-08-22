@@ -1,6 +1,11 @@
-## S28-QFE4 (not yet released)
+## S28-QFE5 (8/22/2014)
+* Temporary remedy for `npm install` failing when %APPDATA%\npm is not present
+* Fixed issue of reading xml files in Debug Console
+
+## S28-QFE4 (8/20/2014)
 * Add support for viewing process command line in process API and UI
 * Improve WebJobs error handling
+* Fixed deallock issue when OnLockAcquired throws exception
 
 ## S28-QFE3 (8/15/2014)
 * Adding Environment Variables view to Process API and UI
