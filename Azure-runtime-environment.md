@@ -32,10 +32,22 @@ The web site is able to access many standard Windows locations like %ProgramFile
 
 ## Restrictions
 
-Windows Azure runs web sites in a sandboxed environment that allows multiple sites to safely co-exist on the same machine.
+Azure websites run in a sandboxed environment that allows multiple sites to safely co-exist on the same machine.
 
-In most cases, sites are able to do most things that 'normal' web sites typically need to do. But in some scenario, you may run into something that doesn't work due to sandbox limitations.
+In most cases, sites are able to do most things that 'normal' web sites typically need to do. But in some scenario, you may run into something that doesn't work due to sandbox limitations. Some restrictions are described below.
 
-One such example is that sites cannot use the GDI API.
+### Sites cannot use the GDI API
 
-If you find something that doesn't work and you are not sure why, the best place to ask is the [forum](http://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazurewebsitespreview).
+For the most part, sites cannot call into GDI, which means that some libraries do not work.
+
+Per [this thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-US/b4a6eb43-0013-435f-9d11-00ee26a8d017/report-viewer-error-on-export-pdf-or-excel-from-azure-web-sites) and [this thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-US/d14bc4fa-256e-4f8f-9682-432ab556f74d/report-viewer-control-fix-for-export-to-pdf-available?forum=windowsazurewebsitespreview), special support was added to make ReportViewer work on sites that run in Basic or Standard mode. However, other libraries that generate PDF files (or use GDI in other ways) might still not work.
+
+### Sites cannot listen on sockets
+
+Sites receive requests via IIS (or indirectly via iisnode), but they cannot start listening on sockets. So for instance if you try to listen on a custom port on localhost, it will not work.
+
+### Final notes
+
+Note that the product is still evolving, so it is possible that some scenarios that don't work today will work in the future.
+
+If you find something that doesn't work and you are not sure why, the best place to ask is the [Azure Websites forum](http://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazurewebsitespreview).
