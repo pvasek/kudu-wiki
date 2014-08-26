@@ -215,6 +215,21 @@ e.g. this enables parent paths
 </configuration>
 ```
 
+### Adding IP restrictions
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <security>
+      <ipSecurity xdt:Transform="RemoveAttributes(allowUnlisted)">
+        <add ipAddress="204.79.197.200" allowed="true" xdt:Transform="Insert"/>
+      </ipSecurity>
+    </security>
+  </system.webServer>
+</configuration>
+```
+
 ### Only log successful http requests to the IIS log (aka Web Server log)
 
 ```xml
