@@ -44,6 +44,9 @@ The JSON body of the post should look like this, passing the command and the fol
     PUT /api/vfs/{path}/
     Creates a directory at path
 
+    DELETE /api/vfs/{path}
+    Delete the file at path.
+
 ## Zip
    The Zip API allows downloading folders as zip files, or expanding zip files into folders.
 
