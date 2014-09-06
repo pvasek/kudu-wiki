@@ -1,6 +1,7 @@
 ## S28-QFE6 (9/8/2014)
 * New feature to download custom deployment scripts
 * Upgrade Kudu to SignalR 2.x
+* Marking processes with `scm` and `webjob` labels in Process Explorer
 
 ## S28-QFE5 (8/22/2014)
 * Temporary remedy for `npm install` failing when %APPDATA%\npm is not present
