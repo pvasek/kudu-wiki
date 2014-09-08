@@ -9,8 +9,8 @@ Azure Websites sets some environment variables with information about your websi
 - `WEBSITE_SITE_NAME` - The name of the site.
 - `WEBSITE_SKU` - The sku of the site (Possible values: `Free`, `Shared`, `Basic`, `Standard`).
 - `WEBSITE_COMPUTE_MODE` - Specifies whether website is on a **dedicated** or **shared** VM/s (Possible values: `Shared`, `Dedicated`).
-- `WEBSITE_SITE_MODE` - The mode for the site (can be `Free` for a free site, `Basic` for a shared site or empty for a standard site).
-- `WEBSITE_HOSTNAME` - The Azure Websites host name for the site   (For example: `site.azurewebsites.net`).
+- `WEBSITE_SITE_MODE` - The mode for the site (can be `Limited` for a free site, `Basic` for a shared site or empty for a standard site).
+- `WEBSITE_HOSTNAME` - The Azure Website's primary host name for the site (For example: `site.azurewebsites.net`). Note that custom hostnames are not accounted for here.
 - `WEBSITE_INSTANCE_ID` - The id representing the VM that the site is running on (If site runs on multiple instances, each instance will have a different id).
 - `WEBSITE_NODE_DEFAULT_VERSION` - The default node version this website is using.
 - `WEBSOCKET_CONCURRENT_REQUEST_LIMIT` - The limit for websocket's concurrent requests.
