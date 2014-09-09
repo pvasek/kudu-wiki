@@ -250,6 +250,7 @@ The following does the equivalent of enabling Web Sockets in the portal
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
   <system.webServer>
     <globalModules>
+      <add name="WebSocketModule" xdt:Locator="Match(WebSocketModule)" xdt:Transform="Remove" />
       <add name="WebSocketModule" image="%windir%\System32\inetsrv\iiswsock.dll" xdt:Transform="Insert" />
     </globalModules>
     <webSocket xdt:Transform="SetAttributes(pingInterval)" pingInterval="00:02:30" />
@@ -257,6 +258,7 @@ The following does the equivalent of enabling Web Sockets in the portal
   <location path="" xdt:Locator="Match(path)" xdt:Transform="InsertIfMissing">
     <system.webServer xdt:Transform="InsertIfMissing">
       <modules xdt:Transform="InsertIfMissing">
+        <add name="WebSocketModule" xdt:Locator="Match(WebSocketModule)" xdt:Transform="Remove" />
         <add name="WebSocketModule" lockItem="true" xdt:Transform="Insert" />
       </modules>
     </system.webServer>
