@@ -1,7 +1,9 @@
-## S28-QFE6 (9/8/2014)
+## S28-QFE6 (9/10/2014)
+* Add initial support for ProjectK apps (aka ASP.NET vnext)
 * New feature to download custom deployment scripts
 * Upgrade Kudu to SignalR 2.x
 * Marking processes with `scm` and `webjob` labels in Process Explorer
+* Return LastModified header from `/api/vfs` API
 
 ## S28-QFE5 (8/22/2014)
 * Temporary remedy for `npm install` failing when %APPDATA%\npm is not present
