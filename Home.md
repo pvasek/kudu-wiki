@@ -60,6 +60,7 @@ See the [[Version history]] page for details.
 
 Read this is you are interested in contributing to Kudu
 
+* [[Contributing]]
 * [[Getting Started]]
 * Blog post: [Developing Kudu locally](http://blog.davidebbo.com/2012/06/developing-kudu-locally-and-on-azure.html)
 * [[Deploy locally-built private Kudu to Azure]]
