@@ -68,7 +68,6 @@ Read this is you are interested in contributing to Kudu
 * [[Running Tests]]
 * [[Deploying to a server]]
 * [[Git workflow]] for contributors
-* [Coding Guidelines](http://aspnetwebstack.codeplex.com/wikipage?title=CodingConventions) We use the coding guidelines used by AspNetWebStack
 
 ## Miscellaneous
 
