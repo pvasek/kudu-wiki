@@ -1,3 +1,10 @@
+## S29-QFE1 (9/29/2014)
+* Disable deployment with app setting SCM_DISABLE_DEPLOY_ON_PUSH
+* Gravatar support
+
+## S29 (9/18/2014)
+* New `SITE_BITNESS` environment variable
+
 ## S28-QFE6 (9/10/2014)
 * Add initial support for ProjectK apps (aka ASP.NET vnext)
 * New feature to download custom deployment scripts
