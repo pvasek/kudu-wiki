@@ -44,6 +44,24 @@ This transform adds a /somepath IIS application under the SCM site.
 </configuration>
 ```
 
+### Adding new applications to the 'main' site
+
+It is a variation of the above but simply adds a /somepath IIS application under the main site (`%XDT_SITENAME%`) instead.
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <sites>
+      <site name="%XDT_SITENAME%" xdt:Locator="Match(name)">
+        <application path="/somepath" xdt:Transform="Insert">
+          <virtualDirectory path="/" physicalPath="%XDT_EXTENSIONPATH%" />
+        </application>
+      </site>
+    </sites>
+  </system.applicationHost>
+</configuration>
+```
 
 ### Changing the number of segments allowed in the URL
 
