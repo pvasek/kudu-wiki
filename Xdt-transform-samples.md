@@ -207,13 +207,15 @@ e.g. this enables parent paths
 
 ### Registering an IIS HttpModule
 
+e.g. this enables SomeModule on the main site
+
 ```xml
 <?xml version="1.0"?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <location path="" xdt:Locator="Match(path)" xdt:Transform="InsertIfMissing">
-    <system.webServer xdt:Transform="InsertIfMissing">
-      <modules xdt:Transform="InsertIfMissing">
-        <add name="SomeModule" type="SomeModule.SomeModuleType" xdt:Transform="Insert"/>
+  <location path="%XDT_SITENAME%" xdt:Locator="Match(path)">
+    <system.webServer>
+      <modules>
+        <add name="SomeModule" type="SomeModule.SomeModuleType" xdt:Transform="InsertIfMissing"/>
       </modules>
     </system.webServer>
   </location>
