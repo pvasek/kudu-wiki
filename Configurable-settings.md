@@ -46,6 +46,12 @@ After deployment, Kudu will execute, if exists, `postdeployment` script under /s
 
 	SCM_POST_DEPLOYMENT_ACTIONS_PATH=<path> 
 
+### Don't build and deploy during git push
+
+With this flag, a `git push` updates the server repo, but does not trigger a deployment:
+
+	SCM_DISABLE_DEPLOY_ON_PUSH=1
+
 ## Diagnostic related settings
 
 ### Changing the trace level
