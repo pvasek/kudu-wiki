@@ -81,6 +81,10 @@ The JSON body of the post should look like this, passing the command and the fol
     Payload: { format: 'basic', url: 'https://github.com/SomeOrg/SomeRepo.git' } 
     Trigger a new deployment from that repository 
 
+    POST /deploy
+    Payload: { format: 'basic', url: 'https://github.com/SomeOrg/SomeRepo.git#<commit_sha>' } 
+    Trigger a new deployment from that repository for certain commit. 
+
 ## SSHKey
 
     PUT /api/sshkey	
