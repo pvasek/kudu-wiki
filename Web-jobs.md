@@ -72,7 +72,7 @@ You can deploy a WebJob by directly copying the files under the locations discus
 
 ### Deploying .NET Console WebJobs alongside an ASP.NET application
 
-If you have Visual Studio 2013 Update 3 (or later), it lets you do exactly this. Previously, this was done using the [WebJobsVs](http://visualstudiogallery.msdn.microsoft.com/f4824551-2660-4afa-aba1-1fcc1673c3d0) VS add-in, but that is now obsolete.
+If you have Visual Studio 2013 Update 3 (or later), it lets you do exactly this (more info [here](http://azure.microsoft.com/en-us/documentation/articles/websites-dotnet-deploy-webjobs/)). Previously, this was done using the [WebJobsVs](http://visualstudiogallery.msdn.microsoft.com/f4824551-2660-4afa-aba1-1fcc1673c3d0) VS add-in, but that is now obsolete.
 
 High level:
 
