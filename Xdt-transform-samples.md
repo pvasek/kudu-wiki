@@ -204,7 +204,7 @@ e.g. this enables parent paths
   </system.webServer>
 </configuration>
 ```
-### Registering an IIS `Native` HttpModule
+### Registering an IIS Native HttpModule
 
 e.g. this enables native module (native module must be registered at globalModules)
 
@@ -219,7 +219,7 @@ e.g. this enables native module (native module must be registered at globalModul
 </configuration>
 ```
 
-### Registering an IIS HttpModule
+### Registering an IIS Managed HttpModule
 
 e.g. this enables SomeModule on the main site
 
@@ -297,5 +297,29 @@ The following does the equivalent of enabling Web Sockets in the portal
       </modules>
     </system.webServer>
   </location>
+</configuration>
+```
+
+### Add a rewrite rule
+
+Add a rule that returns a 403 if a certain http header is present
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer xdt:Transform="InsertIfMissing">
+    <rewrite xdt:Transform="InsertIfMissing">
+      <rules xdt:Transform="InsertIfMissing">
+        <rule name="MyRule" xdt:Locator="Match(name)" xdt:Transform="RemoveAll"/>
+        <rule name="MyRule" xdt:Locator="Match(name)" patternSyntax="Wildcard" stopProcessing="true" xdt:Transform="InsertIfMissing">
+          <match url="*" />
+          <conditions>
+              <add input="{HTTP_X_FORWARDED_SSL30}" pattern="1" />
+          </conditions>
+          <action type="CustomResponse" statusCode="403" subStatusCode="900" statusReason="Forbidden" statusDescription="Forbidden" />
+        </rule>
+      </rules>
+    </rewrite>    
+  </system.webServer>
 </configuration>
 ```
