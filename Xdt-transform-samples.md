@@ -204,6 +204,20 @@ e.g. this enables parent paths
   </system.webServer>
 </configuration>
 ```
+### Registering an IIS `Native` HttpModule
+
+e.g. this enables native module (native module must be registered at globalModules)
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <globalModules>
+      <add name="Your Module Name" image="<path to dll such as d:\home\SiteExtensions\MyNative\module.dll>" preCondition="bitness32" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" />
+    </globalModules>
+  </system.webServer>
+</configuration>
+```
 
 ### Registering an IIS HttpModule
 
