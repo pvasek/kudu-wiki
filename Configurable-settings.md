@@ -131,4 +131,4 @@ Timeout in milliseconds to keep application logging on (Default is 43200000, whi
 
 Each site gets the site extensions feed from a configurable Url. If it is not set, the behavior is equivalent to
 
-    SCM_SITEEXTENSIONS_FEED_URL="http://www.siteextensions.net/api/v2/"
+    SCM_SITEEXTENSIONS_FEED_URL=http://www.siteextensions.net/api/v2/
