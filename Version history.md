@@ -1,3 +1,8 @@
+## S30 (10/27/2014)
+* Support for auto-swap in continuous deployment scenarios
+* Support passing feed url when installing site extensions
+* Handle copying over a DLL in use by trying to rename it first (relevant to NewRelic)
+
 ## S29-QFE1 (9/29/2014)
 * Disable deployment with app setting SCM_DISABLE_DEPLOY_ON_PUSH
 * Gravatar support
