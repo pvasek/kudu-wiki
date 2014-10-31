@@ -33,6 +33,7 @@ See the [[Version history]] page for details.
 * [Managing database connections in Azure Web Sites](http://blog.davidebbo.com/2012/09/managing-database-connections-in-azure.html)
 * [[Accessing files via FTP]]
 * [[Deploying inplace and without repository]]
+* [[Using a custom web.config for Node apps]]
 * [Sending an email when your Azure web site deployment completes](http://blog.amitapple.com/post/56390805814/deployment-email)
 
 ### Understanding Kudu and Windows Azure Web Sites
