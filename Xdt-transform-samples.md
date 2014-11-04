@@ -63,6 +63,25 @@ It is a variation of the above but simply adds a /somepath IIS application under
 </configuration>
 ```
 
+### Adding new `sub` applications to the 'main' site
+
+It is a variation of the above but simply adds a /somepath/subpath IIS application under the main site (`%XDT_SITENAME%`).
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <sites>
+      <site name="%XDT_SITENAME%" xdt:Locator="Match(name)">
+        <application path="/somepath/subpath" xdt:Transform="Insert">
+          <virtualDirectory path="/" physicalPath="%XDT_EXTENSIONPATH%" />
+        </application>
+      </site>
+    </sites>
+  </system.applicationHost>
+</configuration>
+```
+
 ### Changing the number of segments allowed in the URL
 
 ```xml
