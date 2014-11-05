@@ -176,3 +176,13 @@ Sample of available settings.
 
     DELETE /api/siteextensions/{id}
     Uninstall the package with {id}.
+
+## Sample of using REST API with PowerShell
+
+    $username = "`$website"
+    $password = "pwd"
+    $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $username,$password)))
+
+    $apiUrl = "https://{sitename}.scm.azurewebsites.net/api/zip/site/wwwroot"
+    $filePath = "C:\Temp\books.zip"
+    Invoke-RestMethod -Uri $apiUrl -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)} -Method PUT -InFile $filePath -ContentType "multipart/form-data"
