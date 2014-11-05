@@ -53,7 +53,7 @@ The JSON body of the post should look like this, passing the command and the fol
     GET /api/zip/{path}
     Zip up and download the specified folder. The zip doesn't include the top folder itself.
 
-    PUT /api/vfs/{path}
+    PUT /api/zip/{path}
     Upload a zip file which gets expanded into the specified folder. Existing files are not deleted
     unless they need to be overwritten by files in the zip.
 
