@@ -23,7 +23,7 @@ Note: If you manually install IIS, here is what needs to be enabled:
 * Install [IISNode](https://github.com/Azure/iisnode/releases/download/v0.2.11/iisnode-full-v0.2.11-x64.msi)
 * Pretend to have the 32 bit version of Node to fool the version detection logic:
  * Copy your `\Program Files\nodejs` folder to \Program Files (x86)\nodejs.
- * Under `\Program Files (x86)\nodejs`, you need to have a folder named `0.8.2`, and containing [node.exe version 0.8.2](http://nodejs.org/dist/v0.8.2/node.exe). And then same deal for Node 0.10.5. Yes, this is kind of painful, and we need to make it easier!
+ * Under `\Program Files (x86)\nodejs`, you need to have a folder named `0.8.2`, and containing [node.exe version 0.8.2](http://nodejs.org/dist/v0.8.2/node.exe). And then same deal for Node 0.10.5 (you can put the 0.8.2 exe in the 0.10.5 folder; it's the folder that matters). Yes, this is kind of painful, and we need to make it easier!
 * The Web and WebApplications folders need to be present under `\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v10.0` and under `\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v11.0`. If you don't have them, you may need to copy them from a machine that has VS 2010 installed. This is needed because some of the test apps target these. **TODO**: we need to make this easier!
 * Install [Mercurial](http://mercurial.selenic.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Mercurial```)
 
