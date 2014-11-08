@@ -17,7 +17,7 @@ Note: If you manually install IIS, here is what needs to be enabled:
 
 * Install the XUnit.net runner for VS 2013, which you install from Tools / Extensions & Updates
 * Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true (or remove the attribute if you are running the latest Windows 8.1). **note**: on a new Win 10 machine, this wasn't needed for some reason.
-* unzip [this file](https://dl.dropboxusercontent.com/u/2209341/Kudu_Progx86_Msbuild_Microsoft_VisualStudio.zip) and copy the contents into your \Program Files (x86)\MSBuild\Microsoft\VisualStudio. This brings in various files from older VS versions that you may not have installed.
+* unzip [this file](https://dl.dropboxusercontent.com/u/2209341/Kudu_Progx86_Msbuild_Microsoft_VisualStudio.zip) and copy the contents into your `\Program Files (x86)\MSBuild\Microsoft\VisualStudio`. This brings in various files from older VS versions that you may not have installed.
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
 * Install [IISNode](https://github.com/Azure/iisnode/releases/download/v0.2.11/iisnode-full-v0.2.11-x64.msi)
 * Pretend to have the 32 bit version of Node to fool the version detection logic:
