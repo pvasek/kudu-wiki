@@ -7,7 +7,6 @@ see the readme for [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/m
 * IIS >= 7, configured to run ASP.NET 4.0. This can be installed using [WebPI](http://www.microsoft.com/web/downloads/platform.aspx).
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
 * Install [Node](http://nodejs.org/). Node is used as part of the build process for sites.
-* Install [MVC 3](http://www.asp.net/mvc/mvc3).
 
 Note: If you manually install IIS, here is what needs to be enabled:
 
@@ -17,6 +16,7 @@ Note: If you manually install IIS, here is what needs to be enabled:
 
 * Install the XUnit.net runner for VS 2013, which you install from Tools / Extensions & Updates
 * Install [ASP.NET WebPages 1.0](http://www.microsoft.com/en-us/download/details.aspx?id=15979)
+* Install [MVC 3](http://www.asp.net/mvc/mvc3).
 * Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true (or remove the attribute if you are running the latest Windows 8.1).
 * unzip [this file](https://dl.dropboxusercontent.com/u/2209341/Kudu_Progx86_Msbuild_Microsoft_VisualStudio.zip) and copy the contents into your `\Program Files (x86)\MSBuild\Microsoft\VisualStudio`. This brings in various files from older VS versions that you may not have installed.
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
