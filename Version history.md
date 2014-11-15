@@ -1,3 +1,8 @@
+## S42 (11/14/2014)
+* Add better Python support
+* Add username to process info
+* Don't ask why it jumped from S30 to S42. The reasons are bizarre and uninteresting :)
+
 ## S30 (10/27/2014)
 * Support for auto-swap in continuous deployment scenarios
 * Support passing feed url when installing site extensions
