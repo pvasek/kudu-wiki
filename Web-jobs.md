@@ -107,6 +107,24 @@ When a shutdown request is detected there is a **30** seconds default waiting pe
 > this sample will have the job grace period at 60 seconds instead of the default.
 
 
+## WebJob Working Directory ##
+
+There are 2 options for where the WebJob is running from (what is the working directory):
+
+1. The WebJob is copied to a temporary directory under `%TEMP%\jobs\{job type}\{job name}\{random name}` and will run from there
+  This option prevents the original WebJob binaries from being locked which might cause issues redeploying the WebJob.
+  For example updating an .exe file that is currently running.
+2. The WebJob is run directly from the WebJob binaries directory. We call this option **in place**.
+  This option can have the locking issue and should only be used when there is no risk of locking the file.
+  For example if the WebJob only consists of a `.cmd` file.
+
+By default the first option is used (`in place = false`) other than for `.js` node.js scripts (`in place = true`).
+
+To explicitly configured this option add a file to the root of your WebJob called `settings.job` with this content:
+
+    { "is_in_place": true/false }
+
+
 ## API ##
 
 [[WebJobs API]]
