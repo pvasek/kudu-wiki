@@ -1,7 +1,8 @@
 ## S42 (11/14/2014)
+* Add **in place** mode for WebJobs
+* Change tracing to use one file per entry instead of a single trace.xml
 * Add better Python support
 * Add username to process info
-* Add **in place** mode for WebJobs
 * Don't ask why it jumped from S30 to S42. The reasons are bizarre and uninteresting :)
 
 ## S30 (10/27/2014)
