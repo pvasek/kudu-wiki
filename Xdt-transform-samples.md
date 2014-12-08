@@ -215,13 +215,13 @@ This transform changes the value of `maxInstances` for PHP 5.4.
 
 Use the following technique if you need to make changes to php.ini that can't be overridden in user.ini. The steps assume PHP 5.5, so tweak in the obvious way for other versions.
 
-- In the Kudu console, click on the planet-looking icon
-- From there go in the `config` folder, and then in the `PHP-5.5.18` folder (minor version may be different)
-- Run `copy php.ini d:\home\site` to copy it to your site folder
-- Click the Home icon, and then go in the site folder to find your copy of php.ini
-- Edit it and make any changes you need. e.g. to disable impersonation, comment out the line that has `fastcgi.impersonate=1`
-- Now, deploy the `applicationhost.config` in that same `site` folder
-- Restart your site
+- In the Kudu console, click on the planet-looking icon.
+- From there go in the `config` folder, and then in the `PHP-5.5.18` folder (or whatever version you're using).
+- Run `copy php.ini d:\home\site` to copy it to your site folder.
+- Click the Home icon, and then go in the site folder to find your copy of php.ini.
+- Edit it and make any changes you need. e.g. to disable impersonation, comment out the line that has `fastcgi.impersonate=1`.
+- Now, deploy the `applicationhost.config` in that same `site` folder (changing 5.5 to other version if needed). It will cause PHP to use your php.ini instead of the default.
+- Restart your site.
 
 ```xml
 <?xml version="1.0"?> 
