@@ -220,7 +220,7 @@ Use the following technique if you need to make changes to php.ini that can't be
 - Run `copy php.ini d:\home\site` to copy it to your site folder.
 - Click the Home icon, and then go in the site folder to find your copy of php.ini.
 - Edit it and make any changes you need. e.g. to disable impersonation, comment out the line that has `fastcgi.impersonate=1`.
-- Now, deploy the `applicationhost.config` in that same `site` folder (changing 5.5 to other version if needed). It will cause PHP to use your php.ini instead of the default.
+- Now, deploy the `applicationhost.config` below to that same `site` folder (changing 5.5 to other version if needed). It will cause PHP to use your php.ini instead of the default.
 - Restart your site.
 
 ```xml
