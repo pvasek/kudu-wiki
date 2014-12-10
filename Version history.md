@@ -1,3 +1,8 @@
+## S42-QFE1 (12/09/2014)
+* Support a new inplace mode for WebJobs
+* Add support for ASP.NET 5 beta
+* Change Kudu tracing to create one file per request
+
 ## S42 (11/14/2014)
 * Add **in place** mode for WebJobs
 * Change tracing to use one file per entry instead of a single trace.xml
