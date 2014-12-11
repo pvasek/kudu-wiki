@@ -1,3 +1,6 @@
+## S42-QFE2 (TBD)
+* Added support for deploying WebJobs when installing site extensions.
+
 ## S42-QFE1 (12/09/2014)
 * Support a new inplace mode for WebJobs
 * Add support for ASP.NET 5 beta
