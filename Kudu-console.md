@@ -1,6 +1,6 @@
 The Kudu Console is a tool that gives you both command line and file browser access to your sites, all from the comfort of a web browser.
 
-** To access it, simply go to `{yoursite}.scm.azurewebsites.net`, and click on Debug Console at the top. **
+**To access it, simply go to `{yoursite}.scm.azurewebsites.net`, and click on Debug Console at the top.**
 
 Here is a short [screencast](http://www.youtube.com/watch?v=kxgTtIeFppk) that demonstrates the use of the Console (though it's a bit outdated).
 
