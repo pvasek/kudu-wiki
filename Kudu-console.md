@@ -1,8 +1,8 @@
-Here is a short [screencast](http://www.youtube.com/watch?v=kxgTtIeFppk) that demonstrates the use of the Console.
-
 The Kudu Console is a tool that gives you both command line and file browser access to your sites, all from the comfort of a web browser.
 
-If you start at the [[root of the Kudu service|Accessing-the-kudu-service]] (e.g. https://yoursite.scm.azurewebsites.net/), you'll see a `Debug console` menu item that leads to the Kudu Console.
+** To access it, simply go to `{yoursite}.scm.azurewebsites.net`, and click on Debug Console at the top. **
+
+Here is a short [screencast](http://www.youtube.com/watch?v=kxgTtIeFppk) that demonstrates the use of the Console (though it's a bit outdated).
 
 Note that there is also a local (non-browser based) client that gives you the same Console functionality. See this [post](http://blog.amitapple.com/post/45675601255/azurewebsiteterminal) for details. The post also has some good information about the Console that also applies to the browser-based version, so please read through.
 
@@ -31,8 +31,12 @@ For directories, it downloads a zip file containing the full content of the fold
 
 ## Upload files and folder using drag and drop
 
-You can drag some files from the Windows shell (or Mac finder), and drop them directly into the Kudu Console's UI, much like you would between two Windows shell folders. You have to try it to believe it! :)
+You can drag some files from the Windows shell (or Mac finder), and drop them directly into the Kudu Console's File Explorer UI, much like you would between two Windows shell folders. You have to try it to believe it! :)
 
+
+## Upload and expand zip file
+
+If you try to drop a zip file into the File Explorer UI (per previews section), you'll see a special Zip file drop zone appearing. If you drop it there, it will copy the content of the expanded zip file, instead of the zip file itself. It's a much more efficient way to upload a large number of small files.
 
 ## View and Edit text files
 
