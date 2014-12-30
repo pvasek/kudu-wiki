@@ -1,4 +1,4 @@
-## S42-QFE2 (TBD)
+## S42-QFE2 (12/30/2014)
 * Added support for deploying WebJobs when installing site extensions.
 
 ## S42-QFE1 (12/09/2014)
