@@ -1,6 +1,8 @@
-### Prerequisites to run Kudu
+### Prerequisites to run Kudu and functional tests
 We have recently created a few custom scripts to automate the setup of Kudu development dependencies
 see the readme for [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/master/Setup) for details. The new approach has been minimally tested so the older manual instruction below are still worth reading to understand what the new script does. The script requires that [WebPI 4.5](http://www.microsoft.com/web/downloads/platform.aspx) be installed. Once you have WebPI install simply execute the script from the directory.
+
+* To fully run functional tests, you will still need to manually execute first two steps from [Additional prerequisites to run the functional tests](https://github.com/projectkudu/kudu/wiki/Getting-started#additional-prerequisites-to-run-the-functional-tests)
 
 ### Manual Setup Instructions
 * Visual Studio 2013. Note that you need to run it as admin. Install/Update to the latest version of NuGet Package Manager (Tools -> Extensions and Updates).
@@ -14,9 +16,13 @@ Note: If you manually install IIS, here is what needs to be enabled:
 
 ### Additional prerequisites to run the functional tests
 
-* Install the XUnit.net runner for VS 2013, which you install from Tools / Extensions & Updates
+* Install the XUnit.net runner for VS 2013, which you install from NuGet Package Manager
 * Install [ASP.NET WebPages 1.0](http://www.microsoft.com/en-us/download/details.aspx?id=15979)
+
+You are done here if you had run [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/master/Setup), otherwise continue.
+
 * Install [MVC 3](http://www.asp.net/mvc/mvc3).
+* Install [v3.0.0.0 System.Web.Mvc.dll] (https://dl.dropboxusercontent.com/u/2209341/System.Web.Mvc.dll) using [gacutil.exe] (http://msdn.microsoft.com/en-us/library/ex0ss12c(v=vs.110).aspx)
 * Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true (or remove the attribute if you are running the latest Windows 8.1).
 * unzip [this file](https://dl.dropboxusercontent.com/u/2209341/Kudu_Progx86_Msbuild_Microsoft_VisualStudio.zip) and copy the contents into your `\Program Files (x86)\MSBuild\Microsoft\VisualStudio`. This brings in various files from older VS versions that you may not have installed.
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
