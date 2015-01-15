@@ -25,7 +25,9 @@ The default is Node.js 0.10.32.
 ## PHP
 * 5.3
 * 5.4
-* 5.5  
+* 5.5
+* 5.6
+
 The default is PHP 5.4. 
 
 ## Python
