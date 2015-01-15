@@ -2,7 +2,7 @@
 * **CLR**: 2.0, 4.0  
 The default is CLR 4.0.   
 * **Framework**: up to 4.5  
-The default is .NET Framework 4.5 (currently .NET 4.5.1).
+The default is .NET Framework 4.5 (currently .NET 4.5.2).
 
 ## Node.js (and matching npm)
 * 0.6.17 (1.1.21)
