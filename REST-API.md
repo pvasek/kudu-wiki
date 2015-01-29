@@ -42,7 +42,7 @@ The JSON body of the post should look like this, passing the command and the fol
     Puts a file at path.
 
     PUT /api/vfs/{path}/
-    Creates a directory at path
+    Creates a directory at path. The path can be nested, e.g. `folder1/folder2`.
 
     DELETE /api/vfs/{path}
     Delete the file at path.
@@ -55,7 +55,7 @@ The JSON body of the post should look like this, passing the command and the fol
 
     PUT /api/zip/{path}
     Upload a zip file which gets expanded into the specified folder. Existing files are not deleted
-    unless they need to be overwritten by files in the zip.
+    unless they need to be overwritten by files in the zip. The path can be nested (e.g. `folder1/folder2`), and needs to exist.
 
 ## Deployment
 
