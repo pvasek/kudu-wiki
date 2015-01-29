@@ -14,9 +14,9 @@ The following will inject an environment variable named `FOO`, with value `BAR`:
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
   <system.webServer> 
     <runtime xdt:Transform="InsertIfMissing">
-         <environmentVariables xdt:Transform="InsertIfMissing">
-            <add name="FOO" value="BAR" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" />    
-         </environmentVariables>
+      <environmentVariables xdt:Transform="InsertIfMissing">
+        <add name="FOO" value="BAR" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" />    
+      </environmentVariables>
     </runtime> 
   </system.webServer> 
 </configuration> 
