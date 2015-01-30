@@ -6,7 +6,7 @@ There are a couple of settings that can be used to optimize the deployment.  Bel
 
 * SCM_REPOSITORY_PATH
 
-This represents the repository path.  The value is a relative path of site directory that will be the root of repository (see [[File structure on azure]]).   The default is `repository`; meaning the repository will be created at `site\repository` folder.
+This represents the repository path.  The value can either be absolute path (such as `d:\home\site\myfolder`) or a relative path of site directory; for instance, `myfolder` setting means `d:\home\site\myfolder`.  The default is `repository`; meaning the repository will be created at `d:\home\site\repository` folder.
   
 * SCM_NO_REPOSITORY
 
@@ -18,7 +18,7 @@ This indicates which sub folder in the repository folder to be deployed.  This i
 
 * SCM_TARGET_PATH
 
-This indicates which sub folder in the wwwroot to deploy to.  This is often used where only part of your site (wwwroot) is under source control and you only want to deploy to that part.  The default is `.`; meaning deploying to the root of wwwroot.
+This indicates which folder to deploy to.  The value can either be absolute path (such as `d:\home\site\myfolder`) or a relative path of wwwroot directory; for instance, `myfolder` setting means `d:\home\site\wwwroot\myfolder`.  The default is `.`; meaning deploying to `d:\home\site\wwwroot`.
 
 ## Scenarios
 Given the above 4 settings, one can use in combination to achieve interesting scenarios.
