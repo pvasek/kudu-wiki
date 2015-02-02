@@ -4,17 +4,17 @@ There are three different ways to publish files to an Azure Web Site:
 2. [Web Deploy](http://www.iis.net/download/webdeploy) (also known as MSDeploy)
 3. FTP
 
-When it comes to authenticating with these three mechanisms, you cannot use your Live ID credentials (which the protocols can't easily support), but instead need to use deployment credentials.
+When it comes to authenticating with these three mechanisms, you cannot use your Microsoft ID (aka Live ID) credentials (which the protocols can't easily support), but instead need to use deployment credentials.
 
-To make things more interesting, there are actually two sets of deployment credentials that you can use to publish. This page discusses the two alternatives.
+To make things more interesting, there are actually two sets of deployment credentials that you can use to publish to a Website. This page discusses the two alternatives.
 
 ## User-level credentials (aka Deployment Credentials)
 
 These are the credentials that you choose yourself in the Azure portal. If you're not sure what they are, you can reset them by going to the Dashboard tab for any site and clicking 'Reset deployment credentials' (under quick glance).
 
-These credentials are directly tied to a Live ID, and not to a particular web site. This needs to be emphasized, because the Azure portal UI is a bit confusing, as you need to go under a specific site on order to change them. But changing them under one site affects all of them!
+These credentials are directly tied to a Microsoft Account, and not to a particular web site. This needs to be emphasized, because the Azure portal UI is a bit confusing, as you need to go under a specific site on order to change them. But changing them under one site affects all of them!
 
-Note that when an Azure subscription has multiple admins/co-admins, each person has their own set of credentials, since they each have a different Live ID. In other words, user-level credentials are never meant to be shared among different users.
+Note that when an Azure subscription has multiple admins/co-admins, each person has their own set of credentials, since they each have a different Microsoft Account. In other words, user-level credentials are never meant to be shared among different users.
 
 One key point about the user-level credentials is that since you specifically set them, they are meant to be memorized, and directly typed by the user when needed (e.g. when doing a git push).
 
@@ -30,9 +30,7 @@ The publish profile is an XML file that contains both WebDeploy and FTP related 
 
 Note that the multi co-admins scenario does not affect those credentials. All the admins/co-admins will end up with the exact same site-level credentials for a given site (but each site has different ones of course).
 
-And unlike User lever credentials, the site-level credentials are definitely not meant to be memorized (though you're welcome to try!). Instead, they're meant to be used by programs that automates deployment for you (like WebMatrix).
-
-They can also be useful when a subscription owner wants to allow an external party to publish to just one site while having no access to the others.
+And unlike User lever credentials, the site-level credentials are definitely not meant to be memorized (though you're welcome to try!). Instead, they're meant to be used by programs that automates deployment for you (like Visual Studio).
 
 ## When to use which set of credentials
 
