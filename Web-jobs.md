@@ -40,7 +40,7 @@ We use the following logic to decide which file is the script to run within the 
 
 ## Environment Settings ##
 
-When a job is invoked, several settings are added to it's environment that the job process can use:
+When a job is invoked, several settings are added to its environment that the job process can use:
 
 * **WEBJOBS_PATH** - The root path of currently running job (will be under some temporary directory).
 * **WEBJOBS_NAME** - The current job name.
