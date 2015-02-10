@@ -24,10 +24,11 @@ When that happens, it is no longer relevant what technique you used to deploy yo
 One important point here is that we are talking about the runtime **on Azure Websites**. So just because it works on your machine does not imply that you don't have a runtime issue On Azure Websites.
 
 There are many things that could cause a runtime issue. e.g.
+- your Website may not be configured correctly. e.g. wrong version of PHP, .NET runtime, etc...
 - there could be an external dependency like a database that's not set up correctly
-- your code could be making invalid assumptions about paths
-- something in the Websites runtime environment might block certain things that work on your local box
-- there could be OS differences if you are developing on a Mac, since Azure Websites runs on Windows.
+- your code could be making invalid assumptions about paths, like hard coding something that only exists on your machine
+- something in the Websites runtime environment might block certain operations that work on your local box
+- there could be OS differences if you are developing on a Mac, since Azure Websites runs on Windows
 
 ## Determining which type of issue you have
 
