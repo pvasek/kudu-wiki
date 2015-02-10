@@ -7,6 +7,10 @@ Sometimes, the issue exists outside of Azure Web Sites. Here are a couple things
 * [[Make sure all your files are committed]]: this applies to git scenarios
 * [[Make sure site correctly deploys locally]]: this applies to ASP.NET Web Applications
 
+# Understanding the difference between deployment and runtime issues
+
+See [[deployment vs runtime issues]].
+
 # Kudu and Azure Web Site specific investigation
 
 ## Make sure the site itself works
