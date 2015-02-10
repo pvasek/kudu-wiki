@@ -21,7 +21,9 @@ A runtime issue happens when the files in your wwwroot folder are exactly what t
 
 When that happens, it is no longer relevant what technique you used to deploy your site. All that matter is that you got the files in the right place. In this case, a description of your issue should focus on what your code is doing at runtime, and how it is failing, rather than on how you deployed it.
 
-Again, there are many reasons this could happen. e.g.
+One important point here is that we are talking about the runtime **on Azure Websites**. So just because it works on your machine does not imply that you don't have a runtime issue On Azure Websites.
+
+There are many things that could cause a runtime issue. e.g.
 - there could be an external dependency like a database that's not set up correctly
 - your code could be making invalid assumptions about paths
 - something in the Websites runtime environment might block certain things that work on your local box
