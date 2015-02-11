@@ -17,7 +17,7 @@ This article explains some of the differences you may encounter, and how to repo
 
 When using one of the options that go through Kudu, your sources live within the Azure Websites infrastructure, and get built and deployed from within Azure Websites.
 
-If you connect to your site via [[Kudu Console]], you will see your sources under `site\repository`, as well, as various deployment related artifacts.
+If you connect to your site via [[Kudu Console]], you will see your sources under `site\repository`, as well as various deployment related artifacts.
 
 ## How does Visual Studio Online deployment work
 
@@ -39,3 +39,12 @@ Instead, with VSO, you have to use the mechanisms provided by VSO (like the Buil
 Also, it matters in term of reporting issues to the correct set of people:
 - For Kudu, you can use the [Websites forum](https://social.msdn.microsoft.com/Forums/azure/en-US/home?forum=windowsazurewebsitespreview), or open issue in this Kudu GitHub project.
 - For VSO, you should instead use the [Visual Studio Online Forum](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=TFService), where you will find the right set of experts.
+
+## Can I host my git repo on VSO and have Kudu build it
+
+At this time, this is not supported, but it is potentially something that could be supported later.
+
+In the meantime, the closest you can get is:
+- host your sources in VSO, without any build/deployment semantic (i.e. just a plain repo)
+- Set up your Azure Website to use 'Local Git repository'
+- When you need to deploy, push from your local machine to the Azure Websites repo, where the build will be handled by the Kudu engine
