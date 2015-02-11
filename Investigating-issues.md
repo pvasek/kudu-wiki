@@ -7,9 +7,12 @@ Sometimes, the issue exists outside of Azure Web Sites. Here are a couple things
 * [[Make sure all your files are committed]]: this applies to git scenarios
 * [[Make sure site correctly deploys locally]]: this applies to ASP.NET Web Applications
 
-# Understanding the difference between deployment and runtime issues
+# Misc investigation topics
 
-See [[deployment vs runtime issues]].
+- Understanding the difference between deployment and runtime issues: [[deployment vs runtime issues]].
+- [[Reporting your site name without posting it publicly]]
+- [[Sharing a git repo that captures your issue]]
+- [[VSO vs Kudu deployments]]
 
 # Kudu and Azure Web Site specific investigation
 
