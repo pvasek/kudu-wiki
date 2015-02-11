@@ -5,3 +5,8 @@ However, if you prefer not to share it publicly on the forum or in a Github issu
 - You don't need to deploy anything in that dummy site. Just leave it empty.
 - Mention the name of that dummy site in the public forum. This will allow us to locate your Web Hosting Plan, and other relevant details about your subscription. If there are multiple sites in your Web Hosting Plan, you may need to give us some small additional hint about which one is at stake (e.g. the site that starts with 'a').
 - Try to keep the site around until you no longer need assistance.
+
+
+## What if you can't even create a site
+
+If things are so broken for you that you are not even able to create a new site, you can still convey to us information about your subscription by creating a dummy storage account in your subscription and sharing its name.
