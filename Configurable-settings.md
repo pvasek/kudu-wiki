@@ -48,7 +48,7 @@ After deployment, Kudu will execute, if exists, `postdeployment` script under /s
 
 ### Don't build and deploy during git push
 
-With this flag, a `git push` updates the server repo, but does not trigger a deployment:
+With this flag, a `git push` updates the server repo, but does not trigger a deployment. Note that this only applies when git pushing directly to the Kudu git endpoint, and not in continuous integration scenarios like GitHub/Bitbucket.
 
 	SCM_DISABLE_DEPLOY_ON_PUSH=1
 
