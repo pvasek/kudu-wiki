@@ -11,7 +11,7 @@ Sometimes, the issue exists outside of Azure Web Sites. Here are a couple things
 
 - Understanding the difference between deployment and runtime issues: [[deployment vs runtime issues]].
 - [[Reporting your site name without posting it publicly]]
-- [[Sharing a git repo that captures your issue]]
+- [[Using a git repo to report an issue]]
 - [[VSO vs Kudu deployments]]
 
 # Kudu and Azure Web Site specific investigation
