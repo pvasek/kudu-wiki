@@ -1,4 +1,4 @@
-When you run into an issue, it is often helpful to provide a repro scenario to the people who will be investigating it. The best way of doing this is to create a git repository that captures the issue, and share it via a public GitHub project.
+When you run into an issue, it is often helpful to provide a repro scenario to the people who will be investigating it. The best way of doing this is to create a git repository that captures the issue, and share publicly on GitHub.
 
 ## The benefits of using a git repo to share your repro
 
