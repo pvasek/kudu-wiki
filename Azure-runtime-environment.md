@@ -36,8 +36,8 @@ Free and Shared sites get 1GB of space, Basic sites get 10GB, and Standard sites
 
 A number of common Windows locations are using temporary storage on the local machine. For instance
 
-- `%APPDATA%` points to something like `C:\DWASFiles\Sites\mysite\AppData`.
-- `%TMP%` goes to `C:\DWASFiles\Sites\mysite\Temp`.
+- `%APPDATA%` points to something like `D:\local\AppData`.
+- `%TMP%` goes to `D:\local\Temp`.
 
 Unlike Persisted files, these files are not shared among site instances. Also, you cannot rely on them staying there. For instance, if you stop a site and restart it, you'll find that all of these folders get reset to their original state.
 
