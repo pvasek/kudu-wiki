@@ -16,6 +16,7 @@ The following will inject an environment variable named `FOO`, with value `BAR`:
     <runtime xdt:Transform="InsertIfMissing">
       <environmentVariables xdt:Transform="InsertIfMissing">
         <add name="FOO" value="BAR" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" />    
+        <add name="PATH" value="%PATH%;%HOME%\BAR" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" />    
       </environmentVariables>
     </runtime> 
   </system.webServer> 
