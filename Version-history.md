@@ -1,3 +1,9 @@
+## S43
+* Add initial support for LibGit2Sharp (not on by default)
+* Add ARM support for WebJobs api
+* Add support for NuGet v3 site extension feeds
+* Kudu trace improvements
+
 ## S42-QFE2 (12/30/2014)
 * Added support for deploying WebJobs when installing site extensions.
 
