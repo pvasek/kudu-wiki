@@ -1,3 +1,8 @@
+## next
+* Fix GitLab payload support
+* Optimize site extension install/update to be idempotent
+* Increase file browser max count from 100 to 200
+
 ## S43
 * Add initial support for LibGit2Sharp (not on by default)
 * Add ARM support for WebJobs api
