@@ -32,25 +32,25 @@ Please see [[Deploying inplace and without repository]] for information on using
 
 By default, Kudu automatically update submodules before doing a deployment. To turn that off:
 
-	SCM_DISABLE_SUBMODULES=1
+    SCM_DISABLE_SUBMODULES=1
 
 ### Using a git shallow clone in Continuous Deployment scenarios
 
 For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. To turn it on:
 
-	SCM_USE_SHALLOW_CLONE=1
+    SCM_USE_SHALLOW_CLONE=1
 
 ### Customize post deployment action directory
 
 After deployment, Kudu will execute, if exists, `postdeployment` script under /site/deployments/tools directory.  To customize to different directory, one can set the following setting.
 
-	SCM_POST_DEPLOYMENT_ACTIONS_PATH=<path> 
+    SCM_POST_DEPLOYMENT_ACTIONS_PATH=<path> 
 
 ### Don't build and deploy during git push
 
 With this flag, a `git push` updates the server repo, but does not trigger a deployment. Note that this only applies when git pushing directly to the Kudu git endpoint, and not in continuous integration scenarios like GitHub/Bitbucket.
 
-	SCM_DISABLE_DEPLOY_ON_PUSH=1
+    SCM_DISABLE_DEPLOY_ON_PUSH=1
 
 ## Diagnostic related settings
 
@@ -58,20 +58,25 @@ With this flag, a `git push` updates the server repo, but does not trigger a dep
 
 By default, it is set to 1, but you can get more tracing with higher values, up to 4. e.g.
 
-	SCM_TRACE_LEVEL=4
+    SCM_TRACE_LEVEL=4
 
 ### Changing the timeout before external commands are killed
 
 By default, when your build process launches some command, it's allowed to run for up to 60 seconds without producing any output. If that is not long enough, you can make it longer, e.g. to make it 10 minutes:
 
-	SCM_COMMAND_IDLE_TIMEOUT=600
+    SCM_COMMAND_IDLE_TIMEOUT=600
 
 
 ### Changing the timeout of the log streaming feature
 
 When using the log streaming feature, by default it times out after 30 minutes of inactivity. To change it to 15 minutes (unit is seconds):
 
-	SCM_LOGSTREAM_TIMEOUT=900
+    SCM_LOGSTREAM_TIMEOUT=900
+
+
+### Using libgit2sharp instead of git.exe for many Kudu git operations
+
+    SCM_USE_LIBGIT2SHARP_REPOSITORY=1
 
 ## Runtime settings
 
