@@ -10,7 +10,7 @@ When setting things up manually as described here, you'll need to enable the 'Lo
 
 ## Set up a Web Hook so Kudu gets notified when a deployment happens
 
-The hook URL is the `/deploy path` on the Kudu service. So it looks like `https://mysite.scm.azurewebsites.net/deploy`. But since the service uses basic auth, you need to pass the creds in the URL. Typically, you'll want to use the site-level credentials here and not the user credentials (see [[Deployment-credentials]]). So the full URL will look like `https://$mysite:BigRandomPassword@mysite.scm.azurewebsites.net/deploy`
+The hook URL is the `/deploy` path on the Kudu service. So it looks like `https://mysite.scm.azurewebsites.net/deploy`. But since the service uses basic auth, you need to pass the creds in the URL. Typically, you'll want to use the site-level credentials here and not the user credentials (see [[Deployment-credentials]]). So the full URL will look like `https://$mysite:BigRandomPassword@mysite.scm.azurewebsites.net/deploy`
 
 The easiest way to get this URL is to directly copy it from the Azure Portal. You'll find it in the Configure tab, in the Deployment Trigger Url field.
 
