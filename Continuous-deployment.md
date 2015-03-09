@@ -1,14 +1,12 @@
-## From the Azure portal
+## Setting up continuous deployment from the Azure portal
 
 The Azure portal makes it easy to set up continuous deployment from GitHub or Bitbucket.
 
-This documents discusses what happens under the cover. In most cases you don't need to worry about this. It may be useful to set up continuous deployment from a git host that the portal doesn't directly support, like GitLab.
-
-Steps to set up continuous deployment from an externally hosted repo (e.g. GitHub/Bitbucket/GitLab):
+This documents discusses what happens under the cover. In most cases you don't need to worry about this. It can be useful to set up continuous deployment from a git host that the portal doesn't directly support, like GitLab.
 
 ## Create an Azure Website with local git enabled
 
-When setting things up manually as described here, you'll need to enable the 'Local Git repository' option in the portal for your site. Even though you will in fact set up continuous deployment, this is the closest option that allows things to work.  
+When setting things up manually as described here, you'll need to enable the 'Local Git repository' option in the portal for your site. Even though you will in fact set up continuous deployment, this is the option that allows things to work.  
 
 ## Set up a Web Hook so Kudu gets notified when a deployment happens
 
