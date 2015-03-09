@@ -1,61 +1,33 @@
 ## From the Azure portal
 
-The Azure portal makes it easy to set up continuous deployment from GitHub, Bitbucket or Codeplex.
+The Azure portal makes it easy to set up continuous deployment from GitHub or Bitbucket.
 
-This documents discusses what happens under the cover. Inmost cases you don't need to worry about this. It may be useful to set up continuous deployment from a git host that the portal doesn't directly support.
+This documents discusses what happens under the cover. In most cases you don't need to worry about this. It may be useful to set up continuous deployment from a git host that the portal doesn't directly support, like GitLab.
 
-Steps to set up continuous deployment from an externally hosted repo (e.g. GitHub/CodePlex/Bitbucket):
+Steps to set up continuous deployment from an externally hosted repo (e.g. GitHub/Bitbucket/GitLab):
 
-## Getting the hook URL
+## Create an Azure Website with local git enabled
 
-The hook URL is the /deploy path on the Kudu service. So it looks like `https://mysite.scm.azurewebsites.net/deploy`. But since the service uses basic auth, you need to pass the creds in the URL. Typically, you'll want to use the site-level credentials here and not the user credentials (see [[Deployment-credentials]]). So the full URL will look like `https://$mysite:BigRandomPassword@mysite.scm.azurewebsites.net/deploy`
+When setting things up manually as described here, you'll need to enable the 'Local Git repository' option in the portal for your site. Even though you will in fact set up continuous deployment, this is the closest option that allows things to work.  
 
-Note that you can also obtain this URL from the Azure Portal under the Configure tab, in the Deployment Trigger Url field.
+## Set up a Web Hook so Kudu gets notified when a deployment happens
 
-Once you have the URL, you can set it as a GitHub/CodePlex/Bitbucket hook, either via OAuth, or manually from those sites.
+The hook URL is the `/deploy path` on the Kudu service. So it looks like `https://mysite.scm.azurewebsites.net/deploy`. But since the service uses basic auth, you need to pass the creds in the URL. Typically, you'll want to use the site-level credentials here and not the user credentials (see [[Deployment-credentials]]). So the full URL will look like `https://$mysite:BigRandomPassword@mysite.scm.azurewebsites.net/deploy`
 
-The hook expects a POST request, and supports the payload from those various sites (which are all different).
+The easiest way to get this URL is to directly copy it from the Azure Portal. You'll find it in the Configure tab, in the Deployment Trigger Url field.
+
+Once you have the URL, you can set it as a GitHub/Bitbucket/GitLab hook.
 
 
-## Giving the private key to the Kudu service
+## For private repos, set up a deploy key
 
-If the repo is private, you will also need to set up an SSH key.
+If the repo is private, you will also need to set up an SSH 'deploy key' on GitHub/Bitbucket/GitLab.
 
-The public key is given to GitHub/Bitbucket, either manually or through their OAuth API.
+This can be done using the following steps:
+- Take the full deploy URL above, and replace `/deploy` with `/api/sshkey?ensurePublicKey=1`. So it'll look like `https://$mysite:BigRandomPassword@mysite.scm.azurewebsites.net/api/sshkey?ensurePublicKey=1`
+- Run `curl` on this URL, which returns an SSH public key. It's returned as a JSON string, so you'll need to remove the quotes. It should look like `ssh-rsa AAAAB3NzaC1etc...`
+- Set this string as a 'deploy key' on your GitHub/Bitbucket/GitLab repository.
 
-The private key is given to the Kudu service. This can be done in two ways:
+## Test that everything works
 
-### Using the REST API
-
- using the PUT `/sshkey` REST API. The supported key format is privacy enhanced mail (PEM). Since Kudu runs as a service (no interactive), make sure the private key PEM is not encrypted with `passphrase`. The ssh-keygen command, by default, will solicit passphrase, do leave it blank.
-
-One possible way to call the REST API is using curl. e.g.
-
-    curl --user username 'https://yoursite.scm.azurewebsites.net/sshkey' -X PUT --upload-file /c/users/me/.ssh/id_rsa
-
-### Manually over ftp (this is probably simpler)
-
-You need to copy two files over FTP (see [[Accessing-files-via-ftp]] and [[File-structure-on-azure]]).
-
-At the root, create a .ssh folder (i.e. .ssh is a sibling to the site folder) and create two files.
-
-The first is named config (so `.ssh\config`) and should contain exactly:
-
-    HOST *
-    	  StrictHostKeyChecking no
-
-The second is `id_rsa` and contains, your private key, e.g.
-
-    -----BEGIN RSA PRIVATE KEY-----
-    MIIEoAIBAAKCAQEAxFkKAmZSruEVhq4g0LsDTBiKe/FXYcy1dzi/eHd4Cw32bq9H
-    EpUBFrMykK3TVc/pdL9PVD/oq3ikvAkDeZFYUDMso4vvMf5/FfmU2oCwRaESF545
-    etc...
-    -----END RSA PRIVATE KEY-----
-    
-## Deleting the repository
-
-You can do this from the Dashboard page on the Azure portal.
-
-As an alternative, you can run the following curl command, using the same username/password that you use for git deployment:
-
-    curl --user yourusername -X DELETE https://yoursitename.scm.azurewebsites.net/live/scm
+The easiest way to test it is to got to GitHub/Bitbucket/GitLab and click 'test' on the Web Hook you set up. Or you can try simply pushing a chance to your repo. 
