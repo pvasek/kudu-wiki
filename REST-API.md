@@ -30,7 +30,9 @@ The JSON body of the post should look like this, passing the command and the fol
 
     	
 ## VFS
-   The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with trailing slashes are treated as directories.
+The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with trailing slashes are treated as directories.
+
+**Note:** when updating or deleting a file, ETag behavior will apply. You can pass a `If-Match: "*"` header to disable the ETag check.
 
     GET /api/vfs/{path}
     Gets a file at path
