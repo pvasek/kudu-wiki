@@ -6,7 +6,7 @@ A deployment issue is an issue that causes the wrong set of files to get deploye
 
 As a result of a deployment issue, you will often end up with a non-running site, which makes it look like a 'runtime' issue. But the core issue is with the deployment. **When that happens, you should not ask yourself "*why isn't my site running correctly?*". Instead, the right question to ask is "*why aren't the right files ending up in my wwwroot folder?*".**
 
-Note that there can be all kind of deployment issues, and they can potentially happen with any deployment technology (e.g. Kudu, WebDeploy, FTP).
+Note that there can be all kind of deployment issues, and they can potentially happen with any deployment technology (e.g. Kudu, WebDeploy, FTP, VS Online).
 
 When using Kudu, there are all kind of possibilities:
 - something in your repo may not be quite right
@@ -14,6 +14,8 @@ When using Kudu, there are all kind of possibilities:
 - maybe you're running into a Kudu bug
 
 We can help investigate those after you have made the determination that you are in fact dealing with a deployment issue.
+
+When using VS Online, it could be a range of other things, best discussed on the [VS Online Forum](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=TFService)
 
 ## Runtime issues
 
