@@ -37,6 +37,7 @@
     GET /api/triggeredwebjobsswagger
 
 **Response**
+    [
       {
         name: "jobName",
         runCommand: "...\run.cmd",
@@ -56,7 +57,7 @@
             url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
           }
       }
-
+    ]
 ### Get a specific triggered job by name ###
 
     GET /api/triggeredwebjobs/{job name}
