@@ -63,7 +63,7 @@
     GET /api/triggeredwebjobs/{job name}
 
 **Response**
-
+    [
     {
       "swagger": "2.0",
       "info": {
@@ -102,6 +102,7 @@
         }
       }
     }
+    ]
 
 ### Upload a triggered job as zip ###
 
