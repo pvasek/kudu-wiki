@@ -27,6 +27,6 @@ As for the real site, it can of course implement any authentication mechanism th
 
 ### Process model
 
-Not only the Kudu service site runs in the same sandbox as the site, but it actually runs in the same *process* as the site. However, there are no assumptions in the code that this is the case, and it is something that could very well change in the future.
+The Kudu service site runs in the same sandbox as the site.  By default, it runs in the different *process* as the site. 
 
 The only thing that really 'connects' the Kudu site to the real site is the file system, and that works regardless of what process or machine they each run on.
