@@ -32,6 +32,52 @@
       }
     ]
 
+### List all triggered jobs in swagger fromat ###
+
+    GET /api/triggeredwebjobsswagger
+
+**Response**
+
+	{
+	  "swagger": "2.0",
+	  "info": {
+		"version": "v1",
+		"title": "WebJobs"
+	  },
+	  "host": "placeHolder",
+	  "schemes": [
+		"https"
+	  ],
+	  "paths": {
+		"/api/triggeredjobs/jobName/run": {
+		  "post": {
+			"deprecated": false,
+			"operationId": "jobName",
+			"consumes": [],
+			"produces": [],
+			"responses": {
+			  "200": {
+				"description": "Success"
+			  },
+			  "default": {
+				"description": "Success"
+			  }
+			},
+			"parameters": [
+			  {
+				"name": "arguments",
+				"in": "query",
+				"description": "Web Job Arguments",
+				"required": false,
+				"type": "string"
+			  }
+			]
+		  }
+		}
+	  }
+	}
+
+
 ### List all triggered jobs in swagger format###
 
     GET /api/triggeredwebjobsswagger
