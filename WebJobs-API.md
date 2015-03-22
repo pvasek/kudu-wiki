@@ -32,6 +32,31 @@
       }
     ]
 
+### List all triggered jobs in swagger format###
+
+    GET /api/triggeredwebjobsswagger
+
+**Response**
+      {
+        name: "jobName",
+        runCommand: "...\run.cmd",
+        type: "triggered",
+        url: "http://.../triggeredwebjobs/jobName",
+        history_url: "http://.../triggeredwebjobs/jobName/history",
+        extra_info_url: "http://.../",
+        latest_run:
+          {
+            id: "20131103120400",
+            status: "Success",
+            start_time: "2013-11-08T02:56:00.000000Z",
+            end_time: "2013-11-08T02:57:00.000000Z",
+            duration: "00:01:00",
+            output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
+            error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
+            url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
+          }
+      }
+
 ### Get a specific triggered job by name ###
 
     GET /api/triggeredwebjobs/{job name}
@@ -39,23 +64,42 @@
 **Response**
 
     {
-      name: "jobName",
-      runCommand: "...\run.cmd",
-      type: "triggered",
-      url: "http://.../triggeredwebjobs/jobName",
-      history_url: "http://.../triggeredwebjobs/jobName/history",
-      extra_info_url: "http://.../",
-      latest_run:
-        {
-          id: "20131103120400",
-          status: "Success",
-          start_time: "2013-11-08T02:56:00.000000Z",
-          end_time: "2013-11-08T02:57:00.000000Z",
-          duration: "00:01:00",
-          output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
-          error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-          url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
+      "swagger": "2.0",
+      "info": {
+        "version": "v1",
+        "title": "WebJobs"
+      },
+      "host": "placeHolder",
+      "schemes": [
+        "https"
+      ],
+      "paths": {
+        "/api/triggeredjobs/jobName/run": {
+          "post": {
+            "deprecated": false,
+            "operationId": "jobName",
+            "consumes": [],
+            "produces": [],
+            "responses": {
+              "200": {
+                "description": "Success"
+              },
+              "default": {
+                "description": "Success"
+              }
+            },
+            "parameters": [
+              {
+                "name": "arguments",
+                "in": "query",
+                "description": "Web Job Arguments",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          }
         }
+      }
     }
 
 ### Upload a triggered job as zip ###
