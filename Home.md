@@ -73,4 +73,4 @@ Read this is you are interested in contributing to Kudu
 ## Miscellaneous
 
 * [[Blog posts and screencasts]]
-* [[Cool tweets from the community|Cool user tweets]]
+* [[Cool tweets from the community|Cool user tweets]] [[And some specifically about WebJobs|Cool WebJobs tweets]]
