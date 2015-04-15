@@ -132,6 +132,10 @@ Timeout in milliseconds to keep application logging on (Default is 43200000, whi
 
     WEBSITE_DISABLE_SCM_SEPARATION=true
 
+### Pre-start the SCM site as part of site creation (needs to be set in the site creation call)
+
+    WEBSITE_START_SCM_ON_SITE_CREATION=true
+
 ### Site Extensions gallery feed url
 
 Each site gets the site extensions feed from a configurable Url. If it is not set, the behavior is equivalent to
