@@ -1,9 +1,17 @@
-## next
-* Fix GitLab payload support
-* Optimize site extension install/update to be idempotent
-* Increase file browser max count from 100 to 200
+## S45 (4/2015)
+* Support for WebJobs as an API app
+* Site extension fixes and optimizations
+* Make Kudu behave better when the disk is full
 
-## S43
+## S44 (3/2015)
+* Support ASP.NET 5 beta3
+* Fix GitLab payload support
+* Optimize site extension install/update to be idempotent and support async
+* Other site extension improvements for API app scenarios
+* Increase file browser max count from 100 to 200
+* Improved tracing
+
+## S43 (2/2015)
 * Add initial support for LibGit2Sharp (not on by default)
 * Add ARM support for WebJobs api
 * Add support for NuGet v3 site extension feeds
