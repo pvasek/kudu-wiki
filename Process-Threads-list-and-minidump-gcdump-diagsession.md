@@ -4,7 +4,7 @@ To diagnose issues, one may need to get the list of running processes, their cpu
 
 ## Using /api/processes
 
-`<kudu-service-url>/api/processes` endpoint returns the list of running processes in json format.   Each process info contains process name, id and a link `/api/processes/{id}` to its detail information (such as memory, cpu usages, etc.).  Note: the id `0` is reserved for current `w3wp.exe` process allowing a shortcut to this via `/api/processes/0`.  One can take the minidump of any given process by simply connect to `/api/processes/{id}/dump`.   For Windows Azure, we include support for taking a gcdump and diagsession format (`/api/processes/{id}/gcdump?format=raw` and `/api/processes/{id}/gcdump?format=diagsession` respectively).      
+`<kudu-service-url>/api/processes` endpoint returns the list of running processes in json format.   Each process info contains process name, id and a link `/api/processes/{id}` to its detail information (such as memory, cpu usages, etc.).  Note: the id `0` is reserved for current `w3wp.exe` process allowing a shortcut to this via `/api/processes/0`.  One can take the minidump of any given process by simply connect to `/api/processes/{id}/dump`.      
 
 ## Using /api/processes/{id}/threads
 
@@ -24,7 +24,6 @@ To diagnose issues, one may need to get the list of running processes, their cpu
 * `GET /api/processes/{id}/dump` => minidump of process with `id`.  By default, this is minimum dump without memory (dumptType=0).
 * `GET /api/processes/{id}/dump?dumpType=2` => full memory minidump of process with `id`.  The available dumpType  value can be found at [MINIDUMP_TYPE](http://msdn.microsoft.com/en-us/library/windows/desktop/ms680519.aspx).
 * `GET /api/processes/{id}/dump?dumpType=2&format=zip` => full memory minidump of process with `id`.  This will include matching sos.dll and mscordackws.dll in the zip package.  
-* `GET /api/processes/{id}/gcdump` => take managed gcdump.  This returns a diagsession format file.    VS 2013 Ultimate (or newer) is needed to open this type of file.  You can also specify different format query string such as `?format=raw` (returning in raw gcdump format readable by [perfview](http://www.microsoft.com/en-us/download/details.aspx?id=28567) or `?format=zip` to compress the raw gcdump in zip file.
 
 For web sites running on multiple instances the WEBSITE_INSTANCE_ID environment variable can indicate the current instance ID. An instance ID can be used to modify the cookie that directs a request to a specific instance of the web site - before dump requests above. Listing all instance IDs for a web site requires use of the Azure Web Sites REST API.  
 
