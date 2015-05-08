@@ -18,6 +18,7 @@ Note: If you manually install IIS, here is what needs to be enabled:
 
 * Install [ASP.NET WebPages 1.0](http://www.microsoft.com/en-us/download/details.aspx?id=15979)
 * If you don't see the tests in Test Explorer pane, it may be because you have Xunit runner install as VSIX.  For Xunit 2.0, the runner is installed as part of the project (not VSIX).  To fix, open VS -> TOOLS -> Extensions and Updates ..., and uninstall Xunit runner VSIX. 
+* If still don't see the tests, try remove this folder `%TEMP%\VisualStudioTestExplorerExtensions`.  See [this](http://xunit.github.io/docs/running-tests-in-vs.html).
 
 You are done here if you had run [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/master/Setup), otherwise continue.
 
