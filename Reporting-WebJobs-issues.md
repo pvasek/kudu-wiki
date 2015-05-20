@@ -1,11 +1,11 @@
 ## tl;dr
 
-When reporting a WebJobs issue, there are a few key things that need to be specified:
+When reporting a [WebJobs issue](https://github.com/projectkudu/kudu/issues), there are a few key things that need to be specified:
 
 1. Is your WebJobs continuous or triggered (triggered includes both manual and scheduled)
 1. How are you deploying it? e.g. zip upload, VS deployment, git deployment, FTP, ...
 1. What is it written in? e.g. .NET, Node, PHP, batch file, etc...
-1. If .NET, are you using the WebJobs SDK?
+1. If .NET, are you using the WebJobs SDK? If you know the problem is a WebJobs SDK issue, report it in the [WebJobs SDK repo](https://github.com/Azure/azure-webjobs-sdk/issues).
 
 More details below...
 
@@ -43,3 +43,4 @@ Make sure you specify what you are using.
 The WebJobs SDK is a separate piece which is technically not part of the core WebJobs feature, but makes it easier to write certain types of WebJobs.
 
 When reporting an issue or asking a question, please make sure you specify whether the issue is about WebJobs in general, or specific to the SDK.  
+
