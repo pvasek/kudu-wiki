@@ -2,7 +2,7 @@ We get a lot of questions from users that look more or less like "*I deploy my s
 
 ## Deployment issues
 
-A deployment issue is an issue that causes the wrong set of files to get deployed to your site folder (typically `site\wwwroot`). i.e. as a result of deployment, you expect a certain set of files to end up in that folder, but due to some problem during deployment, you end up with a different set of files.
+A deployment issue is an issue that causes the wrong set of files to get deployed to your site folder (typically `site\wwwroot`), or that causes some files not to get deployed at all. i.e. as a result of deployment, you expect a certain set of files to end up in that folder, but due to some problem during deployment, you end up with a different set of files.
 
 As a result of a deployment issue, you will often end up with a non-running site, which makes it look like a 'runtime' issue. But the core issue is with the deployment. **When that happens, you should not ask yourself "*why isn't my site running correctly?*". Instead, the right question to ask is "*why aren't the right files ending up in my wwwroot folder?*".**
 
