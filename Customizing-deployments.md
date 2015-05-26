@@ -10,6 +10,20 @@ When deploying a git repository via Kudu, the rules for picking a specific proje
 # .deployment file
 Deployment configuration files let you override the default heuristics of deployment by allowing you to specify a project or folder to be deployed. It has to be at the root of the repository and it's in .ini format. Here are some examples:
 
+## Deploying with custom script
+
+You can specify the custom deployment script to build and deploy your application.
+
+Here is an example:
+
+    [config]
+    command = deploy.cmd
+
+For other script engine, ..
+
+    [config]
+    command = powershell -file deploy.ps1
+
 ## Deploying a specific ASP.NET project file (i.e. a WAP)
 
 You can specify the full path to the project file. **Note that this is not a path to the solution file (.sln), but to the project file (.csproj/.vbproj)**. The reason for this is that Kudu only builds the minimal dependency tree for this project, and avoids building unrelated projects in the solution that are not needed by the web project.
