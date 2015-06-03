@@ -116,6 +116,9 @@ There are a set of environment variables passed to the XDT to assist in locating
 
 Site extensions can be shared with others using the Site Extensions gallery. See [this post](http://azure.microsoft.com/blog/2014/06/20/azure-web-sites-extensions/) for more information.
 
+### Updating for site extensions
+You can add the ability for your site extensions to auto-update when you publish a new version. See [here](https://github.com/projectkudu/SiteExtensionUpdater) for more details.
+
 ### Install/Uninstall scripts for gallery extensions
 
 An extension installed from the gallery can contain install/uninstall scripts. To use this, simply include an install.cmd and/or uninstall.cmd at the root of your extension. You can find an example [here](https://github.com/ligershark/AzureJobs/tree/dcaa9ad748e00667e8aca70ce2cb1c8e6ef6797a/ImageCompressor.Job/SiteExtension) (taken from the Image Compressor extension).
