@@ -23,7 +23,6 @@ Note: If you manually install IIS, here is what needs to be enabled:
 You are done here if you had run [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/master/Setup), otherwise continue.
 
 * Install [MVC 3](http://www.asp.net/mvc/mvc3).
-* Install [v3.0.0.0 System.Web.Mvc.dll] (https://dl.dropboxusercontent.com/u/2209341/System.Web.Mvc.dll) using [gacutil.exe] (http://msdn.microsoft.com/en-us/library/ex0ss12c(v=vs.110).aspx)
 * Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true (or remove the attribute if you are running the latest Windows 8.1).
 * unzip [this file](https://dl.dropboxusercontent.com/u/2209341/Kudu_Progx86_Msbuild_Microsoft_VisualStudio.zip) and copy the contents into your `\Program Files (x86)\MSBuild\Microsoft\VisualStudio`. This brings in various files from older VS versions that you may not have installed.
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
