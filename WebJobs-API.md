@@ -19,6 +19,9 @@
     url: "http://.../triggeredwebjobs/jobName",
     history_url: "http://.../triggeredwebjobs/jobName/history",
     extra_info_url: "http://.../",
+    scheduler_logs_url: "https://.../vfs/data/jobs/triggered/jobName/job_scheduler.log",
+    settings: { },
+    using_sdk: false,
     latest_run:
       {
         id: "20131103120400",
@@ -28,7 +31,8 @@
         duration: "00:01:00",
         output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
         error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-        url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
+        url: "http://.../triggeredwebjobs/jobName/history/20131103120400",
+        trigger: "Schedule - 0 0 0 * * *"
       }
   }
 ]
@@ -214,7 +218,8 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
         duration: "00:01:00",
         output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
         error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-        url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
+        url: "http://.../triggeredwebjobs/jobName/history/20131103120400",
+        trigger: "Schedule - 0 0 0 * * *"
       }
     ]
 }
@@ -235,7 +240,8 @@ Note: if the site has multiple instances, the job will run on one of them arbitr
   duration: "00:01:00",
   output_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/output_20131103120400.log",
   error_url: "http://.../vfs/data/jobs/triggered/jobName/20131103120400/error_20131103120400.log",
-  url: "http://.../triggeredwebjobs/jobName/history/20131103120400"
+  url: "http://.../triggeredwebjobs/jobName/history/20131103120400",
+  trigger: "Schedule - 0 0 0 * * *"
 }
 ```
 
@@ -347,3 +353,19 @@ Body
 ```
 
 > To set a continuous job as singleton during deployment (without the need for the REST API) you can simply create a file called ```settings.job``` with the content: ```{ "is_singleton": true }``` and put it at the root of the (specific) WebJob directory.
+
+### Set the schedule for a triggered job ###
+
+You can set the schedule for invoking a triggered job by providing a cron expression made of 6 fields (second, minute, hour, day, month, day of the week).
+
+    PUT /api/triggeredwebjobs/{job name}/settings
+
+Body
+
+```json
+{
+  "schedule": "0 */2 * * * *"
+}
+```
+
+> To set the schedule for a triggered job during deployment (without the need for the REST API) you can simply create a file called ```settings.job``` with the content: ```{ "schedule": "0 */2 * * * *" }``` and put it at the root of the (specific) WebJob directory.
