@@ -133,6 +133,8 @@ Each field can have a specific value (1), a range (1-10), a set of values (1,2,3
 
 Whenever the `settings.job` file is updated with a new schedule, the WebJob's schedule will automatically update, it is best to deploy the `settings.job` as part of the WebJob (should be in the root of the WebJob's files).
 
+> For the schedule to work it requires the website to be configured as **Always On** and is not an Azure Scheduler but an internal implementation of a scheduler.
+
 #### Sample `settings.job` file ####
 
 ```
