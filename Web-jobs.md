@@ -1,6 +1,6 @@
 Ability to run a script (called job) in 2 different ways:
 
-1. External trigger - run the job every time an API is called.
+1. Trigger - run the job every time an API is called or a schedule is reached.
 2. Continuous - make sure the job is always running (job should have a while loop but when it goes down we bring it back up).
 
 Jobs are deployed by copying them to the right place in the file-system (or using a designated API which will do the same).
@@ -124,6 +124,31 @@ To explicitly configured this option add a file to the root of your WebJob calle
 
     { "is_in_place": true/false }
 
+## Scheduling a triggered WebJob ##
+
+To schedule a triggered WebJob you need to add a **schedule** property to the `settings.job` file.
+The value of the **schedule** is [cron expression](https://code.google.com/p/ncrontab/wiki/CrontabExpression) that has **6** fields to represent the schedule: `{second} {minute} {hour} {day} {month} {day of the week}`.
+
+Each field can have a specific value (1), a range (1-10), a set of values (1,2,3), all values (*), an interval value (*/2 == 0,2,4,6,...) or a mix of these (1,5-10).
+
+Whenever the `settings.job` file is updated with a new schedule, the WebJob's schedule will automatically update, it is best to deploy the `settings.job` as part of the WebJob (should be in the root of the WebJob's files).
+
+#### Sample `settings.job` file ####
+
+```
+{
+  "schedule": "* */1 * * * *"
+}
+```
+
+#### Sample schedules ####
+
+- `0 */5 * * * *` - run every 5 minutes (specifically on minute 0, 5, 10, 15, ...).
+- `0 0 0 * * 1-5` - run at midnight on Monday, Tuesday, Wednesday, Thursday and Friday.
+
+[More samples](https://code.google.com/p/ncrontab/wiki/CrontabExamples)
+
+> Note samples are missing the seconds field, to make them work just add `0` as the first field to make them 6 fields total.
 
 ## API ##
 
