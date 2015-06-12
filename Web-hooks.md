@@ -131,3 +131,9 @@ This is request sent by the Kudu service to the registered URL.
   "end_time": "2013-06-06T01:24:17.63342Z"
 }
 ```
+
+## Hook scenarios
+
+### Notify deployment status to Slack
+
+See https://github.com/WCOMAB/KuduPostDeploymentSlackHook for details
