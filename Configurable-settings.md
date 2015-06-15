@@ -74,9 +74,9 @@ When using the log streaming feature, by default it times out after 30 minutes o
     SCM_LOGSTREAM_TIMEOUT=900
 
 
-### Using libgit2sharp instead of git.exe for many Kudu git operations
+### Using git.exe instead of libgit2sharp for git operations
 
-    SCM_USE_LIBGIT2SHARP_REPOSITORY=1
+    SCM_USE_LIBGIT2SHARP_REPOSITORY=0
 
 ## Runtime settings
 
