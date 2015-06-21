@@ -1,7 +1,18 @@
+## S47 (?/2015)
+* Add support for deploying from VS Online
+* Add support for deploying from OneDrive
+
+## S46 (6/2015)
+* Add support for scheduled WebJobs without using external scheduler ([blog post](http://blog.amitapple.com/post/2015/06/scheduling-azure-webjobs/))
+* Support ASP.NET 5 beta4
+* Add basic support for the Go language
+* Turn on libgit2sharp by default, and update it to latest
+
 ## S45 (4/2015)
 * Support for WebJobs as an API app
 * Site extension fixes and optimizations
 * Make Kudu behave better when the disk is full
+* Remove gcdump support
 
 ## S44 (3/2015)
 * Support ASP.NET 5 beta3
