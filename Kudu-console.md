@@ -38,6 +38,10 @@ You can drag some files from the Windows shell (or Mac finder), and drop them di
 
 If you try to drop a zip file into the File Explorer UI (per previews section), you'll see a special Zip file drop zone appearing. If you drop it there, it will copy the content of the expanded zip file, instead of the zip file itself. It's a much more efficient way to upload a large number of small files.
 
+This demonstrates the UI:
+
+![kudu_drop](https://cloud.githubusercontent.com/assets/6472374/8329527/b0a2734c-1a82-11e5-97aa-949fbde67a8f.gif)
+
 ## View and Edit text files
 
 If you click the Edit icon next to a file, the Console will open up a window where you can view and edit the file. It's a super basic editor, so don't expect any syntax coloring or fancy code editor features. But it can still be helpful when investigating issues. e.g. you could use it to quickly tweak a web.config file.
