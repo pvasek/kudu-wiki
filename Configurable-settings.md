@@ -98,6 +98,10 @@ See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-
 
     WEBSITE_PRIVATE_EXTENSIONS=0
 
+### Set the time zone
+
+    WEBSITE_TIME_ZONE=AUS Eastern Standard Time
+
 ### Diagnostics related settings
 
 The name (or relative path to the LogDirectory) of the file where internal errors are logged, for troubleshooting the listener:
