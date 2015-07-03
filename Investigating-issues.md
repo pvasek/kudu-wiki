@@ -15,6 +15,7 @@ Sometimes, the issue exists outside of Azure Web Sites. Here are a couple things
 - [[VSO vs Kudu deployments]]
 - [[Reporting WebJobs issues]]
 - [[Troubleshooting PHP errors]]
+- [[Troubleshooting Node errors]]
 
 # Kudu and Azure Web Site specific investigation
 
