@@ -100,7 +100,7 @@ See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-
 
 ### Set the time zone
 
-    WEBSITE_TIME_ZONE=AUS Eastern Standard Time
+    WEBSITE_TIME_ZONE=Eastern Standard Time
 
 ### Diagnostics related settings
 
