@@ -36,7 +36,7 @@ You can drag some files from the Windows shell (or Mac finder), and drop them di
 
 ## Upload and expand zip file
 
-If you try to drop a zip file into the File Explorer UI (per previews section), you'll see a special Zip file drop zone appearing. If you drop it there, it will copy the content of the expanded zip file, instead of the zip file itself. It's a much more efficient way to upload a large number of small files.
+If you try to drop a zip file into the File Explorer UI (per previews section), you'll see a special Zip file drop zone appearing. If you drop it there, it will copy the content of the expanded zip file, instead of the zip file itself. It's a much more efficient way to upload a large number of small files and folders (folders work best with Chrome).
 
 This demonstrates the UI:
 
