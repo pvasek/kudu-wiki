@@ -89,11 +89,16 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
 
 ## SSHKey
 
+    GET /api/sshkey?ensurePublicKey=1
+    Generate the private/public key pair (if not already created), and return the public key as a string. e.g. "ssh-rsa AAAAB3NzaC1yc..."
+
+The PUT method still exists, but should be avoided as it involves sending the private key over. GET with `ensurePublicKey=1` should be used instead.
+
     PUT /api/sshkey	
     Set the private key. The supported key format is privacy enhanced mail (PEM)
 
     GET /api/sshkey	
-    Get the public key.  Optional: ?ensurePublicKey=1 to generate if none exist.
+    Get the public key.
     	
 ## Environment
 
