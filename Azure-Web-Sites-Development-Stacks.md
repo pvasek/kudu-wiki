@@ -15,7 +15,6 @@ To get the full list of supported Node and npm:
 The default is Node.js 0.10.32.
 
 ## PHP
-* 5.3
 * 5.4
 * 5.5
 * 5.6
