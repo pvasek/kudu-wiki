@@ -15,7 +15,7 @@ To deploy a continuous job copy your binaries to:
 
 The following file types are accepted as runnable scripts that can be used as a job:
 
-* .cmd, .bat, .exe (using windows cmd). Note: make sure batch files don't include the UTF-8 BOM, which can break it!
+* .cmd, .bat, .exe (using windows cmd)
 * .ps1 (using powershell)
 * .sh (using bash)
 * .php (using php)
@@ -29,6 +29,7 @@ We use the following logic to decide which file is the script to run within the 
 * The order of file types extension used is: ```.cmd```, ```.bat```, ```.exe```, ```.ps1```, ```.sh```, ```.php```, ```.py```, ```.js```.
 * The recommended script file to have in your job directory is: ```run.cmd```.
 * Note: We'll only look for a script under the root directory of that job (not under sub directories of it).
+* Note: make sure .bat/.cmd files don't include the UTF-8 BOM, which can break things!
 
 
 ## Configuration Settings ##
