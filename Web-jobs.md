@@ -29,7 +29,7 @@ We use the following logic to decide which file is the script to run within the 
 * The order of file types extension used is: ```.cmd```, ```.bat```, ```.exe```, ```.ps1```, ```.sh```, ```.php```, ```.py```, ```.js```.
 * The recommended script file to have in your job directory is: ```run.cmd```.
 * Note: We'll only look for a script under the root directory of that job (not under sub directories of it).
-* Note: make sure .bat/.cmd files don't include the UTF-8 BOM, which can break things!
+* Note: make sure .bat/.cmd files don't include the UTF-8 BOM (inserted by some editors such as Visual Studio by default), which can break things!
 
 
 ## Configuration Settings ##
