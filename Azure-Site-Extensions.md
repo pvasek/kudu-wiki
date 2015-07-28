@@ -123,6 +123,31 @@ You can add the ability for your site extensions to auto-update when you publish
 
 An extension installed from the gallery can contain install/uninstall scripts. To use this, simply include an install.cmd and/or uninstall.cmd at the root of your extension. You can find an example [here](https://github.com/ligershark/AzureJobs/tree/dcaa9ad748e00667e8aca70ce2cb1c8e6ef6797a/ImageCompressor.Job/SiteExtension) (taken from the Image Compressor extension).
 
+## Understanding what could go wrong with xdt transforms
+
+There are several categories of issues that could cause things to not work, and it's very important to understand this difference in order to be successful with XDTs.
+
+### Invalid XDT
+
+If your applicationhost.xdt is not valid, the XDT transform operation will fail. This could happen if you have malformed XML, or if you are incorrectly using XDT concepts like `xdt:Transform` attributes.
+
+When that happens, you will see an error in the XDT log (see debugging section below).
+
+### Valid XDT that doesn't do what you want it to
+
+Here, your XDT file is valid, but it does not modify your applicationhost.config in the way that you expect. The XST syntax can be tricky, and it can take a few tries to get it right (looking at [samples](https://github.com/projectkudu/kudu/wiki/Xdt-transform-samples) often helps!
+
+To diagnose this kind of issues, look at the generated applicationhost.config (see next section), and see if it has what you expect.
+
+### Transform does what you expect, but applicationhost.config semantic is not what you expect
+
+Here, the transform does exactly what you ask it to, and therefore the generated applicationhost.config looks exactly the way you intended.
+
+However, that applicationhost.config does not work as you expect, possibly due to misunderstanding of the application.config schema.
+
+It's important to note that **these issues have nothing to do with XDT transforms**. They  are pure applicationhost.config issues, much like you'd see on your local IIS.  
+
+
 ## Debugging private Extensions
 
 #### Finding your applicationhost.config
