@@ -370,3 +370,20 @@ Add a rule that returns a 403 if a certain http header is present
   </system.webServer>
 </configuration>
 ```
+
+### Add an allowedServerVariables
+
+Add `CONTENT_TYPE` to the list of allowed variables:
+
+```xml
+<?xml version="1.0"?> 
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
+  <system.webServer> 
+    <rewrite>
+      <allowedServerVariables>
+        <add name="CONTENT_TYPE" xdt:Transform="InsertIfMissing" />
+      </allowedServerVariables>
+    </rewrite>
+  </system.webServer>
+</configuration>
+```
