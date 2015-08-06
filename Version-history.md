@@ -1,6 +1,12 @@
-## S47 (?/2015)
+## S47 (8/2015)
+* New profiling support
 * Add support for deploying from VS Online
 * Add support for deploying from OneDrive
+* Change Kudu Console editor to use Ace
+* Change logger to be text based instead of XML, for big perf improvement
+* Support ASP.NET 5 beta6
+* Fix vfs/zip controller issue with paths that contain % characters
+* Add new Kudu icon!
 
 ## S46 (6/2015)
 * Add support for scheduled WebJobs without using external scheduler ([blog post](http://blog.amitapple.com/post/2015/06/scheduling-azure-webjobs/))
