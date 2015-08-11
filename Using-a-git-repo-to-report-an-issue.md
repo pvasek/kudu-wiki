@@ -29,7 +29,7 @@ If you're seeing an issue in a really complex situation that involves tons of te
 
 First, it makes things easier on people investigating, as it directly gets their focus on the right thing. They will spend less time investigating, and are more likely to be helpful.
 
-The second one is more subtle: as part of putting together this simpler repro, you will yourself see things more clearly, and you may very well discover the root of your problem (yes, this does happen a lot!). Or at the very least, you'll a clearer understanding of the scope of the problem, allowing you to discuss it more productively (i.e. no *"my site is broken, help me!"*).
+The second one is more subtle: as part of putting together this simpler repro, you will yourself see things more clearly, and you may very well discover the root of your problem (yes, this does happen a lot!). Or at the very least, you'll get clearer understanding of the scope of the problem, allowing you to discuss it more productively (i.e. no *"my site is broken, help me!"*).
 
 ### Keep it free of secrets
 
