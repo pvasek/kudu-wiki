@@ -37,7 +37,7 @@ That goes without saying, but make sure you don't publicly share a repo that has
 
 ### Don't commit all your binaries!
 
-This is particularly true of .NET apps that use NuGet and have tons of DLLs in `bin`. The best way to do this is to copy a `.gitignore` file at the root before you start committing files (here is an [example](https://github.com/projectkudu/kudu/blob/master/.gitignore)) from Kudu.
+This is particularly true of .NET apps that use NuGet and have tons of DLLs in `bin`. The best way to do this is to copy a `.gitignore` file at the root before you start committing files (here is an [example](https://github.com/projectkudu/kudu/blob/master/.gitignore) from Kudu).
 
 With this, a clean clone of your repo should pretty much just contain text files (and maybe a few png's).
 
