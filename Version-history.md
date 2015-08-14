@@ -4,7 +4,9 @@
 * Add support for deploying from OneDrive
 * Change Kudu Console editor to use Ace
 * Change logger to be text based instead of XML, for big perf improvement
+* Adds the TriggeredJobFinished event to the WebHooks form
 * Support ASP.NET 5 beta6
+* Support Bitbucket Webhook 2.0 payload (git and public repo only)
 * Fix vfs/zip controller issue with paths that contain % characters
 * Add new Kudu icon!
 
