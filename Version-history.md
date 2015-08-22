@@ -1,5 +1,6 @@
 ## S47 (8/2015)
 * New profiling support
+* Add support for DNX based WebJobs
 * Add support for deploying from VS Online
 * Add support for deploying from OneDrive
 * Change Kudu Console editor to use Ace
