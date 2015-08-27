@@ -10,3 +10,20 @@ Here is what happens when you swap a source slot (let's call it 'Staging') into 
 The confusion happens when users expect that their Staging site will not be restarted at all during the swap, and notice that it in fact is. But that is not normally as issue, since by the time the Staging site gets swapped, it has been warmed up.
 
 So to summarize: the swap mechanism does not guarantee that the Staging site won't be restarted, but it does guarantee that no cold site is ever used for Production.
+
+### What if hitting the site root is not good enough to warm up the site?
+
+If you need additional paths to be hit to warm up your site, you can use the `applicationInitialization` feature in your web.config file, e.g.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <applicationInitialization>
+      <add initializationPage="/pagetowarmup1.php" />
+      <add initializationPage="/pagetowarmup2.php" />
+      <add initializationPage="/pagetowarmup3.php" />
+    </applicationInitialization>
+  </system.webServer>
+</configuration>
+```
