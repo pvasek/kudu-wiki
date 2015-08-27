@@ -48,6 +48,7 @@ See the [[Version history]] page for details.
 * [[How Kudu deploys sites|Deployment]]
 * [[Configurable settings]]
 * [[Deployment Environment]]
+* [[Information about other Azure Web Apps features]]
 
 ### Troubleshooting
 
