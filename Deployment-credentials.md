@@ -1,4 +1,4 @@
-There are three different ways to publish files to an Azure Web Site:
+There are three different ways to publish files to an Azure Web App:
 
 1. git: the main topic of this wiki, and what the Kudu project is all about!
 2. [Web Deploy](http://www.iis.net/download/webdeploy) (also known as MSDeploy)
@@ -12,9 +12,9 @@ To make things more interesting, there are actually two sets of deployment crede
 
 These are the credentials that you choose yourself in the Azure portal. If you're not sure what they are, you can reset them by going to the Dashboard tab for any site and clicking 'Reset deployment credentials' (under quick glance).
 
-These credentials are directly tied to a Microsoft Account, and not to a particular web site. This needs to be emphasized, because the Azure portal UI is a bit confusing, as you need to go under a specific site on order to change them. But changing them under one site affects all of them!
+These credentials are directly tied to a Microsoft Account, and not to a particular web app. This needs to be emphasized, because the Azure portal UI is a bit confusing, as you need to go under a specific site on order to change them. But changing them under one site affects all of them!
 
-Note that when an Azure subscription has multiple admins/co-admins, each person has their own set of credentials, since they each have a different Microsoft Account. In other words, user-level credentials are never meant to be shared among different users.
+Note that when an Azure subscription has multiple admins/co-admins, each person has their own set of credentials, since they each have a different Microsoft Account. The same is true for users that are given access to a Web App via RBAC (Role Based Access Control). In other words, user-level credentials are never meant to be shared among different users.
 
 One key point about the user-level credentials is that since you specifically set them, they are meant to be memorized, and directly typed by the user when needed (e.g. when doing a git push).
 
