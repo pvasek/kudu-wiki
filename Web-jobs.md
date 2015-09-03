@@ -140,7 +140,7 @@ Whenever the `settings.job` file is updated with a new schedule, the WebJob's sc
 
 ```
 {
-  "schedule": "* */1 * * * *"
+  "schedule": "0 */1 * * * *"
 }
 ```
 
