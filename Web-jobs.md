@@ -137,10 +137,11 @@ Whenever the `settings.job` file is updated with a new schedule, the WebJob's sc
 > For the schedule to work it requires the website to be configured as **Always On** and is not an Azure Scheduler but an internal implementation of a scheduler.
 
 #### Sample `settings.job` file ####
+Here is an example schedule that will run once every minute:
 
 ```
 {
-  "schedule": "0 */1 * * * *"
+  "schedule": "0 * * * * *"
 }
 ```
 
