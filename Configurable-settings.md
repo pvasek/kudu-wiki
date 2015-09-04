@@ -34,11 +34,15 @@ By default, Kudu automatically update submodules before doing a deployment. To t
 
     SCM_DISABLE_SUBMODULES=1
 
+Note: this is support as an Azure App Setting, but not in the .deployment file.
+
 ### Using a git shallow clone in Continuous Deployment scenarios
 
 For large repos, you can make Kudu use a shallow clone when it clones your repo from GitHub or Bitbucket, which can save disk space. Shallow clones can be tricky, so make sure you understand what they are before using this. It is off by default. To turn it on:
 
     SCM_USE_SHALLOW_CLONE=1
+
+Note: this is support as an Azure App Setting, but not in the .deployment file.
 
 ### Customize post deployment action directory
 
