@@ -44,4 +44,5 @@ This demonstrates the UI:
 
 ## View and Edit text files
 
-If you click the Edit icon next to a file, the Console will open up a window where you can view and edit the file. It's a super basic editor, so don't expect any syntax coloring or fancy code editor features. But it can still be helpful when investigating issues. e.g. you could use it to quickly tweak a web.config file.
+If you click the Edit icon ![pencil](https://cloud.githubusercontent.com/assets/6472374/9696655/f5c0a4ca-537c-11e5-9024-25e92a42bb2d.PNG) next to a file, the Console will open up a window where you can view and edit that file. Kudu is using Ace (https://github.com/ajaxorg/ace) for in-browser editing.
+Try `CTRL + ,` for advanced features like vim key bindings. The editor is really helpful when investigating issues. You could use it to quickly tweak a `web.config` file, with syntax checking and highlighting.
