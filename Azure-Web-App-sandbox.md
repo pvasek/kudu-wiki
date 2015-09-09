@@ -139,8 +139,8 @@ Given the above background information, the following are numerical limits which
 
 These limits apply to each sandbox and therefore represent the sum usage of all the processes within the given sandbox.  
 
-| Limit name | Description| Free/Shared Limit | Basic+ Limit |
-| ---------------------------------------------------------- |
+| Limit name | Description | Free/Shared Limit | Basic+ Limit |
+| ---------- | ----------- | ----------------- | ------------ |
 | Threads | Number of threads| 512 | Unlimited |
 | Processes | Number of processes | 32 | Unlimited |
 | Connections | Number of bound sockets outstanding | 250 | Unlimited |
@@ -152,6 +152,7 @@ These limits apply to each sandbox and therefore represent the sum usage of all 
 These limits apply only for customers of Basic or higher plans; in other words customers running on their own dedicated VMs.  These limits are there to protect the entire VM even though one particular site may be with its limits described above.  The limits are different depending on the size of VM configured.  
 
 | Limit name | Description | Small (A1) | Medium (A2) | Large (A3)
-| ----------------------------------------------------------------
+| ---------- | ----------- | ---------- | ----------- | ----------
 | Connections | Number of connections across entire VM | 1920 | 3968 | 8064
+
 
