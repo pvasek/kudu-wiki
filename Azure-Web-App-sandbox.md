@@ -39,7 +39,7 @@ Applications cannot write to any location in the registry.  This limitation is i
 
 #### Access to Event Log
 
-Applications cannot read from or write to the event log service.  However, as a workaround, applications are provided a user-mode “virtualized” event log in which to write events.  These events end up in a file named “d:\home\logfiles\eventlog.xml”, with a limit of 1000 (rotated) entries in the file; this virtualization was done to enable better debugging of applications as well as to support applications which require (as part of their basic function) to register event sources.  As mentioned, the virtualization is done in user-mode within the application process itself using API hooking (in our case detours).  
+Applications cannot read from or write to the event log service.  However, as a workaround, applications are provided a user-mode "virtualized"” event log in which to write events.  These events end up in a file named `d:\home\logfiles\eventlog.xml`, with a limit of 1000 (rotated) entries in the file; this virtualization was done to enable better debugging of applications as well as to support applications which require (as part of their basic function) to register event sources.  As mentioned, the virtualization is done in user-mode within the application process itself using API hooking (in our case detours).  
 
 #### Access to out-of-process COM servers
 
@@ -55,11 +55,11 @@ For the sake of radical attack surface area reduction, the sandbox prevents almo
 
 However one common pattern that is affected is PDF file generation.  There are several cases of note:
 
-#### Microsoft SQL Reporting Framework manually generating PDFs
+##### Microsoft SQL Reporting Framework manually generating PDFs
 
 This usage pattern does not work for Free/Shared plans due to the sandbox.  However, a small set of APIs are opened for use in Basic+ plans; these APIs are designed to enable SQL Reporting framework creation of PDFs.  So these libraries should be usable for PDF generation in Basic+.  
 
-#### PDF generation from HTML
+##### PDF generation from HTML
 
 There are multiple libraries used to convert HTML to PDF.  Many Windows/.NET specific versions leverage IE APIs and therefore leverage User32/GDI32 extensively.  These APIs are largely blocked in the sandbox (regardless of plan) and therefore these frameworks do not work in the sandbox.  
 
@@ -67,7 +67,7 @@ There are some frameworks that do not leverage User32/GDI32 extensively (wkhtmlt
 
 #### Process Enumeration/Job-Assignment
 
-Processes within a sandbox are able to access each other via their handles and retrieve the handles using OpenProcess(); the access is restricted to within the sandbox; a process cannot open/see other processes outside the sandbox.  
+Processes within a sandbox are able to access each other via their handles and retrieve the handles using `OpenProcess()` the access is restricted to within the sandbox; a process cannot open/see other processes outside the sandbox.  
 
 For example, if you use the System.Diagnostics.Process class to enumerate processes you will only see the processes within the sandbox.  
 
@@ -85,11 +85,11 @@ Applications are highly restricted in terms of their access of the file system.
 
 Every Azure Web App has a home directory stored/backed by Azure Storage.  This network share is where applications store their content.  This directory is available for the sandbox with read/write access.  
 
-As a convenience for our customers, the sandbox implements a dynamic symbolic link in kernel mode which maps “d:\home” to the customer home directory.  This is done to remove the need of the customer to keep referencing their own network share path when accessing the site.  No matter where the site runs, or how many sites run on a VM, each can access their home directory using “d:\home”.  
+As a convenience for our customers, the sandbox implements a dynamic symbolic link in kernel mode which maps `d:\home` to the customer home directory.  This is done to remove the need of the customer to keep referencing their own network share path when accessing the site.  No matter where the site runs, or how many sites run on a VM, each can access their home directory using `d:\home`.  
 
 #### Local directory access (d:\local)
 
-Every Azure Web App has a local directory which is temporary and is deleted when the run is no longer running on the VM.  This directory is a place to store temporary data for the application.  The sandbox implements a dynamic symbolic link which maps “d:\local” to point to this directory.  The application naturally has read/write access to this directory.   
+Every Azure Web App has a local directory which is temporary and is deleted when the run is no longer running on the VM.  This directory is a place to store temporary data for the application.  The sandbox implements a dynamic symbolic link which maps `d:\local` to point to this directory.  The application naturally has read/write access to this directory.   
 
 #### System drive access
 
@@ -133,7 +133,7 @@ Within the sandbox, applications can create named pipes which accessible only wi
 
 ### Numerical Sandbox Limits
 
-Given the above background information, the following are numerical limits which apply to applications in the sandbox.  Note that “unlimited” still means memory/resource limits may apply; however the sandbox does not explicitly restrict.  
+Given the above background information, the following are numerical limits which apply to applications in the sandbox.  Note that "unlimited" still means memory/resource limits may apply; however the sandbox does not explicitly restrict.  
 
 #### Per-Sandbox (per-app/per-site) Numerical Limits
 
@@ -154,5 +154,3 @@ These limits apply only for customers of Basic or higher plans; in other words c
 | Limit name | Description | Small (A1) | Medium (A2) | Large (A3)
 | ---------- | ----------- | ---------- | ----------- | ----------
 | Connections | Number of connections across entire VM | 1920 | 3968 | 8064
-
-
