@@ -44,6 +44,7 @@ See the [[Version history]] page for details.
 * [[Enabling continuous deployment from Github, Codeplex and Bitbucket|Continuous deployment]]
 * [[File structure on Azure]]
 * [[Azure Runtime Environment]]
+* [[Azure Web App sandbox]]
 * [[Understanding deployment credentials|Deployment credentials]]
 * [[How Kudu deploys sites|Deployment]]
 * [[Configurable settings]]
