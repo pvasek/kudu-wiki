@@ -194,7 +194,7 @@ or
 
     POST /api/triggeredwebjobs/{job name}/run
 
-**To run with arguments use the arguments parameters that will be added to the script when invoked**
+**To run with arguments use the arguments parameters that will be added to the script when invoked. It also gets passed to the WebJob as the `WEBJOBS_COMMAND_ARGUMENTS` environment variable.**
 
     POST /api/triggeredwebjobs/{job name}/run?arguments={arguments}
 
