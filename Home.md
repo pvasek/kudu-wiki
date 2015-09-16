@@ -57,7 +57,6 @@ See the [[Version history]] page for details.
 * [[Investigating Issues]]
 * Using the [[Kudu Console]]
 * [[Diagnostic Log Stream]]
-* [[FAQ Continuous Deployment]]
 * [[Investigating Continuous Deployment]]
 * [[Process Threads list and minidump/gcdump/diagsession]]
 
