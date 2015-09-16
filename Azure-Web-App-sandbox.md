@@ -1,27 +1,29 @@
-Your Azure Web Apps (as well as Mobile App/Services) run in a sandbox.  This article describes the purpose of the sandbox and the restrictions that it imposes on your applications.  We have not done a great job of communicating these limitations, hence the article.  Over time we will update with corrections as well as when we update the sandbox itself.  
+_This article is provided with the intent of communicating various runtime execution limitations enforced by the Azure Web Apps platform.  This article will serve as the foremost point of communication regarding this topic and will be updated whenever changes occur._
+
+### Introduction
+
+All Azure Web Apps (as well as Mobile App/Services) run in a secure environment called a _sandbox_. Each app runs inside its own sandbox, isolating its execution from other instances on the same machine as well as providing an additional degree of security and privacy which would otherwise not be available.  The sandbox mechanism aims to ensure that each app running on a machine will have a minimum guaranteed level of service; furthermore, the runtime limits enforced by the sandbox protects apps from being adversely affected by other resource-intensive apps which may be running on the same machine.
 
 ### Purpose of the sandbox
 
-We run applications in a sandbox primarily to ensure they do not do damage to other applications or the underlying platform itself.  This is not an issue for customers running an application on their own machine, but is a very important living issue for a service like Azure Web Apps which has 100000's of applications running on 100000's of VMs.  With Azure Web Apps the platform VMs are configured/maintained by Microsoft; we provide this application environment for customers and the sandbox protects this environment from the application itself.  
+The App Service platform execution environment differs from a local execution environment mainly due to multi-tenancy &mdash; because a single physical machine in the data center can be concurrently executing apps and services belonging to a large number of differing customers, resources are more constrained than in the case of an app running on a single machine.  The sandbox mechanism mitigates the risk of service disruption due to resource contention and depletion in two ways: it (1) ensures that each app receives a minimum guarantee of resources and quality-of-service, and conversely (2) enforces limits so that an app can not disrupt other concurrently-executing apps on the same machine.
 
-A secondary but also important motivation for the sandbox is to meter use of the platform resources (storage, networking, compute) as well as prevent abuse.
+A corollary but also important function that the sandbox provides is the ability to meter an app's resource usage (e.g. storage usage, network traffic, and compute time); the resource limits also serve to prevent abuse and attacks by malicious apps.
 
 ### Definition of the sandbox
 
-For the context of Azure Web Apps, the sandbox is a set of kernel-mode enforced restrictions on a set of processes.  Practically this set is defined as the root W3WP.EXE process which is launched to run your application, plus all the child processes launched by that root process.  So the sandbox is basically a container of a set of processes, which have a set of restrictions applied.  
-
-**Put another way, each Azure Web App (formerly known as site) has its own sandbox, consisting of all the processing used in the app.**  
-
-When running applications in Azure Web Apps, multiple processes may be involved in actually executing the application.  Here are some examples of languages supported in Azure Web Apps and the processes contained in the respective sandboxes:
+Each app is viewed by the sandbox as a tree of _processes_, rooted by the app's main IIS (`w3wp.exe`) process.  Each app's lifetime begins with the creation of this `w3wp.exe` process, which, in turn, may spawn other child processes, such as `php-cgi.exe` or `node.exe`.  These processes are grouped together and are collectively subject to a _single_ set of limits, all enforced within the underlying Windows kernel.  It is common for a single app to have multiple processes involved in processing an incoming request.  The following table illustrates typical execution profiles and their "process groups," organized by programming language:
 
 | Language | Processes in sandbox |
 | -------- | -------------------- |
-| C#       | W3WP.EXE, CSC.EXE, CVTRES.EXE |
-| node.js  | W3WP.EXE, NODE.EXE |
-| PHP      | W3WP.EXE, PHP-CGI.EXE |
-| Java     | W3WP.EXE, JAVA.EXE |
+| C#       | `W3WP.EXE`, `CSC.EXE`, `CVTRES.EXE` |
+| node.js  | `W3WP.EXE`, `NODE.EXE` |
+| PHP      | `W3WP.EXE`, `PHP-CGI.EXE` |
+| Java     | `W3WP.EXE`, `JAVA.EXE` |
 
-The vast majority of the limits in this article apply to the entire sandbox; that is to all the processes in the tree.  
+The vast majority of the execution limits outlined in this article apply to the entire sandbox: that is, to all the processes in the tree.  For example, the memory allocated by `php-cgi.exe` and `w3wp.exe` _both_ count towards the _same_ memory quota.  Spawning additional processes will _not_ allow you to consume more memory!
+
+**TL;DR: Each Azure Web App (formerly known as site) has its own sandbox, consisting of _all_ the processing used in the app.**  
 
 ### App Service Plans and Sandbox Limits
 
@@ -29,17 +31,19 @@ In the context of the sandbox, the limits which apply may depend on the type of 
 
 ### General Sandbox Restrictions
 
-The following section describes things that are totally restricted from within the sandbox.  
+The sandbox generally aims to restrict access to _shared_ components of Windows.  Unfortunately, many core components of Windows have been designed as shared components: the [registry](https://en.wikipedia.org/wiki/Windows_Registry), [cryptography](https://en.wikipedia.org/wiki/Local_Security_Authority_Subsystem_Service), and [graphics](https://en.wikipedia.org/wiki/Graphics_Device_Interface) subsystems, among others.  This section outlines the limitations placed on usage of these often essential, yet shared components.
 
 #### Writing to registry
 
-Applications cannot write to any location in the registry.  This limitation is implemented a global restriction rather than a set of ACLs.  There is no hive/key which is writable including HKCU.  
+Apps may not to any location in the registry regardless of any [permissions](https://en.wikipedia.org/wiki/Access_control_list) present on the key.  This blanket limitation is implemented as a global restriction without exceptions.
 
-(Reading the registry, however, is permitted.  ACLs are used to restrict what keys are accessible).  
+While writing is not allowed, the reading and enumeration of keys and values are permitted.  Access to keys and values for these purposes are governed by the ACLs present on the key.
+
+**In short,  there is no hive or key which is writable, including `HKEY_CURRENT_USER`.  However, reading and enumeration of keys are permitted, subject to the permissions present on the key.**
 
 #### Access to Event Log
 
-Applications cannot read from or write to the event log service.  However, as a workaround, applications are provided a user-mode "virtualized"” event log in which to write events.  These events end up in a file named `d:\home\logfiles\eventlog.xml`, with a limit of 1000 (rotated) entries in the file; this virtualization was done to enable better debugging of applications as well as to support applications which require (as part of their basic function) to register event sources.  As mentioned, the virtualization is done in user-mode within the application process itself using API hooking (in our case detours).  
+While apps are not permitted to read from or write to the Event Log service _per se_, a virtualized event log is available which requires no change to app code to use.  Events written using the normal event logging APIs will be written to an XML file located at `%SYSTEMDRIVE%\home\logfiles\eventlog.xml`.  This virtualized event log has a rotating limit of 1000 events &mdash; events written past this limit still be written, but will cause the oldest events to be removed from the file. This virtualization is done to enable better debugging of apps as well as to support applications which require, as part of their basic function, the registration and use of event sources.  Technically, this virtualization is done in user-mode within the application process itself using [API hooking](http://research.microsoft.com/en-us/projects/detours/).  
 
 #### Access to out-of-process COM servers
 
@@ -101,16 +105,18 @@ While sandboxed applications can follow/open existing symbolic links, they canno
 
 ### Networking Restrictions/Considerations
 
-Applications are restricted in terms of their outbound/inbound network access.  
+There are manifold restrictions in terms of network access from an Azure Web App.  This section outlines limitations _specific_ to Azure App Service; apps are, in addition, still subject to Azure's [own networking restrictions](https://azure.microsoft.com/en-us/documentation/articles/virtual-networks-faq/).
 
 #### Network endpoint listening
 
-Applications cannot listen on an arbitrary port which is exposed to the internet; the only external way to access the application is through port 80/443.  However, an application can create a listen socket which is accessible only from within the sandbox.  So two processes within a sandbox can communicate with each other using TCP/IP sockets; but not process outside the sandbox would be able to connect to the listening process within the sandbox.  See next topic.  
+The only way an application can be accessed via the internet is through the already-exposed HTTP (`80`) and HTTPS (`443`) TCP ports; applications may not listen on other ports for packets arriving from the internet.  
+However, applications may create a socket which can listen for connections from within the sandbox.  For example, two processes within the same app may communicate with one another via TCP sockets; connection attempts incoming from outside the sandbox, albeit they be on the same machine, will fail.  See the next topic for additional detail.
 
 #### Local Address Requests
 
-With the exception of the above case involving local listening, an application cannot connect to a local IP address; in this context local means either the loopback address (127.0.0.1) or the IP address of the VM itself.  In general when the sandbox rejects a connection for whatever reason, the resulting .NET exception looks like:
+Connection attempts to local addresses (_e.g._ `localhost`, `127.0.0.1`) and the machine's own IP will fail, _except_ if another process in the _same_ sandbox has created a listening socket on the destination port.  
 
+Rejected connection attempts, such as the following example which attempts to connect to `127.0.0.1:80`, from .NET will result in the following exception:
 ```
 Exception Details: System.Net.Sockets.SocketException: An attempt was made to access a socket in a way forbidden by its access permissions 127.0.0.1:80
 ```
@@ -130,6 +136,11 @@ Regarding of address, applications cannot connect to anywhere using ports 445, 1
 #### Named Pipes
 
 Within the sandbox, applications can create named pipes which accessible only within the sandbox (much like how listen sockets are allowed within sandbox). 
+
+### Virtual Networks
+Azure Web Apps may set up their [_virtual networks_](https://azure.microsoft.com/en-us/documentation/articles/virtual-networks-overview), or _VNets_ in order to facilitate connectivity between Azure and on-premise intranets.  This special case of network connectivity is also handled differently in the sandbox.  In particular, the aforementioned restrictions on private and local addresses are ignored if the target network interface belongs to the app.  Other VNet adapters on the same machine cannot be accessed, and all other network limitations are still apply.
+
+Additionally, the sandbox automatically affinitizes [`connect`](https://msdn.microsoft.com/en-us/library/windows/desktop/ms737625%28v=vs.85%29.aspx) and [`send`](https://msdn.microsoft.com/en-us/library/windows/desktop/ms740149%28v=vs.85%29.aspx) operations destined for VNet addresses to the correct VNet interface, in order to improve ease-of-use of the VNet feature.
 
 ### Numerical Sandbox Limits
 
