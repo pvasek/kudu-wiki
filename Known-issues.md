@@ -34,11 +34,3 @@ It seems to be a general msysgit issue that people run into occasionally (not re
 The workaround is to make a dummy commit (e.g. using `--allow-empty` so you don't have to change any files) and push again. If you want to keep your repo clean, you can then reset that commit and force push.
 
 Our hope is that this issue is fixed in the newest msysgit (version 2.5.x). Right now, Kudu is still using an older build (1.8.4). Unless we find some issues with using the newer build, we're planning to move to it before the end of 2015, and hopefully this will take care of this.
-
-### You get a 404 during 'git push'
-
-That can happen when you have a large site, and you have the git http.postBuffer setting set to a high value.
-
-The workaround is to unset it, using:
-
-    git config --global --unset http.postBuffer
