@@ -1,5 +1,9 @@
 ## Read what others are saying about WebJobs!
 
+- "I've been busy writing my first @Azure WebJob in Node.js -- and the experience was all kinds of awesome -- http://t.co/VaWfqJOSTA" @glen_a_smith [27 May 2015](http://twitter.com/#!/glen_a_smith/status/603497290666364928)
+- "I really think #azure #webjobs are going to be a Big thing. After a single day of usage I've found a ton scenario where they are perfect!" @ivanfioravanti [14 Apr 2015](http://twitter.com/#!/ivanfioravanti/status/588093948712845313)
+- "Using scheduled Azure WebJobs is so much easier and nicer than using Azure WebRoles in the old times .." @igorkulman [9 Apr 2015](http://twitter.com/#!/igorkulman/status/586127091227348992)
+- "Azure Web Jobs are awesome t.co/HRxnTcokbW" @spkrby [23 Mar 2015](http://twitter.com/#!/spkrby/status/580161768615362560)
 - "This week I have been mostly singing the praises of #Azure #Webjobs.That is some crazy, voodoo, useful stuff!" @Benjimawoo [18 Mar 2015](http://twitter.com/#!/Benjimawoo/status/578287671790977024)
 - "Now run scripts on existing website using Azure Webjobs. This is simple awesome !! #Azure4Sure" @mayanksbirla [18 Mar 2015](http://twitter.com/#!/mayanksbirla/status/578159423538872320)
 - "Webjobs comes without any cost from Microsoft Azure! Just with loads of love #Azure4Sure" @VatsAnkush [18 Mar 2015](http://twitter.com/#!/VatsAnkush/status/578156087150387200)
