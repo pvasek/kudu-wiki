@@ -1,3 +1,16 @@
+### New Roslyn based compiler takes more memory
+
+Recently, we updated the .NET build process to use the new VS 2015 toolset. The primary reason is to give access to new C# 6 compiler features like string interpolation.
+
+One downside of this change that has been affecting some users is that the new compiler appears to use quite a bit more memory than the old one, at least in some scenarios. When running on VMs that are already tight on memory, that can cause it to go over the edge and start thrashing, leading to extremely slow performance.
+
+Luckily, there is a simple workaround to go back to the previous compiler. Add the following App Settings in the Azure portal:
+
+    MSBUILD_PATH=D:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe
+
+We're still investigating the issue, but in the meantime, this should completely eliminate it. The obvious drawback is that you won't be able to use new compiler features.
+   
+
 ### You may get occasional "Couldn't reserve space for cygwin's heap" errors when git pushing
 
 This is tracked by https://github.com/projectkudu/kudu/issues/878.
@@ -25,7 +38,3 @@ That can happen when you have a large site, and you have the git http.postBuffer
 The workaround is to unset it, using:
 
     git config --global --unset http.postBuffer
-
-### post-receive issue with remote: hooks/post-receive: line 4: D:\Program: No such file or directory
-
-Simply follow the step in this [repository](https://github.com/projectkudu/FixPostReceive)
