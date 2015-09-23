@@ -10,7 +10,7 @@ Luckily, there is a simple workaround to go back to the previous compiler. Add t
 
 We're still investigating the issue, but in the meantime, this should completely eliminate it. The obvious drawback is that you won't be able to use new compiler features. If that is a deal killer for you, the alternative workaround is to avoid running out of memory in the VM, using one or more of the following techniques:
 
-- Scale up to a large VM size.
+- Scale up to a larger VM size.
 - Reduce the number of sites you run in your App Service Plan (remember that slots are distinct sites).
 - Avoid workflows that use a lot of memory. e.g. in some user's case, there was a WebJob that was at time taking 2GB of memory, which combine with the compiler memory usage to trigger the issue.
    
