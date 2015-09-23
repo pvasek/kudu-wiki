@@ -98,6 +98,12 @@ See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-
 
     WEBSITE_LOAD_USER_PROFILE=1
 
+### Turning on the 'local cache' feature.
+
+This feature copies the site bits to the faster local drive before running them.
+
+    WEBSITE_LOCAL_CACHE_OPTION=Always
+
 ### Disable the use of private site extensions
 
     WEBSITE_PRIVATE_EXTENSIONS=0
