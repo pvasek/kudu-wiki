@@ -1,5 +1,9 @@
 ## Here are a few fun tweets about Kudu from the community:
 
+- "I've just discovered Kudu console and take back all the nasty things I said about @Azure" @danorak [2 Sep 2015](http://twitter.com/#!/danorak/status/639091042357133313)
+- "Deploying to @azure via @github push origin is a truck load easier than the old FTP days." @James_Willock [28 May 2015](http://twitter.com/#!/James_Willock/status/603842275886669825)
+- "Automatic deployments to Azure using GitHub are awesome (when your code isn't busted)." @reverentgeek [15 May 2015](http://twitter.com/#!/reverentgeek/status/599249444366917632)
+- "On OS X, I just wrote a @nodejs app with @code, then deployed to @Azure (first time in 5 years) using @github CI. What a world we live in." @_DANTHOMPSON [5 May 2015](http://twitter.com/#!/_DANTHOMPSON/status/595701665036132353)
 - "never gets old, new azure website, create a git repo with some files, commit, push and boom - site is live #5mins #azure" @michelebusta [13 Mar 2015](http://twitter.com/#!/michelebusta/status/576540747383619584)
 - "project #kudu has given #azure #websites its elan https://t.co/oPduA33XuO @davidebbo and others contributors. Thanks!" @vlele [8 Mar 2015](http://twitter.com/#!/vlele/status/574597872865382400)
 - "Pushing my #nodejs app to #azure via #github was embarrassingly easy!" @SteveGreatrex [18 Feb 2015](http://twitter.com/#!/SteveGreatrex/status/568052661368561664)
