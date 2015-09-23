@@ -2,7 +2,7 @@
 
 Recently, we updated the .NET build process to use the new VS 2015 toolset. The primary reason is to give access to new C# 6 compiler features like string interpolation.
 
-One downside of this change that has been affecting some users is that the new compiler appears to use quite a bit more memory than the old one, at least in some scenarios. When running on VMs that are already tight on memory, that can cause it to go over the edge and start thrashing, leading to extremely slow performance.
+One downside of this change that has been [affecting some users](https://github.com/projectkudu/kudu/issues/1693) is that the new compiler appears to use quite a bit more memory than the old one, at least in some scenarios. When running on VMs that are already tight on memory, that can cause it to go over the edge and start thrashing, leading to extremely slow performance.
 
 Luckily, there is a simple workaround to go back to the previous compiler. Add the following App Settings in the Azure portal:
 
