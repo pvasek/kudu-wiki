@@ -24,7 +24,7 @@ print "Content-type: text/plain\n\n";
 print "Hello from Perl on Windows!\n";
 ```
 
-If you're using __CGI.pm__ to write to disk (or anything that uses __File::Temp__), be aware that Perl does not get the right temporary location in its $ENV{TMPDIR}. You'll need to specify it yourself at the top of your script.
+If you're using __CGI.pm__ to write to disk (or anything that uses __File::Temp__ for that matter), be aware that Perl does not get the right temporary location in its `$ENV{TMPDIR}`. You'll need to specify it yourself at the top of your script.
 
 Example:
 ```perl
