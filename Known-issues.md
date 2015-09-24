@@ -1,19 +1,25 @@
-### New Roslyn based compiler takes more memory
+### New Roslyn based compiler maxes out CPU, slowing down everything
 
 Recently, we updated the .NET build process to use the new VS 2015 toolset. The primary reason is to give access to new C# 6 compiler features like string interpolation.
 
-One downside of this change that has been [affecting some users](https://github.com/projectkudu/kudu/issues/1693) is that the new compiler appears to use quite a bit more memory than the old one, at least in some scenarios. When running on VMs that are already tight on memory, that can cause it to go over the edge and start thrashing, leading to extremely slow performance.
+Unfortunately, we found an issue with compiler that can in some cases cause it to max out the CPU, and that can continue even after the build is complete. See[this issue](https://github.com/projectkudu/kudu/issues/1693).
 
-Luckily, there is a simple workaround to go back to the previous compiler. Add the following App Settings in the Azure portal:
+We are actively discussing with the compiler team, and they will hopefully address the issue. But in the meantime, there are workarounds that can be used to avoid it.
+
+#### Disable the 'shared compilation' mode of the new compiler
+
+By default, the compiler starts a server process (`vbcscompiler.exe`), and sends work to it. This server keeps running across compilations. The bug is related to how this server communicate via a named pipe.
+
+You can easily disable this behavior by adding the following App Settings in the Azure portal: 
+
+    SCM_BUILD_ARGS=/p:UseSharedCompilation=false
+
+#### Go back to the older compiler
+
+As an alternative, if you are not using any VS 2015 features, you can back to the previous compiler. Add the following App Settings in the Azure portal:
 
     MSBUILD_PATH=D:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe
 
-We're still investigating the issue, but in the meantime, this should completely eliminate it. The obvious drawback is that you won't be able to use new compiler features. If that is a deal killer for you, the alternative workaround is to avoid running out of memory in the VM, using one or more of the following techniques:
-
-- Scale up to a larger VM size.
-- Reduce the number of sites you run in your App Service Plan (remember that slots are distinct sites).
-- Avoid workflows that use a lot of memory. e.g. in some user's case, there was a WebJob that was at time taking 2GB of memory, which combine with the compiler memory usage to trigger the issue.
-   
 
 ### You may get occasional "Couldn't reserve space for cygwin's heap" errors when git pushing
 
