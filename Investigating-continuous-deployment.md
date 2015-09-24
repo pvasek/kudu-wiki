@@ -2,6 +2,10 @@ This is a guide to help investigate why the continuous deployment from GitHub or
 
 ## Issues related to setting up continuous deployment from the Azure Portal
 
+### Things to check if you are working with GitHub organizations
+
+This [post](https://azure.microsoft.com/en-us/blog/using-app-service-web-apps-continuous-deployment-with-github-organizations/) describes what you need to do to make sure that Azure can see repos in the relevant organizations.
+
 ### Q: Can't see the repositories in the drop down!
 
 You need to be an admin on the repositories.  To check if you are an admin of the repo, ...
