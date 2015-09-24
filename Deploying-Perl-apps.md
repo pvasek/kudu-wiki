@@ -37,6 +37,9 @@ print $q->header(-type => "text/plain");
 print "Temporary folder set to $ENV{TMPDIR}\n";
 ```
 
+
 Output:
 
 `Temporary folder set to d:\local\temp`
+
+See this issue for more details on `File::Temp`: https://github.com/projectkudu/kudu/issues/1700
