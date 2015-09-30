@@ -66,6 +66,32 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
     
     GET /api/deployments/{id}
     Get a deployment
+
+    PUT /api/deployments/{id}
+    This API has 2 behaviors based on the payload.
+
+      - Redeploy a current or previous deployment
+        {id} is optional. If not provided, redeploy the current head.
+        payload (optional):
+        {
+          clean: false,        // optional, whether to run git clean -xdf before building
+          needFileUpdate: true // optional, whether to run git checkout (good to skip checkout big repo) 
+        }
+
+      - Add a deployment status to history
+        {id} is required.
+        payload (required):
+        {
+          status: 3|4,                               // required, whether failed (3) or success (4) status
+          message: "commit message",                 // required, commit message  
+          author: "John Smith",                      // required
+          deployer: "VSO",                           // required, deployer service      
+          author_email: "john@smith.com",            // optional
+          start_time: "2015-09-09T22:39:50.0052315Z",// optional, when the deployment started
+          end_time: "2015-09-09T22:39:50.0052315Z",  // optional, when the deployment ended
+          active: true,                              // optional, this is latest deployment
+          details: "https://foo.com/details"         // optional, url to get more details
+        }
     
     PUT /api/deployments/{id}
     Deploy a previous deployment
