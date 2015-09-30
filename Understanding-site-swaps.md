@@ -1,3 +1,5 @@
+**Note: you should also check out [this blog post](http://ruslany.net/2015/09/how-to-warm-up-azure-web-app-during-deployment-slots-swap/) which goes in great depth about this topic.**
+
 When you swap two slots, there is always a source and a target. Typically, the target is the Production slot (i.e. the site itself). Swapping is performed in a way that avoids any down time for the target site. However, we've seen a fair bit of misunderstanding from users about exactly what that means, so this will try to clarify.
 
 Here is what happens when you swap a source slot (let's call it 'Staging') into a target slot (Production).
