@@ -36,7 +36,7 @@ We use the following logic to decide which file is the script to run within the 
 
 * **WEBJOBS_RESTART_TIME** - Timeout in seconds between when a continuous job's process goes down (for any reason) and the time we re-launch it again (Only for continuous jobs).
 * **WEBJOBS_IDLE_TIMEOUT** - Time in seconds after which we'll abort a running triggered job's process if it's in idle, has no cpu time or output (Only for triggered jobs).
-* **WEBJOBS_HISTORY_SIZE** - Maximum number of runs kept in the history directory for a triggered job.
+* **WEBJOBS_HISTORY_SIZE** - Maximum number of runs kept in the history directory for a triggered job. The default is 50.
 * **WEBJOBS_STOPPED** - Set this setting to **1** to disable running any job (will also stop all currently running jobs).
 
 ## Environment Settings ##
