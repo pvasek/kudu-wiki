@@ -326,6 +326,8 @@ e.g. this enables SomeModule on the main site
 
 The default is 50, and the following changes it to 100.
 
+Note that the cleanup happens is a kind of unusual way. When `maxLogFiles` is reached, half the files get deleted. So for example when set to 100, you'll have between 50 and 100 at any given time.
+
 ```xml
 <?xml version="1.0"?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
