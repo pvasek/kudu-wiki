@@ -322,6 +322,24 @@ e.g. this enables SomeModule on the main site
 </configuration>
 ```
 
+### Change the number of failed request files that get kepts
+
+The default is 50, and the following changes it to 100.
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.applicationHost>
+    <sites>
+      <site name="%XDT_SITENAME%" xdt:Locator="Match(name)">
+        <traceFailedRequestsLogging xdt:Transform="Remove" />
+        <traceFailedRequestsLogging xdt:Transform="Insert" enabled="true" customActionsEnabled="true" directory="D:\home\LogFiles" maxLogFileSizeKB="4096" maxLogFiles="100" />
+      </site>
+    </sites>
+  </system.applicationHost>
+</configuration>
+```
+
 ### Enable Web Sockets
 
 The following does the equivalent of enabling Web Sockets in the portal
