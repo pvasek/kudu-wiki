@@ -2,7 +2,7 @@ Note: this section applies to both Pre-Installed and Private [[site extensions|A
 
 The simplest way to apply one of these transforms for your site is:
 
-- Create an `applicationHost.xdt` file under your 'site' folder (i.e. `d:\home\site\applicationHost.xdt`), and copy the content from the samples below into it
+- Use [Kudu Console] to create an `applicationHost.xdt` file under your 'site' folder (i.e. `d:\home\site\applicationHost.xdt`), and copy the content from the samples below into it
 
 See [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.aspx) for detailed documentation on the XDT syntax.
 
