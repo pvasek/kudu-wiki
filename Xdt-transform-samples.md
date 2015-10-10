@@ -391,6 +391,36 @@ Add a rule that returns a 403 if a certain http header is present
 </configuration>
 ```
 
+### Redirect http traffic to https
+
+This redirects all http traffic to https. It also makes sure that the site warmup request gets through, which makes things work correctly in site swap and Always On scenarios.
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <location path="%XDT_SITENAME%" xdt:Transform="InsertIfMissing" xdt:Locator="Match(path)">
+    <system.webServer xdt:Transform="InsertIfMissing">
+      <applicationInitialization xdt:Transform="InsertIfMissing">
+        <add initializationPage="/"  xdt:Transform="InsertIfMissing"/>
+      </applicationInitialization>
+
+      <rewrite xdt:Transform="InsertIfMissing">
+        <rules xdt:Transform="InsertIfMissing">
+          <rule name="Force HTTPS" enabled="true" stopProcessing="true">
+            <match url="(.*)" ignoreCase="false" />
+            <conditions>
+              <add input="{HTTPS}" pattern="off" />
+              <add input="{WARMUP_REQUEST}" pattern="1" negate="true" />
+            </conditions>
+            <action type="Redirect" url="https://{HTTP_HOST}/{R:1}" appendQueryString="true" redirectType="Permanent" />
+          </rule>
+        </rules>
+      </rewrite>    
+    </system.webServer>
+  </location>
+</configuration>
+```
+
 ### Add an allowedServerVariables
 
 Add `CONTENT_TYPE` to the list of allowed variables:
