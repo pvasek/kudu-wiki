@@ -175,3 +175,5 @@ At the root of the repository enter the command:
 ![2012-12-20-azure-website-custom-deployment-part-3_md8](https://cloud.githubusercontent.com/assets/4468967/10491870/aaacacfe-725d-11e5-9395-04018262eb68.png)
 
 **NOTE: Another improvement we could do here is to store the repository on GitHub/Bitbucket and connect them to our 2 sites, now every time we push to GitHub/Bitbucket, both of our sites will be deployed.**
+
+The repository I've used can be cloned from [here](https://github.com/amitapl/CustomScriptSample).
