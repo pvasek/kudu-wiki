@@ -115,7 +115,7 @@ running the following command: `npm install azure-cli -g`
 - Enter the following command: `azure site deploymentscript --node --sitePath nodejs`
 - Where "nodejs" is the path to the node.js website directory.
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md1.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md1](https://cloud.githubusercontent.com/assets/4468967/10491864/aa9bc2c2-725d-11e5-9363-a65393e2c270.png)
 
 - Notice the files that were generated:
 > - .deployment - a file telling which command to run for deployment (currently deploy.cmd).
@@ -131,7 +131,7 @@ At the root of the repository enter the command:
 
     azure site deploymentscript --aspWAP mvc4\Mvc4WebApplication\Mvc4WebApplication.csproj -s mvc4\Mvc4WebApplication.sln
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md2.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md2](https://cloud.githubusercontent.com/assets/4468967/10491869/aaa01520-725d-11e5-9a77-9d7410e05f30.png)
 
 * Rename deploy.cmd to deploy.mvc4.cmd: `move deploy.cmd deploy.mvc4.cmd`
 
@@ -151,27 +151,27 @@ At the root of the repository enter the command:
 
     git push WA master
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md3.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md3](https://cloud.githubusercontent.com/assets/4468967/10491865/aa9d9868-725d-11e5-9ab0-9401ab59076f.png)
 
 * We receive an error and the deployment fails since we still haven't set the app setting yet, so let's do that.
 
 * Go to the website on windows azure management portal and add under the CONFIGURATION tab under "app settings" a setting with name SITE_FLAVOR and value nodejs/mvc3 (based on the current site we're configuring).
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md4.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md4](https://cloud.githubusercontent.com/assets/4468967/10491923/0959494c-725e-11e5-84d6-4f2a723d248f.png)
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md5.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md5](https://cloud.githubusercontent.com/assets/4468967/10491867/aa9dda8a-725d-11e5-9203-f54c55176936.png)
 
 * Click on the "Save" button.
 
 * Now we can either push our changes again (we'll need a new commit, even an empty one, otherwise it'll tell us that nothing has changed and the deployment won't reinitiate).
 * Or we can go to the DEPLOYMENTS tab in Windows Azure portal, select the last deployment which failed and push the RETRY button to retry the deployment.
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md6.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md6](https://cloud.githubusercontent.com/assets/4468967/10491868/aaa00efe-725d-11e5-9225-8764e54ab336.png)
 
 ### That's it, now we have a working mvc4/node.js website
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md7.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md7](https://cloud.githubusercontent.com/assets/4468967/10491866/aa9ddada-725d-11e5-8311-827ba59a8f05.png)
 
-![](/images/2012-12-20-azure-website-custom-deployment-part-3.md8.png)
+![2012-12-20-azure-website-custom-deployment-part-3_md8](https://cloud.githubusercontent.com/assets/4468967/10491870/aaacacfe-725d-11e5-9395-04018262eb68.png)
 
 **NOTE: Another improvement we could do here is to store the repository on GitHub/Bitbucket and connect them to our 2 sites, now every time we push to GitHub/Bitbucket, both of our sites will be deployed.**
