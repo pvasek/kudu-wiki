@@ -2,6 +2,8 @@ Note: This page is sourced from a 3-part [blog series](http://blog.amitapple.com
 
 See also: [Customizing Deployments](https://github.com/projectkudu/kudu/wiki/Customizing-deployments)
 
+-----
+
 #Custom Deployment Scripts For Microsoft Azure Web Apps (Websites) Using Git Deployment
 
 The coolest feature on Microsoft Azure Web Apps is the ability to deploy your website using git.
@@ -37,6 +39,8 @@ With all of those you can create your own deployment script, a simple one for ex
 This script will copy all of the files from your repository to the wwwroot directory.
 
 But to make things easier, you can use the azure-cli tool which will actually generate a deployment script for you that will do exactly the same deployment process as the default one but now you are able to update that script and add (or remove) your own steps.
+
+-----
 
 # Custom Deployment Script Generator
 
@@ -95,6 +99,8 @@ The genius of this tool is that it'll only copy the files that were changed, it'
 After adding your own logic to the deployment script you can run in locally and test it to make sure it does what you need it to, it'll publish your site to a sub-directory called *artifacts* so make sure you're not add the files there to your repository.
 
 When the script is tested, add the generated files to your repository (.deployment and deploy.cmd, for node also web.config and iisnode.yml) and push your repository to your Microsoft azure web app and see your custom deployment running.
+
+-----
 
 # Customizing site deployment based on site's app settings in Azure Web Apps (Websites)
 
