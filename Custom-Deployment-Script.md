@@ -1,5 +1,7 @@
 Note: This page is sourced from a 3-part [blog series](http://blog.amitapple.com/post/38417491924/azurewebsitecustomdeploymentpart1) which explains the feature in detail.
 
+See also: [Customizing Deployments](https://github.com/projectkudu/kudu/wiki/Customizing-deployments)
+
 #Custom Deployment Scripts For Microsoft Azure Web Apps (Websites) Using Git Deployment
 
 The coolest feature on Microsoft Azure Web Apps is the ability to deploy your website using git.
