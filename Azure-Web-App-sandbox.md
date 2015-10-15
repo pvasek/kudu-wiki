@@ -172,11 +172,11 @@ Here is a list of frameworks and scenarios that have been found to be not be usa
 
 PDF generators failing due to restriction mentioned above:
 
-- EVOPDF:  
-- Rotativa: PDF generation.
-- wkhtmltopdf: PDF generation.
-- Syncfusion: PDF generation.
-- Siberix: PDF generation.
+- EVOPDF
+- Rotativa
+- wkhtmltopdf
+- Syncfusion
+- Siberix
 
 Other scenarios:
 
