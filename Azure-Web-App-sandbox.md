@@ -165,3 +165,19 @@ These limits apply only for customers of Basic or higher plans; in other words c
 | Limit name | Description | Small (A1) | Medium (A2) | Large (A3)
 | ---------- | ----------- | ---------- | ----------- | ----------
 | Connections | Number of connections across entire VM | 1920 | 3968 | 8064
+
+### Unsupported frameworks
+
+Here is a list of frameworks and scenarios that have been found to be not be usable due to one or more of the restrictions above. It's conceivable that some will be supported in the future as the sandbox evolves.
+
+PDF generators failing due to restriction mentioned above:
+
+- EVOPDF:  
+- Rotativa: PDF generation.
+- wkhtmltopdf: PDF generation.
+- Syncfusion: PDF generation.
+- Siberix: PDF generation.
+
+Other scenarios:
+
+- PhantomJS/Selenium: tries to connect to local address, and also uses GDI+.
