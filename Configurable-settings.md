@@ -92,6 +92,12 @@ Used the change the version of Node that is used by default
 
     WEBSITE_NODE_DEFAULT_VERSION=0.10.5
 
+### Change the Npm version
+
+Used the change the version of Npm that is used by default
+
+    WEBSITE_NPM_DEFAULT_VERSION=1.2.30
+
 ### Add user profile support for a site
 
 See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-US/b919f872-2d4c-4c94-9cf1-9494e97d35ce/deployments-fails-when-referencing-systemxaml?forum=azuregit) for details. Note that this is only available for sites running in Basic or Standard mode.
