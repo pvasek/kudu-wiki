@@ -177,6 +177,7 @@ PDF generators failing due to restriction mentioned above:
 - wkhtmltopdf
 - Syncfusion
 - Siberix
+- NReco (uses wkhtmltopdf)
 
 Other scenarios:
 
