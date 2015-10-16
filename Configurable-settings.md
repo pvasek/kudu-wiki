@@ -44,6 +44,12 @@ For large repos, you can make Kudu use a shallow clone when it clones your repo 
 
 Note: this is support as an Azure App Setting, but not in the .deployment file.
 
+### Don't touch web.config at the end of the deployment
+
+By default, it gets touched. Sometimes, it's sub-optimal as it can causes an unnecessary restart. To avoid it, set:
+
+    SCM_TOUCH_WEBCONFIG_AFTER_DEPLOYMENT=0
+
 ### Customize post deployment action directory
 
 After deployment, Kudu will execute, if exists, `postdeployment` script under /site/deployments/tools directory.  To customize to different directory, one can set the following setting.
