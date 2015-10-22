@@ -31,7 +31,7 @@ You are done here if you had run [KuduDevSetup.cmd](https://github.com/projectku
  * Copy your `\Program Files\nodejs` folder to \Program Files (x86)\nodejs.
  * Under `\Program Files (x86)\nodejs`, you need to have a folder named `0.8.2`, and containing [node.exe version 0.8.2](http://nodejs.org/dist/v0.8.2/node.exe). And then same deal for Node 0.10.5 (you can put the 0.8.2 exe in the 0.10.5 folder; it's the folder that matters). Yes, this is kind of painful, and we need to make it easier!
 * Install [Mercurial](http://mercurial.selenic.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Mercurial```)
-
+* Install HttpPlatformHandler ([x86](http://go.microsoft.com/fwlink/?LinkId=690722), [x64](http://go.microsoft.com/fwlink/?LinkId=690721)) for ASP.NET 5 support
 
 ### Deploying your first application
 1. First clone the repository.
