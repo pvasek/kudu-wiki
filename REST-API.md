@@ -92,10 +92,7 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
           active: true,                              // optional, this is latest deployment
           details: "https://foo.com/details"         // optional, url to get more details
         }
-    
-    PUT /api/deployments/{id}
-    Deploy a previous deployment
-    
+        
     DELETE /api/deployments/{id}
     Delete a deployment
     
