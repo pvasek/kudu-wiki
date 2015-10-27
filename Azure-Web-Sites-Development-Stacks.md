@@ -9,7 +9,7 @@ The default is .NET Framework 4.5 (currently .NET 4.5.2).
 
 To get the full list of supported Node and npm:
 
-* Go to https://hackbox.[yoursite].azurewebsites.net/
+* Go to https://[yoursite].scm.azurewebsites.net/
 * Click on 'Runtime versions' under API 
 
 The default is Node.js 0.10.32.
