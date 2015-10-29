@@ -1,8 +1,8 @@
 ## .NET
 * **CLR**: 2.0, 4.0  
 The default is CLR 4.0.   
-* **Framework**: up to 4.5  
-The default is .NET Framework 4.5 (currently .NET 4.5.2).
+* **Framework**: up to 4.6  
+The default is .NET Framework 4.6 (currently .NET 4.6.0).
 * ASP.NET 5 is also supported either through Kudu or Web Deploy
 
 ## Node.js (and matching npm)
