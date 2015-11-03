@@ -15,6 +15,7 @@ This is useful in two scenarios:
 - Create a Web Apps that you will use as you admin site, inside the relevant App Service Plan 
 - Go to https://resources.azure.com and locate the App Service Plan (under 'serverfarms')
 - Click Edit, and set the `adminSiteName` property to you're admin site's name. e.g. `"adminSiteName": "myadminsite"`
+- Click Put to save the change
 
 ## Deploying bits into an admin site
 
