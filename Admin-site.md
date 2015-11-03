@@ -2,6 +2,8 @@
 
 Each App Service Plan (aka Server Farm) can have an admin site, which is use to share behavior or files among all the other Web Apps in the App Service Plan.
 
+Note that this feature is only supported in Standard or higher mode. It is not available to Free/Shared/Basic Web Apps.
+
 ## Scenarios
 
 This is useful in two scenarios:
