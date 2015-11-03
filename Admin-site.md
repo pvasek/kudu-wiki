@@ -32,5 +32,5 @@ If you zip file contains a site extension, it is now active in all other Web App
 
 - After deploying the admin bits, pick another Web App in the same plan, and restart it.
 - Go into that Web App's Kudu Console, and click on the Environment tab at the top
-- You should see a new environment variable called `WEBSITE_ADMIN_SITEID`, with value `1040747975` (or whatever you segment is above).
+- You should see a new environment variable called `WEBSITE_ADMIN_SITEID`, with value `1040747975` (or whatever your segment is above).
 - You can now access the bits from code by looking up their location in `@"D:\Program Files (x86)\AdminExtensions\{0}\MySiteExtension\1.0.0"`, where you replace `{0}` with `Environment.GetEnvironmentVariable("WEBSITE_ADMIN_SITEID")`.
