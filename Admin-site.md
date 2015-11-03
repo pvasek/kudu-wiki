@@ -17,7 +17,7 @@ This is useful in two scenarios:
 - Click Edit, and set the `adminSiteName` property to your admin site's name. e.g. `"adminSiteName": "myadminsite"`
 - Click Put to save the change
 
-## Deploying bits into an admin site
+## Deploying Bits into the Admin Site
 
 - Go to your admin site's [[Kudu Console]]
 - Create a folder with this structure: `D:\home\SiteExtensions\MySiteExtension\1.0.0`
@@ -26,7 +26,7 @@ This is useful in two scenarios:
 
 The expanded content of the zip file will get copied to a folder named `D:\Program Files (x86)\AdminExtensions\1040747975\MySiteExtension\1.0.0`. Note that the `1040747975` will vary.
 
-If you zip file contains a site extension, it is now active in all other Web Apps in the plan (pending restart), and you are done.
+If your zip file contains a site extension, it is now active in all other Web Apps in the plan (pending restart), and you are done.
 
 ## Accessing the deployed admin bits from other Web Apps
 
