@@ -1,3 +1,13 @@
+## S49 (11/2015)
+* Add smarts to avoid touching web.config during deployment when it's not needed
+* Support ASP.NET 5 beta8
+
+## S48 (10/2015)
+* Add WebHooks support to WebJobs
+* Support ASP.NET 5 beta7
+* Display update percentage during file upload to Kudu Console
+* Added Ace editor help to Kudu Console
+
 ## S47 (8/2015)
 * New profiling support
 * Add support for DNX based WebJobs
