@@ -12,7 +12,7 @@ This is useful in two scenarios:
 
 ## Creating an admin site
 
-- Create a Web Apps that you will use as you admin site, inside the relevant App Service Plan 
+- Create a new Web App that you will use as your admin site, inside the relevant App Service Plan 
 - Go to https://resources.azure.com and locate the App Service Plan (under 'serverfarms')
 - Click Edit, and set the `adminSiteName` property to your admin site's name. e.g. `"adminSiteName": "myadminsite"`
 - Click Put to save the change
