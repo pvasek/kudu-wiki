@@ -38,7 +38,7 @@
 ]
 ```
 
-### List all triggered jobs in swagger fromat ###
+### List all triggered jobs in swagger format ###
 
     GET /api/triggeredwebjobsswagger
 
