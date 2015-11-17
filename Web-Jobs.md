@@ -24,7 +24,7 @@ The following file types are accepted as runnable scripts that can be used as a 
 
 We use the following logic to decide which file is the script to run within the job's directory:
 
-* Per file type we look first for a file named: ```run.{file type extension}``` (for example ```run.cmd``` or ```run.exe```.
+* Per file type we look first for a file named: ```run.{file type extension}``` (for example ```run.cmd``` or ```run.exe```).
 * If it doesn't exists for all file types, we'll then look for the first file with a supported file type extension.
 * The order of file types extension used is: ```.cmd```, ```.bat```, ```.exe```, ```.ps1```, ```.sh```, ```.php```, ```.py```, ```.js```.
 * The recommended script file to have in your job directory is: ```run.cmd```.
