@@ -15,6 +15,7 @@ To deploy a continuous job copy your binaries to:
 
 The following file types are accepted as runnable scripts that can be used as a job:
 
+* .fsx (using the F# fsi.exe interactive compiler)
 * .cmd, .bat, .exe (using windows cmd)
 * .ps1 (using powershell)
 * .sh (using bash)
