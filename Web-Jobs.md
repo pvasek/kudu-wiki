@@ -22,6 +22,7 @@ The following file types are accepted as runnable scripts that can be used as a 
 * .php (using php)
 * .py (using python)
 * .js (using node)
+* project.json (using Dnx - [details here](http://ahmelsayed.com/running-dnx-based-webjobs))
 
 We use the following logic to decide which file is the script to run within the job's directory:
 
