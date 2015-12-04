@@ -116,6 +116,10 @@ This feature copies the site bits to the faster local drive before running them.
 
     WEBSITE_LOCAL_CACHE_OPTION=Always
 
+Also, the size of the cache can be changed (default is 300MB):
+
+    WEBSITE_LOCAL_CACHE_SIZEINMB=500
+
 ### Disable the use of private site extensions
 
     WEBSITE_PRIVATE_EXTENSIONS=0
