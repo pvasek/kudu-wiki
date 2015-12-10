@@ -112,6 +112,8 @@ See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-
 
 ### Turning on the 'local cache' feature.
 
+**note**: this feature is still experimental and not yet ready for production use!
+
 This feature copies the site bits to the faster local drive before running them.
 
     WEBSITE_LOCAL_CACHE_OPTION=Always
