@@ -342,6 +342,25 @@ Note that the cleanup happens is a kind of unusual way. When `maxLogFiles` is re
 </configuration>
 ```
 
+### Log failed request trace only for a certain status code
+
+The following makes FREB logs only for `409` requests
+
+```
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.webServer>
+    <tracing>
+      <traceFailedRequests>
+        <add path="*" xdt:Locator="Match(path)">
+          <failureDefinitions xdt:Transform="SetAttributes(statusCodes)" statusCodes="409" />
+        </add>
+      </traceFailedRequests>
+    </tracing>
+  </system.webServer>
+</configuration>
+```
+
 ### Enable Web Sockets
 
 The following does the equivalent of enabling Web Sockets in the portal
