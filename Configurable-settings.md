@@ -52,7 +52,7 @@ By default, it gets touched. Sometimes, it's sub-optimal as it can causes an unn
 
 ### Customize post deployment action directory
 
-See [Post Deployment Action Hooks] for details.
+See [[Post Deployment Action Hooks]] for details.
 
 ### Don't build and deploy during git push
 
