@@ -52,9 +52,7 @@ By default, it gets touched. Sometimes, it's sub-optimal as it can causes an unn
 
 ### Customize post deployment action directory
 
-After deployment, Kudu will execute, if exists, `postdeployment` script under /site/deployments/tools directory.  To customize to different directory, one can set the following setting.
-
-    SCM_POST_DEPLOYMENT_ACTIONS_PATH=<path> 
+See [Post Deployment Action Hooks] for details.
 
 ### Don't build and deploy during git push
 
