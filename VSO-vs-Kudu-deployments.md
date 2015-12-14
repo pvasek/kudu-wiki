@@ -4,6 +4,7 @@ When you set up deployment from source control in the Azure portal, you get a nu
 - Visual Studio Online
 - Local Git repository
 - GitHub
+- OneDrive
 - Dropbox
 - Bitbucket
 - CodePlex
