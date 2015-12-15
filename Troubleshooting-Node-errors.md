@@ -5,3 +5,4 @@ Once that's done:
 - using [[Kudu Console]], go to `D:\home\LogFiles\Application`. You should see some .txt files, as well as an `index.html`.
 - Click the down arrow next to `index.html`, and it should open a new tab with a page showing a list of errors.
 - Click the `log` link on any entry to get details
+- Another place to look for possible errors is under `D:\home\site\wwwroot\iisnode`
