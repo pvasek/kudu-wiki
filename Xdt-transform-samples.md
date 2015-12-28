@@ -8,7 +8,7 @@ See [Xml Document Transform](http://msdn.microsoft.com/en-us/library/dd465326.as
 
 ### Adding environment variables
 
-The following will inject an environment variable named `FOO`, with value `BAR`:
+The following will inject an environment variable named `FOO`, with value `BAR`, and add a folder to the `PATH`:
 ```xml
 <?xml version="1.0"?> 
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
