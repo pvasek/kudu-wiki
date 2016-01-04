@@ -1,6 +1,6 @@
 If your PHP site is failing with some http 500 errors, try enabling logging. To do this:
 - Use [[Kudu Console]] and go into `D:\home\site\wwwroot`
-- In your `.user.ini` file, add  the following line (you can type 'touch .user.ini` to create the file if it doesn't exist, and don't forget the starting dot on the .user.ini file!):
+- In your `.user.ini` file, add  the following line (you can type `touch .user.ini` to create the file if it doesn't exist, and don't forget the starting dot on the .user.ini file!):
 
 ```
 log_errors = On
