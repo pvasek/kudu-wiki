@@ -11,3 +11,7 @@ A **post deployment action hook** is a script/executable that runs after the dep
 - The script will have the same environment variables as the deployment script and *possibly* new environment variables set by the deployment script.
 
 - Script file name (minus extension) will become title in deployment log
+
+- Pre-installed site extension (%ProgramFiles(x86)%\SiteExtensions) could also have post deployment scripts
+ - There is a "PostDeploymentActions" folder under the the root of the package
+ - There is an environment variable {extension id}_EXTENSION_VERSION with value "latest" or {version}
