@@ -4,7 +4,16 @@ One important technique to diagnose issues is to look at trace files. Kudu servi
 
 ## Using /logstream
 
-By simply connecting to `<kudu-service-url>/logstream` (preferably using a tool like curl), you will be able to get the live streaming of traces.  The /logstream watches (FileSystemWatcher) all the log/txt files changes under /LogFiles and its sub folders.   
+The simplest way to get streaming logs is to use `curl`, e.g.
+
+    curl -u {username} https://{sitename}.scm.azurewebsites.net/logstream
+
+Notes:
+
+- The `{username}` here is your Azure Publishing user (same as you use for git publishing). The command will prompt for your password.
+- On windows, you can get `curl` in various ways, e.g. by installing Git for Windows. Note that PowerShell has a `curl` alias for `Invoke-WebRequest`, but that is not the real curl command, and will not work. 
+
+The /logstream watches (FileSystemWatcher) all the log/txt files changes under /LogFiles and its sub folders.   
 
 To scope the live traces to certain providers/folders, you may additional specify the path.
 
