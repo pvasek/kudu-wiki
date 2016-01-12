@@ -12,7 +12,7 @@ To get the full list of supported Node and npm:
 * Go to https://[yoursite].scm.azurewebsites.net/
 * Click on 'Runtime versions' under API 
 
-The default is Node.js 0.10.32.
+The default is Node.js 4.2.3.
 
 ## PHP
 * 5.4
