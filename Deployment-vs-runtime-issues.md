@@ -1,4 +1,4 @@
-We get a lot of questions from users that look more or less like "*I deploy my site and it doesn't run correctlt*" or "*I deployed and I still see old content when I browse*". When that happens, the first thing we need to do is determine whether it is a deployment issue or a runtime issue. This article explains the difference, and how to help isolate which one it is.
+We get a lot of questions from users that look more or less like "*I deploy my site and it doesn't run correctly*" or "*I deployed and I still see old content when I browse*". When that happens, the first thing we need to do is determine whether it is a deployment issue or a runtime issue. This article explains the difference, and how to help isolate which one it is.
 
 ## Deployment issues
 
