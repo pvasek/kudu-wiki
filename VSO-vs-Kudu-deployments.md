@@ -51,5 +51,5 @@ At this time, this is not supported, but you can setup build/deployment via [vis
 - For VSTS Git repo, my site had continuous deployment setup using VSTS infrastructure before, how can I migrate to use Kudu deployment engine?
 
  - [Disable continuous deployment](https://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/) from your site.
- - Make sure build definition is deleted (https://{VSTS Account}.visualstudio.com/DefaultCollection/project/_build), if not, right click on your build definition and choose "Delete".
+ - Make sure build definition is deleted, you can check your build definition from ````https://{VSTS Account Name}.visualstudio.com/DefaultCollection/{Project Name}/_build````. If there is leftover build definition, right click on it and choose "Delete".
  - From Azure portal, select option "Visual Studio Team Services" and follow the UI guidance
