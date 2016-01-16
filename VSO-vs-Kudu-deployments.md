@@ -21,7 +21,7 @@ If you connect to your site via [[Kudu Console]], you will see your sources unde
 
 ## How does Visual Studio Team Services deployment work
 
-When setting up continuous deployment to an Azure Website from Visual Studio Online, things work in the following way:
+When setting up continuous deployment to an Azure Website from Visual Studio Team Services, things work in the following way:
 - You repository lives in the VSTS infrastructure.
 - When you push a change via git, the VSTS build infrastructure builds your sources, and produces some deployment artifacts.
 - VSTS then uses WebDeploy (the same technology used by Visual Studio) to deploy the artifacts to your Azure Websites.
