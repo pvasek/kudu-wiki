@@ -9,7 +9,7 @@ When you set up deployment from source control in the Azure portal, you get a nu
 - Dropbox
 - External repository
 
-Under the cover, all of these options are using the Kudu deployment engine. For option "Visual Studio Team Services", Kudu only support git repository, see [Can I host my repo on VSTS and have Kudu build it](https://github.com/projectkudu/kudu/wiki/VSO-vs-Kudu-deployments#can-i-host-my-repo-on-vsts-and-have-kudu-build-it) for details.
+Under the cover, all of these options are using the Kudu deployment engine. For option "Visual Studio Team Services", Kudu only support git repository, see [Can I host my repo on VSTS and have Kudu build it](https://github.com/projectkudu/kudu/wiki/VSTS-vs-Kudu-deployments#can-i-host-my-repo-on-vsts-and-have-kudu-build-it) for details.
 
 This article explains some of the differences you may encounter, and how to report and investigate them.
 
