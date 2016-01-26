@@ -12,6 +12,7 @@ Sometimes, the issue exists outside of Azure Web Sites. Here are a couple things
 - Understanding the difference between deployment and runtime issues: [[deployment vs runtime issues]].
 - [[Reporting your site name without posting it publicly]]
 - [[Using a git repo to report an issue]]
+- [[Isolating WebJobs and Deployment script issues]]
 - [[VSTS vs Kudu deployments]]
 - [[Reporting WebJobs issues]]
 - [[Troubleshooting PHP errors]]
