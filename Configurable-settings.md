@@ -162,6 +162,11 @@ Timeout in milliseconds to keep application logging on (Default is 43200000, whi
 
     WEBSITE_DISABLE_SCM_SEPARATION=true
 
+When separation enabled (the default), the main site and scm site run in different sandboxes. Some resulting behavior:
+
+- With separation, when you stop the site, the scm site is still running, and you can continue to use git and msdeploy.
+- With separation, the Main and scm sites each have their own local files. So you won't see the Main site's temp files from Kudu console.
+
 ### Pre-start the SCM site as part of site creation (needs to be set in the site creation call)
 
     WEBSITE_START_SCM_ON_SITE_CREATION=true
