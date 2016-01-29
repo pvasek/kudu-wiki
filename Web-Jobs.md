@@ -6,10 +6,10 @@ Ability to run a script (called job) in 2 different ways:
 Jobs are deployed by copying them to the right place in the file-system (or using a designated API which will do the same).
 
 To deploy a triggered job copy your binaries to:
-```site/wwwroot/app_data/jobs/triggered/{job name}```
+```d:\home\site\wwwroot\app_data\jobs\triggered\{job name}```
 
 To deploy a continuous job copy your binaries to:
-```site/wwwroot/app_data/jobs/continuous/{job name}```
+```d:\home\site\wwwroot\app_data\jobs\continuous\{job name}```
 
 **Note:** see the Deployment section below for alternative ways of deploying WebJobs.
 
