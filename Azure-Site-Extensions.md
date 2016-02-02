@@ -71,6 +71,8 @@ The site owner can overwrite the existing site extensions with their own impleme
 
 **Important note**: Site Extensions only get applied after the site is restarted. However, if you modify existing extensions without changing the applicationHost.xdt, no manual restart is needed.
 
+Also, note that the Restart button on the Site Extension Kudu tab only restarts the scm site (by just killing the process). If your xdt effects the Main site, you will need to either kill the non-Scm `w3wp.exe` in Kudu's Process Explorer, or fully restart the site from the Azure Portal.
+
 There are two flavors of Private site extensions: 'named' and 'top level'.
 
 ### Named private extensions
