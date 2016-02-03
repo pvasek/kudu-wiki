@@ -10,6 +10,10 @@ To diagnose issues, one may need to get the list of running processes, their cpu
 
 `<kudu-service-url>/api/processes/{id}/threads` endpoint returns the list of threads for a given process.   Each thread info contains id, state and a link `/api/processes/{id}/threads/{tid}` to its detail information (such as memory, cpu usages, etc.).  
 
+## Process Environment Variable
+
+One of the properties returned from `<kudu-service-url>/api/processes/{id}` is `environment_variables` which is a collection of all the environment variables in that process. You can filer scm processes from main site processes using another property called `is_scm_site`.
+
 ## Summary
 
 * `GET /api/processes` => list of processes.
