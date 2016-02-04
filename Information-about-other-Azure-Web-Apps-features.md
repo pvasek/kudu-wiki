@@ -1,5 +1,4 @@
 * [[Understanding site swaps]]
 * [[Deploying Perl apps]]
-* [[Using newer Python versions]]
 * [[Investigating msdeploy ARM failures]]
 * [[Admin site]]
