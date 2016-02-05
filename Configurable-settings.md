@@ -125,6 +125,7 @@ Also, the size of the cache can be changed (default is 300MB):
 ### Set the time zone
 
     WEBSITE_TIME_ZONE=Eastern Standard Time
+    WEBSITE_TIME_ZONE=AUS Eastern Standard Time
 
 ### Diagnostics related settings
 
