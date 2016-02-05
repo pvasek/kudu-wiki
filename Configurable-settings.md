@@ -124,8 +124,12 @@ Also, the size of the cache can be changed (default is 300MB):
 
 ### Set the time zone
 
+By default, the time zone is always UTC, but you can change it. You can get the list of valid values from [this article](https://technet.microsoft.com/en-us/library/cc749073(v=ws.10).aspx). If the string is not recognized, it falls back to UTC. The best way to test that it works is to type `time` from Kudu console.
+
     WEBSITE_TIME_ZONE=Eastern Standard Time
     WEBSITE_TIME_ZONE=AUS Eastern Standard Time
+
+Note that there appears to be an issue that makes it not work when using `DateTimeOffset.Now`. See [this question](http://stackoverflow.com/questions/30939990/changing-timezone-on-azure-web-apps-doesnt-work-for-datetimeoffset-now) for details.
 
 ### Diagnostics related settings
 
