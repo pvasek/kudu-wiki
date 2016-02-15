@@ -105,6 +105,8 @@ There can be only one such extension for a given site, and it consists of a sing
 
 ## Authoring XDT transforms
 
+There is an awesome site extension written by [shibayan](https://twitter.com/shibayan) that makes it super easy to auther correct xdt's. It's called [IISManager](https://github.com/shibayan/IISManager), and you can install it using Kudu or the (new) Azure Portal. It let's you edit `applicationhost.config`, and automatically generates the xdt for you.
+
 Please check out [[XDT Transform Samples]] for a set of examples of what you can do with XDT files.
 
 There are a set of environment variables passed to the XDT to assist in locating the appropriate elements and set the proper property.
