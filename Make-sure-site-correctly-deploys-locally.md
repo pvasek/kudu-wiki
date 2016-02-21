@@ -25,14 +25,27 @@ In some cases, multiple projects in a solution don't correctly depend on each ot
 
 ## Locally testing your deployment
 
-The simplest way to detect this type of issues early on is to test your deployment locally. You can use the following steps to do that:
+The simplest way to detect this type of issues early on is to test your deployment locally. You can do this either using VS, or from the command line.
 
-- First completely clean your repository to make sure it has no files other than what's committed (you can do this by running `git clean -dxf`). Or you can use a fresh clone, which will guarantee it's clean.
+In either case, start by completely cleaning your repository to make sure it has no files other than what's committed (you can do this by running `git clean -dxf`). Or you can use a fresh clone, which will guarantee it's clean.
+
+### Local deployment using VS
+
 - In VS, right click on your Project and choose 'Publish...'
 - In the drop down, choose 'New Profile' and call it something like 'local publish'
 - In the Publish Method drop down, choose 'File System', and pick a target location, e.g. `c:\mysite`
 - Click the Publish button
 
-Now, your `c:\mysite` folder has a set of files that is very similar to what you would have on Azure. The next step is to try running it locally. One simple way to do this is to open that folder as a Web Site in VS (Alt-Shift-O). Or you could configure an IIS application to point to it.
+### Local deployment using msbuild
+
+Go to the folder that has your `.sln` file, and run the following command (adjust the path to the `.csproj` for your scenario). This is what Kudu runs by default when you deploy (it can be overridden if you have custom deployment script):
+
+    msbuild MyMvcApp\MyMvcApp.csproj /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="d:\mysite";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release;UseSharedCompilation=false /p:SolutionDir="."
+
+### Testing the resulting files
+
+With either approach, your `c:\mysite` folder now has a set of files that is very similar to what you would have on Azure.
+
+The next step is to try running it locally. One simple way to do this is to open that folder as a Web Site in VS (Alt-Shift-O). Or you could configure an IIS application to point to it.
 
 If it doesn't run correctly, then it won't run in Azure either, and you'll need to tackle that problem first.
