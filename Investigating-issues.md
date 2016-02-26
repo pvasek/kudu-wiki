@@ -14,6 +14,7 @@ Sometimes, the issue exists outside of Azure Web Sites. Here are a couple things
 - [[Using a git repo to report an issue]]
 - [[Isolating WebJobs and Deployment script issues]]
 - [[VSTS vs Kudu deployments]]
+- [[Setting up a VSTS account so it can deploy to a Web App]]
 - [[Reporting WebJobs issues]]
 - [[Troubleshooting PHP errors]]
 - [[Troubleshooting Node errors]]
