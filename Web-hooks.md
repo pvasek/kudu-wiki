@@ -121,14 +121,19 @@ This is request sent by the Kudu service to the registered URL.
 
 ```
 {
-  "id": "cd5bee7181e74ea38a3522e73253f6ebb8ed72fb",
-  "status": "success", (could be pending, building, deploying, failed, success)
-  "author_email": "someone@somewhere.com",
-  "author": "Some One",
+  "id": "982843aff56d37f2bfb9f532a9c0465031f4172d",
+  "status": "success",
+  "statusText": "",
+  "authorEmail": "someone@somewhere.com",
+  "author": "Someone",
   "message": "My fix",
-  "deployer": "Some One",
-  "start_time": "2013-06-06T01:24:16.5873293Z",
-  "end_time": "2013-06-06T01:24:17.63342Z"
+  "deployer": "Someone",
+  "receivedTime": "2015-12-16T00:52:07.7240633Z",
+  "startTime": "2016-02-27T17:44:25.8567966Z",
+  "endTime": "2016-02-27T17:45:06.2016537Z",
+  "lastSuccessEndTime": "2016-02-27T17:45:06.2016537Z",
+  "complete": true,
+  "siteName": "MySite"
 }
 ```
 
