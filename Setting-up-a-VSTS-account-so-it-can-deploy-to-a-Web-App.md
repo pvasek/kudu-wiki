@@ -33,3 +33,18 @@ After the account is created, if it's not AAD backed, you cannot change that. So
 - It looks very similar to the first one you saw, but it doesn't have the 'Sign in with your work or school account' link. Go ahead and Sign in from this page.
 - If your account belongs to multiple directories, you'll see a page asking you to pick one. Otherwise, skip this step.
 - You are now logged in to VSTS. Click 'Create a free account now'. The account that will be created will be correctly backed by AAD, and will work in Azure.
+
+
+## Linking your VSTS account to your Azure subscription
+
+The last step is that you need to link your VSTS account to your Azure subscription.
+
+To do this, go to the Azure Portal, click Browse and search for 'Team':
+
+![image](https://cloud.githubusercontent.com/assets/556238/13531726/d8c9608e-e1dc-11e5-83a0-d35df99cc62b.png)
+
+Now select the relevant Team Services account, and click Link:
+
+![image](https://cloud.githubusercontent.com/assets/556238/13531647/7fb69b24-e1dc-11e5-9bf1-c313cfe04cb6.png)
+
+And you're done! You will now be able to set up continuous deploying to your git repos hosted in VSTS.
