@@ -131,7 +131,7 @@ Raw sockets (created with socket type SOCK_RAW) are not available to application
 
 #### Restricted Outgoing Ports
 
-Regardless of address, applications cannot connect to anywhere using ports 445, 137, 138, and 139.  
+Regardless of address, applications cannot connect to anywhere using ports 445, 137, 138, and 139. In other words, even if connecting to a non-private IP address or the address of a virtual network, connections to ports 445, 137, 138, and 139 are not permitted.
 
 #### Named Pipes
 
