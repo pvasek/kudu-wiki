@@ -30,8 +30,7 @@ Response:
           "direction": "out"
         }
       ]
-    },
-    "files": null
+    }
   }
 }
 ```
