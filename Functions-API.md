@@ -1,6 +1,16 @@
+Each API has two ARM flavors:
+
+1. one the works at the resource group level, and automatically implies a Function App
+2. one that works on a specific Function App (which is basically a special Web App)
+
+Each of the sections below lists both flavors.
+
 ### Getting a function
 
-    get /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions?api-version=2015-08-01
+    get /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions/MyFunction?api-version=2015-08-01
+
+    get /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/sites/{functionapp}/functions/MyFunction?api-version=2015-08-01
+
 
 Response:
 
@@ -39,6 +49,8 @@ Response:
 
     get /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions?api-version=2015-08-01
 
+    get /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/sites/{functionapp}/functions?api-version=2015-08-01
+
 Response:
 
 ```json
@@ -54,6 +66,8 @@ Response:
 ### Creating a function in a resource group 
 
     put /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions/MyFunction?api-version=2015-08-01
+
+    put /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/sites/{functionapp}/functions/MyFunction?api-version=2015-08-01
 
 Request body (sample):
 
@@ -74,8 +88,7 @@ Request body (sample):
           "direction": "out",
           "name": "res"
         }
-      ],
-      "disabled": false
+      ]
     },
     "files": {
       "index.js": "module.exports = function (context, data) {\r\n    context.res = {\r\n        body: { greeting: 'Hello ' + data.first + ' ' + data.last + '!'}\r\n    };\r\n\r\n    context.done();\r\n};\r\n"
