@@ -85,3 +85,4 @@ Request body (sample):
 }
 ```
 
+Response: same as doing a GET above.
