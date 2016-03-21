@@ -51,3 +51,37 @@ Response:
 }
 ```
 
+### Creating a function in a resource group 
+
+    put /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions/MyFunction?api-version=2015-08-01
+
+Request body (sample):
+
+```json
+{
+  "location": "West US",
+  "properties": {
+    "config": {
+      "bindings": [
+        {
+          "webHookType": "genericJson",
+          "type": "httpTrigger",
+          "direction": "in",
+          "name": "req"
+        },
+        {
+          "type": "http",
+          "direction": "out",
+          "name": "res"
+        }
+      ],
+      "disabled": false
+    },
+    "files": {
+      "index.js": "module.exports = function (context, data) {\r\n    context.res = {\r\n        body: { greeting: 'Hello ' + data.first + ' ' + data.last + '!'}\r\n    };\r\n\r\n    context.done();\r\n};\r\n"
+    },
+    "test_data": "{ 'name': 'David' }"
+  }
+}
+```
+
