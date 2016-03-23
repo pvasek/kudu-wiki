@@ -37,7 +37,7 @@ After the account is created, if it's not AAD backed, you cannot change that. So
 
 ## Linking your VSTS account to your Azure subscription
 
-The last step is that you need to link your VSTS account to your Azure subscription.
+The last step is that you need to link your VSTS account to your Azure subscription (see also [this post](https://www.visualstudio.com/en-us/get-started/setup/set-up-billing-for-your-account-vs) on this topic).
 
 To do this, go to the Azure Portal, click Browse and search for 'Team':
 
