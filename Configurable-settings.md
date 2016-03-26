@@ -110,7 +110,7 @@ See [this forum thread](http://social.msdn.microsoft.com/Forums/windowsazure/en-
 
 ### Turning on the 'local cache' feature.
 
-This feature copies the site bits to the faster local drive before running them.
+This feature copies the site bits to the faster local drive before running them. Se [this post](https://azure.microsoft.com/en-us/documentation/articles/app-service-local-cache/) for more info.
 
     WEBSITE_LOCAL_CACHE_OPTION=Always
 
