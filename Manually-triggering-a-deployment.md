@@ -22,6 +22,8 @@ Transfer-encoding: chunked
 ````
 For Mercurial (hg) add `"is_hg": true` to the JSON payload.
 
+`$SiteLevelUsername:SiteLevelPassword` are [Site-Level credentials](https://github.com/projectkudu/kudu/wiki/Deployment-credentials). They are a good fit here being distinct for each site and randomly generated.
+
 #### Azure App Service Specific (using Azure PowerShell):
 
 e.g. Using the "External Repository" deployment method in the Azure Portal.
@@ -37,4 +39,4 @@ Invoke-AzureRmResourceAction -ResourceGroupName <ResourceGroupName> `
                              -Force -Verbose
 ````
 
-GitHub specific guide here: https://github.com/projectkudu/kudu/wiki/Deploying-from-github
+For a GitHub specific guide see this page here: [Deploying from GitHub](https://github.com/projectkudu/kudu/wiki/Deploying-from-github)
