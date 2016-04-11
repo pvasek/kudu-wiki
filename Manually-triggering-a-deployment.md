@@ -1,5 +1,3 @@
-## Manually triggering a deployment
-
 This method works for external git/Mercurial repositories, DropBox and OneDrive.
 
 Here's how to trigger a (fetch) deployment from an external repository.
