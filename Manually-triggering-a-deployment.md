@@ -1,7 +1,8 @@
-## [UNDER REVIEW]
 ## Manually triggering a deployment
 
-Here's how to trigger a (fetch) deployment from an external __git__ repository.
+This method works for external git/Mercurial repositories, DropBox and OneDrive.
+
+Here's how to trigger a (fetch) deployment from an external repository.
 
 e.g. You have a git repository at https://example.com/git/RepositoryName.git and you'd like to notify Kudu to trigger a deployment for every new commit.
 
