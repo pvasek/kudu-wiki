@@ -28,7 +28,7 @@ For Mercurial (hg) add `"is_hg": true` to the JSON payload.
 
 e.g. Using the "External Repository" deployment method in the Azure Portal.
 
-In addition to the POST above you can accomplish the same thing by invoking the following cmdlet:
+In addition to the POST above you can accomplish the same thing by calling `Invoke-AzureRmResourceAction`:
 ````
 # Action sync
 Invoke-AzureRmResourceAction -ResourceGroupName <ResourceGroupName> `
