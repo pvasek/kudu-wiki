@@ -22,7 +22,7 @@ Transfer-encoding: chunked
 ````
 For Mercurial (hg) add `"is_hg": true` to the JSON payload.
 
-#### Azure Specific (using Azure PowerShell):
+#### Azure App Service Specific (using Azure PowerShell):
 
 e.g. Using the "External Repository" deployment method in the Azure Portal.
 
