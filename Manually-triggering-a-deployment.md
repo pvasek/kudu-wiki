@@ -3,6 +3,8 @@
 
 Here's how to trigger a (fetch) deployment from an external __git__ repository.
 
+e.g. You have a git repository at https://example.com/git/RepositoryName.git and you'd like to notify Kudu to trigger a deployment for every new commit.
+
 ##### Raw POST
 ```
 POST /deploy HTTP/1.1
