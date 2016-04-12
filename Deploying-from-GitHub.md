@@ -1,5 +1,7 @@
 Normally, the way to deploy changes to Kudu is to push to the repository provided by Kudu. As an alternative, some users prefer to push to GitHub, and have that automatically trigger a deployment.
 
+The following guide is GitHub specific, for a more general approach (e.g. repository outside GitHub) see [[Manually triggering a deployment]]
+
 GitHub has a Service Hooks feature which makes implementing this relatively straightforward.
 
 ## High level workflow
