@@ -12,6 +12,27 @@ Azure Web Apps doesn't have direct support for Perl, but it's possible to get it
 - Go to the [Azure Portal](https://manage.windowsazure.com/) and go to you site's Configure page.
 - Under Handler Mappings, add one for: Extension: `*.pl`, Script processor path: `D:\home\site\perl\perl\bin\perl.exe`, Additional arguments: `-MFCGI::IIS=do`.
 
+Other FastCGI operation modes for reference:
+
+`-MFCGI::IIS=test`
+This is a simple test routine, that displays a counter that increments by 1 each time 
+the script is called as a FastCGI.
+
+`-MFCGI::IIS=carp`
+In this mode, `CGI::Carp qw(fatalsToBrowser)` is invoked before running the do method.
+
+`-MFCGI::IIS=eval`
+With this mode eval is used instead of the do operator. Slower run time, but allows 
+you to trap errors.
+
+`-MFCGI::IIS=evalhead`
+With this mode eval is used instead of the do operator, also the `Content-Type: 
+text/html` header is returned first, allowing you to trap wrong header errors.
+
+`-MFCGI::IIS=do`
+Producion Mode. This is the default mode, and will be called if no arguments are given, i.e. 
+`perl -MFCGI::IIS`. The calling script is loaded into the FastCGI using the do operator.
+
 ![Handler](https://cloud.githubusercontent.com/assets/6472374/10073698/7694ff64-62d3-11e5-9ec3-0cc7bab187f3.PNG)
 
 - Using Kudu console, copy a Perl file into `D:\home\site\wwwroot`. e.g. `hello.pl`.
