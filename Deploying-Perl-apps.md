@@ -1,3 +1,5 @@
+### Deploying a Hello World Perl application
+
 Azure Web Apps doesn't have direct support for Perl, but it's possible to get it working with some manual steps:
 
 - Create a Web App.
@@ -64,3 +66,71 @@ Output:
 `Temporary folder set to d:\local\temp`
 
 See this issue for more details on `File::Temp`: https://github.com/projectkudu/kudu/issues/1700
+
+### Adding MySQL database connectivity
+
+- Copy `D:\home\site\perl\c\bin\libmysql_.dll` to `D:\home\site\perl\perl\vendor\lib\auto\DBD\mysql` (See this [StackOverflow](http://stackoverflow.com/questions/4206439/sequenced-steps-to-install-perl-strawberry-mysql-and-dbdmysql-on-windows-xp/12723291#12723291) thread for the "Why")
+
+- Add `BEGIN { $ENV{SYSTEMROOT} = "D:\\Windows"; }` at the top of your `.pl` script (See this [StackOverflow](https://serverfault.com/questions/639887/iis-permissions-to-allow-outgoing-rest-http-requests-from-site-code/640473) thread for the "Why")
+
+- At this point, running your Perl script in the Kudu console should be successful.
+
+Example:
+```perl
+BEGIN
+{
+    $ENV{TMPDIR} = "d:\\local\\temp";
+    $ENV{SYSTEMROOT} = "D:\\Windows";
+}
+
+use DBI;
+print "Content-type: text/plain\n\n";
+
+$db="wordpress";
+$host="a-mysql-db.cloudapp.net";
+$user="db_user";
+$password="db_pass";
+
+# Connect to MySQL database
+my $dbhandle = DBI->connect ("DBI:mysql:database=$db:host=$host",
+                           $user,
+                           $password) 
+                           or die "Can't connect to database: $DBI::errstr\n";
+
+# Execute 'SHOW TABLES'
+my $statement=$dbhandle->prepare("SHOW TABLES");
+$statement->execute();
+
+while (my @row=$statement->fetchrow_array)
+{
+  print $row[0]."\n";
+}
+$statement->finish;
+
+# Disconnect from database
+$db->disconnect or warn "Disconnection error: $DBI::errstr\n";
+exit;
+```
+
+```cmd
+D:\home\site\wwwroot> d:\home\site\perl\perl\bin\perl.exe TestMySQL.pl
+
+Content-type: text/plain
+
+wp_commentmeta
+wp_comments
+wp_links
+wp_options
+wp_postmeta
+wp_posts
+wp_term_relationships
+wp_term_taxonomy
+wp_terms
+wp_usermeta
+wp_users
+```
+
+- With the console test successful, accessing the script over FastCGI should now also render the expected results:
+
+
+![FastCGI](https://cloud.githubusercontent.com/assets/6472374/14495855/e01f8e44-0199-11e6-9eab-809f2cb9d7ed.png)
