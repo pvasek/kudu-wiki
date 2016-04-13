@@ -69,9 +69,11 @@ See this issue for more details on `File::Temp`: https://github.com/projectkudu/
 
 ### Adding MySQL database connectivity
 
-- Copy `D:\home\site\perl\c\bin\libmysql_.dll` to `D:\home\site\perl\perl\vendor\lib\auto\DBD\mysql` (See this [StackOverflow](http://stackoverflow.com/questions/4206439/sequenced-steps-to-install-perl-strawberry-mysql-and-dbdmysql-on-windows-xp/12723291#12723291) thread for the "Why")
+- Copy `D:\home\site\perl\c\bin\libmysql_.dll` to `D:\home\site\perl\perl\vendor\lib\auto\DBD\mysql`
+<br>(See this [StackOverflow](http://stackoverflow.com/questions/4206439/sequenced-steps-to-install-perl-strawberry-mysql-and-dbdmysql-on-windows-xp/12723291#12723291) thread for the "Why")
 
-- Add `BEGIN { $ENV{SYSTEMROOT} = "D:\\Windows"; }` at the top of your `.pl` script (See this [StackOverflow](https://serverfault.com/questions/639887/iis-permissions-to-allow-outgoing-rest-http-requests-from-site-code/640473) thread for the "Why")
+- Add `BEGIN { $ENV{SYSTEMROOT} = "D:\\Windows"; }` at the top of your `.pl` script
+<br>(See this [StackOverflow](https://serverfault.com/questions/639887/iis-permissions-to-allow-outgoing-rest-http-requests-from-site-code/640473) thread for the "Why")
 
 - At this point, running your Perl script in the Kudu console should be successful.
 
