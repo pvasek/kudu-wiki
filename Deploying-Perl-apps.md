@@ -114,7 +114,7 @@ $db->disconnect or warn "Disconnection error: $DBI::errstr\n";
 exit;
 ```
 
-```cmd
+```
 D:\home\site\wwwroot> d:\home\site\perl\perl\bin\perl.exe TestMySQL.pl
 
 Content-type: text/plain
