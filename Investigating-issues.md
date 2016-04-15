@@ -31,6 +31,14 @@ If the site is up but a Kudu feature is broken in some way, try hitting the [[ro
 
 If you get an error, it could mean that there is something wrong with Kudu. Please record what the error is and report it to the [forum](http://social.msdn.microsoft.com/Forums/en-US/azuregit/threads)
 
+## Check if disk space is available
+
+On Kudu site under `Environment` tab, you can see the d:\home and d:\local usages.   Ensure disk space is available (green).
+
+## Check if file system is in normal mode
+
+When there is an on-going storage issue, the file system may be temporarily switched to read-only mode.  You can find out by, on Kudu site under `Environment` tab, look for WEBSITE_VOLUME_TYPE, the normal value is `PrimaryStorageVolume`.  Otherwise, the file system is read-only.   During such, any write attempts (such as deployment) will fail. 
+
 ## Live traces
 
 See [[Diagnostic Log Stream]].
