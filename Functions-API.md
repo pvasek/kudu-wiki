@@ -45,7 +45,7 @@ Response:
 }
 ```
 
-### Listing functions in a resource group 
+### Listing functions
 
     get /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions?api-version=2015-08-01
 
@@ -63,7 +63,7 @@ Response:
 }
 ```
 
-### Creating a function in a resource group 
+### Creating a function
 
     put /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions/MyFunction?api-version=2015-08-01
 
