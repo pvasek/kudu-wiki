@@ -19,10 +19,17 @@ Here is an example:
     [config]
     command = deploy.cmd
 
-For PowerShell, it takes a little be of crazy syntax, but the following works:
+For PowerShell, it takes a little bit of crazy syntax, but the following works:
 
     [config]
     command = powershell -NoProfile -NoLogo -ExecutionPolicy Unrestricted -Command "& "$pwd\deploy.ps1" 2>&1 | echo"
+
+| Syntax                          | Please explain                                           |
+|:--------------------------------|:---------------------------------------------------------|
+| `&`                             | Call operator. Runs a command, script, or script block. |
+| `-ExecutionPolicy Unrestricted` | System-wide setting is `RemoteSigned`, you need this parameter in to execute scripts<br> |
+| `2>&1`                          | Redirect standard error (2) to standard output (1)      |
+| `echo`                          | Alias to `Write-Output`. Same effect as `Out-Default`. Necessary to work around [this console host window title behavior](https://github.com/projectkudu/KuduScript/pull/33)
 
 ## Deploying a specific ASP.NET project file (i.e. a WAP)
 
