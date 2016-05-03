@@ -19,10 +19,10 @@ Here is an example:
     [config]
     command = deploy.cmd
 
-For other script engine, ..
+For PowerShell, it takes a little be of crazy syntax, but the following works:
 
     [config]
-    command = powershell -file deploy.ps1
+    command = powershell -NoProfile -NoLogo -ExecutionPolicy Unrestricted -Command "& "$pwd\deploy.ps1" 2>&1 | echo"
 
 ## Deploying a specific ASP.NET project file (i.e. a WAP)
 
