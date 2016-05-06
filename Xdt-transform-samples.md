@@ -298,6 +298,8 @@ e.g. this enables SomeModule on the main site
 
 ### Adding IP restrictions
 
+This will apply IP restrictions on both the main site and Scm site. To only make it apply to the Main site, you can add a location attribute as in the "Registering an IIS Managed HttpModule" sample.
+
 ```xml
 <?xml version="1.0"?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
