@@ -103,11 +103,11 @@ Then there is a default period of **5** seconds waiting for the job process to s
 
 When a shutdown request is detected there is a **30** seconds default waiting period for the job process to stop.
 
-> You can change the grace period of a job by specifying it (in seconds) in the settings.job file (should be in the same root directory as the job's script) where the name of the setting is **stopping\_wait_time** like so:
+You can change the grace period of a job by specifying it (in seconds) in the [settings.job](#settingsjobs-reference) file where the name of the setting is **stopping\_wait_time** like so:
 
-> ```{ "stopping_wait_time": 60 }```
+```{ "stopping_wait_time": 60 }```
 
-> this sample will have the job grace period at 60 seconds instead of the default.
+This sample will have the job grace period at 60 seconds instead of the default.
 
 
 ## WebJob Working Directory ##
@@ -123,18 +123,18 @@ There are 2 options for where the WebJob is running from (what is the working di
 
 By default the first option is used (`in place = false`) other than for `.js` node.js scripts (`in place = true`).
 
-To explicitly configured this option add a file to the root of your WebJob called `settings.job` with this content:
+You can explicitly configure this setting in your [settings.job](#settingsjobs-reference). e.g.
 
     { "is_in_place": true/false }
 
 ## Scheduling a triggered WebJob ##
 
-To schedule a triggered WebJob you need to add a **schedule** property to the `settings.job` file.
+To schedule a triggered WebJob you need to add a **schedule** property to the [settings.job](#settingsjobs-reference) file.
 The value of the **schedule** is [cron expression](https://code.google.com/p/ncrontab/wiki/CrontabExpression) that has **6** fields to represent the schedule: `{second} {minute} {hour} {day} {month} {day of the week}`.
 
 Each field can have a specific value (1), a range (1-10), a set of values (1,2,3), all values (*), an interval value (*/2 == 0,2,4,6,...) or a mix of these (1,5-10).
 
-Whenever the `settings.job` file is updated with a new schedule, the WebJob's schedule will automatically update, it is best to deploy the `settings.job` as part of the WebJob (should be in the root of the WebJob's files).
+Whenever the `settings.job` file is updated with a new schedule, the WebJob's schedule will automatically update, it is best to deploy the `settings.job` as part of the WebJob.
 
 > For the schedule to work it requires the website to be configured as **Always On** and is not an Azure Scheduler but an internal implementation of a scheduler.
 
@@ -155,6 +155,36 @@ Here is an example schedule that will run once every minute:
 [More samples](https://code.google.com/p/ncrontab/wiki/CrontabExamples)
 
 > Note samples are missing the seconds field, to make them work just add `0` as the first field to make them 6 fields total.
+
+## settings.jobs reference ##
+
+An optional `settings.job` file can be deployed with a WebJob to tweak various settings. This file must be located at the root of the WebJobs's folder, along side your WebJob's script (e.g. in `wwwroot\app_data\jobs\triggered\{job name}` or `wwwroot\app_data\jobs\continuous\{job name}`).
+
+`settings.job` is a json file with top level settings, e.g.
+
+```
+{
+  "schedule": "0 * * * * *",
+  "is_in_place": true
+}
+```
+
+The following settings are supported (click setting name for detailed information).
+
+Settings usable on all WebJobs: 
+
+- [is_in_place](#webjob-working-directory)
+- [stopping_wait_time](##graceful-shutdown)
+
+Settings usable only on Continuous WebJobs: 
+
+- [[is_singleton|WebJobs-API#set-a-continuous-job-as-singleton]]
+
+Settings usable only on Triggered WebJobs: 
+
+- [schedule](#scheduling-a-triggered-webjob)
+
+
 
 ## API ##
 
