@@ -174,7 +174,7 @@ The following settings are supported (click setting name for detailed informatio
 Settings usable on all WebJobs: 
 
 - [is_in_place](#webjob-working-directory)
-- [stopping_wait_time](##graceful-shutdown)
+- [stopping_wait_time](#graceful-shutdown)
 
 Settings usable only on Continuous WebJobs: 
 
