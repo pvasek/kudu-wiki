@@ -173,16 +173,16 @@ The following settings are supported (click setting name for detailed informatio
 
 Settings usable on all WebJobs: 
 
-- [is_in_place](#webjob-working-directory)
-- [stopping_wait_time](#graceful-shutdown)
+- [is_in_place](#webjob-working-directory): allows the job to run in place without being first copied to a temp folder
+- [stopping_wait_time](#graceful-shutdown): allows control of the shutdown behavior
 
 Settings usable only on Continuous WebJobs: 
 
-- [[is_singleton|WebJobs-API#set-a-continuous-job-as-singleton]]
+- [[is_singleton|WebJobs-API#set-a-continuous-job-as-singleton]]: only run the WebJobs on a single instance when scaled out
 
 Settings usable only on Triggered WebJobs: 
 
-- [schedule](#scheduling-a-triggered-webjob)
+- [schedule](#scheduling-a-triggered-webjob): run the WebJob on a CRON schedule
 
 
 
