@@ -99,3 +99,18 @@ Request body (sample):
 ```
 
 Response: same as doing a GET above.
+
+### Getting a function's secrets
+
+    post /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions/MyFunction/listsecrets?api-version=2015-08-01
+
+    post /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/sites/{functionapp}/functions/MyFunction/listsecrets?api-version=2015-08-01
+
+Response body:
+
+```json
+{
+  "key": "xyzxyzxyzxyzxyz",
+  "trigger_url": "https://functionsbay.azurewebsites.net/api/HttpTriggerNodeJS1?code=xyzxyzxyzxyzxyz"
+}
+```
