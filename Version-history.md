@@ -1,4 +1,30 @@
+## S54 (04/2016)
+* Add initial Mono support (not yet complete)
+* Initial work to move up to newer git version
+* Update to latest semver to fix Node/npm version handling
+* Use newest nuget.exe beta to get ready for .NET Core RC2
+
+## S53 (03/2016)
+* Yet more Azure Functions support :)
+
+## S52 (02/2016)
+* More Azure Functions support
+
+## S51 (01/2016)
+* Add initial Azure Functions support
+* Add support for multiple post deployment scripts
+* Add caching in /api/deployments API to improve perf when called repeatedly by portal
+* Make scheduled WebJobs available in Basic mode (used to be Standard+ only)
+* Make /deploy API support async (issue #1802)  
+
+## S50 (12/2015)
+* Add new `SCM_COMMIT_MESSAGE` env variable available in deployment scripts
+* Fix some issues relating to auto-swap with continuous deployment
+* Fix site extension update issue
+* Move to a more recent version of the ACE editor
+
 ## S49 (11/2015)
+* Make Kudu work better with ASP.NET 5 RC1
 * Add smarts to avoid touching web.config during deployment when it's not needed
 * Support ASP.NET 5 beta8
 
