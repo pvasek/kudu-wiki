@@ -122,6 +122,16 @@ Also, the size of the cache can be changed (default is 300MB):
 
     WEBSITE_PRIVATE_EXTENSIONS=0
 
+### Load certificates in the Web App
+
+First, the certs must be uploaded to the App Service Plan. Than App settings need to be set:
+
+    WEBSITE_LOAD_CERTIFICATES=*
+
+or the specific thumbprints for just one
+
+    WEBSITE_LOAD_CERTIFICATES=ABCABCABCABCABCABCABCABCABCABCABCABCABCABC,DEFDEFDEFDEFDEFDEFDEFDEFDEFDEFDEFDEFDEFDEF
+
 ### Set the time zone
 
 By default, the time zone is always UTC, but you can change it. You can get the list of valid values from [this article](https://technet.microsoft.com/en-us/library/cc749073(v=ws.10).aspx). If the string is not recognized, it falls back to UTC. The best way to test that it works is to type `time` from Kudu console.
