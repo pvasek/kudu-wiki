@@ -124,7 +124,7 @@ Also, the size of the cache can be changed (default is 300MB):
 
 ### Load certificates in the Web App
 
-First, the certs must be uploaded to the App Service Plan. Than App settings need to be set:
+See [this post](https://azure.microsoft.com/en-us/blog/using-certificates-in-azure-websites-applications/) for details. First, the certs must be uploaded to the App Service Plan. Than App settings need to be set:
 
     WEBSITE_LOAD_CERTIFICATES=*
 
