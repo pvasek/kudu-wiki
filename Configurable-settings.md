@@ -1,9 +1,9 @@
-There are various things that you can configure using App Settings, which you can find on the Configure page in the Windows Azure portal.
-
-Note that in addition to using App Settings, you can specify those settings in your [[.deployment file|Customizing-deployments]]. This is useful if you want the setting to be part of your repository.
+There are various things that you can configure using App Settings, which you can find on the Configure page in the Azure portal.
 
 
 ## Repository and deployment related settings
+
+Note that in addition to using App Settings, you can specify those settings in your [[.deployment file|Customizing-deployments]]. This is useful if you want the setting to be part of your repository.
 
 ### Adding flags to the msbuild command line
 
