@@ -1,4 +1,4 @@
-All Web Apps have both a main site and an SCM site (where Kudu runs). When you click Stop in the portal, only the main site is stopped, while the SCM site keeps running. Stopping both is possible, but the steps are more complex.
+All Web Apps have both a main site and an SCM site (where Kudu runs, including WebJobs). When you click Stop in the portal, only the main site is stopped, while the SCM site keeps running. Stopping both is possible, but the steps are more complex.
 
 To stop both the main site and SCM site:
 
