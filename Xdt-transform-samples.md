@@ -1,6 +1,8 @@
 Note: this section applies to both Pre-Installed and Private [[site extensions|Azure Site Extensions]].
 
-The simplest way to apply one of these transforms for your site is:
+There is a very cool Site Extension called [IIS Manager](https://github.com/shibayan/IISManager) which lets you very easily create XDT files simply by editing your applicationhost.config. This page contains a bunch of sample XDT's, but if you don't find what you want, it's pretty easy to just create your own, as long as you know the IIS applicationhost.config syntax.
+
+The simplest way to apply one of the transforms below for your site is:
 
 - Use [[Kudu Console]] to create an `applicationHost.xdt` file under your 'site' folder (i.e. `d:\home\site\applicationHost.xdt`), and copy the content from the samples below into it
 
