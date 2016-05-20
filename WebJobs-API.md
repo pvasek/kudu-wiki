@@ -204,6 +204,12 @@ or
 
 Note: if the site has multiple instances, the job will run on one of them arbitrarily. This is the same behavior as regular requests sent to the site.
 
+In the http response, you get back a location attribute, with a URL to the details of the run that was started. e.g.
+
+    Location: https://mysite.scm.azurewebsites.net/api/triggeredwebjobs/SomeJob/history/201605192149381933
+
+
+
 ### List all triggered job runs history ###
 
     GET /api/triggeredwebjobs/{job name}/history
