@@ -5,7 +5,8 @@ This page gives instructions on investigating Kudu issues that occur in Azure We
 Sometimes, the issue exists outside of Azure Web Sites. Here are a couple things worth looking at to make sure things are healthy before looking at an issue as Azure specific:
 
 * [[Make sure all your files are committed]]: this applies to git scenarios
-* [[Make sure site correctly deploys locally]]: this applies to ASP.NET Web Applications
+* [[Make sure site correctly deploys locally]]: this applies to standard ASP.NET Web Applications (i.e. 4.x)
+* [[Test your ASP.NET Core repo locally]]: this applies to ASP.NET Core web Applications
 
 # Misc investigation topics
 
