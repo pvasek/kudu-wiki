@@ -14,7 +14,7 @@ Go to the folder that has your solution file, and run
 
 #### Build your solution
 
-Build it in-place using the following command. Adjust to make your solution file:
+Build it in-place using the following command. Change `MySolution.sln` to the name of your solution file:
 
     msbuild MySolution.sln /t:Build /p:Configuration=Release 
 
