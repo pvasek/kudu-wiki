@@ -31,7 +31,7 @@ For PowerShell, it takes a little bit of crazy syntax, but the following works:
 | `2>&1`                          | Redirect standard error (2) to standard output (1)      |
 | `echo`                          | Alias to `Write-Output`. Same effect as `Out-Default`. Necessary to work around [this console host window title behavior](https://github.com/projectkudu/KuduScript/pull/33#issuecomment-143817501)
 
-## Deploying a specific ASP.NET project file (i.e. a WAP)
+## Deploying a specific ASP.NET 4.x project file (i.e. a WAP)
 
 You can specify the path to the project file, relative to the root of your repo. **Note that this is not a path to the solution file (.sln), but to the project file (.csproj/.vbproj)**. The reason for this is that Kudu only builds the minimal dependency tree for this project, and avoids building unrelated projects in the solution that are not needed by the web project.
 
@@ -39,6 +39,13 @@ Here is an example:
 
     [config]
     project = WebProject/WebProject.csproj
+
+## Deploying a specific ASP.NET Core project
+
+For ASP.NET Core apps, specify the path to the folder that contains the project.json, e.g.
+
+    [config]
+    project = MyCoreProjectFolder
 
 ## Deploying a specific folder for a Node, PHP, or ASP.NET site
 
