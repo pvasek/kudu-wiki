@@ -19,6 +19,10 @@ Github has recently required an explicit authorization for OAuth application to 
 * Click `Azure Management Portal`.   For old Portal, click `Windows Azure`.
 * Click `Grant access` to the specific organization
 
+### Q: WebApp did not receive notification from Bitbucket 
+
+Bitbucket fires the notification to service hooks in sequence.   The time limit overall is 30 secs.  Given each hooks, Azure WebApp may take up to 10 seconds to process.  If one has multiple hooks registered, the first few hooks may receive the notification properly.   The remaining (once exceed 30s) may not.   Unfortunately, there is no easy workaround besides performing the sync operation (either using portal or powershell cmdlet) manually.
+
 ## Other topics
 
 ### Look at service log  
