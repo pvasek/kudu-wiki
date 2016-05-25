@@ -139,7 +139,7 @@ When that happens, you will see an error in the XDT log (see debugging section b
 
 ### Valid XDT that doesn't do what you want it to
 
-Here, your XDT file is valid, but it does not modify your applicationhost.config in the way that you expect. The XST syntax can be tricky, and it can take a few tries to get it right (looking at [samples](https://github.com/projectkudu/kudu/wiki/Xdt-transform-samples) often helps!
+Here, your XDT file is valid, but it does not modify your applicationhost.config in the way that you expect. The XSD syntax can be tricky, and it can take a few tries to get it right (looking at [samples](https://github.com/projectkudu/kudu/wiki/Xdt-transform-samples) often helps!
 
 To diagnose this kind of issues, look at the generated applicationhost.config (see debugging section below), and see if it has what you expect.
 
