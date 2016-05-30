@@ -1,4 +1,4 @@
-This is a guide to help investigate why the continuous deployment from GitHub or Bitbucket not working. 
+This is a guide to help investigate issues with continuous deployment from GitHub or Bitbucket.
 
 ## Issues related to setting up continuous deployment from the Azure Portal
 
