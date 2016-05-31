@@ -122,6 +122,11 @@ The PUT method still exists, but should be avoided as it involves sending the pr
 
     GET /api/sshkey	
     Get the public key.
+
+If you plan to copy a private SSH key from one site to another, you may do as follow;
+
+  - download key to local: `curl "https://user:password@siteA.scm.azurewebsites.net/api/vfs/.ssh/id_rsa" -o c:\temp\id_rsa`
+  - upload key to site: `curl "https://user:password@siteB.scm.azurewebsites.net/api/sshkey" --upload-file c:\temp\id_rsa`
     	
 ## Environment
 
