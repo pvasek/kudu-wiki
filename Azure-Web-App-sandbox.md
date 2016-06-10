@@ -2,7 +2,7 @@ _This article is provided with the intent of communicating various runtime execu
 
 ### Introduction
 
-All Azure Web Apps (as well as Mobile App/Services and WebJobs) run in a secure environment called a _sandbox_. Each app runs inside its own sandbox, isolating its execution from other instances on the same machine as well as providing an additional degree of security and privacy which would otherwise not be available.  The sandbox mechanism aims to ensure that each app running on a machine will have a minimum guaranteed level of service; furthermore, the runtime limits enforced by the sandbox protects apps from being adversely affected by other resource-intensive apps which may be running on the same machine.
+All Azure Web Apps (as well as Mobile App/Services, WebJobs and Functions) run in a secure environment called a _sandbox_. Each app runs inside its own sandbox, isolating its execution from other instances on the same machine as well as providing an additional degree of security and privacy which would otherwise not be available.  The sandbox mechanism aims to ensure that each app running on a machine will have a minimum guaranteed level of service; furthermore, the runtime limits enforced by the sandbox protects apps from being adversely affected by other resource-intensive apps which may be running on the same machine.
 
 ### Purpose of the sandbox
 
