@@ -134,7 +134,9 @@ or the specific thumbprints for just one
 
 ### Set the time zone
 
-By default, the time zone is always UTC, but you can change it. You can get the list of valid values from [this article](https://technet.microsoft.com/en-us/library/cc749073(v=ws.10).aspx). If the string is not recognized, it falls back to UTC. The best way to test that it works is to type `time` from Kudu console.
+By default, the time zone is always UTC, but you can change it. You can get the list of valid values from [this article](https://technet.microsoft.com/en-us/library/cc749073(v=ws.10).aspx). You can also find the list in your registry under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`. If the string is not recognized, it falls back to UTC. The best way to test that it works is to type `time` from Kudu console.
+
+Examples:
 
     WEBSITE_TIME_ZONE=Eastern Standard Time
     WEBSITE_TIME_ZONE=AUS Eastern Standard Time
