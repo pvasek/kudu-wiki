@@ -93,7 +93,7 @@ Request body (sample):
     "files": {
       "index.js": "module.exports = function (context, data) {\r\n    context.res = {\r\n        body: { greeting: 'Hello ' + data.first + ' ' + data.last + '!'}\r\n    };\r\n\r\n    context.done();\r\n};\r\n"
     },
-    "test_data": "{ 'name': 'David' }"
+    "test_data": "{ 'first': 'David', 'last': 'Ebbo' }"
   }
 }
 ```
