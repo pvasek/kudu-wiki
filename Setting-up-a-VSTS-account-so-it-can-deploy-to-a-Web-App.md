@@ -1,4 +1,4 @@
-The Azure Portal supports setting up continuous deployment from a VSTS account. When tricky part is that this is only supported if the account is backed by an Azure Active Directory.
+The Azure Portal supports setting up continuous deployment from a VSTS account. One tricky part is that this is only supported if the account is backed by an Azure Active Directory.
 
 ## How you can tell if a given account is backed by AAD
 
