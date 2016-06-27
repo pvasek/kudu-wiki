@@ -84,3 +84,15 @@ For example, to generate a deployment script for an ASP.NET web application:
 The resulting script can also be run and tested locally, it'll output the site into: `your repo root/artifacts/`
 
 For more information on deployment hooks and a step by step sample of the deployment script generator go to [this blog post](http://blog.amitapple.com/post/38417491924/azurewebsitecustomdeploymentpart1).
+
+
+### Easiest way to get started with a custom deployment script
+
+Instead of using the command line to generate a starter deployment script, there is an alternative approach that is often easier:
+
+- Deploy your repo *without* any deployment scripts.
+- Go to the site's [[Kudu Console]].
+- From the Tools menu, choose 'Download deployment script'. You'll get a zip with a `.deployment` and `deploy.cmd` files.
+- Commit both files at the root of your repo
+- Tweak them as needed
+
