@@ -23,8 +23,8 @@ One of the properties returned from `<kudu-service-url>/api/processes/{id}` is `
 * `GET /api/processes/{id}/modules` => list of modules for process with `id`.
 * `GET /api/processes/{id}/modules/{base_address}` => details about the module.
 * `DELETE /api/processes/{id}` => terminate process with `id` and its children.
-* `GET /api/processes/0` => detail process information of current `w3wp.exe`.
-* `DELETE /api/processes/0` => terminate `w3wp.exe` process and its children.
+* `GET /api/processes/0` => detail process information of scm site's `w3wp.exe`. Or use -1 for main site.
+* `DELETE /api/processes/0` => terminate scm site's `w3wp.exe` process and its children. Or use -1 for main site.
 * `GET /api/processes/{id}/dump` => minidump of process with `id`.  By default, this is minimum dump without memory (dumptType=0).
 * `GET /api/processes/{id}/dump?dumpType=2` => full memory minidump of process with `id`.  The available dumpType  value can be found at [MINIDUMP_TYPE](http://msdn.microsoft.com/en-us/library/windows/desktop/ms680519.aspx).
 * `GET /api/processes/{id}/dump?dumpType=2&format=zip` => full memory minidump of process with `id`.  This will include matching sos.dll and mscordackws.dll in the zip package.  
