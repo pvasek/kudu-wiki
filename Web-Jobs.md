@@ -138,6 +138,9 @@ Whenever the `settings.job` file is updated with a new schedule, the WebJob's sc
 
 > For the schedule to work it requires the website to be configured as **Always On** and is not an Azure Scheduler but an internal implementation of a scheduler.
 
+> The local time is, by default, the timezone of server machine.  In Azure environment, by default, it is UTC.  To adjust the timezone, you may specify the appSetting `WEBSITE_TIME_ZONE` with the value of [the name of timezone](https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx); for instance, `Pacific Standard Time`.  The worker process as well as webjobs will use that as local time zone.
+
+
 #### Sample `settings.job` file ####
 Here is an example schedule that will run once every minute:
 
