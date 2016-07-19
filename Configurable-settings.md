@@ -24,6 +24,12 @@ e.g. to force your repo to be treated as a plain web site (no build), you can us
  
     SCM_SCRIPT_GENERATOR_ARGS=--basic -p FolderToDeploy
 
+### Take over the whole deployment script
+
+See [[Customizing deployments]] for details. e.g.
+
+    COMMAND=deploy.cmd
+
 ### Changing the repo and deployment paths, and not using a repo at all
 
 Please see [[Deploying inplace and without repository]] for information on using the `SCM_REPOSITORY_PATH`, `SCM_NO_REPOSITORY`, `PROJECT` and `SCM_TARGET_PATH` flags.
