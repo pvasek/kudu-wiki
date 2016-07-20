@@ -11,7 +11,7 @@ A **post deployment action hook** is a script/executable that runs after the dep
 
 - A script which returns an error exit code (<>0) will fail the deployment and the next script will not be called.
 
-- The script will have the same environment variables as the deployment script and *possibly* new environment variables set by the deployment script.
+- The script will have the same environment variables as the deployment script.
 
 - Script file name (minus extension) will become title in deployment log
 
