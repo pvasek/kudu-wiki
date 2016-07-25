@@ -179,7 +179,6 @@ PDF generators failing due to restriction mentioned above:
 - Siberix
 - NReco (uses wkhtmltopdf)
 - Spire.PDF
-- Debenu PDF Library
 
 Other scenarios:
 
