@@ -172,7 +172,7 @@ Here is a list of frameworks and scenarios that have been found to be not be usa
 
 PDF generators failing due to restriction mentioned above:
 
-- EVOPDF
+- EVOPDF (See http://www.evopdf.com/azure-html-to-pdf-converter.aspx for vendor solution)
 - Rotativa
 - wkhtmltopdf
 - Syncfusion
