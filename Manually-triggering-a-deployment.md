@@ -23,6 +23,14 @@ For Mercurial (hg) add `"is_hg": true` to the JSON payload.
 
 `$SiteLevelUsername:SiteLevelPassword` are [Site-Level credentials](https://github.com/projectkudu/kudu/wiki/Deployment-credentials). They are a good fit here being distinct for each site and randomly generated.
 
+#### Deploy from specific commit id
+
+You could in addition specify commit id (or branch) as part of git URL to deploy from; for instance, ..
+
+```
+    "url":"https://username:password@example.com/git/RepositoryName.git#commit_id"
+```
+
 #### Azure App Service Specific (using Azure PowerShell):
 
 e.g. Using the "External Repository" deployment method in the Azure Portal.
