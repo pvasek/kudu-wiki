@@ -47,7 +47,7 @@ While apps are not permitted to read from or write to the Event Log service _per
 
 #### Access to out-of-process COM servers
 
-Windows Servers have a bunch of COM servers configured and available for consumption by   default; however the sandbox prevents access to all out-of-proc COM servers.  For example, an sandboxed application cannot call into WMI, or into MSIServer.  
+Windows Servers have a bunch of COM servers configured and available for consumption by   default; however the sandbox prevents access to all out-of-proc COM servers.  For example, a sandboxed application cannot call into WMI, or into MSIServer.  
 
 #### Use of Console
 
