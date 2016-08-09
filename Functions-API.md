@@ -63,7 +63,7 @@ Response:
 }
 ```
 
-### Creating a function
+### Creating or Updating a function
 
     put /subscriptions/{sub}/resourceGroups/{rg}/providers/Microsoft.Web/functions/MyFunction?api-version=2015-08-01
 
