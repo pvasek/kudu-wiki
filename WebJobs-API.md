@@ -350,7 +350,7 @@ or
 
 ### Set a continuous job as singleton ###
 
-If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances.
+If a continuous job is set as singleton it'll run only on a single instance opposed to running on all instances. By default, it runs on all instances.
 
     PUT /api/continuouswebjobs/{job name}/settings
 
