@@ -38,6 +38,8 @@ Use the following steps:
 
 ## Setting up continuous deployment using manual steps
 
+**Note**: Unlike the Resource Explorer case above, the repoUrl property should not be changed when configuring manually. The webhook payload should already contain the remote repository URL.
+
 ### Create an Azure Website with local git enabled
 
 When setting things up manually as described here, you'll need to enable the 'Local Git repository' option in the portal for your site. Even though you will in fact set up continuous deployment, this is the option that allows things to work.  
