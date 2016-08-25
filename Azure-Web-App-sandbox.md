@@ -183,6 +183,7 @@ The following PDF generators *are* supported:
 
 - SQL Reporting framework: requires the site to run in Basic or higher
 - EVOPDF: See http://www.evopdf.com/azure-html-to-pdf-converter.aspx for vendor solution
+- Telerik reporting: requires the site to run in Basic or higher. More info [here](http://www.telerik.com/forums/out-of-memory-in-azure-websites#yDA-ydAnBEOF0qKbHljCvw)
 
 
 Other scenarios that are not supported:
