@@ -68,5 +68,5 @@ Let's say that you have one repo that contains two different ASP.NET projects (p
 Instead, you can use App Settings to set the same values that are supported in the .deployment file. The steps are:
 
 - Go to the Configure tab for you site in the Azure portal
-- Add an App Setting called `Project`, and set its value to something like `WebProject/WebProject.csproj`
-- Then in your other web site you can set `Project` to point to a different .csproj file.
+- Add an App Setting called `PROJECT`, and set its value to something like `WebProject/WebProject.csproj`
+- Then in your other web site you can set `PROJECT` to point to a different .csproj file.
