@@ -3,3 +3,4 @@
 * [[Deploying Perl apps]]
 * [[Investigating msdeploy ARM failures]]
 * [[Admin site]]
+* [[MySQL in-app]]
