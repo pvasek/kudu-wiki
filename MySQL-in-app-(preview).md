@@ -73,7 +73,11 @@ To turn on [slow query log](http://dev.mysql.com/doc/refman/5.7/en/slow-query-lo
 
 #### How do I customize MySql server (MySqld.exe arguments)?
 
-At this moment, we don't expose such knobs.  However, do give us feedbacks (via [forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazurewebsitespreview)) and we will look into it. 
+You can specify extra arguments for MySqld.exe via `WEBSITE_MYSQL_ARGUMENTS` appSettings.
+
+#### How do I import and export database?
+
+You could simply use phpMyAdmin (see how to access above).   Programatically, you could POST to `https://<sitename>.scm.azurewebsites.net/mysqlutils/dump` (with empty body) and `https://<sitename>.scm.azurewebsites.net/mysqlutils/execute` to export and import sql scripts respectively.
 
 #### How do I report issues?
 
