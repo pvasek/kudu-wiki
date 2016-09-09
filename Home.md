@@ -17,7 +17,7 @@ If you are using git to push to an Azure Web Site, this is the section you'll ca
 See the [[Version history]] page for details.
 
 ### Features
-* [Publishing a website from Source Control](https://www.windowsazure.com/en-us/documentation/articles/web-sites-publish-source-control/) (official documentation from windowsazure.com)
+* [Publishing a website from Source Control](https://azure.microsoft.com/en-us/documentation/articles/app-service-continous-deployment/) (official documentation)
 * [[Deployment hooks]]: how to take over the deployment logic for a site
 * [[Web Hooks]]
 * [[Azure Site Extensions]] (see also [[Xdt Transform Samples]])
