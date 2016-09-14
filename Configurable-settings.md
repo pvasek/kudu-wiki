@@ -93,14 +93,13 @@ When using the log streaming feature, by default it times out after 30 minutes o
 
     SCM_LOGSTREAM_TIMEOUT=900
 
+## Runtime settings
+
+The following settings must be set in the Azure App Settings, and cannot be overridden in the .deployment file (since they are not deployment settings)
 
 ### Using git.exe instead of libgit2sharp for git operations
 
     SCM_USE_LIBGIT2SHARP_REPOSITORY=0
-
-## Runtime settings
-
-The following settings must be set in the Azure App Settings, and cannot be overridden in the .deployment file (since they are not deployment settings)
 
 ### Change the Node version
 
