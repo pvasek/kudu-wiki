@@ -4,9 +4,9 @@ Here is an example:
 
 ```bash
 # Switch branch (/settings endpoint)
-$ curl -H "Content-Type: application/json; charset=UTF-8" \
+$ curl https://user:pass@site.scm.azurewebsites.net/settings \
        --data "{key: 'branch', value: 'anotherbranch' }" \
-       https://user:pass@site.scm.azurewebsites.net/settings
+       -H "Content-Type: application/json; charset=UTF-8"
 
 
 $ cat body.json
