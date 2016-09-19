@@ -2,6 +2,28 @@ By default, only pushes to the 'master' branch get deployed. But you can change 
 
 Here is an example:
 
-    curl --user yourname -H "Content-Type: application/json; charset=UTF-8" --data "{key: 'branch', value: 'somebranch' }" https://yoursite.scm.azurewebsites.net/settings
+```bash
+# Switch branch (/settings endpoint)
+$ curl -H "Content-Type: application/json; charset=UTF-8" \
+       --data "{key: 'branch', value: 'anotherbranch' }" \
+       https://user:pass@site.scm.azurewebsites.net/settings
 
-The Azure portal also has UI to change this (in the Configure tab).
+
+$ cat body.json
+{
+    "format": "basic",
+    "url": "https://github.com/snobu/allworkandnoplay"
+}
+
+
+# Trigger a deployment (branch name is read from /settings)
+$ curl -X POST https://user:pass@site.scm.azurewebsites.net/deploy \
+       --data @body.json \
+       -H "Content-type: application/json"
+```
+
+Which results in:<br>
+![anotherbranch](https://cloud.githubusercontent.com/assets/6472374/18649223/fefa65aa-7ec6-11e6-8696-2b89bec5147e.png)
+
+The Azure portal (portal.azure.com) also has UI to change this:<br>
+**Deployment options** blade -> **Disconnect** -> **Setup** -> **Choose branch**.
