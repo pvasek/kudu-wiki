@@ -12,7 +12,7 @@ $ curl -H "Content-Type: application/json; charset=UTF-8" \
 $ cat body.json
 {
     "format": "basic",
-    "url": "https://github.com/snobu/allworkandnoplay"
+    "url": "https://github.com/username/projectname"
 }
 
 
