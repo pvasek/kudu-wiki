@@ -49,6 +49,8 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
     DELETE /api/vfs/{path}
     Delete the file at path.
 
+See this page for information on switching branch: [[Deployment branch|Deployment branch]]
+
 ## Zip
    The Zip API allows downloading folders as zip files, or expanding zip files into folders.
 
