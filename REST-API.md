@@ -108,7 +108,7 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
 
     POST /deploy
     Payload: { format: 'basic', url: 'https://github.com/SomeOrg/SomeRepo.git#<commit_sha>' } 
-    Trigger a new deployment from that repository for certain commit. 
+    Trigger a new deployment from that repository for certain commit. Note that <commit_sha> needs to be a sha and not a branch/tag.
 
 See this page for information on switching branch: [[Deployment branch|Deployment branch]]
 
