@@ -49,8 +49,6 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
     DELETE /api/vfs/{path}
     Delete the file at path.
 
-See this page for information on switching branch: [[Deployment branch|Deployment branch]]
-
 ## Zip
    The Zip API allows downloading folders as zip files, or expanding zip files into folders.
 
@@ -111,6 +109,8 @@ See this page for information on switching branch: [[Deployment branch|Deploymen
     POST /deploy
     Payload: { format: 'basic', url: 'https://github.com/SomeOrg/SomeRepo.git#<commit_sha>' } 
     Trigger a new deployment from that repository for certain commit. 
+
+See this page for information on switching branch: [[Deployment branch|Deployment branch]]
 
 ## SSHKey
 
