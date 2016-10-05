@@ -16,7 +16,7 @@ You need to be an admin on the repositories.  To check if you are an admin of th
 
 Github has recently required an explicit authorization for OAuth application to access the org repositories.  To grant the authorization, ...
 * Browse to https://github.com/settings/applications
-* Click `Azure Management Portal`.   For old Portal, click `Windows Azure`.
+* Click `Azure Management Portal - Primary` or `Azure Management Portal - Secondary`; for old Portal, click `Windows Azure`.
 * Click `Grant access` to the specific organization
 
 ### Q: WebApp did not receive notification from Bitbucket 
