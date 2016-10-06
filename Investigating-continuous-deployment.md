@@ -8,7 +8,7 @@ This [post](https://azure.microsoft.com/en-us/blog/using-app-service-web-apps-co
 
 ### Q: Can't see the repositories in the drop down!
 
-You need to be an admin on the repositories.  To check if you are an admin of the repo, ...
+You need to be an admin on the repositories.  The reason  is Azure WebApp will need to add the WebHook on your behalf.  To check if you are an admin of the repo, ...
 * For github, see if you can browse to https://github.com/{account}/{repo}/settings/hooks.
 * For bitbucket, see if you can browse to https://bitbucket.org/{account}/{repo}/admin/hooks.
 
