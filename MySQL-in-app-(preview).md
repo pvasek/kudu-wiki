@@ -75,9 +75,13 @@ To turn on [slow query log](http://dev.mysql.com/doc/refman/5.7/en/slow-query-lo
 
 You can specify extra arguments for MySqld.exe via `WEBSITE_MYSQL_ARGUMENTS` appSettings.
 
-#### How do I import and export database?
+#### Is my database backed up and restored along with site backup/restore feature?
 
-You could simply use phpMyAdmin (see how to access above).   Programatically, you could POST to `https://<sitename>.scm.azurewebsites.net/mysqlutils/dump` (with empty body) and `https://<sitename>.scm.azurewebsites.net/mysqlutils/execute` to export and import sql scripts respectively.
+Yes.  During site backup, we simply run `mysqldump.exe` tool against In-App MySql.  The output script `LocalMySqlDatabase.sql` was saved along with the site content - you can see it in the backup zip file.  During restore, we simply run `mysql.exe` on the `LocalMySqlDatabase.sql` script. 
+
+#### Can I import and export database by myself?
+
+Yes. You could simply use phpMyAdmin (see how to access above).   Programatically, you could POST to `https://<sitename>.scm.azurewebsites.net/mysqlutils/dump` (with empty body) and `https://<sitename>.scm.azurewebsites.net/mysqlutils/execute` to export and import sql scripts respectively.  Note that, this is SCM of your site, you will need to provide publishing credentials.
 
 #### How do I report issues?
 
