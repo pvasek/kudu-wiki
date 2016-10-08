@@ -219,7 +219,8 @@ Sample of available settings.
     $username = "`$website"
     $password = "pwd"
     $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $username,$password)))
+    $userAgent = "powershell/1.0"
 
     $apiUrl = "https://{sitename}.scm.azurewebsites.net/api/zip/site/wwwroot"
     $filePath = "C:\Temp\books.zip"
-    Invoke-RestMethod -Uri $apiUrl -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)} -Method PUT -InFile $filePath -ContentType "multipart/form-data"
+    Invoke-RestMethod -Uri $apiUrl -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)} -UserAgent $userAgent -Method PUT -InFile $filePath -ContentType "multipart/form-data"
