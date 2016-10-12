@@ -129,6 +129,11 @@ Also, the size of the cache can be changed (default is 300MB):
 
     WEBSITE_LOCAL_CACHE_SIZEINMB=500
 
+
+### Turning on the 'dynamic cache' feature.
+
+    WEBSITE_DYNAMIC_CACHE=1
+
 ### Disable the use of private site extensions
 
     WEBSITE_PRIVATE_EXTENSIONS=0
