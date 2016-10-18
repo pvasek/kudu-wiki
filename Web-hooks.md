@@ -134,6 +134,7 @@ This is request sent by the Kudu service to the registered URL.
   "lastSuccessEndTime": "2016-02-27T17:45:06.2016537Z",
   "complete": true,
   "siteName": "MySite"
+  "hostName": "MySite(-soltName).scm.azurewebsites.net"
 }
 ```
 
