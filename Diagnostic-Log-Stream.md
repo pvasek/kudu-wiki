@@ -6,7 +6,7 @@ One important technique to diagnose issues is to look at trace files. Kudu servi
 
 The simplest way to get streaming logs is to use `curl`, e.g.
 
-    curl -u {username} https://{sitename}.scm.azurewebsites.net/logstream
+    curl -u {username} https://{sitename}.scm.azurewebsites.net/api/logstream
 
 Notes:
 
@@ -17,10 +17,10 @@ The /logstream watches (FileSystemWatcher) all the log/txt files changes under /
 
 To scope the live traces to certain providers/folders, you may additional specify the path.
 
-* `/logstream/kudu/trace` => kudu related traces intended for diagnostic kudu issues.
-* `/logstream/kudu/deployment` => kudu deployment traces intended for application developers/operators.
-* `/logstream/application` => application traces.
-* `/logstream/http` => iis logs.
+* `/api/logstream/kudu/trace` => kudu related traces intended for diagnostic kudu issues.
+* `/api/logstream/kudu/deployment` => kudu deployment traces intended for application developers/operators.
+* `/api/logstream/application` => application traces.
+* `/api/logstream/http` => iis logs.
 
 etc.
 
