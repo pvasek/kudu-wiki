@@ -83,6 +83,10 @@ Yes.  During site backup, we simply run `mysqldump.exe` tool against In-App MySq
 
 Yes. You could simply use phpMyAdmin (see how to access above).   Programatically, you could POST to `https://<sitename>.scm.azurewebsites.net/mysqlutils/dump` (with empty body) and `https://<sitename>.scm.azurewebsites.net/mysqlutils/execute` to export and import sql scripts respectively.  Note that, this is SCM of your site, you will need to provide publishing credentials.
 
+#### Can I customize the database, username and password to be used?
+
+Yes.  The connection string is stored at `D:\home\data\mysql\MYSQLCONNSTR_localdb.txt`.   The application (such as wordpress) reads from this file for what database, username and password to use.  This also applies to what to backup and restore provided by Azure WebApps.   If you want to customize the database, username and password, simply modify this file and restart the WebApps.
+
 #### How do I report issues?
 
 [Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazurewebsitespreview) is a good starting point.  Do title it with `MySql in-app` keyword for faster references.
