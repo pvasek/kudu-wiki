@@ -47,7 +47,7 @@ The connection string flows to your application as an env variable `MYSQLCONNSTR
   
 #### How to use phpMyAdmin with MySql in-app?
 
-[phpMyAdmin](https://www.phpmyadmin.net/) is enabled by default with the feature.  You can access it thru `https://<sitename>.scm.azurewebsites.net/phpMyAdmin/`.  The phpMyAdmin is aware of MySql credentials and will connect automatically.  The *caveat* is since MySql is only started with the main site if one were to access phpMyAdmin (which is part of SCM site) *without* the main site (and MySql) running, it may confusingly prompt for password.   We are working toward improving the phpMyAdmin experience to better inform users in this scenario.
+[phpMyAdmin](https://www.phpmyadmin.net/) is enabled by default with the feature.  You can access it thru `https://<sitename>.scm.azurewebsites.net/phpMyAdmin/`.  Unlike phpMyAdmin from SiteExtenions gallery, this phpMyAdmin is aware of MySql credentials and will connect automatically.  The *caveat* is since MySql is only started with the main site if one were to access phpMyAdmin (which is part of SCM site) *without* the main site (and MySql) running, it may confusingly prompt for password.   We are working toward improving the phpMyAdmin experience to better inform users in this scenario.
 
 <strong>Important:</strong> If you previously have phpMyAdmin installed via SiteExtension gallery, you will have to uninstall it.  Since this phpMyAdmin from SiteExtension gallery will take precedent and it is *not* MySql In-App aware, it will not work with MySql In-App. 
 
