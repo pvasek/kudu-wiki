@@ -189,6 +189,12 @@ Timeout in milliseconds to keep application logging on (Default is 43200000, whi
 
     WEBSITE_WEBDEPLOY_USE_SCM=false
 
+### Attempt to rename DLLs if they can't be copied during a WebDeploy deployment
+
+Note: this only applies if you don't set `WEBSITE_WEBDEPLOY_USE_SCM=false`
+
+    MSDEPLOY_RENAME_LOCKED_FILES=1
+
 ### Use the same process for the user site and the scm site
 
     WEBSITE_DISABLE_SCM_SEPARATION=true
