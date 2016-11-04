@@ -132,7 +132,13 @@ Also, the size of the cache can be changed (default is 300MB):
 
 ### Turning on the 'dynamic cache' feature.
 
+Full content caching:
+
     WEBSITE_DYNAMIC_CACHE=1
+
+Directory metadata caching:
+
+    WEBSITE_DYNAMIC_CACHE=2
 
 ### Disable the use of private site extensions
 
