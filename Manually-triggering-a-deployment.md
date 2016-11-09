@@ -19,7 +19,9 @@ Transfer-encoding: chunked
     "url":"https://username:password@example.com/git/RepositoryName.git"
 }
 ````
-For Mercurial (hg) add `"is_hg": true` to the JSON payload.
+For Mercurial (hg) add `"is_hg": true` to the JSON payload.  
+
+Optionally, you can pass `/deploy?isAsync=true` which will make the deployment to run asynchronously.  The response will return immediately with `Location` header where to poll the status of the deployment.
 
 `$SiteLevelUsername:SiteLevelPassword` are [Site-Level credentials](https://github.com/projectkudu/kudu/wiki/Deployment-credentials). They are a good fit here being distinct for each site and randomly generated.
 
