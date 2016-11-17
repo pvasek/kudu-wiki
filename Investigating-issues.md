@@ -88,5 +88,5 @@ By default, in Azure WebApp env, the SCM idletimeout is 20 minutes.  Idle means 
 
 * Set your WebApp's appSettings `WEBSITE_SCM_IDLE_TIMEOUT_IN_MINUTES = <value>`.  For instance, set to 30 if your deployment will last at most 30 mins.
 
-* Enable your WebApp's AlwaysOn feature.  Our infrastructure will send requests periodically to your SCM site to keep it alive.   Literally, same behovior as `WEBSITE_SCM_IDLE_TIMEOUT_IN_MINUTES = <large value>`.
+* Enable your WebApp's AlwaysOn feature.  Our infrastructure will send requests periodically to your SCM site to keep it alive.   Literally, same behavior as `WEBSITE_SCM_IDLE_TIMEOUT_IN_MINUTES = <large value>`.
 
