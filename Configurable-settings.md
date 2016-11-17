@@ -165,6 +165,14 @@ Examples:
 
 Note that there appears to be an issue that makes it not work when using `DateTimeOffset.Now`. See [this question](http://stackoverflow.com/questions/30939990/changing-timezone-on-azure-web-apps-doesnt-work-for-datetimeoffset-now) for details.
 
+### Increase the time before the scm site is timeout
+
+By default, even on dedicated, the timeout is 20 minutes. But you can increase it:
+
+    WEBSITE_SCM_IDLE_TIMEOUT_IN_MINUTES=30
+
+Note that this is not needed if you are also using the Always On feature.
+
 ### Diagnostics related settings
 
 The name (or relative path to the LogDirectory) of the file where internal errors are logged, for troubleshooting the listener:
