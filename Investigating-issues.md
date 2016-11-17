@@ -81,3 +81,12 @@ To get more details for any of the above status codes, capture the git client tr
 ### Set Kudu logging to verbose level
 
 Try setting AppSetting SCM_TRACE_LEVEL to 4 for kudu-related verbose logging.
+
+### Deployment process got terminated due to idle timeout
+
+By default, in Azure WebApp env, the SCM idletimeout is 20 minutes.  Idle means no more incoming request to SCM site.   If your deployment process (fetch, build, deploy) takes longer than that, it will be abruptly terminated.  You can do one of the followings.
+
+* Set your WebApp's appSettings `WEBSITE_SCM_IDLE_TIMEOUT_IN_MINUTES = <value>`.  For instance, set to 30 if your deployment will last at most 30 mins.
+
+* Enable your WebApp's AlwaysOn feature.  Our infrastructure will send requests periodically to your SCM site to keep it alive.   Literally, same behovior as `WEBSITE_SCM_IDLE_TIMEOUT_IN_MINUTES = <large value>`.
+
