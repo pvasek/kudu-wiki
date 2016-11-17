@@ -128,46 +128,6 @@ It is a variation of the above but simply adds a /somepath/subpath IIS applicati
 </configuration>
 ```
 
-### Remove all your recycling options from your .NET 4(+) application pool, and make it available always
-
-```xml
-<?xml version="1.0"?>
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <system.applicationHost>
-    <applicationPools>
-      <add name="%XDT_SITENAME%" xdt:Transform="Insert" autoStart="true" managedRuntimeVersion="v4.0" startMode="AlwaysRunning">
-        <processModel idleTimeout="00:00:00" />
-        <recycling>
-          <periodicRestart time="00:00:00" />
-        </recycling>
-      </add>
-    </applicationPools>
-  </system.applicationHost>
-</configuration>
-```        
-
-### Recycle your application pool at a given time, say off-business hours.
-
-```xml
-<?xml version="1.0"?>
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <system.applicationHost>
-    <applicationPools>
-      <add name="%XDT_SITENAME%" xdt:Locator="Match(name)">
-        <recycling xdt:Transform="Insert" >
-          <periodicRestart>
-            <schedule>
-              <clear />
-              <add value="00:00:00" />
-            </schedule>
-          </periodicRestart>
-        </recycling>
-      </add>
-    </applicationPools>
-  </system.applicationHost>
-</configuration>
-```
-
 ### Increase the queueLength for your application pool
 
 Note: the default is 1000
