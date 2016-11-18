@@ -51,13 +51,11 @@ The connection string flows to your application as an env variable `MYSQLCONNSTR
 
 <strong>Important:</strong> If you previously have phpMyAdmin installed via SiteExtension gallery, you will have to uninstall it.  Since this phpMyAdmin from SiteExtension gallery will take precedent and it is *not* MySql In-App aware, it will not work with MySql In-App. 
 
-#### What about MySql command line tools?
+#### What about MySql command line tools from SCM Kudu Console?
 
-Among other things, `MySql.exe` or `MySqlAdmin.exe` tools are available at `d:\program files (x86)\MySql\5.7.9.0\bin`.  Like phpMyAdmin above, make sure the main site is running before using the tool.  The credential is available at `D:\home\data\mysql\MYSQLCONNSTR_localdb.txt`.  Due to limited spaces, we may not have all the complete MySql tool set.  Let us know (via [forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazurewebsitespreview)) if any other tools would be useful.
+Among other things, `MySql.exe` or `MySqlAdmin.exe` tools are available at `d:\program files (x86)\MySql\5.7.9.0\bin`.  Like phpMyAdmin above, make sure the main site is running before using the tool in SCM Kudu Console.  The credential is available at `D:\home\data\mysql\MYSQLCONNSTR_localdb.txt`.   If you are running WebJobs and need to get connection string programmatically, [this sample](https://github.com/suwatch/phpmyadmin/blob/96d3e349de0e17b3fe2f01f3d9e1e8b4497b86ed/config.inc.php#L49-L72) shows how to do so.   Do make sure you set AlwaysOn for your site to ensure MySql is up and running. 
 
-#### How do we define MySql credentials/security?
-
-MySql in-app is running on the same sandbox as the site itself and it can only be accessed locally (127.0.0.1).  The port is dynamically defined (not always default 3306) to support multiple sites running on the same VM (multi-tenant).  We will best-effort affinitize to the same port for the same site.   The most important part is MySql in-app database files are part of the site content (`D:\home\data\mysql`) and ones with site admin credential (for instance, able to access SCM site) will have access to the files; as a result, full access to database.   Based on above security, we intentionally keep MySql credential simple with a pre-set of username, password and database name.  If you think of a scenario where different user credentials must be used for the same app, do let us know (via [forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazurewebsitespreview)).
+Due to limited spaces, we may not have all the complete MySql tool set.  Let us know (via [forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazurewebsitespreview)) if any other tools would be useful.
 
 #### Where is MySql Data directory?
 
