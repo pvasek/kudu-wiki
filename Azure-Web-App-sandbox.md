@@ -35,7 +35,7 @@ The sandbox generally aims to restrict access to _shared_ components of Windows.
 
 #### Writing to registry
 
-Apps may not to any location in the registry regardless of any [permissions](https://en.wikipedia.org/wiki/Access_control_list) present on the key.  This blanket limitation is implemented as a global restriction without exceptions.
+Apps may not write to any location in the registry regardless of any [permissions](https://en.wikipedia.org/wiki/Access_control_list) present on the key.  This blanket limitation is implemented as a global restriction without exceptions.
 
 While writing is not allowed, the reading and enumeration of keys and values are permitted.  Access to keys and values for these purposes are governed by the ACLs present on the key.
 
