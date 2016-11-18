@@ -1,6 +1,6 @@
 **Scenario**: an external component wants to know when deployments are complete. It registers a callback url that will be called each time a deployment has finished, with the deployment information on whether the deployment was successful or not, the author, commit id and more.
 
-**Possible use case**: With this feature you're able to hook a kudu site as a trigger in web services such as [Logic Apps](aka.ms/logicapps) or [zapier.com](https://zapier.com) which allows you to do a wide array of actions when a deployment is done, for example:
+**Possible use case**: With this feature you're able to hook a kudu site as a trigger in web services such as [Logic Apps](https://aka.ms/logicapps) or [zapier.com](https://zapier.com) which allows you to do a wide array of actions when a deployment is done, for example:
 - Send an email when deployment is done
 - Call when a deployment has failed
 - Tweet when a deployment has succeeded
