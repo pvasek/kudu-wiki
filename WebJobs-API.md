@@ -320,6 +320,7 @@ The file name should be in the `Content-Dispostion` header, example:
 
     Content-Disposition: attachement; filename=run.cmd
 
+**Note**: the difference between the two techniques is that the first just adds files into the folder, while the second first deletes any existing content before adding new files.
 
 ### Delete a continuous job ###
 
