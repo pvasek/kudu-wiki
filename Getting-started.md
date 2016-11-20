@@ -5,7 +5,7 @@ see the readme for [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/m
 * To fully run functional tests, you will still need to manually execute first two steps from [Additional prerequisites to run the functional tests](https://github.com/projectkudu/kudu/wiki/Getting-started#additional-prerequisites-to-run-the-functional-tests)
 
 ### Manual Setup Instructions
-* Visual Studio 2013. Note that you need to run it as admin. Install/Update to the latest version of NuGet Package Manager (Tools -> Extensions and Updates).
+* Visual Studio 2015. Note that you need to run it as admin. Install/Update to the latest version of NuGet Package Manager (Tools -> Extensions and Updates).
 * IIS >= 7, configured to run ASP.NET 4.0. This can be installed using [WebPI](http://www.microsoft.com/web/downloads/platform.aspx).
 * Install Git (http://git-scm.com/downloads) to the default location (we expect it in ```C:\Program Files (x86)\Git\bin```).
 * Install [Node](http://nodejs.org/). Node is used as part of the build process for sites.
