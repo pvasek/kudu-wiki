@@ -39,6 +39,20 @@ D:\home> cd .ssh
 D:\home\.ssh> ssh -i id_rsa git@github.com
 ```
 
+### Q: Get exception "Cannot find SourceControlToken with name GitHub".
+
+To setup continuous deployment, An oauth token is required to call GitHub/Bitbucket apis.  This token is given to Azure during OAuth consent flow on portal.  If you run into this issue, try logon to portal (portal.azure.com) and perform setup continuous deployment once (to any site).  The oauth token will be stored for the logon Azure user.   Each Azure user will need to go thru OAuth consent flow once.
+
+### Q: Can I use Service Principal to setup continuous deployment
+
+Yes.  To setup continuous deployment, An oauth token is required to call GitHub/Bitbucket apis.  Since there is no OAuth consent flow for Service Principal, one will need to associate oauth token to Service Principal manually.
+
+- Logon to GitHub and generate personal token.
+- [Use ARMClient and logon with Service Principal](https://github.com/projectKudu/ARMClient/wiki/Login-and-Acquire-Tokens).
+- [Assign GitHub token for Service Principal](https://github.com/projectkudu/ARMClient/wiki/Update-SourceControlTokens).
+
+**Note:** VSTS deployment setup with Service Principal is not supported.
+
 ## Other topics
 
 ### Look at service log  
