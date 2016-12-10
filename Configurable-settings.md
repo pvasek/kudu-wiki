@@ -222,6 +222,12 @@ When separation enabled (the default), the main site and scm site run in differe
 
     WEBSITE_START_SCM_ON_SITE_CREATION=true
 
+### Disable the generation of bindings in applicationhost.config
+
+This can be useful in some scenarios where they can get out of sync.
+
+    WEBSITE_SKIP_ALL_BINDINGS_IN_APPHOST_CONFIG=1
+
 ### Site Extensions gallery feed url
 
 Each site gets the site extensions feed from a configurable Url. If it is not set, the behavior is equivalent to
