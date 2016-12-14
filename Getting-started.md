@@ -16,15 +16,16 @@ Note: If you manually install IIS, here is what needs to be enabled:
 
 ### Additional prerequisites to run the functional tests
 
-* Install [ASP.NET WebPages 1.0](http://www.microsoft.com/en-us/download/details.aspx?id=15979)
 * If you don't see the tests in Test Explorer pane, it may be because you have Xunit runner install as VSIX.  For Xunit 2.0, the runner is installed as part of the project (not VSIX).  To fix, open VS -> TOOLS -> Extensions and Updates ..., and uninstall Xunit runner VSIX. 
 * If still don't see the tests, try remove this folder `%TEMP%\VisualStudioTestExplorerExtensions`.  See [this](http://xunit.github.io/docs/running-tests-in-vs.html).
 
 You are done here if you had run [KuduDevSetup.cmd](https://github.com/projectkudu/kudu/tree/master/Setup), otherwise continue.
 
-* Install [MVC 3](http://www.asp.net/mvc/mvc3).
+* Install [MVC 3](http://www.asp.net/mvc/mvc3). After installing, ensure KB2993937 is installed by running Windows Update or downloading it directly from [here](https://support.microsoft.com/en-us/kb/2993937).
+* Install [ASP.NET WebPages 1.0](http://www.microsoft.com/en-us/download/details.aspx?id=15979).
+* Install F#. This can be done during a Visual Studio install or from within Visual Studio, or you can install it directly from [here](https://www.microsoft.com/en-us/download/details.aspx?id=48179).
 * Open your %WINDIR%\System32\inetsrv\config\applicationHost.config and look for `<applicationPoolDefaults>`. Under `<processModel>`, make sure you don't have `setProfileEnvironment="false"`. If you do, set it to true (or remove the attribute if you are running the latest Windows 8.1).
-* unzip [this file](https://dl.dropboxusercontent.com/u/2209341/Kudu_Progx86_Msbuild_Microsoft_VisualStudio.zip) and copy the contents into your `\Program Files (x86)\MSBuild\Microsoft\VisualStudio`. This brings in various files from older VS versions that you may not have installed.
+* Unzip [this file](https://dl.dropboxusercontent.com/u/2209341/Kudu_Progx86_Msbuild_Microsoft_VisualStudio.zip) and copy the contents into your `\Program Files (x86)\MSBuild\Microsoft\VisualStudio`. This brings in various files from older VS versions that you may not have installed.
 * Install the [URL rewrite module for IIS](http://www.iis.net/download/URLRewrite).
 * Install [IISNode](https://github.com/Azure/iisnode/releases/download/v0.2.11/iisnode-full-v0.2.11-x64.msi)
 * Pretend to have the 32 bit version of Node to fool the version detection logic:
@@ -37,6 +38,8 @@ You are done here if you had run [KuduDevSetup.cmd](https://github.com/projectku
 1. First clone the repository.
 
         git clone git://github.com/projectkudu/kudu.git
+
+2. Run build.cmd. During development, builds can be run from within Visual Studio, but this ensures you have a Release build and that the KuduSync.NET package dependency from the solution-level packages.config file is in place.
 
 3. Open Kudu.sln as **Administrator** and build it.
 
